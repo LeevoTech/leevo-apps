@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-lang-en="Leevo Learn English – PSLE English Exam Prep Guide" data-lang-zh="Leevo英语学习 – 新加坡小六会考英语备考指南">Leevo Learn English – PSLE English Exam Prep Guide</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:Arial,sans-serif; background:linear-gradient(135deg,#0d2035,#07111f); color:#fff; line-height:1.7; padding:40px 30px; max-width:900px; margin:0 auto;}
+    .back-link{display:inline-block; margin-bottom:40px; color:#f2c86b; text-decoration:none; font-size:18px;}
+    .back-link:hover{text-decoration:underline;}
+    h1{color:#f2c86b; font-size:32px; margin-bottom:30px; line-height:1.4;}
+    h2{color:#ffffff; font-size:24px; margin:30px 0 20px;}
+    p{color:#e6e6e6; font-size:18px; margin-bottom:20px;}
+    ul{color:#e6e6e6; font-size:18px; margin:20px 0 20px 30px;}
+    li{margin-bottom:10px;}
+    .lang-switch-btn{padding:6px 14px; border-radius:6px; border:none; background:#f2c86b; color:#07111f; font-weight:bold; cursor:pointer; margin-bottom:20px;}
+  </style>
+</head>
+<body>
+  <!-- 语言切换按钮，和首页共用存储 -->
+  <button id="pageLangSwitch" class="lang-switch-btn">中文 / EN</button>
+
+  <!-- 返回首页双语链接 -->
+  <a href="../index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回 Leevo 应用首页">← Back to Leevo Apps Home</a>
+
+  <h1 data-lang-en="Leevo Learn English — Singapore PSLE English Exam Preparation Guide" data-lang-zh="Leevo英语学习 — 新加坡小六会考英语备考指南">Leevo Learn English — Singapore PSLE English Exam Preparation Guide</h1>
+
+  <p data-lang-en="Specially built for Primary 6 students in Singapore! All practice questions are carefully revised and adapted from nearly 10 years of past Singapore PSLE English examination papers, covering all frequently tested question types, knowledge points and difficulty levels." data-lang-zh="专为新加坡小六学生打造！所有练习题均参考近10年新加坡小六会考英语真题精心改编整理，覆盖历年高频题型、核心知识点与考试难度标准。">Specially built for Primary 6 students in Singapore! All practice questions are carefully revised and adapted from nearly 10 years of past Singapore PSLE English examination papers, covering all frequently tested question types, knowledge points and difficulty levels.</p>
+
+  <h2 data-lang-en="Key Features & Purpose" data-lang-zh="核心特点与学习目标">Key Features & Purpose</h2>
+  <ul>
+    <li data-lang-en="✅ Based on real past-year PSLE English papers from the past 10 years — close to actual exam style & requirements" data-lang-zh="✅ 依托近10年真实小六会考英语真题改编，题型、出题思路贴合官方考试标准">✅ Based on real past-year PSLE English papers from the past 10 years — close to actual exam style & requirements</li>
+    <li data-lang-en="✅ Full coverage of key modules: Grammar, Vocabulary, Comprehension, Oral & Writing common exam formats" data-lang-zh="✅ 全面覆盖重点模块：语法、词汇、阅读理解、口语、写作等必考题型">✅ Full coverage of key modules: Grammar, Vocabulary, Comprehension, Oral & Writing common exam formats</li>
+    <li data-lang-en="✅ 100% free for Primary 6 learners — no hidden fees, focus on solid exam revision" data-lang-zh="✅ 面向小六学生完全免费使用，无付费门槛，专心扎实复习备考">✅ 100% free for Primary 6 learners — no hidden fees, focus on solid exam revision</li>
+    <li data-lang-en="✅ Help students get familiar with exam rhythm, strengthen weak points & build confidence for PSLE" data-lang-zh="✅ 帮助学生熟悉考试节奏、查漏补缺、巩固重点，从容备战小六会考">✅ Help students get familiar with exam rhythm, strengthen weak points & build confidence for PSLE</li>
+  </ul>
+
+  <h2 data-lang-en="Designed for effective daily review" data-lang-zh="科学设计，适合日常持续复习">Designed for effective daily review</h2>
+  <p data-lang-en="Organized by topic and difficulty, short daily practice sessions let students review steadily without stress — build up language sense, master answering skills and be fully prepared to achieve great results in the Singapore Primary School Leaving Examination." data-lang-zh="按知识点、难度分级编排，每日少量高效练习，轻松坚持不疲惫；培养语感、掌握答题技巧、积累实战手感，扎扎实实做好充分准备，冲刺理想小六会考英语成绩。">Organized by topic and difficulty, short daily practice sessions let students review steadily without stress — build up language sense, master answering skills and be fully prepared to achieve great results in the Singapore Primary School Leaving Examination.</p>
+
+<script>
+// 读取与首页共享的语言存储，自动同步
+let currentLang = localStorage.getItem('leevoLang') || 'en';
+
+function updateAllText(){
+  document.querySelectorAll('[data-lang-en],[data-lang-zh]').forEach(el=>{
+    const txt = el.getAttribute(`data-lang-${currentLang}`);
+    if(txt) el.innerHTML = txt;
+  });
+}
+
+document.addEventListener('DOMContentLoaded', updateAllText);
+
+document.getElementById('pageLangSwitch').addEventListener('click',()=>{
+  currentLang = currentLang === 'en' ? 'zh' : 'en';
+  localStorage.setItem('leevoLang', currentLang); // 切换保存，全站统一
+  updateAllText();
+});
+</script>
+</body>
+</html>
