@@ -6,7 +6,7 @@
 
   <title>Leevo Apps | Useful Android Apps & Games for Daily Life</title>
   <meta name="description" content="Discover Leevo Apps — practical Android apps for fitness, learning, music, and fun puzzle games. Simple, high-quality mobile tools for everyone.">
-  <meta name="keywords" content="Leevo Apps, Android apps, home workout app, learn English app, PSLE Math, music player, puzzle games, free Android games">
+  <meta name="keywords" content="Leevo Apps, Android apps, home workout app, learn English app, PSLE Math, music player, puzzle games, free Android games, Google Play">
   <meta name="robots" content="index, follow">
 
   <style>
@@ -141,15 +141,25 @@
       object-fit: cover;
     }
     .app-card h3 { font-size: 23px; margin-bottom: 10px; }
-    .app-card p { color: #9fb0c0; margin-bottom: 18px; }
+    .app-card p { color: #9fb0c0; margin-bottom: 12px; }
     .learn-more {
       color: #f2c86b;
       font-weight: 700;
       font-size: 14px;
       cursor: pointer;
+      display: inline-block;
+      margin-right:15px;
+      margin-bottom:8px;
     }
     .learn-more a { color: #f2c86b; }
     .learn-more:hover, .learn-more a:hover { text-decoration: underline; }
+
+    .play-link {
+      color:#42d480;
+      font-size:13px;
+      font-weight:bold;
+    }
+    .play-link:hover { text-decoration:underline; }
 
     .guides { background: #07111f; }
     .guide-box {
@@ -252,7 +262,7 @@
   <div class="hero">
     <div class="hero-badge">Independent Android App Developer</div>
     <h1>Apps made to make<br><span>everyday life better.</span></h1>
-    <p>Useful fitness tools, learning apps, music players & fun puzzle games for Android.</p>
+    <p>Useful fitness tools, learning apps, music players & fun puzzle games for Android — get them on Google Play!</p>
     <a class="button" href="#apps">Explore Our Apps</a>
   </div>
 </header>
@@ -261,72 +271,80 @@
   <div class="container">
     <div class="section-label">Our Apps</div>
     <h2>Discover Leevo Apps</h2>
-    <p class="section-description">Simple, practical & enjoyable Android apps built for daily use.</p>
+    <p class="section-description">Simple, practical & enjoyable Android apps built for daily use — ready to install from Google Play.</p>
 
     <div class="app-grid">
-      <!-- 未上线文章：Coming soon + 提示弹窗 -->
       <div class="app-card">
         <div class="app-icon"><img src="images/leevo-color.png" alt="Leevo Color – creative coloring & art app"></div>
         <h3>Leevo Color</h3>
         <p>Creative coloring & art experience on your Android device.</p>
-        <span class="learn-more" onclick="openModal('Leevo Color','Coming soon! New guides are being created. Visit <a href=&quot;#guides&quot; style=&quot;color:#f2c86b&quot;>Guides & Tips</a> to read published articles first.')">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Color','Coming soon! Guides are being created. <br><br><a href=&quot;https://play.google.com/store/apps/details?id=com.leevo.color&quot; target=&quot;_blank&quot; style=&quot;color:#42d480; font-weight:bold;&quot;>📲 Get it on Google Play</a>')">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.color" target="_blank" class="play-link">📲 Install</a>
       </div>
 
-      <!-- ✅ 已有文章：直接可点击阅读链接，去掉Coming soon、去掉弹窗 -->
+      <!-- ✅ Home Workout: Read Guide + Google Play 双链接 -->
       <div class="app-card">
         <div class="app-icon"><img src="images/home-workout.png" alt="Leevo Home Workout – daily fitness & exercise"></div>
         <h3>Leevo Home Workout</h3>
         <p>Easy home fitness routines, no equipment needed.</p>
         <span class="learn-more"><a href="articles/best-free-home-workout-apps.html">→ Read Fitness Guide</a></span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.homeworkout" target="_blank" class="play-link">📲 Get on Google Play</a>
       </div>
 
       <div class="app-card">
         <div class="app-icon"><img src="images/leevo-learn-english.png" alt="Leevo Learn English – learn & practice English easily"></div>
         <h3>Leevo Learn English</h3>
         <p>Simple daily English learning for students & beginners.</p>
-        <span class="learn-more" onclick="openModal('Leevo Learn English','Coming soon! English learning tips & study guides are coming soon. Keep an eye on <a href=&quot;#guides&quot; style=&quot;color:#f2c86b&quot;>Guides & Tips</a> for new articles.')">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Learn English','Coming soon! Study guides coming soon. <br><br><a href=&quot;https://play.google.com/store/apps/details?id=com.leevo.learn.english&quot; target=&quot;_blank&quot; style=&quot;color:#42d480; font-weight:bold;&quot;>📲 Get it on Google Play</a>')">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.learn.english" target="_blank" class="play-link">📲 Install</a>
       </div>
 
       <div class="app-card">
         <div class="app-icon"><img src="images/leevo-learn-psle-math.png" alt="Leevo Learn PSLE Math – Singapore primary math practice"></div>
         <h3>Leevo Learn: PSLE Math</h3>
         <p>Helpful practice & revision for Singapore PSLE Mathematics.</p>
-        <span class="learn-more" onclick="openModal('Leevo Learn: PSLE Math','Coming soon! PSLE study strategies, practice tips will be published in <a href=&quot;#guides&quot; style=&quot;color:#f2c86b&quot;>Guides & Tips</a> soon.')">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Learn: PSLE Math','Coming soon! Practice tips coming soon. <br><br><a href=&quot;https://play.google.com/store/apps/details?id=com.leevo.learn.pslemath&quot; target=&quot;_blank&quot; style=&quot;color:#42d480; font-weight:bold;&quot;>📲 Get it on Google Play</a>')">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.learn.pslemath" target="_blank" class="play-link">📲 Install</a>
       </div>
 
       <div class="app-card">
         <div class="app-icon"><img src="images/leevo-music.png" alt="Leevo Music – simple offline Android music player"></div>
         <h3>Leevo Music</h3>
         <p>Lightweight, easy-to-use music player for Android.</p>
-        <span class="learn-more" onclick="openModal('Leevo Music','Coming soon! Music player usage tips & feature guides are coming soon. Visit <a href=&quot;#guides&quot; style=&quot;color:#f2c86b&quot;>Guides & Tips</a> for updates.')">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Music','Coming soon! Usage guides coming soon. <br><br><a href=&quot;https://play.google.com/store/apps/details?id=com.leevomusic.app&quot; target=&quot;_blank&quot; style=&quot;color:#42d480; font-weight:bold;&quot;>📲 Get it on Google Play</a>')">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevomusic.app" target="_blank" class="play-link">📲 Install</a>
       </div>
 
       <div class="app-card">
         <div class="app-icon"><img src="images/leevo-planet-merge.png" alt="Leevo Planet Merge – relaxing merge puzzle game"></div>
         <h3>Leevo Planet Merge</h3>
         <p>Calm, fun merging puzzle game for stress-free entertainment.</p>
-        <span class="learn-more" onclick="openModal('Leevo Planet Merge','Coming soon! Relaxing game tips & play guides will be shared in <a href=&quot;#guides&quot; style=&quot;color:#f2c86b&quot;>Guides & Tips</a> later.')">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Planet Merge','Coming soon! Game tips coming soon. <br><br><a href=&quot;https://play.google.com/store/apps/details?id=com.leevo.mergegame&quot; target=&quot;_blank&quot; style=&quot;color:#42d480; font-weight:bold;&quot;>📲 Get it on Google Play</a>')">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.mergegame" target="_blank" class="play-link">📲 Install</a>
       </div>
 
       <div class="app-card">
         <div class="app-icon"><img src="images/leevo-push-box.png" alt="Leevo Push Box – classic brain puzzle game"></div>
         <h3>Leevo Push Box</h3>
         <p>Sharpen your mind with challenging box-pushing puzzles.</p>
-        <span class="learn-more" onclick="openModal('Leevo Push Box','Coming soon! Strategy & solving guides for puzzles are coming soon. Check <a href=&quot;#guides&quot; style=&quot;color:#f2c86b&quot;>Guides & Tips</a> for new content.')">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Push Box','Coming soon! Strategy guides coming soon. <br><br><a href=&quot;https://play.google.com/store/apps/details?id=com.leevo.pushbox&quot; target=&quot;_blank&quot; style=&quot;color:#42d480; font-weight:bold;&quot;>📲 Get it on Google Play</a>')">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.pushbox" target="_blank" class="play-link">📲 Install</a>
       </div>
 
       <div class="app-card">
         <div class="app-icon"><img src="images/leevo-zombie-shooter.png" alt="Leevo Zombie Shooter – exciting action shooting game"></div>
         <h3>Leevo Zombie Shooter</h3>
         <p>Fast-paced survival action shooter game for Android.</p>
-        <span class="learn-more" onclick="openModal('Leevo Zombie Shooter','Coming soon! Gameplay tips & survival guides will be published in <a href=&quot;#guides&quot; style=&quot;color:#f2c86b&quot;>Guides & Tips</a> soon.')">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Zombie Shooter','Coming soon! Gameplay tips coming soon. <br><br><a href=&quot;https://play.google.com/store/apps/details?id=com.leevo.zombieshooter&quot; target=&quot;_blank&quot; style=&quot;color:#42d480; font-weight:bold;&quot;>📲 Get it on Google Play</a>')">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.zombieshooter" target="_blank" class="play-link">📲 Install</a>
       </div>
 
       <div class="app-card">
         <div class="app-icon"><img src="images/noirs-adventure.png" alt="Noir's Adventure – fun puzzle platform adventure game"></div>
         <h3>Noir's Adventure</h3>
         <p>Explore, solve puzzles & enjoy retro-style platform gameplay.</p>
-        <span class="learn-more" onclick="openModal('Noir\'s Adventure','Coming soon! Walkthrough & fun tips will be shared in <a href=&quot;#guides&quot; style=&quot;color:#f2c86b&quot;>Guides & Tips</a> later.')">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Noir\'s Adventure','Coming soon! Walkthrough tips coming soon. <br><br><a href=&quot;https://play.google.com/store/apps/details?id=com.leevo.noirs_adventure&quot; target=&quot;_blank&quot; style=&quot;color:#42d480; font-weight:bold;&quot;>📲 Get it on Google Play</a>')">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.noirs_adventure" target="_blank" class="play-link">📲 Install</a>
       </div>
     </div>
   </div>
@@ -373,7 +391,6 @@ function openModal(title,htmlText){
 function closeModal(){
   document.getElementById('infoModal').classList.remove('show');
 }
-// 点击弹窗外部背景也能关闭弹窗
 window.onclick=function(e){
   const modal=document.getElementById('infoModal');
   if(e.target===modal) modal.classList.remove('show');
