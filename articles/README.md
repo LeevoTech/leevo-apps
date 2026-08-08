@@ -1,2 +1,2 @@
 # Articles & Guides
-SEO articles, tips and guides for Leevo Apps.
+Collection of helpful articles, usage guides and tips for Leevo Apps.
