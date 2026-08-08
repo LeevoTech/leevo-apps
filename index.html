@@ -37,6 +37,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap:15px;
     }
     .logo {
       font-size: 25px;
@@ -45,12 +47,24 @@
     }
     .logo span { color: #f2c86b; }
     .nav-links {
-      display: flex;
-      gap: 28px;
-      color: #c8d3df;
-      font-size: 15px;
+      display: flex; gap: 28px; color: #c8d3df; font-size: 15px;
     }
     .nav-links a:hover { color: #ffffff; }
+
+    /* 徽章切换按钮样式 */
+    .badge-switch-btn {
+      padding: 6px 14px;
+      border-radius: 6px;
+      border: none;
+      background: #f2c86b;
+      color: #07111f;
+      font-weight: bold;
+      cursor: pointer;
+      transition:0.2s;
+    }
+    .badge-switch-btn:hover{
+      transform:scale(1.05);
+    }
 
     .hero {
       max-width: 1000px;
@@ -135,11 +149,7 @@
       background: #172c42;
       margin-bottom: 20px;
     }
-    .app-icon img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    .app-icon img { width: 100%; height: 100%; object-fit: cover; }
     .app-card h3 { font-size: 23px; margin-bottom: 10px; }
     .app-card p { color: #9fb0c0; margin-bottom:12px; }
     .learn-more {
@@ -153,9 +163,9 @@
     .learn-more a { color: #f2c86b; }
     .learn-more:hover, .learn-more a:hover { text-decoration: underline; }
 
-    /* Google Play 官方按钮样式 */
+    /* Play官方按钮样式 */
     .play-btn-img {
-      height: 40px; /* 标准高度，大小舒服统一 */
+      height: 40px;
       width: auto;
       display: inline-block;
       transition: transform 0.2s;
@@ -169,18 +179,9 @@
       padding: 45px;
       border-radius: 18px;
     }
-    .guide-box p {
-      color: #aebdca;
-      max-width: 700px;
-      margin-bottom: 25px;
-    }
-    .guide-box ul {
-      margin: 20px 0 20px 20px;
-      color: #e2e8f0;
-    }
-    .guide-box li {
-      margin-bottom: 10px;
-    }
+    .guide-box p { color: #aebdca; max-width:700px; margin-bottom:25px; }
+    .guide-box ul { margin:20px 0 20px 20px; color:#e2e8f0; }
+    .guide-box li { margin-bottom:10px; }
     .about { background: #0a1726; }
 
     footer {
@@ -190,13 +191,9 @@
       color: #8294a5;
     }
     .footer-inner {
-      max-width: 1150px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
+      max-width:1150px; margin:auto; display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;
     }
-    .footer-links { display: flex; gap: 20px; }
+    .footer-links { display:flex; gap:20px; }
 
     /* 弹窗样式 */
     .modal {
@@ -207,35 +204,23 @@
       align-items: center;
       justify-content: center;
       z-index: 999;
-      padding: 20px;
+      padding:20px;
     }
-    .modal.show { display: flex; }
+    .modal.show { display:flex; }
     .modal-content {
-      background: #101f30;
-      border: 1px solid #3c5f80;
-      border-radius: 12px;
-      padding: 30px;
-      max-width: 500px;
-      text-align: center;
+      background:#101f30; border:1px solid #3c5f80; border-radius:12px; padding:30px; max-width:500px; text-align:center;
     }
-    .modal-content h3 { color: #f2c86b; margin-bottom:15px; }
+    .modal-content h3 { color:#f2c86b; margin-bottom:15px; }
     .close-btn {
-      margin-top:20px;
-      padding:8px 20px;
-      background:#f2c86b;
-      color:#07111f;
-      border:none;
-      border-radius:6px;
-      font-weight:bold;
-      cursor:pointer;
+      margin-top:20px; padding:8px 20px; background:#f2c86b; color:#07111f; border:none; border-radius:6px; font-weight:bold; cursor:pointer;
     }
 
     @media (max-width: 700px) {
-      .nav-links { display: none; }
-      .hero { padding-top: 100px; }
-      .app-grid { grid-template-columns: 1fr; }
-      .footer-inner { flex-direction: column; }
-      h2 { font-size: 31px; }
+      .nav-links { display:none; }
+      .hero { padding-top:100px; }
+      .app-grid { grid-template-columns:1fr; }
+      .footer-inner { flex-direction:column; }
+      h2 { font-size:31px; }
     }
   </style>
 </head>
@@ -259,6 +244,8 @@
       <a href="#guides">Guides</a>
       <a href="#about">About</a>
     </div>
+    <!-- ✅ 徽章语言切换按钮 -->
+    <button id="badgeLangToggle" class="badge-switch-btn">切换徽章: 中文 / EN</button>
   </nav>
 
   <div class="hero">
@@ -274,7 +261,6 @@
     <div class="section-label">Our Apps</div>
     <h2>Discover Leevo Apps</h2>
     <p class="section-description">Simple, practical & enjoyable Android apps built for daily use — ready to install from Google Play.</p>
-
     <div class="app-grid">
       <!-- Leevo Color -->
       <div class="app-card">
@@ -283,11 +269,11 @@
         <p>Creative coloring & art experience on your Android device.</p>
         <span class="learn-more" onclick="openModal('Leevo Color','Coming soon! Guides are being created.', 'https://play.google.com/store/apps/details?id=com.leevo.color')">Coming soon →</span>
         <a href="https://play.google.com/store/apps/details?id=com.leevo.color" target="_blank" rel="noopener noreferrer">
-          <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Available on Google Play" class="play-btn-img">
+          <img class="play-btn-img" alt="Available on Google Play">
         </a>
       </div>
 
-      <!-- ✅ Leevo Home Workout: Read Guide + 官方Play图片按钮 -->
+      <!-- ✅ Leevo Home Workout: Read Guide + Play徽章 -->
       <div class="app-card">
         <div class="app-icon"><img src="images/home-workout.png" alt="Leevo Home Workout – daily fitness & exercise"></div>
         <h3>Leevo Home Workout</h3>
@@ -295,7 +281,7 @@
         <span class="learn-more"><a href="articles/best-free-home-workout-apps.html">→ Read Fitness Guide</a></span>
         <br>
         <a href="https://play.google.com/store/apps/details?id=com.leevo.homeworkout" target="_blank" rel="noopener noreferrer">
-          <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Available on Google Play" class="play-btn-img">
+          <img class="play-btn-img" alt="Available on Google Play">
         </a>
       </div>
 
@@ -306,7 +292,7 @@
         <p>Simple daily English learning for students & beginners.</p>
         <span class="learn-more" onclick="openModal('Leevo Learn English','Coming soon! Study guides coming soon.', 'https://play.google.com/store/apps/details?id=com.leevo.learn.english')">Coming soon →</span>
         <a href="https://play.google.com/store/apps/details?id=com.leevo.learn.english" target="_blank" rel="noopener noreferrer">
-          <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Available on Google Play" class="play-btn-img">
+          <img class="play-btn-img" alt="Available on Google Play">
         </a>
       </div>
 
@@ -317,7 +303,7 @@
         <p>Helpful practice & revision for Singapore PSLE Mathematics.</p>
         <span class="learn-more" onclick="openModal('Leevo Learn: PSLE Math','Coming soon! Practice tips coming soon.', 'https://play.google.com/store/apps/details?id=com.leevo.learn.pslemath')">Coming soon →</span>
         <a href="https://play.google.com/store/apps/details?id=com.leevo.learn.pslemath" target="_blank" rel="noopener noreferrer">
-          <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Available on Google Play" class="play-btn-img">
+          <img class="play-btn-img" alt="Available on Google Play">
         </a>
       </div>
 
@@ -328,7 +314,7 @@
         <p>Lightweight, easy-to-use music player for Android.</p>
         <span class="learn-more" onclick="openModal('Leevo Music','Coming soon! Usage guides coming soon.', 'https://play.google.com/store/apps/details?id=com.leevomusic.app')">Coming soon →</span>
         <a href="https://play.google.com/store/apps/details?id=com.leevomusic.app" target="_blank" rel="noopener noreferrer">
-          <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Available on Google Play" class="play-btn-img">
+          <img class="play-btn-img" alt="Available on Google Play">
         </a>
       </div>
 
@@ -339,7 +325,7 @@
         <p>Calm, fun merging puzzle game for stress-free entertainment.</p>
         <span class="learn-more" onclick="openModal('Leevo Planet Merge','Coming soon! Game tips coming soon.', 'https://play.google.com/store/apps/details?id=com.leevo.mergegame')">Coming soon →</span>
         <a href="https://play.google.com/store/apps/details?id=com.leevo.mergegame" target="_blank" rel="noopener noreferrer">
-          <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Available on Google Play" class="play-btn-img">
+          <img class="play-btn-img" alt="Available on Google Play">
         </a>
       </div>
 
@@ -350,7 +336,7 @@
         <p>Sharpen your mind with challenging box-pushing puzzles.</p>
         <span class="learn-more" onclick="openModal('Leevo Push Box','Coming soon! Strategy guides coming soon.', 'https://play.google.com/store/apps/details?id=com.leevo.pushbox')">Coming soon →</span>
         <a href="https://play.google.com/store/apps/details?id=com.leevo.pushbox" target="_blank" rel="noopener noreferrer">
-          <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Available on Google Play" class="play-btn-img">
+          <img class="play-btn-img" alt="Available on Google Play">
         </a>
       </div>
 
@@ -361,7 +347,7 @@
         <p>Fast-paced survival action shooter game for Android.</p>
         <span class="learn-more" onclick="openModal('Leevo Zombie Shooter','Coming soon! Gameplay tips coming soon.', 'https://play.google.com/store/apps/details?id=com.leevo.zombieshooter')">Coming soon →</span>
         <a href="https://play.google.com/store/apps/details?id=com.leevo.zombieshooter" target="_blank" rel="noopener noreferrer">
-          <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Available on Google Play" class="play-btn-img">
+          <img class="play-btn-img" alt="Available on Google Play">
         </a>
       </div>
 
@@ -372,7 +358,7 @@
         <p>Explore, solve puzzles & enjoy retro-style platform gameplay.</p>
         <span class="learn-more" onclick="openModal('Noir\'s Adventure','Coming soon! Walkthrough tips coming soon.', 'https://play.google.com/store/apps/details?id=com.leevo.noirs_adventure')">Coming soon →</span>
         <a href="https://play.google.com/store/apps/details?id=com.leevo.noirs_adventure" target="_blank" rel="noopener noreferrer">
-          <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Available on Google Play" class="play-btn-img">
+          <img class="play-btn-img" alt="Available on Google Play">
         </a>
       </div>
     </div>
@@ -412,12 +398,43 @@
 </footer>
 
 <script>
+// 中英文徽章资源配置
+const BADGE = {
+  en: {
+    url: 'https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png',
+    alt: 'Available on Google Play'
+  },
+  zh: {
+    url: 'https://play.google.com/intl/zh_cn/badges/images/generic/zh_badge_web_generic.png',
+    alt: '在Google Play上获取'
+  }
+};
+let currentLang = 'en'; // 默认英文
+
+// 初始化加载当前语言所有徽章
+function updateAllBadges(){
+  const now = BADGE[currentLang];
+  // 更新页面所有卡片徽章
+  document.querySelectorAll('.play-btn-img').forEach(img=>{
+    img.src = now.url;
+    img.alt = now.alt;
+  });
+  // 更新弹窗内徽章（弹窗打开时会调用此逻辑）
+}
+
+// 切换按钮事件
+document.getElementById('badgeLangToggle').addEventListener('click',()=>{
+  currentLang = currentLang === 'en' ? 'zh' : 'en';
+  updateAllBadges();
+});
+
+// 弹窗逻辑（打开时同步当前语言徽章）
 function openModal(title, text, playUrl){
   document.getElementById('modalTitle').textContent=title;
   document.getElementById('modalText').textContent=text;
-  // 弹窗里动态插入官方Play图片按钮
   const btnContainer=document.getElementById('modalPlayBtn');
-  btnContainer.innerHTML=`<a href="${playUrl}" target="_blank" rel="noopener noreferrer"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Available on Google Play" class="play-btn-img"></a>`;
+  const now = BADGE[currentLang];
+  btnContainer.innerHTML=`<a href="${playUrl}" target="_blank" rel="noopener noreferrer"><img src="${now.url}" alt="${now.alt}" class="play-btn-img"></a>`;
   document.getElementById('infoModal').classList.add('show');
 }
 function closeModal(){
@@ -427,6 +444,9 @@ window.onclick=function(e){
   const modal=document.getElementById('infoModal');
   if(e.target===modal) modal.classList.remove('show');
 }
+
+// 页面加载完成初始化徽章
+document.addEventListener('DOMContentLoaded', updateAllBadges);
 </script>
 </body>
 </html>
