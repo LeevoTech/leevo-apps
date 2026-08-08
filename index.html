@@ -146,7 +146,9 @@
       color: #f2c86b;
       font-weight: 700;
       font-size: 14px;
+      cursor: pointer;
     }
+    .learn-more:hover { text-decoration: underline; }
 
     .guides { background: #07111f; }
     .guide-box {
@@ -184,6 +186,38 @@
     }
     .footer-links { display: flex; gap: 20px; }
 
+    /* 弹窗样式 */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      padding: 20px;
+    }
+    .modal.show { display: flex; }
+    .modal-content {
+      background: #101f30;
+      border: 1px solid #3c5f80;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 500px;
+      text-align: center;
+    }
+    .modal-content h3 { color: #f2c86b; margin-bottom:15px; }
+    .close-btn {
+      margin-top:20px;
+      padding:8px 20px;
+      background:#f2c86b;
+      color:#07111f;
+      border:none;
+      border-radius:6px;
+      font-weight:bold;
+      cursor:pointer;
+    }
+
     @media (max-width: 700px) {
       .nav-links { display: none; }
       .hero { padding-top: 100px; }
@@ -195,6 +229,15 @@
 </head>
 
 <body>
+<!-- 全局弹窗 -->
+<div id="infoModal" class="modal">
+  <div class="modal-content">
+    <h3 id="modalTitle"></h3>
+    <p id="modalText"></p>
+    <button class="close-btn" onclick="closeModal()">Got it</button>
+  </div>
+</div>
+
 <header>
   <nav>
     <div class="logo"><span>Leevo</span> Apps</div>
@@ -224,63 +267,63 @@
         <div class="app-icon"><img src="images/leevo-color.png" alt="Leevo Color – creative coloring & art app"></div>
         <h3>Leevo Color</h3>
         <p>Creative coloring & art experience on your Android device.</p>
-        <span class="learn-more">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Color','Coming soon! We are preparing detailed guides and app introduction. Check back or visit <a href=&quot;#guides&quot; style=&quot;color:#f2c86b&quot;>Guides & Tips</a> for published articles first.')">Coming soon →</span>
       </div>
 
       <div class="app-card">
         <div class="app-icon"><img src="images/home-workout.png" alt="Leevo Home Workout – daily fitness & exercise"></div>
         <h3>Leevo Home Workout</h3>
         <p>Easy home fitness routines, no equipment needed.</p>
-        <span class="learn-more">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Home Workout','Read our first guide: <a href=&quot;articles/best-free-home-workout-apps.html&quot; style=&quot;color:#f2c86b&quot;>Best Free Home Workout Apps — No Equipment Needed</a> for useful tips!')">Coming soon →</span>
       </div>
 
       <div class="app-card">
         <div class="app-icon"><img src="images/leevo-learn-english.png" alt="Leevo Learn English – learn & practice English easily"></div>
         <h3>Leevo Learn English</h3>
         <p>Simple daily English learning for students & beginners.</p>
-        <span class="learn-more">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Learn English','Coming soon! English learning tips & study guides are being created. Keep an eye on <a href=&quot;#guides&quot; style=&quot;color:#f2c86b&quot;>Guides & Tips</a> for new articles.')">Coming soon →</span>
       </div>
 
       <div class="app-card">
         <div class="app-icon"><img src="images/leevo-learn-psle-math.png" alt="Leevo Learn PSLE Math – Singapore primary math practice"></div>
         <h3>Leevo Learn: PSLE Math</h3>
         <p>Helpful practice & revision for Singapore PSLE Mathematics.</p>
-        <span class="learn-more">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Learn: PSLE Math','Coming soon! PSLE study strategies, practice tips will be published in <a href=&quot;#guides&quot; style=&quot;color:#f2c86b&quot;>Guides & Tips</a> soon.')">Coming soon →</span>
       </div>
 
       <div class="app-card">
         <div class="app-icon"><img src="images/leevo-music.png" alt="Leevo Music – simple offline Android music player"></div>
         <h3>Leevo Music</h3>
         <p>Lightweight, easy-to-use music player for Android.</p>
-        <span class="learn-more">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Music','Coming soon! Music player usage tips & feature guides are coming soon. Visit <a href=&quot;#guides&quot; style=&quot;color:#f2c86b&quot;>Guides & Tips</a> for updates.')">Coming soon →</span>
       </div>
 
       <div class="app-card">
         <div class="app-icon"><img src="images/leevo-planet-merge.png" alt="Leevo Planet Merge – relaxing merge puzzle game"></div>
         <h3>Leevo Planet Merge</h3>
         <p>Calm, fun merging puzzle game for stress-free entertainment.</p>
-        <span class="learn-more">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Planet Merge','Coming soon! Relaxing game tips & play guides will be shared in <a href=&quot;#guides&quot; style=&quot;color:#f2c86b&quot;>Guides & Tips</a> later.')">Coming soon →</span>
       </div>
 
       <div class="app-card">
         <div class="app-icon"><img src="images/leevo-push-box.png" alt="Leevo Push Box – classic brain puzzle game"></div>
         <h3>Leevo Push Box</h3>
         <p>Sharpen your mind with challenging box-pushing puzzles.</p>
-        <span class="learn-more">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Push Box','Coming soon! Strategy & solving guides for puzzles are coming soon. Check <a href=&quot;#guides&quot; style=&quot;color:#f2c86b&quot;>Guides & Tips</a> for new content.')">Coming soon →</span>
       </div>
 
       <div class="app-card">
         <div class="app-icon"><img src="images/leevo-zombie-shooter.png" alt="Leevo Zombie Shooter – exciting action shooting game"></div>
         <h3>Leevo Zombie Shooter</h3>
         <p>Fast-paced survival action shooter game for Android.</p>
-        <span class="learn-more">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Zombie Shooter','Coming soon! Gameplay tips & survival guides will be published in <a href=&quot;#guides&quot; style=&quot;color:#f2c86b&quot;>Guides & Tips</a> soon.')">Coming soon →</span>
       </div>
 
       <div class="app-card">
         <div class="app-icon"><img src="images/noirs-adventure.png" alt="Noir's Adventure – fun puzzle platform adventure game"></div>
         <h3>Noir's Adventure</h3>
         <p>Explore, solve puzzles & enjoy retro-style platform gameplay.</p>
-        <span class="learn-more">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Noir\'s Adventure','Coming soon! Walkthrough & fun tips will be shared in <a href=&quot;#guides&quot; style=&quot;color:#f2c86b&quot;>Guides & Tips</a> later.')">Coming soon →</span>
       </div>
     </div>
   </div>
@@ -317,5 +360,21 @@
     </div>
   </div>
 </footer>
+
+<script>
+function openModal(title,htmlText){
+  document.getElementById('modalTitle').textContent=title;
+  document.getElementById('modalText').innerHTML=htmlText;
+  document.getElementById('infoModal').classList.add('show');
+}
+function closeModal(){
+  document.getElementById('infoModal').classList.remove('show');
+}
+// 点击弹窗外部也关闭
+window.onclick=function(e){
+  const modal=document.getElementById('infoModal');
+  if(e.target===modal) modal.classList.remove('show');
+}
+</script>
 </body>
 </html>
