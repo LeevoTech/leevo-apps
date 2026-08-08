@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-lang-en="Leevo Planet Merge — Solar System Merge & Relaxing Game Guide" data-lang-zh="Leevo星球合成 — 太阳系行星合成 · 轻松治愈解压游戏指南">Leevo Planet Merge — Solar System Merge & Relaxing Game Guide</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:Arial,sans-serif; background:linear-gradient(135deg,#0d2035,#07111f); color:#fff; line-height:1.7; padding:40px 30px; max-width:900px; margin:0 auto;}
+    .back-link{display:inline-block; margin-bottom:40px; color:#f2c86b; text-decoration:none; font-size:18px;}
+    .back-link:hover{text-decoration:underline;}
+    h1{color:#f2c86b; font-size:32px; margin-bottom:30px; line-height:1.4;}
+    h2{color:#ffffff; font-size:24px; margin:30px 0 20px;}
+    p{color:#e6e6e6; font-size:18px; margin-bottom:20px;}
+    ul{color:#e6e6e6; font-size:18px; margin:20px 0 20px 30px;}
+    li{margin-bottom:10px;}
+    .lang-switch-btn{padding:6px 14px; border-radius:6px; border:none; background:#f2c86b; color:#07111f; font-weight:bold; cursor:pointer; margin-bottom:20px;}
+  </style>
+</head>
+<body>
+  <!-- 语言切换按钮，与首页共用本地存储，自动同步 -->
+  <button id="pageLangSwitch" class="lang-switch-btn">中文 / EN</button>
+
+  <!-- 返回首页双语链接，样式位置统一 -->
+  <a href="../index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回 Leevo 应用首页">← Back to Leevo Apps Home</a>
+
+  <h1 data-lang-en="Leevo Planet Merge — Grow Planets, Explore the Solar System, Relax Your Mind" data-lang-zh="Leevo星球合成 — 碰撞融合、成长行星、漫游太阳系、轻松治愈身心">Leevo Planet Merge — Grow Planets, Explore the Solar System, Relax Your Mind</h1>
+
+  <p data-lang-en="A gentle, space-themed puzzle game built for quiet little moments of rest! Inspired by our beautiful solar system: start with tiny scattered asteroids, let them collide and merge into small rocky planets, then keep combining to grow bigger, more magnificent planets step by step — no rush, no pressure, just satisfying merging visuals & peaceful space atmosphere." data-lang-zh="专为碎片片刻放松打造的静谧太空休闲游戏！以真实太阳系为灵感：从漂浮细碎小行星开始，两两碰撞融合形成小型行星，持续不断合成升级，一步步孕育更大、更壮观的星球；不赶时间、不设高压，只有流畅合成反馈与宁静浩瀚宇宙氛围。">A gentle, space-themed puzzle game built for quiet little moments of rest! Inspired by our beautiful solar system: start with tiny scattered asteroids, let them collide and merge into small rocky planets, then keep combining to grow bigger, more magnificent planets step by step — no rush, no pressure, just satisfying merging visuals & peaceful space atmosphere.</p>
+
+  <h2 data-lang-en="Gameplay & Highlights" data-lang-zh="玩法特色与体验亮点">Gameplay & Highlights</h2>
+  <ul>
+    <li data-lang-en="✅ Solar system theme: follow the growth path from tiny asteroids → terrestrial planets → larger planets close to the real solar system" data-lang-zh="✅ 太阳系主题成长：从微小小行星起步，逐步合成类地行星、巨型气态行星，贴合真实太阳系行星成长进阶">✅ Solar system theme: follow the growth path from tiny asteroids → terrestrial planets → larger planets close to the real solar system</li>
+    <li data-lang-en="✅ Simple intuitive merge rule: bring two same-level planets together to combine into one larger, higher-level planet" data-lang-zh="✅ 简单易懂合成逻辑：两颗同级星球碰撞融合，生成一颗更大、等级更高的全新星球">✅ Simple intuitive merge rule: bring two same-level planets together to combine into one larger, higher-level planet</li>
+    <li data-lang-en="✅ Low-pressure calm pace: no countdown panic, no difficult reflex demand — pick up anytime, play for 5 minutes to calm down, put down easily" data-lang-zh="✅ 低压力舒缓节奏：无紧迫倒计时、不考验手速反应，随时点开玩几分钟舒缓情绪，随时放下不牵挂">✅ Low-pressure calm pace: no countdown panic, no difficult reflex demand — pick up anytime, play for 5 minutes to calm down, put down easily</li>
+    <li data-lang-en="✅ Beautiful visual & satisfying feedback: smooth merging animation, soft cosmic colors — help ease tired mind & release daily stress" data-lang-zh="✅ 视觉舒适反馈治愈：融合动画流畅自然、星空色调柔和静谧，帮助放松紧绷神经、释放学习工作疲惫压力">✅ Beautiful visual & satisfying feedback: smooth merging animation, soft cosmic colors — help ease tired mind & release daily stress</li>
+  </ul>
+
+  <h2 data-lang-en="Perfect for short pleasant breaks" data-lang-zh="碎片闲暇时光，轻松治愈小确幸">Perfect for short pleasant breaks</h2>
+  <p data-lang-en="Between work/study, while waiting for a bus, before bed — let yourself drift into quiet space for a little while, watch planets grow slowly, breathe easier, feel lighter & happier after a quick relaxing session." data-lang-zh="学习工作间隙、候车等候时、睡前片刻，短暂沉浸宁静宇宙：静静看着星球慢慢壮大，心绪放缓、压力消散，短短几分钟找回轻松愉悦的好心情。">Between work/study, while waiting for a bus, before bed — let yourself drift into quiet space for a little while, watch planets grow slowly, breathe easier, feel lighter & happier after a quick relaxing session.</p>
+
+<script>
+// 与首页共用语言存储，一键同步切换
+let currentLang = localStorage.getItem('leevoLang') || 'en';
+
+function updateAllText(){
+  document.querySelectorAll('[data-lang-en],[data-lang-zh]').forEach(el=>{
+    const txt = el.getAttribute(`data-lang-${currentLang}`);
+    if(txt) el.innerHTML = txt;
+  });
+}
+
+document.addEventListener('DOMContentLoaded', updateAllText);
+
+document.getElementById('pageLangSwitch').addEventListener('click',()=>{
+  currentLang = currentLang === 'en' ? 'zh' : 'en';
+  localStorage.setItem('leevoLang', currentLang);
+  updateAllText();
+});
+</script>
+</body>
+</html>
