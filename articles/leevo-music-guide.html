@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-lang-en="Leevo Music – Lightweight Offline Player & Clean Listening Experience Guide" data-lang-zh="Leevo音乐播放器 – 轻量离线 · 零打扰纯净听歌体验指南">Leevo Music – Lightweight Offline Player & Clean Listening Experience Guide</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:Arial,sans-serif; background:linear-gradient(135deg,#0d2035,#07111f); color:#fff; line-height:1.7; padding:40px 30px; max-width:900px; margin:0 auto;}
+    .back-link{display:inline-block; margin-bottom:40px; color:#f2c86b; text-decoration:none; font-size:18px;}
+    .back-link:hover{text-decoration:underline;}
+    h1{color:#f2c86b; font-size:32px; margin-bottom:30px; line-height:1.4;}
+    h2{color:#ffffff; font-size:24px; margin:30px 0 20px;}
+    p{color:#e6e6e6; font-size:18px; margin-bottom:20px;}
+    ul{color:#e6e6e6; font-size:18px; margin:20px 0 20px 30px;}
+    li{margin-bottom:10px;}
+    .lang-switch-btn{padding:6px 14px; border-radius:6px; border:none; background:#f2c86b; color:#07111f; font-weight:bold; cursor:pointer; margin-bottom:20px;}
+  </style>
+</head>
+<body>
+  <!-- 语言切换按钮，与首页共用本地存储，自动同步 -->
+  <button id="pageLangSwitch" class="lang-switch-btn">中文 / EN</button>
+
+  <!-- 返回首页双语链接，样式位置统一 -->
+  <a href="../index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回 Leevo 应用首页">← Back to Leevo Apps Home</a>
+
+  <h1 data-lang-en="Leevo Music — Lightweight Offline Player, Clean & Undisturbed Listening" data-lang-zh="Leevo音乐播放器 — 轻量简洁 · 离线可用 · 告别广告打扰 · 专注音乐本身">Leevo Music — Lightweight Offline Player, Clean & Undisturbed Listening</h1>
+
+  <p data-lang-en="We built Leevo Music to bring back pure, comfortable music listening! Unlike many players flooded with constant pop-ups, interruptions and full-screen ads during playback — we keep it respectful, lightweight and focused on your music." data-lang-zh="我们打造Leevo音乐播放器，只为回归纯粹舒适的听歌体验！区别于市面上频繁弹窗、播放中途强制插入全屏广告、层层干扰的播放器，我们坚持克制设计、轻量干净、始终把音乐体验放在第一位。">We built Leevo Music to bring back pure, comfortable music listening! Unlike many players flooded with constant pop-ups, interruptions and full-screen ads during playback — we keep it respectful, lightweight and focused on your music.</p>
+
+  <h2 data-lang-en="Core Highlights & Ad Promise" data-lang-zh="核心亮点与广告承诺">Core Highlights & Ad Promise</h2>
+  <ul>
+    <li data-lang-en="✅ Fully offline playback: play saved music files stored on your phone anytime, no internet required" data-lang-zh="✅ 完整支持离线播放：直接读取手机本地音乐文件，随时听歌不用联网">✅ Fully offline playback: play saved music files stored on your phone anytime, no internet required</li>
+    <li data-lang-en="✅ Minimal ad design: ONLY one small banner ad on the home page — NO pop-ups, NO interruptions, NO full-screen ads inside player, playlists, folders or settings" data-lang-zh="✅ 极致低打扰设计：仅首页放置一处横幅广告；播放界面、歌单、文件夹管理、设置等所有功能页面，全程零弹窗、零插播、零全屏广告打断">✅ Minimal ad design: ONLY one small banner ad on the home page — NO pop-ups, NO interruptions, NO full-screen ads inside player, playlists, folders or settings</li>
+    <li data-lang-en="✅ Lightweight & smooth: takes little storage & memory, runs fast even on older phones, simple intuitive controls" data-lang-zh="✅ 轻量流畅不卡顿：占用内存存储空间极小，老旧手机也能快速启动运行，操作逻辑直观顺手">✅ Lightweight & smooth: takes little storage & memory, runs fast even on older phones, simple intuitive controls</li>
+    <li data-lang-en="✅ Practical daily features: create custom playlists, adjust equalizer, sleep timer, quick track management — all usable without disruption" data-lang-zh="✅ 实用功能齐全：自建歌单、音效均衡器、睡眠定时、歌曲快速整理，使用过程安静流畅不被打断">✅ Practical daily features: create custom playlists, adjust equalizer, sleep timer, quick track management — all usable without disruption</li>
+  </ul>
+
+  <h2 data-lang-en="Listen to music peacefully" data-lang-zh="安静沉浸，好好享受每一首音乐">Listen to music peacefully</h2>
+  <p data-lang-en="Whether you are relaxing at home, commuting, exercising or working — Leevo Music lets you immerse in melody without sudden noise or blocking windows ruining the mood. We believe music deserves focus, and we will keep the experience clean as we grow." data-lang-zh="居家放松、通勤路上、运动健身、专注工作学习时，用Leevo音乐播放器，不再被突如其来的广告弹窗打断节奏、遮挡画面、破坏心情。我们相信音乐值得被专注聆听，未来也会持续守住「低打扰、重体验」的核心原则。">Whether you are relaxing at home, commuting, exercising or working — Leevo Music lets you immerse in melody without sudden noise or blocking windows ruining the mood. We believe music deserves focus, and we will keep the experience clean as we grow.</p>
+
+<script>
+// 读取首页共用语言，自动同步切换
+let currentLang = localStorage.getItem('leevoLang') || 'en';
+
+function updateAllText(){
+  document.querySelectorAll('[data-lang-en],[data-lang-zh]').forEach(el=>{
+    const txt = el.getAttribute(`data-lang-${currentLang}`);
+    if(txt) el.innerHTML = txt;
+  });
+}
+
+document.addEventListener('DOMContentLoaded', updateAllText);
+
+document.getElementById('pageLangSwitch').addEventListener('click',()=>{
+  currentLang = currentLang === 'en' ? 'zh' : 'en';
+  localStorage.setItem('leevoLang', currentLang); // 切换保存，全站语言统一
+  updateAllText();
+});
+</script>
+</body>
+</html>
