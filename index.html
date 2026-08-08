@@ -148,7 +148,8 @@
       font-size: 14px;
       cursor: pointer;
     }
-    .learn-more:hover { text-decoration: underline; }
+    .learn-more a { color: #f2c86b; }
+    .learn-more:hover, .learn-more a:hover { text-decoration: underline; }
 
     .guides { background: #07111f; }
     .guide-box {
@@ -229,7 +230,7 @@
 </head>
 
 <body>
-<!-- 全局弹窗 -->
+<!-- 全局提示弹窗 -->
 <div id="infoModal" class="modal">
   <div class="modal-content">
     <h3 id="modalTitle"></h3>
@@ -263,25 +264,27 @@
     <p class="section-description">Simple, practical & enjoyable Android apps built for daily use.</p>
 
     <div class="app-grid">
+      <!-- 未上线文章：Coming soon + 提示弹窗 -->
       <div class="app-card">
         <div class="app-icon"><img src="images/leevo-color.png" alt="Leevo Color – creative coloring & art app"></div>
         <h3>Leevo Color</h3>
         <p>Creative coloring & art experience on your Android device.</p>
-        <span class="learn-more" onclick="openModal('Leevo Color','Coming soon! We are preparing detailed guides and app introduction. Check back or visit <a href=&quot;#guides&quot; style=&quot;color:#f2c86b&quot;>Guides & Tips</a> for published articles first.')">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Color','Coming soon! New guides are being created. Visit <a href=&quot;#guides&quot; style=&quot;color:#f2c86b&quot;>Guides & Tips</a> to read published articles first.')">Coming soon →</span>
       </div>
 
+      <!-- ✅ 已有文章：直接可点击阅读链接，去掉Coming soon、去掉弹窗 -->
       <div class="app-card">
         <div class="app-icon"><img src="images/home-workout.png" alt="Leevo Home Workout – daily fitness & exercise"></div>
         <h3>Leevo Home Workout</h3>
         <p>Easy home fitness routines, no equipment needed.</p>
-        <span class="learn-more" onclick="openModal('Leevo Home Workout','Read our first guide: <a href=&quot;articles/best-free-home-workout-apps.html&quot; style=&quot;color:#f2c86b&quot;>Best Free Home Workout Apps — No Equipment Needed</a> for useful tips!')">Coming soon →</span>
+        <span class="learn-more"><a href="articles/best-free-home-workout-apps.html">→ Read Fitness Guide</a></span>
       </div>
 
       <div class="app-card">
         <div class="app-icon"><img src="images/leevo-learn-english.png" alt="Leevo Learn English – learn & practice English easily"></div>
         <h3>Leevo Learn English</h3>
         <p>Simple daily English learning for students & beginners.</p>
-        <span class="learn-more" onclick="openModal('Leevo Learn English','Coming soon! English learning tips & study guides are being created. Keep an eye on <a href=&quot;#guides&quot; style=&quot;color:#f2c86b&quot;>Guides & Tips</a> for new articles.')">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Learn English','Coming soon! English learning tips & study guides are coming soon. Keep an eye on <a href=&quot;#guides&quot; style=&quot;color:#f2c86b&quot;>Guides & Tips</a> for new articles.')">Coming soon →</span>
       </div>
 
       <div class="app-card">
@@ -370,7 +373,7 @@ function openModal(title,htmlText){
 function closeModal(){
   document.getElementById('infoModal').classList.remove('show');
 }
-// 点击弹窗外部也关闭
+// 点击弹窗外部背景也能关闭弹窗
 window.onclick=function(e){
   const modal=document.getElementById('infoModal');
   if(e.target===modal) modal.classList.remove('show');
