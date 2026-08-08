@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-lang-en="Leevo Learn: PSLE Math — Singapore Primary 6 Math Daily Revision Guide" data-lang-zh="Leevo新加坡小六数学 — 每日练习 · 题型熟悉 · 备考复习指南">Leevo Learn: PSLE Math — Singapore Primary 6 Math Daily Revision Guide</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:Arial,sans-serif; background:linear-gradient(135deg,#0d2035,#07111f); color:#fff; line-height:1.7; padding:40px 30px; max-width:900px; margin:0 auto;}
+    .back-link{display:inline-block; margin-bottom:40px; color:#f2c86b; text-decoration:none; font-size:18px;}
+    .back-link:hover{text-decoration:underline;}
+    h1{color:#f2c86b; font-size:32px; margin-bottom:30px; line-height:1.4;}
+    h2{color:#ffffff; font-size:24px; margin:30px 0 20px;}
+    p{color:#e6e6e6; font-size:18px; margin-bottom:20px;}
+    ul{color:#e6e6e6; font-size:18px; margin:20px 0 20px 30px;}
+    li{margin-bottom:10px;}
+    .lang-switch-btn{padding:6px 14px; border-radius:6px; border:none; background:#f2c86b; color:#07111f; font-weight:bold; cursor:pointer; margin-bottom:20px;}
+  </style>
+</head>
+<body>
+  <!-- 语言切换按钮，与首页共用本地存储，自动同步 -->
+  <button id="pageLangSwitch" class="lang-switch-btn">中文 / EN</button>
+
+  <!-- 返回首页双语链接，样式位置统一 -->
+  <a href="../index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回 Leevo 应用首页">← Back to Leevo Apps Home</a>
+
+  <h1 data-lang-en="Leevo Learn: PSLE Math — Daily Practice & Exam Familiarity Guide" data-lang-zh="Leevo新加坡小六数学 — 熟悉题型 · 每日练习 · 错题巩固 · 全力备考">Leevo Learn: PSLE Math — Daily Practice & Exam Familiarity Guide</h1>
+
+  <p data-lang-en="Designed specially for Singapore Primary 6 students! This app focuses on helping learners get fully familiar with standard PSLE Mathematics question types, core knowledge points, common problem-solving methods and exam answering habits — build solid foundation through regular daily learning instead of last-minute cramming." data-lang-zh="专为新加坡小六学生打造！核心目标是帮助学生系统熟悉小六会考数学标准题型、核心知识点、常用解题思路与答题规范，不靠临时突击，通过每日坚持、规律练习筑牢数学基础，稳步提升解题能力。">Designed specially for Singapore Primary 6 students! This app focuses on helping learners get fully familiar with standard PSLE Mathematics question types, core knowledge points, common problem-solving methods and exam answering habits — build solid foundation through regular daily learning instead of last-minute cramming.</p>
+
+  <h2 data-lang-en="Core Learning & Revision Advantages" data-lang-zh="核心复习优势">Core Learning & Revision Advantages</h2>
+  <ul>
+    <li data-lang-en="✅ Get familiar with all PSLE Math question categories: Numbers, Algebra, Geometry, Measurement, Statistics & Word Problems" data-lang-zh="✅ 全面熟悉会考数学题型：整数分数运算、代数、几何图形、度量衡、统计图表、应用题等必考模块">✅ Get familiar with all PSLE Math question categories: Numbers, Algebra, Geometry, Measurement, Statistics & Word Problems</li>
+    <li data-lang-en="✅ Daily small-volume practice — easy to stick to, avoid burnout, keep math thinking active every day" data-lang-zh="✅ 每日少量精题练习，轻松长期坚持，不疲劳刷题，保持数学思维活跃不间断">✅ Daily small-volume practice — easy to stick to, avoid burnout, keep math thinking active every day</li>
+    <li data-lang-en="✅ Mistake review & consolidation — clearly see weak areas, correct misconceptions, avoid repeating errors" data-lang-zh="✅ 错题复盘巩固，精准定位薄弱知识点、纠正思路误区、杜绝同类错误反复失分">✅ Mistake review & consolidation — clearly see weak areas, correct misconceptions, avoid repeating errors</li>
+    <li data-lang-en="✅ Build exam confidence gradually — know what to expect, master answering pace & skills before the real PSLE" data-lang-zh="✅ 逐步建立考试信心，提前适应出题风格、练稳答题节奏、掌握得分技巧，从容应对正式小六会考">✅ Build exam confidence gradually — know what to expect, master answering pace & skills before the real PSLE</li>
+  </ul>
+
+  <h2 data-lang-en="Steady progress day by day" data-lang-zh="日积月累，稳步提分">Steady progress day by day</h2>
+  <p data-lang-en="Whether it is basic concept strengthening, skillful calculation speed-up or difficult problem thinking training — consistent daily practice helps Primary 6 students turn scattered knowledge into a complete system, improve problem-solving speed & accuracy, and achieve excellent results in Singapore PSLE Mathematics." data-lang-zh="从夯实基础概念、提升计算速度，到拓展难题解题思路，每日坚持练习能帮小六学生把零散知识点串联成完整体系，解题更快、正确率更高，一步一个脚印冲刺理想小六会考数学成绩。">Whether it is basic concept strengthening, skillful calculation speed-up or difficult problem thinking training — consistent daily practice helps Primary 6 students turn scattered knowledge into a complete system, improve problem-solving speed & accuracy, and achieve excellent results in Singapore PSLE Mathematics.</p>
+
+<script>
+// 读取首页共用语言，自动同步
+let currentLang = localStorage.getItem('leevoLang') || 'en';
+
+function updateAllText(){
+  document.querySelectorAll('[data-lang-en],[data-lang-zh]').forEach(el=>{
+    const txt = el.getAttribute(`data-lang-${currentLang}`);
+    if(txt) el.innerHTML = txt;
+  });
+}
+
+document.addEventListener('DOMContentLoaded', updateAllText);
+
+document.getElementById('pageLangSwitch').addEventListener('click',()=>{
+  currentLang = currentLang === 'en' ? 'zh' : 'en';
+  localStorage.setItem('leevoLang', currentLang); // 切换保存，全站语言统一
+  updateAllText();
+});
+</script>
+</body>
+</html>
