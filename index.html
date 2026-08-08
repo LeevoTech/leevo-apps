@@ -3,175 +3,553 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-lang-en="Leevo Apps | Useful Android Apps & Daily Fitness Tools" data-lang-zh="Leevo应用 | 实用安卓应用与居家健身工具">Leevo Apps | Useful Android Apps & Daily Fitness Tools</title>
-  <meta name="description" data-lang-en="Discover Leevo Apps — no-equipment home workout & useful daily apps, simple, smooth, available on Google Play." data-lang-zh="发现Leevo应用——无需器械居家健身+各类实用日常应用，简洁流畅，可在Google Play获取">
+
+  <title data-lang-en="Leevo Apps | Useful Android Apps & Games for Daily Life" data-lang-zh="Leevo应用 | 实用安卓应用与游戏">Leevo Apps | Useful Android Apps & Games for Daily Life</title>
+  <meta name="description" data-lang-en="Discover Leevo Apps — practical Android apps for fitness, learning, music, and fun puzzle games. Simple, high-quality mobile tools for everyone." data-lang-zh="发现Leevo应用——健身、学习、音乐、趣味拼图类实用安卓软件，简洁优质，服务日常使用">
+  <meta name="keywords" content="Leevo Apps, Android apps, home workout app, learn English app, PSLE Math, music player, puzzle games, free Android games, Google Play">
+  <meta name="robots" content="index, follow">
+
   <style>
-    * {box-sizing:border-box;margin:0;padding:0;}
-    html {scroll-behavior:smooth;}
-    body {font-family:Arial, Helvetica, sans-serif; background:linear-gradient(135deg,#0d2035,#07111f); color:#fff; line-height:1.6;}
-    a {text-decoration:none; color:inherit;}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #07111f;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
 
-    header {min-height:90vh; padding:60px 25px; text-align:center;}
-    .logo {font-size:26px; font-weight:bold; margin-bottom:40px;}
-    .logo span {color:#f2c86b;}
-    .lang-switch-btn {padding:6px 14px; border-radius:6px; border:none; background:#f2c86b; color:#07111f; font-weight:bold; cursor:pointer; margin-bottom:40px;}
-    h1 {font-size:clamp(36px,6vw,60px); margin-bottom:20px;}
-    h1 span {color:#f2c86b;}
-    .intro-text {font-size:19px; color:#d0d8e0; max-width:750px; margin:0 auto 50px;}
+    header {
+      min-height: 92vh;
+      background:
+        radial-gradient(circle at top right, #163d67 0, transparent 35%),
+        linear-gradient(135deg, #07111f, #0d2035);
+    }
+    nav {
+      max-width: 1150px;
+      margin: auto;
+      padding: 24px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap:15px;
+    }
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+    .logo span { color: #f2c86b; }
+    .nav-links {
+      display: flex; gap: 28px; color: #c8d3df; font-size: 15px;
+    }
+    .nav-links a:hover { color: #ffffff; }
 
-    .apps-section {padding:40px 25px; max-width:1100px; margin:0 auto;}
-    .apps-grid {display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
+    .lang-switch-btn {
+      padding: 6px 14px;
+      border-radius: 6px;
+      border: none;
+      background: #f2c86b;
+      color: #07111f;
+      font-weight: bold;
+      cursor: pointer;
+      transition:0.2s;
+    }
+    .lang-switch-btn:hover{ transform:scale(1.05); }
 
-    /* ✅ 完全复刻Home Workout卡片样式 */
-    .app-card {background:rgba(255,255,255,0.05); border-radius:16px; padding:32px 28px; border:1px solid rgba(255,255,255,0.1); transition:transform 0.25s ease;}
-    .app-card:hover {transform:translateY(-5px); border-color:rgba(242,200,107,0.4);}
-    .app-icon {width:60px; height:60px; margin-bottom:20px;}
-    .app-icon img {width:100%; height:100%; object-fit:contain;}
-    .app-card h3 {font-size:26px; margin-bottom:12px; font-weight:bold;}
-    .app-card p {font-size:18px; color:#e0e6ed; margin-bottom:18px;}
-    /* 金色指南链接 */
-    .guide-link {color:#f2c86b; font-size:18px; font-weight:500; display:inline-block; margin-bottom:16px;}
-    .guide-link:hover {text-decoration:underline;}
-    /* 统一英文Play徽章 */
-    .play-badge {height:42px; width:auto; display:block;}
+    .hero {
+      max-width: 1000px;
+      margin: auto;
+      padding: 130px 25px 100px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      padding: 8px 16px;
+      border: 1px solid #294969;
+      border-radius: 30px;
+      color: #f2c86b;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+    h1 {
+      font-size: clamp(42px, 7vw, 75px);
+      line-height: 1.08;
+      margin-bottom: 25px;
+    }
+    h1 span { color: #f2c86b; }
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto 35px;
+      color: #b7c4d2;
+      font-size: 19px;
+    }
+    .button {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 9px;
+      background: #f2c86b;
+      color: #07111f;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+    .button:hover { transform: translateY(-2px); }
 
-    footer {padding:30px 25px; text-align:center; color:#999; font-size:15px; border-top:1px solid rgba(255,255,255,0.1); margin-top:50px;}
+    section { padding: 90px 25px; }
+    .container { max-width: 1150px; margin: auto; }
+    .section-label {
+      color: #f2c86b;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+    h2 { font-size: 38px; margin-bottom: 15px; }
+    .section-description {
+      color: #aebdca;
+      max-width: 650px;
+      margin-bottom: 45px;
+    }
 
-    @media(max-width:720px){
-      .apps-grid {grid-template-columns:1fr;}
+    .apps { background: #0a1726; }
+    .app-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+    .app-card {
+      background: #101f30;
+      border: 1px solid #1c344c;
+      border-radius: 16px;
+      padding: 30px;
+      transition: 0.2s;
+    }
+    .app-card:hover {
+      transform: translateY(-4px);
+      border-color: #3c5f80;
+    }
+    .app-icon {
+      width: 55px;
+      height: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #172c42;
+      margin-bottom: 20px;
+    }
+    .app-icon img { width: 100%; height: 100%; object-fit: cover; }
+    .app-card h3 { font-size: 23px; margin-bottom: 10px; }
+    .app-card p { color: #9fb0c0; margin-bottom:12px; }
+    .learn-more {
+      color: #f2c86b;
+      font-weight: 700;
+      font-size:14px;
+      cursor: pointer;
+      display: inline-block;
+      margin-bottom:12px;
+    }
+    .learn-more a { color: #f2c86b; }
+    .learn-more:hover, .learn-more a:hover { text-decoration: underline; }
+
+    /* Play徽章：全程固定全球英文官方版本，稳定加载 */
+    .play-btn-img {
+      height: 40px;
+      width: auto;
+      display: inline-block;
+      transition: transform 0.2s;
+      vertical-align: middle;
+    }
+    .play-btn-img:hover { transform: scale(1.05); }
+
+    .guides { background: #07111f; }
+    .guide-box {
+      background: linear-gradient(135deg, #10253a, #0d1c2c);
+      border: 1px solid #203b55;
+      padding: 45px;
+      border-radius: 18px;
+    }
+    .guide-box p { color: #aebdca; max-width:700px; margin-bottom:25px; }
+    .guide-box ul { margin:20px 0 20px 20px; color:#e2e8f0; }
+    .guide-box li { margin-bottom:10px; }
+    .about { background: #0a1726; }
+
+    footer {
+      padding: 35px 25px;
+      border-top: 1px solid #182d42;
+      background: #07111f;
+      color: #8294a5;
+    }
+    .footer-inner {
+      max-width:1150px; margin:auto; display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;
+    }
+    .footer-links { display:flex; gap:20px; }
+
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      padding:20px;
+    }
+    .modal.show { display:flex; }
+    .modal-content {
+      background:#101f30; border:1px solid #3c5f80; border-radius:12px; padding:30px; max-width:500px; text-align:center;
+    }
+    .modal-content h3 { color:#f2c86b; margin-bottom:15px; }
+    .close-btn {
+      margin-top:20px; padding:8px 20px; background:#f2c86b; color:#07111f; border:none; border-radius:6px; font-weight:bold; cursor:pointer;
+    }
+
+    @media (max-width: 700px) {
+      .nav-links { display:none; }
+      .hero { padding-top:100px; }
+      .app-grid { grid-template-columns:1fr; }
+      .footer-inner { flex-direction:column; }
+      h2 { font-size:31px; }
     }
   </style>
 </head>
+
 <body>
+<!-- 全局弹窗 -->
+<div id="infoModal" class="modal">
+  <div class="modal-content">
+    <h3 id="modalTitle"></h3>
+    <p id="modalText"></p>
+    <div id="modalPlayBtn" style="margin:15px 0;"></div>
+    <button class="close-btn" onclick="closeModal()" data-lang-en="Got it" data-lang-zh="知道了">Got it</button>
+  </div>
+</div>
 
 <header>
-  <div class="logo"><span>Leevo</span> Apps</div>
-  <button id="langSwitch" class="lang-switch-btn">中文 / EN</button>
+  <nav>
+    <div class="logo"><span>Leevo</span> Apps</div>
+    <div class="nav-links">
+      <a href="#apps" data-lang-en="Our Apps" data-lang-zh="我们的应用">Our Apps</a>
+      <a href="#guides" data-lang-en="Guides" data-lang-zh="使用指南">Guides</a>
+      <a href="#about" data-lang-en="About" data-lang-zh="关于我们">About</a>
+    </div>
+    <button id="langSwitch" class="lang-switch-btn">中文 / EN</button>
+  </nav>
 
-  <h1 data-lang-en="Apps built for <span>everyday life</span>" data-lang-zh="为<span>日常便捷生活</span>打造的应用">Apps built for <span>everyday life</span></h1>
-  <p class="intro-text" data-lang-en="Simple, practical apps — home fitness & daily tools, ready to download on Google Play." data-lang-zh="简洁实用应用——居家健身与日常工具，均可在Google Play下载安装">Simple, practical apps — home fitness & daily tools, ready to download on Google Play.</p>
+  <div class="hero">
+    <div class="hero-badge" data-lang-en="Independent Android App Developer" data-lang-zh="独立安卓应用开发者">Independent Android App Developer</div>
+    <h1 data-lang-en="Apps made to make<br><span>everyday life better.</span>" data-lang-zh="用心打造应用<br><span>让日常更便捷美好</span>">Apps made to make<br><span>everyday life better.</span></h1>
+    <p data-lang-en="Useful fitness tools, learning apps, music players & fun puzzle games — get them on Google Play!" data-lang-zh="健身工具、学习应用、音乐播放器与趣味益智游戏 — 均可在Google Play获取！">Useful fitness tools, learning apps, music players & fun puzzle games — get them on Google Play!</p>
+    <a class="button" href="#apps" data-lang-en="Explore Our Apps" data-lang-zh="浏览全部应用">Explore Our Apps</a>
+  </div>
 </header>
 
-<section class="apps-section">
-  <div class="apps-grid">
+<section class="apps" id="apps">
+  <div class="container">
+    <div class="section-label" data-lang-en="Our Apps" data-lang-zh="我们的应用">Our Apps</div>
+    <h2 data-lang-en="Discover Leevo Apps" data-lang-zh="发现Leevo应用">Discover Leevo Apps</h2>
+    <p class="section-description" data-lang-en="Simple, practical & enjoyable Android apps built for daily use — ready to install from Google Play." data-lang-zh="简洁实用、体验流畅的安卓应用，专为日常使用打造，可直接从Google Play安装使用。">Simple, practical & enjoyable Android apps built for daily use — ready to install from Google Play.</p>
 
-    <!-- ✅ 原版参考样板：Leevo Home Workout（风格基准不变） -->
-    <div class="app-card">
-      <div class="app-icon"><img src="images/home-workout.png" alt="Leevo Home Workout"></div>
-      <h3 data-lang-en="Leevo Home Workout" data-lang-zh="Leevo 居家健身">Leevo Home Workout</h3>
-      <p data-lang-en="Easy home fitness routines, no equipment needed." data-lang-zh="无需器械，轻松完成居家健身训练">Easy home fitness routines, no equipment needed.</p>
-      <a href="articles/home-workout-guide.html" class="guide-link" data-lang-en="→ Read Fitness Guide" data-lang-zh="→ 阅读健身指南">→ Read Fitness Guide</a>
-      <a href="https://play.google.com/store/apps/details?id=com.leevo.homeworkout" target="_blank" rel="noopener noreferrer">
-        <img class="play-badge" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Available on Google Play">
-      </a>
+    <div class="app-grid">
+      <!-- ========== 原有全部App完整保留 ========== -->
+      <!-- Leevo Color -->
+      <div class="app-card">
+        <div class="app-icon"><img src="images/leevo-color.png" alt="Leevo Color – creative coloring & art app"></div>
+        <h3 data-lang-en="Leevo Color" data-lang-zh="Leevo 涂色绘画">Leevo Color</h3>
+        <p data-lang-en="Creative coloring & art experience on your Android device." data-lang-zh="在手机上享受创意涂色、自由绘画创作">Creative coloring & art experience on your Android device.</p>
+        <span class="learn-more" onclick="openModal('Leevo Color','Coming soon! Guides are being created.','Leevo Color','即将上线！配套指南正在整理制作中。', 'https://play.google.com/store/apps/details?id=com.leevo.color')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.color" target="_blank" rel="noopener noreferrer">
+          <img class="play-btn-img" alt="Available on Google Play">
+        </a>
+      </div>
+
+      <!-- Leevo Home Workout -->
+      <div class="app-card">
+        <div class="app-icon"><img src="images/home-workout.png" alt="Leevo Home Workout – daily fitness & exercise"></div>
+        <h3 data-lang-en="Leevo Home Workout" data-lang-zh="Leevo 居家健身">Leevo Home Workout</h3>
+        <p data-lang-en="Easy home fitness routines, no equipment needed." data-lang-zh="无需器械，轻松完成居家健身训练">Easy home fitness routines, no equipment needed.</p>
+        <span class="learn-more"><a href="articles/best-free-home-workout-apps.html" data-lang-en="→ Read Fitness Guide" data-lang-zh="→ 阅读健身指南">→ Read Fitness Guide</a></span>
+        <br>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.homeworkout" target="_blank" rel="noopener noreferrer">
+          <img class="play-btn-img" alt="Available on Google Play">
+        </a>
+      </div>
+
+      <!-- Leevo Learn English -->
+      <div class="app-card">
+        <div class="app-icon"><img src="images/leevo-learn-english.png" alt="Leevo Learn English – learn & practice English easily"></div>
+        <h3 data-lang-en="Leevo Learn English" data-lang-zh="Leevo 英语学习">Leevo Learn English</h3>
+        <p data-lang-en="Simple daily English learning for students & beginners." data-lang-zh="适合学生与入门者，轻松坚持日常学英语">Simple daily English learning for students & beginners.</p>
+        <span class="learn-more" onclick="openModal('Leevo Learn English','Coming soon! Study guides coming soon.','Leevo Learn English','即将上线！学习指南正在准备。', 'https://play.google.com/store/apps/details?id=com.leevo.learn.english')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.learn.english" target="_blank" rel="noopener noreferrer">
+          <img class="play-btn-img" alt="Available on Google Play">
+        </a>
+      </div>
+
+      <!-- Leevo Learn: PSLE Math -->
+      <div class="app-card">
+        <div class="app-icon"><img src="images/leevo-learn-psle-math.png" alt="Leevo Learn PSLE Math – Singapore primary math practice"></div>
+        <h3 data-lang-en="Leevo Learn: PSLE Math" data-lang-zh="Leevo 新加坡小六数学">Leevo Learn: PSLE Math</h3>
+        <p data-lang-en="Helpful practice & revision for Singapore PSLE Mathematics." data-lang-zh="配套练习、错题巩固，助力新加坡小六会考数学备考">Helpful practice & revision for Singapore PSLE Mathematics.</p>
+        <span class="learn-more" onclick="openModal('Leevo Learn: PSLE Math','Coming soon! Practice tips coming soon.','Leevo Learn: PSLE Math','即将上线！练习技巧正在整理。', 'https://play.google.com/store/apps/details?id=com.leevo.learn.pslemath')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.learn.pslemath" target="_blank" rel="noopener noreferrer">
+          <img class="play-btn-img" alt="Available on Google Play">
+        </a>
+      </div>
+
+      <!-- Leevo Music -->
+      <div class="app-card">
+        <div class="app-icon"><img src="images/leevo-music.png" alt="Leevo Music – simple offline Android music player"></div>
+        <h3 data-lang-en="Leevo Music" data-lang-zh="Leevo 音乐播放器">Leevo Music</h3>
+        <p data-lang-en="Lightweight, easy-to-use music player for Android." data-lang-zh="轻量简洁、操作顺手的离线音乐播放器">Lightweight, easy-to-use music player for Android.</p>
+        <span class="learn-more" onclick="openModal('Leevo Music','Coming soon! Usage guides coming soon.','Leevo Music','即将上线！使用教程正在编写。', 'https://play.google.com/store/apps/details?id=com.leevomusic.app')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevomusic.app" target="_blank" rel="noopener noreferrer">
+          <img class="play-btn-img" alt="Available on Google Play">
+        </a>
+      </div>
+
+      <!-- Leevo Planet Merge -->
+      <div class="app-card">
+        <div class="app-icon"><img src="images/leevo-planet-merge.png" alt="Leevo Planet Merge – relaxing merge puzzle game"></div>
+        <h3 data-lang-en="Leevo Planet Merge" data-lang-zh="Leevo 星球合成">Leevo Planet Merge</h3>
+        <p data-lang-en="Calm, fun merging puzzle game for stress-free entertainment." data-lang-zh="轻松合成星球，休闲解压、好玩不费脑">Calm, fun merging puzzle game for stress-free entertainment.</p>
+        <span class="learn-more" onclick="openModal('Leevo Planet Merge','Coming soon! Game tips coming soon.','Leevo Planet Merge','即将上线！游戏技巧正在总结。', 'https://play.google.com/store/apps/details?id=com.leevo.mergegame')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.mergegame" target="_blank" rel="noopener noreferrer">
+          <img class="play-btn-img" alt="Available on Google Play">
+        </a>
+      </div>
+
+      <!-- Leevo Push Box -->
+      <div class="app-card">
+        <div class="app-icon"><img src="images/leevo-push-box.png" alt="Leevo Push Box – classic brain puzzle game"></div>
+        <h3 data-lang-en="Leevo Push Box" data-lang-zh="Leevo 推箱子">Leevo Push Box</h3>
+        <p data-lang-en="Sharpen your mind with challenging box-pushing puzzles." data-lang-zh="经典益智推箱子，开动脑筋、锻炼逻辑思维">Sharpen your mind with challenging box-pushing puzzles.</p>
+        <span class="learn-more" onclick="openModal('Leevo Push Box','Coming soon! Strategy guides coming soon.','Leevo Push Box','即将上线！通关思路正在整理。', 'https://play.google.com/store/apps/details?id=com.leevo.pushbox')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.pushbox" target="_blank" rel="noopener noreferrer">
+          <img class="play-btn-img" alt="Available on Google Play">
+        </a>
+      </div>
+
+      <!-- Leevo Zombie Shooter -->
+      <div class="app-card">
+        <div class="app-icon"><img src="images/leevo-zombie-shooter.png" alt="Leevo Zombie Shooter – exciting action shooting game"></div>
+        <h3 data-lang-en="Leevo Zombie Shooter" data-lang-zh="Leevo 僵尸射击">Leevo Zombie Shooter</h3>
+        <p data-lang-en="Fast-paced survival action shooter game for Android." data-lang-zh="紧张刺激生存射击，爽快闯关解压">Fast-paced survival action shooter game for Android.</p>
+        <span class="learn-more" onclick="openModal('Leevo Zombie Shooter','Coming soon! Gameplay tips coming soon.','Leevo Zombie Shooter','即将上线！玩法攻略正在准备。', 'https://play.google.com/store/apps/details?id=com.leevo.zombieshooter')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.zombieshooter" target="_blank" rel="noopener noreferrer">
+          <img class="play-btn-img" alt="Available on Google Play">
+        </a>
+      </div>
+
+      <!-- Noir's Adventure -->
+      <div class="app-card">
+        <div class="app-icon"><img src="images/noirs-adventure.png" alt="Noir's Adventure – fun puzzle platform adventure game"></div>
+        <h3 data-lang-en="Noir's Adventure" data-lang-zh="诺尔大冒险">Noir's Adventure</h3>
+        <p data-lang-en="Explore, solve puzzles & enjoy retro-style platform gameplay." data-lang-zh="复古横版闯关，探索解谜、轻松有趣">Explore, solve puzzles & enjoy retro-style platform gameplay.</p>
+        <span class="learn-more" onclick="openModal('Noir\'s Adventure','Coming soon! Walkthrough tips coming soon.','Noir\'s Adventure','即将上线！通关攻略正在撰写。', 'https://play.google.com/store/apps/details?id=com.leevo.noirs_adventure')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.noirs_adventure" target="_blank" rel="noopener noreferrer">
+          <img class="play-btn-img" alt="Available on Google Play">
+        </a>
+      </div>
+
+      <!-- ========== 新增8个标准占位App卡片（直接填空即可） ========== -->
+      <!-- New App 1 -->
+      <div class="app-card">
+        <div class="app-icon"><img src="images/new-app-01.png" alt="New App 1 – function description"></div>
+        <h3 data-lang-en="New App 1 English Name" data-lang-zh="新应用1 中文名称">New App 1 English Name</h3>
+        <p data-lang-en="Brief English description: core function, who it serves." data-lang-zh="简短中文介绍：核心用途、特色优势、适用人群。">Brief English description: core function, who it serves.</p>
+        <span class="learn-more" onclick="openModal('New App 1 English Name','Coming soon! Guides & tips in preparation.','新应用1 中文名称','即将上线！配套使用指南正在整理中。', 'https://play.google.com/store/apps/details?id=com.leevo.newapp01')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.newapp01" target="_blank" rel="noopener noreferrer">
+          <img class="play-btn-img" alt="Available on Google Play">
+        </a>
+      </div>
+
+      <!-- New App 2 -->
+      <div class="app-card">
+        <div class="app-icon"><img src="images/new-app-02.png" alt="New App 2 – function description"></div>
+        <h3 data-lang-en="New App 2 English Name" data-lang-zh="新应用2 中文名称">New App 2 English Name</h3>
+        <p data-lang-en="Brief English description: core function, who it serves." data-lang-zh="简短中文介绍：核心用途、特色优势、适用人群。">Brief English description: core function, who it serves.</p>
+        <span class="learn-more" onclick="openModal('New App 2 English Name','Coming soon! Guides & tips in preparation.','新应用2 中文名称','即将上线！配套使用指南正在整理中。', 'https://play.google.com/store/apps/details?id=com.leevo.newapp02')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.newapp02" target="_blank" rel="noopener noreferrer">
+          <img class="play-btn-img" alt="Available on Google Play">
+        </a>
+      </div>
+
+      <!-- New App 3 -->
+      <div class="app-card">
+        <div class="app-icon"><img src="images/new-app-03.png" alt="New App 3 – function description"></div>
+        <h3 data-lang-en="New App 3 English Name" data-lang-zh="新应用3 中文名称">New App 3 English Name</h3>
+        <p data-lang-en="Brief English description: core function, who it serves." data-lang-zh="简短中文介绍：核心用途、特色优势、适用人群。">Brief English description: core function, who it serves.</p>
+        <span class="learn-more" onclick="openModal('New App 3 English Name','Coming soon! Guides & tips in preparation.','新应用3 中文名称','即将上线！配套使用指南正在整理中。', 'https://play.google.com/store/apps/details?id=com.leevo.newapp03')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.newapp03" target="_blank" rel="noopener noreferrer">
+          <img class="play-btn-img" alt="Available on Google Play">
+        </a>
+      </div>
+
+      <!-- New App 4 -->
+      <div class="app-card">
+        <div class="app-icon"><img src="images/new-app-04.png" alt="New App 4 – function description"></div>
+        <h3 data-lang-en="New App 4 English Name" data-lang-zh="新应用4 中文名称">New App 4 English Name</h3>
+        <p data-lang-en="Brief English description: core function, who it serves." data-lang-zh="简短中文介绍：核心用途、特色优势、适用人群。">Brief English description: core function, who it serves.</p>
+        <span class="learn-more" onclick="openModal('New App 4 English Name','Coming soon! Guides & tips in preparation.','新应用4 中文名称','即将上线！配套使用指南正在整理中。', 'https://play.google.com/store/apps/details?id=com.leevo.newapp04')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.newapp04" target="_blank" rel="noopener noreferrer">
+          <img class="play-btn-img" alt="Available on Google Play">
+        </a>
+      </div>
+
+      <!-- New App 5 -->
+      <div class="app-card">
+        <div class="app-icon"><img src="images/new-app-05.png" alt="New App 5 – function description"></div>
+        <h3 data-lang-en="New App 5 English Name" data-lang-zh="新应用5 中文名称">New App 5 English Name</h3>
+        <p data-lang-en="Brief English description: core function, who it serves." data-lang-zh="简短中文介绍：核心用途、特色优势、适用人群。">Brief English description: core function, who it serves.</p>
+        <span class="learn-more" onclick="openModal('New App 5 English Name','Coming soon! Guides & tips in preparation.','新应用5 中文名称','即将上线！配套使用指南正在整理中。', 'https://play.google.com/store/apps/details?id=com.leevo.newapp05')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.newapp05" target="_blank" rel="noopener noreferrer">
+          <img class="play-btn-img" alt="Available on Google Play">
+        </a>
+      </div>
+
+      <!-- New App 6 -->
+      <div class="app-card">
+        <div class="app-icon"><img src="images/new-app-06.png" alt="New App 6 – function description"></div>
+        <h3 data-lang-en="New App 6 English Name" data-lang-zh="新应用6 中文名称">New App 6 English Name</h3>
+        <p data-lang-en="Brief English description: core function, who it serves." data-lang-zh="简短中文介绍：核心用途、特色优势、适用人群。">Brief English description: core function, who it serves.</p>
+        <span class="learn-more" onclick="openModal('New App 6 English Name','Coming soon! Guides & tips in preparation.','新应用6 中文名称','即将上线！配套使用指南正在整理中。', 'https://play.google.com/store/apps/details?id=com.leevo.newapp06')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.newapp06" target="_blank" rel="noopener noreferrer">
+          <img class="play-btn-img" alt="Available on Google Play">
+        </a>
+      </div>
+
+      <!-- New App 7 -->
+      <div class="app-card">
+        <div class="app-icon"><img src="images/new-app-07.png" alt="New App 7 – function description"></div>
+        <h3 data-lang-en="New App 7 English Name" data-lang-zh="新应用7 中文名称">New App 7 English Name</h3>
+        <p data-lang-en="Brief English description: core function, who it serves." data-lang-zh="简短中文介绍：核心用途、特色优势、适用人群。">Brief English description: core function, who it serves.</p>
+        <span class="learn-more" onclick="openModal('New App 7 English Name','Coming soon! Guides & tips in preparation.','新应用7 中文名称','即将上线！配套使用指南正在整理中。', 'https://play.google.com/store/apps/details?id=com.leevo.newapp07')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.newapp07" target="_blank" rel="noopener noreferrer">
+          <img class="play-btn-img" alt="Available on Google Play">
+        </a>
+      </div>
+
+      <!-- New App 8 -->
+      <div class="app-card">
+        <div class="app-icon"><img src="images/new-app-08.png" alt="New App 8 – function description"></div>
+        <h3 data-lang-en="New App 8 English Name" data-lang-zh="新应用8 中文名称">New App 8 English Name</h3>
+        <p data-lang-en="Brief English description: core function, who it serves." data-lang-zh="简短中文介绍：核心用途、特色优势、适用人群。">Brief English description: core function, who it serves.</p>
+        <span class="learn-more" onclick="openModal('New App 8 English Name','Coming soon! Guides & tips in preparation.','新应用8 中文名称','即将上线！配套使用指南正在整理中。', 'https://play.google.com/store/apps/details?id=com.leevo.newapp08')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <a href="https://play.google.com/store/apps/details?id=com.leevo.newapp08" target="_blank" rel="noopener noreferrer">
+          <img class="play-btn-img" alt="Available on Google Play">
+        </a>
+      </div>
+
     </div>
+  </div>
+</section>
 
-    <!-- ✅ 新增App 1 -->
-    <div class="app-card">
-      <div class="app-icon"><img src="images/app-01-icon.png" alt="App 01 Name"></div>
-      <h3 data-lang-en="App 01 English Name" data-lang-zh="应用01 中文名称">App 01 English Name</h3>
-      <p data-lang-en="Short clear description of what this app does." data-lang-zh="简短清晰说明应用核心用途">Short clear description of what this app does.</p>
-      <a href="articles/app-01-guide.html" class="guide-link" data-lang-en="→ Read App Guide" data-lang-zh="→ 阅读应用指南">→ Read App Guide</a>
-      <a href="https://play.google.com/store/apps/details?id=com.leevo.app01" target="_blank" rel="noopener noreferrer">
-        <img class="play-badge" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Available on Google Play">
-      </a>
+<section class="guides" id="guides">
+  <div class="container">
+    <div class="section-label" data-lang-en="Guides & Tips" data-lang-zh="指南与技巧">Guides & Tips</div>
+    <div class="guide-box">
+      <h2 data-lang-en="Helpful guides & articles" data-lang-zh="实用教程与文章">Helpful guides & articles</h2>
+      <p data-lang-en="Practical tips for fitness, learning, music & games — to help you get the best out of your Android apps." data-lang-zh="健身、学习、音乐、游戏实用技巧，帮你用好每一款应用">Practical tips for fitness, learning, music & games — to help you get the best out of your Android apps.</p>
+      <ul>
+        <li><a href="articles/best-free-home-workout-apps.html" class="learn-more" data-lang-en="Best Free Home Workout Apps — No Equipment Needed →" data-lang-zh="免费居家健身应用推荐——无需器械也能练 →">Best Free Home Workout Apps — No Equipment Needed →</a></li>
+      </ul>
+      <span class="learn-more" data-lang-en="More guides coming soon" data-lang-zh="更多指南持续更新中">More guides coming soon</span>
     </div>
+  </div>
+</section>
 
-    <!-- ✅ 新增App 2 -->
-    <div class="app-card">
-      <div class="app-icon"><img src="images/app-02-icon.png" alt="App 02 Name"></div>
-      <h3 data-lang-en="App 02 English Name" data-lang-zh="应用02 中文名称">App 02 English Name</h3>
-      <p data-lang-en="Short clear description of what this app does." data-lang-zh="简短清晰说明应用核心用途">Short clear description of what this app does.</p>
-      <a href="articles/app-02-guide.html" class="guide-link" data-lang-en="→ Read App Guide" data-lang-zh="→ 阅读应用指南">→ Read App Guide</a>
-      <a href="https://play.google.com/store/apps/details?id=com.leevo.app02" target="_blank" rel="noopener noreferrer">
-        <img class="play-badge" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Available on Google Play">
-      </a>
-    </div>
-
-    <!-- ✅ 新增App 3 -->
-    <div class="app-card">
-      <div class="app-icon"><img src="images/app-03-icon.png" alt="App 03 Name"></div>
-      <h3 data-lang-en="App 03 English Name" data-lang-zh="应用03 中文名称">App 03 English Name</h3>
-      <p data-lang-en="Short clear description of what this app does." data-lang-zh="简短清晰说明应用核心用途">Short clear description of what this app does.</p>
-      <a href="articles/app-03-guide.html" class="guide-link" data-lang-en="→ Read App Guide" data-lang-zh="→ 阅读应用指南">→ Read App Guide</a>
-      <a href="https://play.google.com/store/apps/details?id=com.leevo.app03" target="_blank" rel="noopener noreferrer">
-        <img class="play-badge" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Available on Google Play">
-      </a>
-    </div>
-
-    <!-- ✅ 新增App 4 -->
-    <div class="app-card">
-      <div class="app-icon"><img src="images/app-04-icon.png" alt="App 04 Name"></div>
-      <h3 data-lang-en="App 04 English Name" data-lang-zh="应用04 中文名称">App 04 English Name</h3>
-      <p data-lang-en="Short clear description of what this app does." data-lang-zh="简短清晰说明应用核心用途">Short clear description of what this app does.</p>
-      <a href="articles/app-04-guide.html" class="guide-link" data-lang-en="→ Read App Guide" data-lang-zh="→ 阅读应用指南">→ Read App Guide</a>
-      <a href="https://play.google.com/store/apps/details?id=com.leevo.app04" target="_blank" rel="noopener noreferrer">
-        <img class="play-badge" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Available on Google Play">
-      </a>
-    </div>
-
-    <!-- ✅ 新增App 5 -->
-    <div class="app-card">
-      <div class="app-icon"><img src="images/app-05-icon.png" alt="App 05 Name"></div>
-      <h3 data-lang-en="App 05 English Name" data-lang-zh="应用05 中文名称">App 05 English Name</h3>
-      <p data-lang-en="Short clear description of what this app does." data-lang-zh="简短清晰说明应用核心用途">Short clear description of what this app does.</p>
-      <a href="articles/app-05-guide.html" class="guide-link" data-lang-en="→ Read App Guide" data-lang-zh="→ 阅读应用指南">→ Read App Guide</a>
-      <a href="https://play.google.com/store/apps/details?id=com.leevo.app05" target="_blank" rel="noopener noreferrer">
-        <img class="play-badge" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Available on Google Play">
-      </a>
-    </div>
-
-    <!-- ✅ 新增App 6 -->
-    <div class="app-card">
-      <div class="app-icon"><img src="images/app-06-icon.png" alt="App 06 Name"></div>
-      <h3 data-lang-en="App 06 English Name" data-lang-zh="应用06 中文名称">App 06 English Name</h3>
-      <p data-lang-en="Short clear description of what this app does." data-lang-zh="简短清晰说明应用核心用途">Short clear description of what this app does.</p>
-      <a href="articles/app-06-guide.html" class="guide-link" data-lang-en="→ Read App Guide" data-lang-zh="→ 阅读应用指南">→ Read App Guide</a>
-      <a href="https://play.google.com/store/apps/details?id=com.leevo.app06" target="_blank" rel="noopener noreferrer">
-        <img class="play-badge" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Available on Google Play">
-      </a>
-    </div>
-
-    <!-- ✅ 新增App 7 -->
-    <div class="app-card">
-      <div class="app-icon"><img src="images/app-07-icon.png" alt="App 07 Name"></div>
-      <h3 data-lang-en="App 07 English Name" data-lang-zh="应用07 中文名称">App 07 English Name</h3>
-      <p data-lang-en="Short clear description of what this app does." data-lang-zh="简短清晰说明应用核心用途">Short clear description of what this app does.</p>
-      <a href="articles/app-07-guide.html" class="guide-link" data-lang-en="→ Read App Guide" data-lang-zh="→ 阅读应用指南">→ Read App Guide</a>
-      <a href="https://play.google.com/store/apps/details?id=com.leevo.app07" target="_blank" rel="noopener noreferrer">
-        <img class="play-badge" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Available on Google Play">
-      </a>
-    </div>
-
-    <!-- ✅ 新增App 8 -->
-    <div class="app-card">
-      <div class="app-icon"><img src="images/app-08-icon.png" alt="App 08 Name"></div>
-      <h3 data-lang-en="App 08 English Name" data-lang-zh="应用08 中文名称">App 08 English Name</h3>
-      <p data-lang-en="Short clear description of what this app does." data-lang-zh="简短清晰说明应用核心用途">Short clear description of what this app does.</p>
-      <a href="articles/app-08-guide.html" class="guide-link" data-lang-en="→ Read App Guide" data-lang-zh="→ 阅读应用指南">→ Read App Guide</a>
-      <a href="https://play.google.com/store/apps/details?id=com.leevo.app08" target="_blank" rel="noopener noreferrer">
-        <img class="play-badge" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Available on Google Play">
-      </a>
-    </div>
-
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-label" data-lang-en="About" data-lang-zh="关于我们">About</div>
+    <h2 data-lang-en="Built with purpose" data-lang-zh="用心做产品，实用为核心">Built with purpose</h2>
+    <p class="section-description" data-lang-en="Leevo Apps is an independent Android developer creating simple, useful tools & fun games focused on real daily value." data-lang-zh="独立安卓开发者团队，专注开发简洁实用工具、轻松趣味游戏，服务真实日常需求">Leevo Apps is an independent Android developer creating simple, useful tools & fun games focused on real daily value.</p>
   </div>
 </section>
 
 <footer>
-  <p data-lang-en="© 2026 Leevo Apps — All rights reserved." data-lang-zh="© 2026 Leevo应用 — 版权所有">© 2026 Leevo Apps — All rights reserved.</p>
+  <div class="footer-inner">
+    <div data-lang-en="© 2026 Leevo Apps. All rights reserved." data-lang-zh="© 2026 Leevo应用 版权所有">© 2026 Leevo Apps. All rights reserved.</div>
+    <div class="footer-links">
+      <span data-lang-en="Privacy" data-lang-zh="隐私政策">Privacy</span>
+      <span data-lang-en="Contact" data-lang-zh="联系我们">Contact</span>
+    </div>
+  </div>
 </footer>
 
 <script>
-// 一键双语切换
-let currentLang='en';
+// 固定配置：中英文统一使用全球官方英文Play徽章，稳定不消失
+const LANG = {
+  en: {
+    playBadge: {
+      url: 'https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png',
+      alt: 'Available on Google Play'
+    }
+  },
+  zh: {
+    playBadge: {
+      url: 'https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png',
+      alt: 'Available on Google Play'
+    }
+  }
+};
+let currentLang = 'en';
+
+// 核心切换函数：文字完整双语，徽章统一英文
+function switchAllContent(){
+  const cfg = LANG[currentLang];
+  // 更新网页标题与meta描述
+  document.title = document.querySelector('title').getAttribute(`data-lang-${currentLang}`);
+  const metaDesc = document.querySelector('meta[name="description"]');
+  metaDesc.content = metaDesc.getAttribute(`data-lang-${currentLang}`);
+
+  // 遍历更新所有双语文字内容
+  document.querySelectorAll('[data-lang-en],[data-lang-zh]').forEach(el=>{
+    const txt = el.getAttribute(`data-lang-${currentLang}`);
+    if(txt) el.innerHTML = txt;
+  });
+
+  // 全部Play徽章统一加载官方英文版本，全球通用、稳定加载
+  document.querySelectorAll('.play-btn-img').forEach(img=>{
+    img.src = cfg.playBadge.url;
+    img.alt = cfg.playBadge.alt;
+  });
+}
+
+// 弹窗：同步当前语言文字+统一英文下载徽章
+function openModal(titleEn, textEn, titleZh, textZh, playUrl){
+  const cfg = LANG[currentLang];
+  const title = currentLang==='en' ? titleEn : titleZh;
+  const text = currentLang==='en' ? textEn : textZh;
+  document.getElementById('modalTitle').textContent = title;
+  document.getElementById('modalText').textContent = text;
+  document.getElementById('modalPlayBtn').innerHTML = `<a href="${playUrl}" target="_blank" rel="noopener noreferrer"><img src="${cfg.playBadge.url}" alt="${cfg.playBadge.alt}" class="play-btn-img"></a>`;
+  document.getElementById('infoModal').classList.add('show');
+}
+function closeModal(){
+  document.getElementById('infoModal').classList.remove('show');
+}
+window.onclick=e=>{
+  const m=document.getElementById('infoModal');
+  if(e.target===m) m.classList.remove('show');
+};
+
+// 绑定语言切换按钮
 document.getElementById('langSwitch').addEventListener('click',()=>{
   currentLang = currentLang==='en' ? 'zh' : 'en';
-  document.querySelectorAll('[data-lang-en],[data-lang-zh]').forEach(el=>{
-    const text = el.getAttribute(`data-lang-${currentLang}`);
-    if(text) el.innerHTML=text;
-  });
+  switchAllContent();
 });
-</script>
 
+// 页面加载完成自动初始化，确保一开始就显示正确文字+英文Play徽章
+document.addEventListener('DOMContentLoaded', switchAllContent);
+</script>
 </body>
 </html>
