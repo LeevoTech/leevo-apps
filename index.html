@@ -160,13 +160,13 @@
     .learn-more a { color: #f2c86b; }
     .learn-more:hover, .learn-more a:hover { text-decoration: underline; }
 
-    /* ✅ 固定高度+防隐藏，保证徽章一定显示 */
+    /* Play徽章：固定英文、高度稳定、对齐不消失 */
     .play-btn-img {
       height: 40px;
       width: auto;
       display: inline-block;
       transition: transform 0.2s;
-      vertical-align: middle; /* 对齐文字，不会飘走/看不见 */
+      vertical-align: middle;
     }
     .play-btn-img:hover { transform: scale(1.05); }
 
@@ -223,6 +223,7 @@
 </head>
 
 <body>
+<!-- 全局弹窗 -->
 <div id="infoModal" class="modal">
   <div class="modal-content">
     <h3 id="modalTitle"></h3>
@@ -263,7 +264,7 @@
         <div class="app-icon"><img src="images/leevo-color.png" alt="Leevo Color – creative coloring & art app"></div>
         <h3 data-lang-en="Leevo Color" data-lang-zh="Leevo 涂色绘画">Leevo Color</h3>
         <p data-lang-en="Creative coloring & art experience on your Android device." data-lang-zh="在手机上享受创意涂色、自由绘画创作">Creative coloring & art experience on your Android device.</p>
-        <span class="learn-more" onclick="openModal('Leevo Color','即将上线！配套指南正在整理制作中。','Leevo Color','Coming soon! Guides are being created.', 'https://play.google.com/store/apps/details?id=com.leevo.color')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Color','Coming soon! Guides are being created.','Leevo Color','即将上线！配套指南正在整理制作中。', 'https://play.google.com/store/apps/details?id=com.leevo.color')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
         <a href="https://play.google.com/store/apps/details?id=com.leevo.color" target="_blank" rel="noopener noreferrer">
           <img class="play-btn-img" alt="Available on Google Play">
         </a>
@@ -286,7 +287,7 @@
         <div class="app-icon"><img src="images/leevo-learn-english.png" alt="Leevo Learn English – learn & practice English easily"></div>
         <h3 data-lang-en="Leevo Learn English" data-lang-zh="Leevo 英语学习">Leevo Learn English</h3>
         <p data-lang-en="Simple daily English learning for students & beginners." data-lang-zh="适合学生与入门者，轻松坚持日常学英语">Simple daily English learning for students & beginners.</p>
-        <span class="learn-more" onclick="openModal('Leevo Learn English','即将上线！学习指南正在准备。','Leevo Learn English','Coming soon! Study guides coming soon.', 'https://play.google.com/store/apps/details?id=com.leevo.learn.english')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Learn English','Coming soon! Study guides coming soon.','Leevo Learn English','即将上线！学习指南正在准备。', 'https://play.google.com/store/apps/details?id=com.leevo.learn.english')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
         <a href="https://play.google.com/store/apps/details?id=com.leevo.learn.english" target="_blank" rel="noopener noreferrer">
           <img class="play-btn-img" alt="Available on Google Play">
         </a>
@@ -297,7 +298,7 @@
         <div class="app-icon"><img src="images/leevo-learn-psle-math.png" alt="Leevo Learn PSLE Math – Singapore primary math practice"></div>
         <h3 data-lang-en="Leevo Learn: PSLE Math" data-lang-zh="Leevo 新加坡小六数学">Leevo Learn: PSLE Math</h3>
         <p data-lang-en="Helpful practice & revision for Singapore PSLE Mathematics." data-lang-zh="配套练习、错题巩固，助力新加坡小六会考数学备考">Helpful practice & revision for Singapore PSLE Mathematics.</p>
-        <span class="learn-more" onclick="openModal('Leevo Learn: PSLE Math','即将上线！练习技巧正在整理。','Leevo Learn: PSLE Math','Coming soon! Practice tips coming soon.', 'https://play.google.com/store/apps/details?id=com.leevo.learn.pslemath')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Learn: PSLE Math','Coming soon! Practice tips coming soon.','Leevo Learn: PSLE Math','即将上线！练习技巧正在整理。', 'https://play.google.com/store/apps/details?id=com.leevo.learn.pslemath')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
         <a href="https://play.google.com/store/apps/details?id=com.leevo.learn.pslemath" target="_blank" rel="noopener noreferrer">
           <img class="play-btn-img" alt="Available on Google Play">
         </a>
@@ -308,7 +309,7 @@
         <div class="app-icon"><img src="images/leevo-music.png" alt="Leevo Music – simple offline Android music player"></div>
         <h3 data-lang-en="Leevo Music" data-lang-zh="Leevo 音乐播放器">Leevo Music</h3>
         <p data-lang-en="Lightweight, easy-to-use music player for Android." data-lang-zh="轻量简洁、操作顺手的离线音乐播放器">Lightweight, easy-to-use music player for Android.</p>
-        <span class="learn-more" onclick="openModal('Leevo Music','即将上线！使用教程正在编写。','Leevo Music','Coming soon! Usage guides coming soon.', 'https://play.google.com/store/apps/details?id=com.leevomusic.app')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Music','Coming soon! Usage guides coming soon.','Leevo Music','即将上线！使用教程正在编写。', 'https://play.google.com/store/apps/details?id=com.leevomusic.app')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
         <a href="https://play.google.com/store/apps/details?id=com.leevomusic.app" target="_blank" rel="noopener noreferrer">
           <img class="play-btn-img" alt="Available on Google Play">
         </a>
@@ -319,7 +320,7 @@
         <div class="app-icon"><img src="images/leevo-planet-merge.png" alt="Leevo Planet Merge – relaxing merge puzzle game"></div>
         <h3 data-lang-en="Leevo Planet Merge" data-lang-zh="Leevo 星球合成">Leevo Planet Merge</h3>
         <p data-lang-en="Calm, fun merging puzzle game for stress-free entertainment." data-lang-zh="轻松合成星球，休闲解压、好玩不费脑">Calm, fun merging puzzle game for stress-free entertainment.</p>
-        <span class="learn-more" onclick="openModal('Leevo Planet Merge','即将上线！游戏技巧正在总结。','Leevo Planet Merge','Coming soon! Game tips coming soon.', 'https://play.google.com/store/apps/details?id=com.leevo.mergegame')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Planet Merge','Coming soon! Game tips coming soon.','Leevo Planet Merge','即将上线！游戏技巧正在总结。', 'https://play.google.com/store/apps/details?id=com.leevo.mergegame')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
         <a href="https://play.google.com/store/apps/details?id=com.leevo.mergegame" target="_blank" rel="noopener noreferrer">
           <img class="play-btn-img" alt="Available on Google Play">
         </a>
@@ -330,7 +331,7 @@
         <div class="app-icon"><img src="images/leevo-push-box.png" alt="Leevo Push Box – classic brain puzzle game"></div>
         <h3 data-lang-en="Leevo Push Box" data-lang-zh="Leevo 推箱子">Leevo Push Box</h3>
         <p data-lang-en="Sharpen your mind with challenging box-pushing puzzles." data-lang-zh="经典益智推箱子，开动脑筋、锻炼逻辑思维">Sharpen your mind with challenging box-pushing puzzles.</p>
-        <span class="learn-more" onclick="openModal('Leevo Push Box','即将上线！通关思路正在整理。','Leevo Push Box','Coming soon! Strategy guides coming soon.', 'https://play.google.com/store/apps/details?id=com.leevo.pushbox')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Push Box','Coming soon! Strategy guides coming soon.','Leevo Push Box','即将上线！通关思路正在整理。', 'https://play.google.com/store/apps/details?id=com.leevo.pushbox')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
         <a href="https://play.google.com/store/apps/details?id=com.leevo.pushbox" target="_blank" rel="noopener noreferrer">
           <img class="play-btn-img" alt="Available on Google Play">
         </a>
@@ -341,7 +342,7 @@
         <div class="app-icon"><img src="images/leevo-zombie-shooter.png" alt="Leevo Zombie Shooter – exciting action shooting game"></div>
         <h3 data-lang-en="Leevo Zombie Shooter" data-lang-zh="Leevo 僵尸射击">Leevo Zombie Shooter</h3>
         <p data-lang-en="Fast-paced survival action shooter game for Android." data-lang-zh="紧张刺激生存射击，爽快闯关解压">Fast-paced survival action shooter game for Android.</p>
-        <span class="learn-more" onclick="openModal('Leevo Zombie Shooter','即将上线！玩法攻略正在准备。','Leevo Zombie Shooter','Coming soon! Gameplay tips coming soon.', 'https://play.google.com/store/apps/details?id=com.leevo.zombieshooter')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Leevo Zombie Shooter','Coming soon! Gameplay tips coming soon.','Leevo Zombie Shooter','即将上线！玩法攻略正在准备。', 'https://play.google.com/store/apps/details?id=com.leevo.zombieshooter')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
         <a href="https://play.google.com/store/apps/details?id=com.leevo.zombieshooter" target="_blank" rel="noopener noreferrer">
           <img class="play-btn-img" alt="Available on Google Play">
         </a>
@@ -352,7 +353,7 @@
         <div class="app-icon"><img src="images/noirs-adventure.png" alt="Noir's Adventure – fun puzzle platform adventure game"></div>
         <h3 data-lang-en="Noir's Adventure" data-lang-zh="诺尔大冒险">Noir's Adventure</h3>
         <p data-lang-en="Explore, solve puzzles & enjoy retro-style platform gameplay." data-lang-zh="复古横版闯关，探索解谜、轻松有趣">Explore, solve puzzles & enjoy retro-style platform gameplay.</p>
-        <span class="learn-more" onclick="openModal('Noir\'s Adventure','即将上线！通关攻略正在撰写。','Noir\'s Adventure','Coming soon! Walkthrough tips coming soon.', 'https://play.google.com/store/apps/details?id=com.leevo.noirs_adventure')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
+        <span class="learn-more" onclick="openModal('Noir\'s Adventure','Coming soon! Walkthrough tips coming soon.','Noir\'s Adventure','即将上线！通关攻略正在撰写。', 'https://play.google.com/store/apps/details?id=com.leevo.noirs_adventure')" data-lang-en="Coming soon →" data-lang-zh="即将上线 →">Coming soon →</span>
         <a href="https://play.google.com/store/apps/details?id=com.leevo.noirs_adventure" target="_blank" rel="noopener noreferrer">
           <img class="play-btn-img" alt="Available on Google Play">
         </a>
@@ -394,7 +395,7 @@
 </footer>
 
 <script>
-// ✅ 确认官方正确图片地址
+// ✅ 关键配置：中英文都使用【全球通用英文Play徽章】，稳定不消失
 const LANG = {
   en: {
     playBadge: {
@@ -404,35 +405,35 @@ const LANG = {
   },
   zh: {
     playBadge: {
-      url: 'https://play.google.com/intl/zh_cn/badges/images/generic/zh_badge_web_generic.png',
-      alt: '在Google Play上获取'
+      url: 'https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png',
+      alt: 'Available on Google Play'
     }
   }
 };
 let currentLang = 'en';
 
-// 核心：同步文字+强制重设图片src，确保加载
+// 切换页面文字 + 统一加载英文Play徽章
 function switchAllContent(){
   const cfg = LANG[currentLang];
-  // 更新title、meta
+  // 更新网页标题与描述
   document.title = document.querySelector('title').getAttribute(`data-lang-${currentLang}`);
   const metaDesc = document.querySelector('meta[name="description"]');
   metaDesc.content = metaDesc.getAttribute(`data-lang-${currentLang}`);
 
-  // 更新页面所有双语文字
+  // 更新所有双语文字内容
   document.querySelectorAll('[data-lang-en],[data-lang-zh]').forEach(el=>{
     const txt = el.getAttribute(`data-lang-${currentLang}`);
     if(txt) el.innerHTML = txt;
   });
 
-  // ✅ 强制重设src，避免中文图片不加载/空白
+  // 全部使用英文官方徽章，稳定、全球通用、不会加载失败
   document.querySelectorAll('.play-btn-img').forEach(img=>{
     img.src = cfg.playBadge.url;
     img.alt = cfg.playBadge.alt;
   });
 }
 
-// 弹窗：传入双语文字，实时生成当前语言徽章
+// 弹窗：同步当前语言文字 + 统一英文下载徽章
 function openModal(titleEn, textEn, titleZh, textZh, playUrl){
   const cfg = LANG[currentLang];
   const title = currentLang==='en' ? titleEn : titleZh;
@@ -450,13 +451,13 @@ window.onclick=e=>{
   if(e.target===m) m.classList.remove('show');
 };
 
-// 切换按钮绑定
+// 绑定切换按钮
 document.getElementById('langSwitch').addEventListener('click',()=>{
   currentLang = currentLang==='en' ? 'zh' : 'en';
   switchAllContent();
 });
 
-// ✅ 页面加载完成立刻执行初始化，确保一开始就有正确徽章
+// 页面加载完成立刻初始化，确保一开始就显示正确徽章
 document.addEventListener('DOMContentLoaded', switchAllContent);
 </script>
 </body>
