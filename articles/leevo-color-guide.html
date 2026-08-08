@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-lang-en="Leevo Color – AI Photo Colorize & Restore Guide" data-lang-zh="Leevo照片AI上色 – 老照片修复&特效使用指南">Leevo Color – AI Photo Colorize & Restore Guide</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:Arial,sans-serif; background:linear-gradient(135deg,#0d2035,#07111f); color:#fff; line-height:1.7; padding:40px 30px; max-width:900px; margin:0 auto;}
+    .back-link{display:inline-block; margin-bottom:40px; color:#f2c86b; text-decoration:none; font-size:18px;}
+    .back-link:hover{text-decoration:underline;}
+    h1{color:#f2c86b; font-size:32px; margin-bottom:30px; line-height:1.4;}
+    h2{color:#ffffff; font-size:24px; margin:30px 0 20px;}
+    p{color:#e6e6e6; font-size:18px; margin-bottom:20px;}
+    ul{color:#e6e6e6; font-size:18px; margin:20px 0 20px 30px;}
+    li{margin-bottom:10px;}
+    .lang-switch-btn{padding:6px 14px; border-radius:6px; border:none; background:#f2c86b; color:#07111f; font-weight:bold; cursor:pointer; margin-bottom:20px;}
+  </style>
+</head>
+<body>
+  <!-- 语言切换按钮：和首页统一 -->
+  <button id="pageLangSwitch" class="lang-switch-btn">中文 / EN</button>
+
+  <!-- 返回首页链接：双语、金色、位置样式和健身文章完全一致 -->
+  <a href="../index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回 Leevo 应用首页">← Back to Leevo Apps Home</a>
+
+  <!-- 标题、段落、列表：全部配 data-lang-en / data-lang-zh 双语 -->
+  <h1 data-lang-en="Leevo Color – AI Photo Colorize, Repair & Creative Art Guide" data-lang-zh="Leevo照片AI上色 – 老照片修复 · 趣味AI变图 使用指南">Leevo Color – AI Photo Colorize, Repair & Creative Art Guide</h1>
+
+  <p data-lang-en="Bring your precious old memories back to life! Leevo Color uses smart AI technology to automatically add natural colors to faded black-and-white photos, fix blurry, scratched or damaged old pictures, and turn ordinary photos into amazing creative artworks with one tap." data-lang-zh="让珍贵老照片重焕光彩！Leevo照片AI上色依托智能AI技术，一键为褪色黑白照片还原自然色彩，修复模糊、划痕、破损老照片，还能把普通照片一键变成创意艺术作品。">Bring your precious old memories back to life! Leevo Color uses smart AI technology to automatically add natural colors to faded black-and-white photos, fix blurry, scratched or damaged old pictures, and turn ordinary photos into amazing creative artworks with one tap.</p>
+
+  <h2 data-lang-en="Core Powerful Features" data-lang-zh="核心强大功能">Core Powerful Features</h2>
+  <ul>
+    <li data-lang-en="✅ AI Black & White Photo Colorization: Intelligent, natural color filling for old monochrome photos." data-lang-zh="✅ 黑白照片AI智能上色：自动识别场景、人物，还原真实自然色彩">✅ AI Black & White Photo Colorization: Intelligent, natural color filling for old monochrome photos.</li>
+    <li data-lang-en="✅ Old Photo Repair & Enhancement: Sharpen blurry faces, remove scratches/stains, restore faded details clearly." data-lang-zh="✅ 老照片清晰修复：模糊人脸变锐利、去除划痕污渍、还原丢失细节，焕然一新">✅ Old Photo Repair & Enhancement: Sharpen blurry faces, remove scratches/stains, restore faded details clearly.</li>
+    <li data-lang-en="✅ Fun AI Art Transformation Effects:" data-lang-zh="✅ 趣味AI创意变图特效：">✅ Fun AI Art Transformation Effects:</li>
+    <ul>
+      <li data-lang-en="• Turn people into cute cartoon / comic style characters" data-lang-zh="• 人像一键变成卡通/动漫二次元风格">• Turn people into cute cartoon / comic style characters</li>
+      <li data-lang-en="• Convert photos into artistic pencil sketch drawings" data-lang-zh="• 照片转为细腻素描手绘效果">• Convert photos into artistic pencil sketch drawings</li>
+      <li data-lang-en="• Face aging: turn your look into elderly appearance" data-lang-zh="• 时光变老：一键体验老年模样">• Face aging: turn your look into elderly appearance</li>
+      <li data-lang-en="• Rejuvenation: turn photos back to younger childhood look" data-lang-zh="• 重返年轻：瞬间变回童年稚嫩模样">• Rejuvenation: turn photos back to younger childhood look</li>
+    </ul>
+  </ul>
+
+  <h2 data-lang-en="Simple & Easy to Use" data-lang-zh="操作简单 · 一键出效果">Simple & Easy to Use</h2>
+  <p data-lang-en="Just select a photo from your phone gallery — choose the tool you want — preview instantly — save/share high-quality results easily! No complex professional skills needed, everyone can create stunning works in seconds." data-lang-zh="只需从相册上传照片 → 选择想要的功能 → 实时预览效果 → 一键保存高清成品、随时分享！无需专业修图技术，人人几秒就能做出惊艳效果">Just select a photo from your phone gallery — choose the tool you want — preview instantly — save/share high-quality results easily! No complex professional skills needed, everyone can create stunning works in seconds.</p>
+
+<script>
+// ✅ 和首页共用本地存储语言，自动同步！
+let currentLang = localStorage.getItem('leevoLang') || 'en';
+
+function updateAllText(){
+  document.querySelectorAll('[data-lang-en],[data-lang-zh]').forEach(el=>{
+    const txt = el.getAttribute(`data-lang-${currentLang}`);
+    if(txt) el.innerHTML = txt;
+  });
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  updateAllText(); // 打开文章自动读取首页选好的语言
+});
+
+document.getElementById('pageLangSwitch').addEventListener('click',()=>{
+  currentLang = currentLang === 'en' ? 'zh' : 'en';
+  localStorage.setItem('leevoLang', currentLang); // 切换也保存，全站统一
+  updateAllText();
+});
+</script>
+</body>
+</html>
