@@ -3,60 +3,611 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-lang-en="Leevo Music – Lightweight Offline Player & Clean Listening Experience Guide" data-lang-zh="Leevo音乐播放器 – 轻量离线 · 零打扰纯净听歌体验指南">Leevo Music – Lightweight Offline Player & Clean Listening Experience Guide</title>
+
+  <!-- ✅ 严格采用你提供的SEO标题、描述、关键词 -->
+  <title data-lang-en="Leevo Music - Offline Music Player Without Playback Ads" data-lang-zh="Leevo音乐 - 无播放广告的离线音乐播放器">Leevo Music - Offline Music Player Without Playback Ads</title>
+
+  <meta name="description"
+        content="Enjoy your local music with Leevo Music. One banner on the home screen, with no advertising interruptions during music playback. Simple, clean and focused on listening."
+        data-lang-en="Enjoy your local music with Leevo Music. One banner on the home screen, with no advertising interruptions during music playback. Simple, clean and focused on listening."
+        data-lang-zh="使用Leevo音乐，轻松聆听本地音乐。仅首页保留单条横幅广告，播放音乐全程零广告打扰，界面简洁干净，专注纯粹聆听体验。">
+
+  <meta name="keywords"
+        content="offline music player, offline music player Android, music player without ads, music player without interruptions, local music player, local music player Android, ad free music player, Android music player, music player for local files, simple music player, Leevo Music">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://leevotech.github.io/leevo-apps/apps/leevo-music/articles/leevo-music-guide.html">
+
   <style>
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:Arial,sans-serif; background:linear-gradient(135deg,#0d2035,#07111f); color:#fff; line-height:1.7; padding:40px 30px; max-width:900px; margin:0 auto;}
-    .back-link{display:inline-block; margin-bottom:40px; color:#f2c86b; text-decoration:none; font-size:18px;}
-    .back-link:hover{text-decoration:underline;}
-    h1{color:#f2c86b; font-size:32px; margin-bottom:30px; line-height:1.4;}
-    h2{color:#ffffff; font-size:24px; margin:30px 0 20px;}
-    p{color:#e6e6e6; font-size:18px; margin-bottom:20px;}
-    ul{color:#e6e6e6; font-size:18px; margin:20px 0 20px 30px;}
-    li{margin-bottom:10px;}
-    .lang-switch-btn{padding:6px 14px; border-radius:6px; border:none; background:#f2c86b; color:#07111f; font-weight:bold; cursor:pointer; margin-bottom:20px;}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #07111f;
+      color: #e6eaf0;
+      line-height: 1.7;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    a { color: #f2c86b; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #203b55;
+      flex-wrap: wrap;
+      gap:15px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+      font-size:16px;
+    }
+    .lang-switch-btn {
+      padding: 6px 14px;
+      border-radius: 6px;
+      border: none;
+      background: #f2c86b;
+      color: #07111f;
+      font-weight: bold;
+      cursor: pointer;
+      transition:0.2s;
+    }
+    .lang-switch-btn:hover{ transform:scale(1.05); }
+
+    .article-header { margin-bottom: 45px; }
+    .article-category {
+      color: #f2c86b;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1.3;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+    .article-intro {
+      font-size: 18px;
+      color: #b7c4d2;
+    }
+
+    section { margin-bottom: 50px; }
+    h2 {
+      font-size: 26px;
+      color: #ffffff;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #1c344c;
+    }
+    h3 {
+      font-size: 20px;
+      color: #f2d28c;
+      margin: 25px 0 12px;
+    }
+    p { margin-bottom: 16px; font-size: 17px; }
+    ul, ol { margin: 20px 0 20px 25px; }
+    li { margin-bottom: 10px; font-size: 17px; }
+
+    .faq-item {
+      background: #0d1c2c;
+      padding:22px;
+      border-radius:10px;
+      margin-bottom:15px;
+      border:1px solid #203b55;
+    }
+    .conclusion {
+      background: linear-gradient(135deg, #10253a, #0d1c2c);
+      padding:35px;
+      border-radius:16px;
+      border:1px solid #294969;
+    }
+
+    @media (max-width:600px) {
+      body { padding:20px 15px; }
+      h1 { font-size:28px; }
+      .page-nav { flex-direction:column; align-items:flex-start; }
+    }
   </style>
 </head>
 <body>
-  <!-- 语言切换按钮，与首页共用本地存储，自动同步 -->
-  <button id="pageLangSwitch" class="lang-switch-btn">中文 / EN</button>
 
-  <!-- 返回首页双语链接，样式位置统一 -->
-  <a href="../index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回 Leevo 应用首页">← Back to Leevo Apps Home</a>
+  <!-- ✅ 统一导航：返回首页 + 双语切换记忆 -->
+  <nav class="page-nav">
+    <a href="/leevo-apps/index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回Leevo应用首页">← Back to Leevo Apps Home</a>
+    <button id="langSwitch" class="lang-switch-btn">中文 / EN</button>
+  </nav>
 
-  <h1 data-lang-en="Leevo Music — Lightweight Offline Player, Clean & Undisturbed Listening" data-lang-zh="Leevo音乐播放器 — 轻量简洁 · 离线可用 · 告别广告打扰 · 专注音乐本身">Leevo Music — Lightweight Offline Player, Clean & Undisturbed Listening</h1>
+<article class="app-article">
 
-  <p data-lang-en="We built Leevo Music to bring back pure, comfortable music listening! Unlike many players flooded with constant pop-ups, interruptions and full-screen ads during playback — we keep it respectful, lightweight and focused on your music." data-lang-zh="我们打造Leevo音乐播放器，只为回归纯粹舒适的听歌体验！区别于市面上频繁弹窗、播放中途强制插入全屏广告、层层干扰的播放器，我们坚持克制设计、轻量干净、始终把音乐体验放在第一位。">We built Leevo Music to bring back pure, comfortable music listening! Unlike many players flooded with constant pop-ups, interruptions and full-screen ads during playback — we keep it respectful, lightweight and focused on your music.</p>
+  <header class="article-header">
+    <p class="article-category" data-lang-en="Music & Audio" data-lang-zh="音乐与音频">Music & Audio</p>
 
-  <h2 data-lang-en="Core Highlights & Ad Promise" data-lang-zh="核心亮点与广告承诺">Core Highlights & Ad Promise</h2>
-  <ul>
-    <li data-lang-en="✅ Fully offline playback: play saved music files stored on your phone anytime, no internet required" data-lang-zh="✅ 完整支持离线播放：直接读取手机本地音乐文件，随时听歌不用联网">✅ Fully offline playback: play saved music files stored on your phone anytime, no internet required</li>
-    <li data-lang-en="✅ Minimal ad design: ONLY one small banner ad on the home page — NO pop-ups, NO interruptions, NO full-screen ads inside player, playlists, folders or settings" data-lang-zh="✅ 极致低打扰设计：仅首页放置一处横幅广告；播放界面、歌单、文件夹管理、设置等所有功能页面，全程零弹窗、零插播、零全屏广告打断">✅ Minimal ad design: ONLY one small banner ad on the home page — NO pop-ups, NO interruptions, NO full-screen ads inside player, playlists, folders or settings</li>
-    <li data-lang-en="✅ Lightweight & smooth: takes little storage & memory, runs fast even on older phones, simple intuitive controls" data-lang-zh="✅ 轻量流畅不卡顿：占用内存存储空间极小，老旧手机也能快速启动运行，操作逻辑直观顺手">✅ Lightweight & smooth: takes little storage & memory, runs fast even on older phones, simple intuitive controls</li>
-    <li data-lang-en="✅ Practical daily features: create custom playlists, adjust equalizer, sleep timer, quick track management — all usable without disruption" data-lang-zh="✅ 实用功能齐全：自建歌单、音效均衡器、睡眠定时、歌曲快速整理，使用过程安静流畅不被打断">✅ Practical daily features: create custom playlists, adjust equalizer, sleep timer, quick track management — all usable without disruption</li>
-  </ul>
+    <h1 data-lang-en="A Music Player That Lets You Enjoy Your Music Without Constant Ads" data-lang-zh="一款让你远离频繁广告、专心聆听音乐的播放器">A Music Player That Lets You Enjoy Your Music Without Constant Ads</h1>
 
-  <h2 data-lang-en="Listen to music peacefully" data-lang-zh="安静沉浸，好好享受每一首音乐">Listen to music peacefully</h2>
-  <p data-lang-en="Whether you are relaxing at home, commuting, exercising or working — Leevo Music lets you immerse in melody without sudden noise or blocking windows ruining the mood. We believe music deserves focus, and we will keep the experience clean as we grow." data-lang-zh="居家放松、通勤路上、运动健身、专注工作学习时，用Leevo音乐播放器，不再被突如其来的广告弹窗打断节奏、遮挡画面、破坏心情。我们相信音乐值得被专注聆听，未来也会持续守住「低打扰、重体验」的核心原则。">Whether you are relaxing at home, commuting, exercising or working — Leevo Music lets you immerse in melody without sudden noise or blocking windows ruining the mood. We believe music deserves focus, and we will keep the experience clean as we grow.</p>
+    <p class="article-intro" data-lang-en="Music should be about listening, not watching advertisements. Leevo Music is designed with a simple idea: keep advertising limited to the home screen, so your listening experience can stay focused on the music. Once you start listening, there are no advertising interruptions during playback." data-lang-zh="音乐，本该专注聆听，而非被广告打扰。Leevo音乐秉持简洁初心：仅在首页保留一条横幅广告支持开发，进入播放环节后全程无广告弹窗、无强制插播，让你的每一次聆听都纯粹沉浸。">
+      Music should be about listening, not watching advertisements. Leevo Music
+      is designed with a simple idea: keep advertising limited to the home
+      screen, so your listening experience can stay focused on the music.
+      Once you start listening, there are no advertising interruptions during
+      playback.
+    </p>
+  </header>
 
-<script>
-// 读取首页共用语言，自动同步切换
-let currentLang = localStorage.getItem('leevoLang') || 'en';
 
-function updateAllText(){
-  document.querySelectorAll('[data-lang-en],[data-lang-zh]').forEach(el=>{
-    const txt = el.getAttribute(`data-lang-${currentLang}`);
-    if(txt) el.innerHTML = txt;
-  });
-}
+  <section>
+    <h2 data-lang-en="Music Should Not Feel Like an Advertisement" data-lang-zh="听音乐，不该变成看广告">Music Should Not Feel Like an Advertisement</h2>
 
-document.addEventListener('DOMContentLoaded', updateAllText);
+    <p data-lang-en="Many free apps need advertising to support development. That is understandable, but advertising does not have to take over the entire user experience." data-lang-zh="免费应用依靠广告维持开发与更新，我们完全理解；但这绝不意味着广告需要无处不在、挤占核心使用体验。">
+      Many free apps need advertising to support development. That is
+      understandable, but advertising does not have to take over the entire
+      user experience.
+    </p>
 
-document.getElementById('pageLangSwitch').addEventListener('click',()=>{
-  currentLang = currentLang === 'en' ? 'zh' : 'en';
-  localStorage.setItem('leevoLang', currentLang); // 切换保存，全站语言统一
-  updateAllText();
-});
-</script>
+    <p data-lang-en="When you are listening to music, the reason you opened a music player is simple: you want to hear your music." data-lang-zh="打开音乐播放器，初衷只有一件事：安安静静听歌、享受旋律陪伴，而不是被迫被广告打断好心情。">
+      When you are listening to music, the reason you opened a music player is
+      simple: you want to hear your music.
+    </p>
+
+    <p data-lang-en="Constant banners, pop-ups, or interruptions can make that simple experience unnecessarily frustrating." data-lang-zh="频繁弹窗、中途插播、全屏广告不断打断播放，把轻松听歌变成反复关广告、等待加载，烦躁又扫兴。">
+      Constant banners, pop-ups, or interruptions can make that simple
+      experience unnecessarily frustrating.
+    </p>
+
+    <p data-lang-en="Leevo Music takes a different approach. The app keeps a single banner advertisement on the home screen while keeping the actual listening experience free from advertising interruptions." data-lang-zh="Leevo音乐选择更尊重用户的平衡方式：仅首页放置单条横幅广告支持持续优化更新，一旦进入播放界面，彻底屏蔽所有广告干扰，回归纯粹聆听体验。">
+      Leevo Music takes a different approach. The app keeps a single banner
+      advertisement on the home screen while keeping the actual listening
+      experience free from advertising interruptions.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="One Banner on the Home Screen. That's It." data-lang-zh="仅首页一条横幅广告，仅此而已">One Banner on the Home Screen. That's It.</h2>
+
+    <p data-lang-en="Leevo Music does not try to place advertisements everywhere." data-lang-zh="Leevo音乐拒绝广告铺满界面、层层叠加，绝不过度打扰。">
+      Leevo Music does not try to place advertisements everywhere.
+    </p>
+
+    <p data-lang-en="The home screen contains a banner advertisement that helps support the continued development of the app. Once you move into your music listening experience, the focus returns to your music." data-lang-zh="首页仅保留一处横幅广告，助力应用持续迭代优化；点击播放、进入听歌环节，界面干净清爽，注意力完完全全回到音乐本身。">
+      The home screen contains a banner advertisement that helps support the
+      continued development of the app. Once you move into your music
+      listening experience, the focus returns to your music.
+    </p>
+
+    <p data-lang-en="There are no advertising interruptions appearing in the middle of your listening session." data-lang-zh="播放歌曲中途，不会突然弹出广告打断旋律、打断情绪。">
+      There are no advertising interruptions appearing in the middle of your
+      listening session.
+    </p>
+
+    <p data-lang-en="There are no unexpected full-screen advertisements taking over your screen while you are enjoying a song." data-lang-zh="沉浸听歌时，不会毫无预兆弹出全屏广告遮挡界面、强制中断播放。">
+      There are no unexpected full-screen advertisements taking over your
+      screen while you are enjoying a song.
+    </p>
+
+    <p data-lang-en="There is simply your music." data-lang-zh="屏幕里、耳边，只有属于你的音乐，安静流畅、完整不间断。">
+      There is simply your music.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Enjoy Your Music Without Interruptions" data-lang-zh="流畅聆听，全程零打扰">Enjoy Your Music Without Interruptions</h2>
+
+    <p data-lang-en="Imagine starting a song, putting on your headphones, and simply listening." data-lang-zh="戴上耳机、按下播放键，旋律缓缓流淌，不用分心、不用等待、不用反复关闭弹窗，全身心沉浸在音乐里。">
+      Imagine starting a song, putting on your headphones, and simply listening.
+    </p>
+
+    <p data-lang-en="You should not have to repeatedly close advertisements or wait for promotional screens before returning to your music." data-lang-zh="不必刚听几句就被迫退出歌曲、关闭广告、等待倒计时，才能回到播放界面。">
+      You should not have to repeatedly close advertisements or wait for
+      promotional screens before returning to your music.
+    </p>
+
+    <p data-lang-en="Leevo Music is designed to keep advertising away from the core listening experience." data-lang-zh="Leevo音乐坚持设计底线：远离核心播放环节，绝不拿打断听歌换取广告曝光。">
+      Leevo Music is designed to keep advertising away from the core listening
+      experience.
+    </p>
+
+    <p data-lang-en="Whether you are listening while relaxing at home, travelling, studying, working, or simply taking a break, the goal is the same: <strong>let the music play.</strong>" data-lang-zh="居家放松、通勤路上、专注学习、工作陪伴、小憩放空，无论何时何地，我们始终坚持一个目标：<strong>让音乐完整流畅地播放。</strong>">
+      Whether you are listening while relaxing at home, travelling, studying,
+      working, or simply taking a break, the goal is the same:
+      <strong>let the music play.</strong>
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Why Choose an Offline Music Player?" data-lang-zh="为什么更推荐离线本地音乐播放器？">Why Choose an Offline Music Player?</h2>
+
+    <p data-lang-en="Not everyone wants to stream music all the time." data-lang-zh="不是任何时候、所有人都依赖在线流媒体听歌。">
+      Not everyone wants to stream music all the time.
+    </p>
+
+    <p data-lang-en="If you already have music stored on your Android device, an offline music player can provide a simple way to listen to your own collection without depending on a constant internet connection." data-lang-zh="手机里珍藏了喜欢的歌曲、专辑？离线播放器无需联网、不耗流量、不卡顿缓冲，随时打开就能播放本地珍藏曲库。">
+      If you already have music stored on your Android device, an offline music
+      player can provide a simple way to listen to your own collection without
+      depending on a constant internet connection.
+    </p>
+
+    <p data-lang-en="Local music can also be useful when travelling, when your internet connection is limited, or when you simply want to listen to the music already stored on your device." data-lang-zh="外出旅行、网络信号差、不想消耗移动流量、只想安静聆听自己收藏的歌曲，本地播放稳定流畅、不受网络波动干扰。">
+      Local music can also be useful when travelling, when your internet
+      connection is limited, or when you simply want to listen to the music
+      already stored on your device.
+    </p>
+
+    <p data-lang-en="Leevo Music is built around this straightforward listening experience: your local music, your playlists, and your own listening habits." data-lang-zh="Leevo音乐围绕纯粹本地听歌打造：读取手机本地音乐、自建专属歌单、记录收听习惯，完全贴合私人音乐收藏、不捆绑在线服务、简洁纯粹。">
+      Leevo Music is built around this straightforward listening experience:
+      your local music, your playlists, and your own listening habits.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="A Simple Music Player for Your Local Music" data-lang-zh="简洁好用，专注本地音乐播放管理">A Simple Music Player for Your Local Music</h2>
+
+    <p data-lang-en="A music player does not need to be complicated to be useful." data-lang-zh="好用的音乐播放器，不必堆砌繁杂功能、加载冗余服务，核心实用、干净清爽、上手即用就是最好。">
+      A music player does not need to be complicated to be useful.
+    </p>
+
+    <p data-lang-en="Leevo Music focuses on the essential features people expect from a practical local music player while keeping the interface clean and easy to use." data-lang-zh="聚焦本地听歌核心刚需功能，界面简约直观、操作流畅易懂，不花哨、不臃肿、稳定省心。">
+      Leevo Music focuses on the essential features people expect from a
+      practical local music player while keeping the interface clean and easy
+      to use.
+    </p>
+
+    <h3 data-lang-en="Play Your Local Music" data-lang-zh="一键播放本地全部音乐">Play Your Local Music</h3>
+
+    <p data-lang-en="Listen to music stored on your Android device through a dedicated music player instead of relying entirely on online streaming services." data-lang-zh="直接读取安卓设备内存储的音乐文件，独立播放器稳定流畅、不依赖网络、不占用流量，随时聆听私人珍藏。">
+      Listen to music stored on your Android device through a dedicated music
+      player instead of relying entirely on online streaming services.
+    </p>
+
+
+    <h3 data-lang-en="Create and Manage Playlists" data-lang-zh="自由创建、管理专属歌单">Create and Manage Playlists</h3>
+
+    <p data-lang-en="Organise songs into playlists that match your mood, activities, or personal preferences." data-lang-zh="按心情、场景、风格、专辑自由分类建歌单，轻松整理曲库、一键切换播放，贴合个人听歌习惯。">
+      Organise songs into playlists that match your mood, activities, or
+      personal preferences.
+    </p>
+
+
+    <h3 data-lang-en="Save Your Favorite Songs" data-lang-zh="收藏喜欢单曲，快速找到挚爱">Save Your Favorite Songs</h3>
+
+    <p data-lang-en="Mark songs you enjoy as favorites so they are easier to find when you want to listen to them again." data-lang-zh="一键标记收藏心爱曲目，单独收藏列表集中存放，不用翻遍全部曲库，随时重温喜欢旋律。">
+      Mark songs you enjoy as favorites so they are easier to find when you
+      want to listen to them again.
+    </p>
+
+
+    <h3 data-lang-en="Recently Played" data-lang-zh="自动记录最近播放曲目">Recently Played</h3>
+
+    <p data-lang-en="Quickly return to music you have recently listened to without having to search through your entire collection again." data-lang-zh="自动留存近期播放记录，上次听到哪首、没听完继续接着听，不用重新翻找、省时省心。">
+      Quickly return to music you have recently listened to without having to
+      search through your entire collection again.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="A Better Balance Between Free and Comfortable" data-lang-zh="免费可用，同时兼顾舒适聆听体验">A Better Balance Between Free and Comfortable</h2>
+
+    <p data-lang-en="Keeping an app free to use requires resources for development, maintenance, updates, and infrastructure." data-lang-zh="免费提供应用、持续修复问题、优化功能、适配新机，需要投入开发精力与服务器资源，合理展示广告是良性支撑方式。">
+      Keeping an app free to use requires resources for development,
+      maintenance, updates, and infrastructure.
+    </p>
+
+    <p data-lang-en="Advertising can help support that work, but the presence of advertising does not mean every part of an app needs to contain advertisements." data-lang-zh="支持广告不等于无底线泛滥、侵占核心使用场景——可以合理展示，但绝不能打扰最核心听歌体验。">
+      Advertising can help support that work, but the presence of advertising
+      does not mean every part of an app needs to contain advertisements.
+    </p>
+
+    <p data-lang-en="Leevo Music follows a simple balance:" data-lang-zh="Leevo音乐坚持清晰、友好、克制的平衡原则：">
+      Leevo Music follows a simple balance:
+    </p>
+
+    <ul>
+      <li data-lang-en="One banner advertisement on the home screen." data-lang-zh="仅首页保留一处横幅广告">One banner advertisement on the home screen.</li>
+      <li data-lang-en="No advertising interruptions during music playback." data-lang-zh="歌曲播放全程，无任何广告弹窗、插播、全屏打断">No advertising interruptions during music playback.</li>
+      <li data-lang-en="No need to constantly close advertisements while listening." data-lang-zh="听歌过程中，不用反复动手关闭广告、等待倒计时">No need to constantly close advertisements while listening.</li>
+      <li data-lang-en="A clean listening experience focused on your music." data-lang-zh="界面干净纯粹，所有设计围绕音乐播放、聆听体验优先">A clean listening experience focused on your music.</li>
+    </ul>
+
+    <p data-lang-en="This approach allows users to enjoy a free music player while keeping advertisements away from the part of the app where they are least welcome." data-lang-zh="既保证应用免费开放使用，又守住底线、把广告隔离在播放环节之外，让用户在最需要沉浸专注的时刻，不被打扰、安心享受音乐。">
+      This approach allows users to enjoy a free music player while keeping
+      advertisements away from the part of the app where they are least
+      welcome.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Music Without the Constant Distraction" data-lang-zh="远离频繁干扰，享受纯粹音乐时光">Music Without the Constant Distraction</h2>
+
+    <p data-lang-en="There is a difference between seeing one advertisement and having your entire experience interrupted by advertisements." data-lang-zh="偶尔看到一处首页广告可以理解、可以接受；但播放中途不停弹窗、强制打断，是完全不可取、严重破坏体验的行为。">
+      There is a difference between seeing one advertisement and having your
+      entire experience interrupted by advertisements.
+    </p>
+
+    <p data-lang-en="A banner on a home screen is easy to understand. You see it when you open the app, and it remains separate from the actual listening experience." data-lang-zh="首页横幅广告位置固定、不遮挡、不干扰，打开应用一眼看到，进入播放页面自动消失、互不干扰、边界清晰。">
+      A banner on a home screen is easy to understand. You see it when you open
+      the app, and it remains separate from the actual listening experience.
+    </p>
+
+    <p data-lang-en="Once you start playing your music, Leevo Music keeps the experience focused on playback rather than advertising." data-lang-zh="按下播放那一刻，界面回归简洁干净、控件清晰好用，全部注意力、视觉焦点，都集中在音乐本身、歌曲信息、播放进度上。">
+      Once you start playing your music, Leevo Music keeps the experience
+      focused on playback rather than advertising.
+    </p>
+
+    <p data-lang-en="That small design decision can make a meaningful difference when an app is something you use regularly." data-lang-zh="这一份克制、用心、尊重用户的设计细节，日积月累，会让日常反复使用音乐播放器的每一次体验，都舒适愉悦、轻松舒心。">
+      That small design decision can make a meaningful difference when an app
+      is something you use regularly.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Who Is Leevo Music For?" data-lang-zh="Leevo音乐，适合这些人群使用">Who Is Leevo Music For?</h2>
+
+    <p data-lang-en="Leevo Music is designed for people who want a straightforward way to listen to music stored on their Android devices without constant advertising interruptions." data-lang-zh="专为喜欢收藏本地音乐、追求简洁纯粹、反感听歌被广告频繁打断、想要稳定流畅离线播放体验的安卓用户打造。">
+      Leevo Music is designed for people who want a straightforward way to
+      listen to music stored on their Android devices without constant
+      advertising interruptions.
+    </p>
+
+    <ul>
+      <li data-lang-en="People looking for a simple offline music player" data-lang-zh="想要界面简洁、上手好用的离线本地音乐播放器">People looking for a simple offline music player</li>
+      <li data-lang-en="Users who listen to music stored locally on their phone" data-lang-zh="习惯将音乐保存到手机、优先聆听本地珍藏曲库">Users who listen to music stored locally on their phone</li>
+      <li data-lang-en="People who prefer a clean music listening experience" data-lang-zh="追求界面清爽、干净简约、纯粹专注聆听氛围">People who prefer a clean music listening experience</li>
+      <li data-lang-en="Users who want playlists and favorite songs" data-lang-zh="需要自建分类歌单、收藏标记心爱曲目、方便管理整理曲库">Users who want playlists and favorite songs</li>
+      <li data-lang-en="People who want recently played music to be easy to find" data-lang-zh="希望自动留存播放记录、快速找回上次聆听曲目、不用费力翻找">People who want recently played music to be easy to find</li>
+      <li data-lang-en="Users who dislike advertisements interrupting music playback" data-lang-zh="极度反感播放中途弹窗、插播、全屏广告打断听歌节奏、破坏心情">Users who dislike advertisements interrupting music playback</li>
+    </ul>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="How Leevo Music Keeps Listening Simple" data-lang-zh="简单四步，轻松开启舒适聆听">How Leevo Music Keeps Listening Simple</h2>
+
+    <ol>
+      <li data-lang-en="<strong>Open Leevo Music.</strong> Your music library is ready to explore from the app." data-lang-zh="<strong>打开Leevo音乐。</strong>自动扫描读取手机本地音乐，曲库完整展示、随时浏览挑选。">
+        <strong>Open Leevo Music.</strong>
+        Your music library is ready to explore from the app.
+      </li>
+
+      <li data-lang-en="<strong>Choose a song.</strong> Select the music you want to hear." data-lang-zh="<strong>挑选心仪曲目。</strong>浏览曲库、歌单、收藏、最近播放，轻松找到当下想听的歌曲。">
+        <strong>Choose a song.</strong>
+        Select the music you want to hear.
+      </li>
+
+      <li data-lang-en="<strong>Press play.</strong> Start your listening session without an advertising interruption." data-lang-zh="<strong>点击播放。</strong>一键启动流畅播放，不会弹出广告、不会强制等待、不会中途打断。">
+        <strong>Press play.</strong>
+        Start your listening session without an advertising interruption.
+      </li>
+
+      <li data-lang-en="<strong>Enjoy the music.</strong> Continue listening without pop-up advertisements taking over the playback experience." data-lang-zh="<strong>沉浸享受音乐。</strong>全程流畅连续、干净无干扰，耳机/外放随心聆听、不被弹窗遮挡界面、不被广告打断旋律。">
+        <strong>Enjoy the music.</strong>
+        Continue listening without pop-up advertisements taking over the
+        playback experience.
+      </li>
+
+      <li data-lang-en="<strong>Build your collection.</strong> Use playlists, favorites, and recently played music to make your library easier to enjoy." data-lang-zh="<strong>打理专属曲库。</strong>自建歌单、收藏标记、回顾播放记录，让音乐分类清晰、查找便捷、贴合个人习惯、越用越顺手。">
+        <strong>Build your collection.</strong>
+        Use playlists, favorites, and recently played music to make your
+        library easier to enjoy.
+      </li>
+    </ol>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Your Music. Your Phone. Your Listening Experience." data-lang-zh="属于你的音乐、你的手机、专属纯粹聆听体验">Your Music. Your Phone. Your Listening Experience.</h2>
+
+    <p data-lang-en="Not every music player needs to become a complicated entertainment platform." data-lang-zh="不是所有音乐播放器，都要做成臃肿复杂、堆砌社交/直播/推荐等无关功能的综合娱乐平台。">
+      Not every music player needs to become a complicated entertainment
+      platform.
+    </p>
+
+    <p data-lang-en="Sometimes you simply want to open an app, choose a song, put on your headphones, and listen." data-lang-zh="很多时候，我们想要的很简单：打开应用、选好歌曲、戴上耳机、安安静静、完整流畅地听完。">
+      Sometimes you simply want to open an app, choose a song, put on your
+      headphones, and listen.
+    </p>
+
+    <p data-lang-en="Leevo Music is built around that simple idea." data-lang-zh="Leevo音乐从诞生之初，就紧紧围绕这份纯粹、简单、专注的初心打造。">
+      Leevo Music is built around that simple idea.
+    </p>
+
+    <p data-lang-en="The app keeps one banner advertisement on the home screen to support development, while keeping advertisements away from music playback." data-lang-zh="仅首页一处横幅广告，支撑持续开发维护、功能优化迭代；播放环节彻底干净、零广告打扰、尊重每一次沉浸聆听时刻。">
+      The app keeps one banner advertisement on the home screen to support
+      development, while keeping advertisements away from music playback.
+    </p>
+
+    <p data-lang-en="<strong>The music should be the main event.</strong>" data-lang-zh="<strong>音乐，才是整场体验里唯一的主角。</strong>">
+      <strong>The music should be the main event.</strong>
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Why an Uninterrupted Listening Experience Matters" data-lang-zh="为什么坚持做到播放全程零广告打断？">Why an Uninterrupted Listening Experience Matters</h2>
+
+    <p data-lang-en="Music can be part of many different moments in everyday life. It can accompany a morning routine, a workout, a long journey, a study session, or a quiet evening." data-lang-zh="音乐融入日常每一个珍贵瞬间：清晨唤醒、运动健身、长途通勤、专注学习、安静夜晚放松陪伴，旋律承载情绪、氛围、回忆。">
+      Music can be part of many different moments in everyday life. It can
+      accompany a morning routine, a workout, a long journey, a study session,
+      or a quiet evening.
+    </p>
+
+    <p data-lang-en="Those moments do not need constant interruptions." data-lang-zh="这些治愈、专注、放松、珍贵的时刻，不该被突兀广告、强制弹窗、中途打断粗暴破坏氛围、打散情绪。">
+      Those moments do not need constant interruptions.
+    </p>
+
+    <p data-lang-en="By limiting advertising to the home screen, Leevo Music aims to create a more respectful relationship between the app and the listener." data-lang-zh="坚持广告仅展示于首页、绝不侵入播放环节，是对音乐的尊重，更是对每一位使用者、每一份沉浸时光的尊重。">
+      By limiting advertising to the home screen, Leevo Music aims to create a
+      more respectful relationship between the app and the listener.
+    </p>
+
+    <p data-lang-en="You see the banner where it belongs, then you get back to what you came for: listening to music." data-lang-zh="打开应用看到首页横幅广告、理解支持开发心意；按下播放，广告消失、回归纯粹，专注聆听、享受音乐，这就是我们想要达成的舒适平衡。">
+      You see the banner where it belongs, then you get back to what you came
+      for: listening to music.
+    </p>
+  </section>
+
+
+  <section class="faq-section">
+    <h2 data-lang-en="Frequently Asked Questions About Leevo Music" data-lang-zh="Leevo音乐常见问题解答">Frequently Asked Questions About Leevo Music</h2>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="Does Leevo Music have advertisements?" data-lang-zh="Leevo音乐里面有广告吗？">Does Leevo Music have advertisements?</h3>
+
+      <p data-lang-en="Yes. Leevo Music displays a banner advertisement on the home screen. Advertising is intentionally limited so that it does not interrupt the music listening experience." data-lang-zh="有的。仅在应用首页展示一处横幅广告，用于支持持续开发更新；刻意严格限制广告位置，绝不侵入、打断音乐播放环节，保证聆听体验干净流畅。">
+        Yes. Leevo Music displays a banner advertisement on the home screen.
+        Advertising is intentionally limited so that it does not interrupt the
+        music listening experience.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="Are there advertisements while listening to music?" data-lang-zh="听歌播放歌曲的时候，会不会弹出广告？">Are there advertisements while listening to music?</h3>
+
+      <p data-lang-en="No. Leevo Music does not display advertising interruptions during music playback. The banner advertisement is limited to the home screen." data-lang-zh="不会！播放音乐过程中，绝对不会弹出任何广告、强制插播、全屏打断，横幅广告仅固定展示在首页，进入播放界面自动消失、全程干净无干扰。">
+        No. Leevo Music does not display advertising interruptions during music
+        playback. The banner advertisement is limited to the home screen.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="Does Leevo Music show pop-up advertisements while playing music?" data-lang-zh="播放歌曲中途，会不会突然弹出广告弹窗遮挡界面？">Does Leevo Music show pop-up advertisements while playing music?</h3>
+
+      <p data-lang-en="No. The listening experience is designed without pop-up advertising interruptions during playback." data-lang-zh="完全不会！核心设计准则就是杜绝播放过程中弹窗广告、强制插播、全屏广告打断播放、遮挡界面、破坏聆听氛围。">
+        No. The listening experience is designed without pop-up advertising
+        interruptions during playback.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="Is Leevo Music an offline music player?" data-lang-zh="Leevo音乐是离线播放器吗？需要联网才能听歌吗？">Is Leevo Music an offline music player?</h3>
+
+      <p data-lang-en="Leevo Music is designed for playing music stored locally on your Android device, making it suitable for users who want a simple local music listening experience." data-lang-zh="是的！主打本地离线播放功能，读取手机存储里的音乐文件，无需联网、不耗流量、不缓冲卡顿，随时随地流畅聆听自己收藏的音乐。">
+        Leevo Music is designed for playing music stored locally on your
+        Android device, making it suitable for users who want a simple local
+        music listening experience.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="Can I create playlists in Leevo Music?" data-lang-zh="可以自己新建、管理专属音乐歌单吗？">Can I create playlists in Leevo Music?</h3>
+
+      <p data-lang-en="Yes. Leevo Music provides playlist management so you can organise your local music according to your preferences." data-lang-zh="完全支持！自由创建、命名、编辑、删除歌单，按心情、场景、风格、专辑灵活分类整理私人曲库，轻松管理、一键切换播放。">
+        Yes. Leevo Music provides playlist management so you can organise your
+        local music according to your preferences.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="Can I save songs as favorites?" data-lang-zh="能把喜欢的歌曲单独收藏标记、集中查看吗？">Can I save songs as favorites?</h3>
+
+      <p data-lang-en="Yes. You can mark songs as favorites so that your preferred music is easier to find." data-lang-zh="支持一键收藏标记心爱单曲，独立收藏列表集中汇总，不用翻遍全部曲库，随时快速找到重温喜欢旋律。">
+        Yes. You can mark songs as favorites so that your preferred music is
+        easier to find.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="Why does Leevo Music have a banner advertisement?" data-lang-zh="为什么首页还要保留一条横幅广告？">Why does Leevo Music have a banner advertisement?</h3>
+
+      <p data-lang-en="The home-screen banner helps support the continued development and maintenance of the app while allowing the core music listening experience to remain free from advertising interruptions." data-lang-zh="仅首页展示横幅广告，是为了持续支撑功能开发、版本更新、问题修复、设备服务器维护运营成本；同时坚守底线、绝不侵入打断播放环节，平衡免费使用与优质聆听体验，长久稳定提供干净好用的音乐播放器。">
+        The home-screen banner helps support the continued development and
+        maintenance of the app while allowing the core music listening
+        experience to remain free from advertising interruptions.
+      </p>
+    </div>
+  </section>
+
+
+  <section class="conclusion">
+    <h2 data-lang-en="Let the Music Play" data-lang-zh="让音乐，完整流畅地播放">Let the Music Play</h2>
+
+    <p data-lang-en="A good music player should make listening easier, not more distracting." data-lang-zh="优秀好用的音乐播放器，应该让听歌这件事变得轻松愉悦、流畅省心，而不是层层广告、频繁弹窗、越用越烦躁分心。">
+      A good music player should make listening easier, not more distracting.
+    </p>
+
+    <p data-lang-en="<strong>Leevo Music</strong> keeps advertising simple: one banner on the home screen, and no advertising interruptions while you listen." data-lang-zh="<strong>Leevo音乐</strong>坚持简洁克制、尊重用户的原则：仅首页一处横幅广告，播放聆听全程零广告打断、零弹窗干扰、纯粹专注。">
+      <strong>Leevo Music</strong> keeps advertising simple: one banner on the
+      home screen, and no advertising interruptions while you listen.
+    </p>
+
+    <p data-lang-en="With local music playback, playlists, favorites, and recently played songs, Leevo Music focuses on the things that matter when you simply want to enjoy your music." data-lang-zh="完整支持本地离线流畅播放、自建专属歌单、标记收藏心爱曲目、留存最近播放记录，聚焦核心刚需功能，不花哨、不臃肿、稳定实用，只为安心享受音乐。">
+      With local music playback, playlists, favorites, and recently played
+      songs, Leevo Music focuses on the things that matter when you simply want
+      to enjoy your music.
+    </p>
+
+    <p data-lang-en="Open the app, choose your song, put on your headphones, and let the music play." data-lang-zh="打开应用、挑选喜欢歌曲、戴上耳机、按下播放键，沉浸旋律、远离打扰、放松身心、纯粹聆听。">
+      Open the app, choose your song, put on your headphones, and let the music
+      play.
+    </p>
+
+    <p data-lang-en="<strong>Because music should be about the music.</strong>" data-lang-zh="<strong>因为音乐，本该回归音乐本身。</strong>">
+      <strong>Because music should be about the music.</strong>
+    </p>
+  </section>
+
+</article>
+
+
+  <!-- ✅ 双语切换+本地存储记忆脚本 -->
+  <script>
+    const langSwitchBtn = document.getElementById('langSwitch');
+    const html = document.documentElement;
+
+    // 读取上次选择语言，默认英文
+    let currentLang = localStorage.getItem('leevo-lang') || 'en';
+
+    // 切换语言并更新页面所有data-lang内容
+    function switchLang(lang) {
+      document.querySelectorAll('[data-lang-en], [data-lang-zh]').forEach(el => {
+        const text = el.getAttribute(`data-lang-${lang}`);
+        if (text) {
+          if(el.tagName === 'META'){
+            el.setAttribute(el.name === 'description' ? 'content' : el.name, text);
+          } else {
+            el.textContent = text;
+          }
+        }
+      });
+      html.lang = lang;
+      localStorage.setItem('leevo-lang', lang);
+    }
+
+    // 初始化加载
+    switchLang(currentLang);
+
+    // 点击切换
+    langSwitchBtn.addEventListener('click', () => {
+      currentLang = currentLang === 'en' ? 'zh' : 'en';
+      switchLang(currentLang);
+    });
+  </script>
+
 </body>
 </html>
