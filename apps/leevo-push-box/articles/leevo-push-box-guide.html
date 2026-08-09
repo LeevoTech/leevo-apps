@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-lang-en="Leevo Push Box – Classic Logic Puzzle Game Guide" data-lang-zh="Leevo推箱子 – 经典益智逻辑闯关游戏指南">Leevo Push Box – Classic Logic Puzzle Game Guide</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:Arial,sans-serif; background:linear-gradient(135deg,#0d2035,#07111f); color:#fff; line-height:1.7; padding:40px 30px; max-width:900px; margin:0 auto;}
+    .back-link{display:inline-block; margin-bottom:40px; color:#f2c86b; text-decoration:none; font-size:18px;}
+    .back-link:hover{text-decoration:underline;}
+    h1{color:#f2c86b; font-size:32px; margin-bottom:30px; line-height:1.4;}
+    h2{color:#ffffff; font-size:24px; margin:30px 0 20px;}
+    p{color:#e6e6e6; font-size:18px; margin-bottom:20px;}
+    ul{color:#e6e6e6; font-size:18px; margin:20px 0 20px 30px;}
+    li{margin-bottom:10px;}
+    .lang-switch-btn{padding:6px 14px; border-radius:6px; border:none; background:#f2c86b; color:#07111f; font-weight:bold; cursor:pointer; margin-bottom:20px;}
+  </style>
+</head>
+<body>
+  <!-- 语言切换按钮，与首页共用本地存储，自动同步 -->
+  <button id="pageLangSwitch" class="lang-switch-btn">中文 / EN</button>
 
+  <!-- 返回首页双语链接，样式位置统一 -->
+  <a href="../index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回 Leevo 应用首页">← Back to Leevo Apps Home</a>
+
+  <h1 data-lang-en="Leevo Push Box — Classic Logic Puzzle, Think Carefully & Clear Levels" data-lang-zh="Leevo推箱子 — 经典益智闯关 · 巧思规划 · 步步通关 · 越玩越聪明">Leevo Push Box — Classic Logic Puzzle, Think Carefully & Clear Levels</h1>
+
+  <p data-lang-en="Leevo Push Box is a timeless brain-teasing puzzle game loved by players of all ages! Simple core rule: control the character to push boxes one by one onto the glowing marked target positions — once all boxes are in place, you clear the level! Sounds easy, but needs careful planning, avoid pushing into dead corners or blocking paths." data-lang-zh="Leevo推箱子是一款老少皆宜、永不过时的经典益智游戏！核心玩法简单易懂：操控角色移动，将箱子逐个推到场地标记好的目标位置上，所有箱子就位即可成功通关！看似轻松，却需要提前规划路线、步步谨慎，避免把箱子推进死角、堵死通路，考验耐心与智慧。">Leevo Push Box is a timeless brain-teasing puzzle game loved by players of all ages! Simple core rule: control the character to push boxes one by one onto the glowing marked target positions — once all boxes are in place, you clear the level! Sounds easy, but needs careful planning, avoid pushing into dead corners or blocking paths.</p>
+
+  <h2 data-lang-en="Game & Brain Benefits" data-lang-zh="游戏特色与益智价值">Game & Brain Benefits</h2>
+  <ul>
+    <li data-lang-en="✅ Easy to start: simple control, clear objective — pick up quickly without complicated tutorials" data-lang-zh="✅ 上手零门槛：操作直观、目标明确，不用复杂教程，几分钟就能懂玩法开始闯关">✅ Easy to start: simple control, clear objective — pick up quickly without complicated tutorials</li>
+    <li data-lang-en="✅ Step-by-step challenge: levels go from easy warm-up to tricky hard puzzles — keep thinking, never get boring fast" data-lang-zh="✅ 难度循序渐进：从入门热身关卡慢慢过渡到烧脑难题，层层递进、越玩越有挑战，久玩不腻">✅ Step-by-step challenge: levels go from easy warm-up to tricky hard puzzles — keep thinking, never get boring fast</li>
+    <li data-lang-en="✅ Exercise key abilities: train logical reasoning, space layout & forward planning — good brain workout for kids & adults alike" data-lang-zh="✅ 益智锻炼大脑：提升逻辑推理、空间想象、预判规划能力，学生锻炼思维、成人放松动脑，老少皆宜">✅ Exercise key abilities: train logical reasoning, space layout & forward planning — good brain workout for kids & adults alike</li>
+    <li data-lang-en="✅ Great time-killer: play a few rounds during breaks, waiting time or before bed — short sessions, full sense of achievement when clearing a level" data-lang-zh="✅ 绝佳休闲消遣：课间休息、候车等候、睡前空闲都能玩几关，用时灵活，解开谜题通关瞬间成就感满满">✅ Great time-killer: play a few rounds during breaks, waiting time or before bed — short sessions, full sense of achievement when clearing a level</li>
+  </ul>
+
+  <h2 data-lang-en="Small tips to play better" data-lang-zh="轻松通关小提示">Small tips to play better</h2>
+  <p data-lang-en="Think ahead before pushing — do not rush! Observe the whole map first, plan which target to finish first, avoid pushing boxes into corners you can’t pull them out from. Take your time, try different ideas, reset & rethink freely — thinking process itself is the fun!" data-lang-zh="别急着盲目推动！先观察整体地图布局，规划优先完成哪个目标位置，避免将箱子推进死角无法移出。卡住可以重新开局、换思路慢慢尝试，思考探索的过程本身就是乐趣所在！">Think ahead before pushing — do not rush! Observe the whole map first, plan which target to finish first, avoid pushing boxes into corners you can’t pull them out from. Take your time, try different ideas, reset & rethink freely — thinking process itself is the fun!</p>
+
+<script>
+// 与首页共用语言存储，一键同步切换
+let currentLang = localStorage.getItem('leevoLang') || 'en';
+
+function updateAllText(){
+  document.querySelectorAll('[data-lang-en],[data-lang-zh]').forEach(el=>{
+    const txt = el.getAttribute(`data-lang-${currentLang}`);
+    if(txt) el.innerHTML = txt;
+  });
+}
+
+document.addEventListener('DOMContentLoaded', updateAllText);
+
+document.getElementById('pageLangSwitch').addEventListener('click',()=>{
+  currentLang = currentLang === 'en' ? 'zh' : 'en';
+  localStorage.setItem('leevoLang', currentLang);
+  updateAllText();
+});
+</script>
+</body>
+</html>
