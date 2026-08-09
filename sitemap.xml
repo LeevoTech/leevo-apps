@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- 👉 1. 网站首页（最重要，优先级最高） -->
   <url>
-    <loc>https://leevotech.github.io/leevo-apps/</loc>
-    <lastmod>2026-08-07</lastmod>
+    <loc>https://leevotech.github.io/leevo-apps/index.html</loc>
+    <lastmod>2026-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- 👉 2. Leevo Color SEO指南文章（就是你现在要加的） -->
+  <url>
+    <loc>https://leevotech.github.io/leevo-apps/apps/leevo-color/articles/leevo-color-guide.html</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 👉 以后其他文章，全部复制上面<url>块，改链接/日期就行 -->
 
 </urlset>
