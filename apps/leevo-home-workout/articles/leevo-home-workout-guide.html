@@ -3,58 +3,479 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-lang-en="Best Free Home Workout Apps — No Equipment Needed" data-lang-zh="最佳免费居家健身应用 — 无需器械">Best Free Home Workout Apps — No Equipment Needed</title>
+
+  <!-- ✅ SEO优化双语言标题&描述，精准植入核心关键词 -->
+  <title data-lang-en="Leevo Home Workout: Personalized Home Fitness & Exercise App" data-lang-zh="Leevo居家健身：个性化家庭训练与居家运动应用">Leevo Home Workout: Personalized Home Fitness & Exercise App</title>
+  <meta name="description" data-lang-en="Discover Leevo Home Workout — your personalized home workout app for muscle building, weight loss, keeping fit, dumbbell routines, no-equipment bodyweight exercises, beginner-friendly plans and visual exercise guides." data-lang-zh="认识Leevo居家健身：专属个性化家庭训练计划，支持增肌、减脂、塑形、哑铃训练、无器械自重运动，新手友好、动作图解指导，轻松养成居家运动习惯。">
+  <meta name="keywords" content="home workout app, home fitness, workout at home, build muscle at home, lose weight at home, dumbbell workout, no equipment exercise, beginner home workout, personal workout planner, bodyweight training">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://leevotech.github.io/leevo-apps/apps/leevo-home-workout/articles/leevo-home-workout-guide.html">
+
   <style>
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:Arial,sans-serif; background:linear-gradient(135deg,#0d2035,#07111f); color:#fff; line-height:1.7; padding:40px 30px; max-width:900px; margin:0 auto;}
-    .back-link{display:inline-block; margin-bottom:40px; color:#f2c86b; text-decoration:none; font-size:18px;}
-    .back-link:hover{text-decoration:underline;}
-    h1{color:#f2c86b; font-size:32px; margin-bottom:30px; line-height:1.4;}
-    h2{color:#ffffff; font-size:24px; margin:30px 0 20px;}
-    p{color:#e6e6e6; font-size:18px; margin-bottom:20px;}
-    .lang-switch-btn{padding:6px 14px; border-radius:6px; border:none; background:#f2c86b; color:#07111f; font-weight:bold; cursor:pointer; margin-bottom:20px;}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #07111f;
+      color: #e6eaf0;
+      line-height: 1.7;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    a { color: #f2c86b; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ✅ 统一导航栏：绝对根路径返回首页+双语切换，永久不404 */
+    .page-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #203b55;
+      flex-wrap: wrap;
+      gap:15px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+      font-size:16px;
+    }
+    .lang-switch-btn {
+      padding: 6px 14px;
+      border-radius: 6px;
+      border: none;
+      background: #f2c86b;
+      color: #07111f;
+      font-weight: bold;
+      cursor: pointer;
+      transition:0.2s;
+    }
+    .lang-switch-btn:hover{ transform:scale(1.05); }
+
+    .article-header { margin-bottom: 45px; }
+    .article-category {
+      color: #f2c86b;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1.3;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+    .article-intro {
+      font-size: 18px;
+      color: #b7c4d2;
+    }
+
+    section { margin-bottom: 50px; }
+    h2 {
+      font-size: 26px;
+      color: #ffffff;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #1c344c;
+    }
+    h3 {
+      font-size: 20px;
+      color: #f2d28c;
+      margin: 25px 0 12px;
+    }
+    p { margin-bottom: 16px; font-size: 17px; }
+    ul, ol { margin: 20px 0 20px 25px; }
+    li { margin-bottom: 10px; font-size: 17px; }
+
+    .faq-item {
+      background: #0d1c2c;
+      padding:22px;
+      border-radius:10px;
+      margin-bottom:15px;
+      border:1px solid #203b55;
+    }
+    .conclusion {
+      background: linear-gradient(135deg, #10253a, #0d1c2c);
+      padding:35px;
+      border-radius:16px;
+      border:1px solid #294969;
+    }
+
+    @media (max-width:600px) {
+      body { padding:20px 15px; }
+      h1 { font-size:28px; }
+      .page-nav { flex-direction:column; align-items:flex-start; }
+    }
   </style>
 </head>
 <body>
-  <!-- 语言切换按钮：和首页文字一致 -->
-  <button id="pageLangSwitch" class="lang-switch-btn">中文 / EN</button>
 
-  <!-- 返回首页链接：双语 -->
-  <a href="../index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回 Leevo 应用首页">← Back to Leevo Apps Home</a>
+  <!-- ✅ 全站统一导航：绝对路径直达首页、双语切换、语言记忆 -->
+  <nav class="page-nav">
+    <a href="/leevo-apps/index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回Leevo应用首页">← Back to Leevo Apps Home</a>
+    <button id="langSwitch" class="lang-switch-btn">中文 / EN</button>
+  </nav>
 
-  <!-- 标题、正文全部加上 data-lang-en / data-lang-zh 双属性 -->
-  <h1 data-lang-en="Best Free Home Workout Apps — No Equipment Needed" data-lang-zh="最佳免费居家健身应用 — 无需器械">Best Free Home Workout Apps — No Equipment Needed</h1>
+<article class="app-article">
 
-  <p data-lang-en="Getting fit doesn't always mean expensive gym memberships or piles of heavy gear. More and more people prefer exercising comfortably in their own living space — flexible, private, and easy to fit into busy daily schedules. A good free home workout app can guide you, keep you consistent, and help you build real progress without extra cost." data-lang-zh="健身并不一定需要昂贵的健身房会员或一大堆重型器械。越来越多人更愿意在自己舒适的居家空间里锻炼——时间灵活、不受打扰，轻松融入繁忙的日常节奏。一款优质免费居家健身应用，能科学引导训练、帮你坚持打卡、实实在在提升体能，完全不用额外花钱。">Getting fit doesn't always mean expensive gym memberships or piles of heavy gear. More and more people prefer exercising comfortably in their own living space — flexible, private, and easy to fit into busy daily schedules. A good free home workout app can guide you, keep you consistent, and help you build real progress without extra cost.</p>
+  <header class="article-header">
+    <p class="article-category" data-lang-en="Home Fitness" data-lang-zh="居家健身">Home Fitness</p>
 
-  <h2 data-lang-en="Why choose no-equipment home workouts?" data-lang-zh="为什么选择无器械居家健身？">Why choose no-equipment home workouts?</h2>
+    <h1 data-lang-en="Leevo Home Workout: A Simple Workout App for Training at Home" data-lang-zh="Leevo居家健身：轻松上手的家庭专属训练应用">Leevo Home Workout: A Simple Workout App for Training at Home</h1>
 
-  <p data-lang-en="Bodyweight exercises — squats, planks, push-ups, lunges — work your full body, build strength, improve posture and boost energy. You can do them early morning, during lunch breaks, or in the evening. The biggest challenge is staying consistent and knowing exactly what to do — and that's where a well-designed app helps most." data-lang-zh="自重训练动作——深蹲、平板支撑、俯卧撑、弓步等，能锻炼全身肌肉、增强力量、改善体态、提升精力。早起、午休碎片时间、晚间空闲都能随时练。健身最难的是坚持，以及清楚知道该练什么——而一款设计贴心的应用，正好能帮你解决这两点。">Bodyweight exercises — squats, planks, push-ups, lunges — work your full body, build strength, improve posture and boost energy. You can do them early morning, during lunch breaks, or in the evening. The biggest challenge is staying consistent and knowing exactly what to do — and that's where a well-designed app helps most.</p>
+    <p class="article-intro" data-lang-en="You do not always need a gym to build a consistent workout routine. With the right exercises, a realistic schedule, and a workout plan that fits your goals, home exercise can become part of your everyday life. Leevo Home Workout is designed to make home workouts easier to plan, understand, and follow." data-lang-zh="不必天天去健身房，也能坚持规律运动！选对动作、贴合时间、匹配目标，居家锻炼轻松融入日常。Leevo居家健身，帮你规划、看懂、坚持家庭训练，简单好执行。">
+      You do not always need a gym to build a consistent workout routine.
+      With the right exercises, a realistic schedule, and a workout plan that
+      fits your goals, home exercise can become part of your everyday life.
+      Leevo Home Workout is designed to make home workouts easier to plan,
+      understand, and follow.
+    </p>
+  </header>
 
 
+  <section>
+    <h2 data-lang-en="What Is Leevo Home Workout?" data-lang-zh="什么是Leevo居家健身？">What Is Leevo Home Workout?</h2>
+
+    <p data-lang-en="Leevo Home Workout is a home workout app designed for people who want to exercise at home without making fitness unnecessarily complicated. Instead of giving everyone exactly the same routine, the app uses information about the user's profile, fitness experience, goals, and available workout time to help create a more suitable personalized training plan." data-lang-zh="Leevo居家健身是专为居家运动打造的健身应用，拒绝复杂冗余训练。不搞千篇一律计划：结合个人资料、运动基础、健身目标、每日可用时长，生成**专属适配**的训练方案。">
+      Leevo Home Workout is a home workout app designed for people who want
+      to exercise at home without making fitness unnecessarily complicated.
+      Instead of giving everyone exactly the same routine, the app uses
+      information about the user's profile, fitness experience, goals, and
+      available workout time to help create a more suitable <strong>personalized training plan</strong>.
+    </p>
+
+    <p data-lang-en="The idea is simple: a workout plan should fit your life. Whether you have a few minutes available each day or more time for training, having a structured routine can make it easier to stay consistent and build a lasting fitness habit." data-lang-zh="核心理念很实在：训练计划要贴合你的真实生活。每天短时间碎片化练、集中系统训练都能适配，科学安排帮你**坚持下去、养成习惯**。">
+      The idea is simple: a workout plan should fit your life. Whether you have
+      a few minutes available each day or more time for training, having a
+      structured routine can make it easier to stay consistent and build a lasting fitness habit.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Why Choose a Home Workout App?" data-lang-zh="为什么选择居家健身App？">Why Choose a Home Workout App?</h2>
+
+    <p data-lang-en="Going to a gym is not always convenient. Travel time, expensive membership fees, crowded equipment, and busy work schedules often stop people from exercising regularly." data-lang-zh="去健身房总有各种不便：往返耗时、会员费贵、器材排队、工作忙碌，很容易中断运动。">
+      Going to a gym is not always convenient. Travel time, expensive membership fees, crowded equipment, and busy work schedules often stop people from exercising regularly.
+    </p>
+
+    <p data-lang-en="Home workouts remove these barriers completely. You can exercise in your living room, bedroom or quiet personal space, arrange training at any time that fits your daily rhythm — no commute, no crowding, total freedom." data-lang-zh="居家锻炼轻松扫清阻碍：客厅、卧室就能练，时间完全自己安排，不用赶路、不用等器械、不受外界打扰，运动自由可控。">
+      Home workouts remove these barriers completely. You can exercise in your living room, bedroom or quiet personal space, arrange training at any time that fits your daily rhythm — no commute, no crowding, total freedom.
+    </p>
+
+    <p data-lang-en="A reliable home workout app also brings clear structure: no more guessing what to do next, follow a scientific planned routine step by step, stay focused and steadily build a consistent exercise habit." data-lang-zh="专业健身App更帮你理清训练逻辑：不用纠结今天练什么、动作顺序怎么排，跟着科学流程完成每一次训练，专注执行、慢慢养成规律运动习惯。">
+      A reliable home workout app also brings clear structure: no more guessing what to do next, follow a scientific planned routine step by step, stay focused and steadily build a consistent exercise habit.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Create a Workout Plan Around Your Personal Goals" data-lang-zh="围绕专属目标，定制个人训练计划">Create a Workout Plan Around Your Personal Goals</h2>
+
+    <p data-lang-en="One of the biggest strengths of Leevo Home Workout is fully personalized fitness planning, never one-size-fits-all." data-lang-zh="Leevo居家健身核心优势就是**个性化定制训练**，拒绝一刀切通用模板。">
+      One of the biggest strengths of Leevo Home Workout is fully personalized fitness planning, never one-size-fits-all.
+    </p>
+
+    <p data-lang-en="When setting up your profile, simply share basic info — height, weight, age, gender, fitness foundation, what you want to achieve, and how much time you can spare daily — the app tailors a plan just for you." data-lang-zh="填写个人信息：身高体重、年龄性别、运动基础、健身目标、每日可用时长，应用据此生成贴合个人情况的专属训练方案。">
+      When setting up your profile, simply share basic info — height, weight, age, gender, fitness foundation, what you want to achieve, and how much time you can spare daily — the app tailors a plan just for you.
+    </p>
+
+    <p data-lang-en="Say goodbye to useless generic routines — every exercise and weekly schedule aligns closely with what you truly want to accomplish." data-lang-zh="告别网上千篇一律却不适合自己的训练内容，每一个动作、每周安排，都围绕你的核心健身目标设计。">
+      Say goodbye to useless generic routines — every exercise and weekly schedule aligns closely with what you truly want to accomplish.
+    </p>
+
+    <h3 data-lang-en="Pick Your Fitness Goal Clearly" data-lang-zh="明确你的健身核心目标">Pick Your Fitness Goal Clearly</h3>
+
+    <p data-lang-en="Everyone exercises for different reasons, and we support the most common practical goals:" data-lang-zh="每个人健身诉求不一样，覆盖主流实用训练方向：">
+      Everyone exercises for different reasons, and we support the most common practical goals:
+    </p>
+
+    <ul>
+      <li data-lang-en="Build muscle & get stronger" data-lang-zh="增肌塑形、提升力量">Build muscle & get stronger</li>
+      <li data-lang-en="Lose weight & burn fat effectively" data-lang-zh="减脂减重、高效燃脂">Lose weight & burn fat effectively</li>
+      <li data-lang-en="Stay active, improve health & maintain fitness" data-lang-zh="日常活动、强身健体、维持体态">Stay active, improve health & maintain fitness</li>
+    </ul>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Workouts That Fit Your Available Daily Time" data-lang-zh="训练计划，完美适配你的可用时长">Workouts That Fit Your Available Daily Time</h2>
+
+    <p data-lang-en="Finding enough spare time is the #1 difficulty for most people keeping fit. A fancy training plan is meaningless if it’s too long or rigid to squeeze into busy days." data-lang-zh="没时间，是坚持健身最大阻碍！计划再专业，太长太死板挤不进日常安排，根本没法落地。">
+      Finding enough spare time is the #1 difficulty for most people keeping fit. A fancy training plan is meaningless if it’s too long or rigid to squeeze into busy days.
+    </p>
+
+    <p data-lang-en="Leevo Home Workout builds daily duration right into planning — short sessions for busy days, richer full workouts when you have more free time — always realistic and doable." data-lang-zh="Leevo居家健身把时间纳入核心规划：忙碌时短时间高效训练，空闲日完整系统练习，保证每一份计划都能真正完成。">
+      Leevo Home Workout builds daily duration right into planning — short sessions for busy days, richer full workouts when you have more free time — always realistic and doable.
+    </p>
+
+    <p data-lang-en="Even when your schedule shifts occasionally — don’t stress! Sustainable consistent exercise beats forcing overly tough, unrealistic schedules that lead to giving up quickly." data-lang-zh="偶尔作息变动也不用焦虑：能长期坚持的适度训练，远比咬牙硬撑、很快放弃的高强度不现实计划更有价值。">
+      Even when your schedule shifts occasionally — don’t stress! Sustainable consistent exercise beats forcing overly tough, unrealistic schedules that lead to giving up quickly.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Home Workouts Without Expensive & Complicated Equipment" data-lang-zh="居家训练，不用昂贵复杂器械">Home Workouts Without Expensive & Complicated Equipment</h2>
+
+    <p data-lang-en="Professional gym gear is not a must for effective fitness! Plenty of powerful, proven exercises rely purely on your own body weight — zero cost, start instantly anywhere." data-lang-zh="想要练出效果，根本不需要全套专业器械！大量经典有效动作依靠**自重就能完成**，零成本、随时随地立刻开练。">
+      Professional gym gear is not a must for effective fitness! Plenty of powerful, proven exercises rely purely on your own body weight — zero cost, start instantly anywhere.
+    </p>
+
+    <p data-lang-en="Leevo Home Workout packs rich training options covering full-body muscles, letting you assemble balanced routines easily." data-lang-zh="Leevo居家健身收录覆盖全身肌群的丰富动作库，轻松搭配均衡全面训练流程。">
+      Leevo Home Workout packs rich training options covering full-body muscles, letting you assemble balanced routines easily.
+    </p>
+
+    <h3 data-lang-en="Train & Strengthen Every Part of Your Body" data-lang-zh="全身肌群均衡锻炼，无死角发力">Train & Strengthen Every Part of Your Body</h3>
+
+    <p data-lang-en="Balanced fitness means training more than just one spot — build strength, endurance and coordination across key areas:" data-lang-zh="科学健身拒绝局部偏科，全面强化核心肌群、提升力量耐力与身体协调性：">
+      Balanced fitness means training more than just one spot — build strength, endurance and coordination across key areas:
+    </p>
+
+    <ul>
+      <li data-lang-en="Arms & Shoulders" data-lang-zh="手臂与肩部">Arms & Shoulders</li>
+      <li data-lang-en="Chest Muscles" data-lang-zh="胸部肌群">Chest Muscles</li>
+      <li data-lang-en="Back & Posture" data-lang-zh="背部与体态矫正">Back & Posture</li>
+      <li data-lang-en="Core & Abs" data-lang-zh="核心与腰腹">Core & Abs</li>
+      <li data-lang-en="Legs & Glutes" data-lang-zh="下肢与臀部">Legs & Glutes</li>
+      <li data-lang-en="Complete Full-Body Workouts" data-lang-zh="全身综合训练">Complete Full-Body Workouts</li>
+    </ul>
+
+    <p data-lang-en="Every workout always includes guided warm-ups — protect joints, raise body temperature and get muscles ready before intense training." data-lang-zh="每次训练配套完整热身流程：激活关节、提升体温、唤醒肌肉，安全开启正式训练。">
+      Every workout always includes guided warm-ups — protect joints, raise body temperature and get muscles ready before intense training.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Effective Dumbbell Workouts You Can Do At Home" data-lang-zh="居家哑铃训练，低成本高效增肌塑形">Effective Dumbbell Workouts You Can Do At Home</h2>
+
+    <p data-lang-en="Dumbbells are the top choice for affordable home fitness gear — compact to store, cheap to buy, yet unlock endless strength training possibilities." data-lang-zh="哑铃是居家健身首选高性价比器械：占地小、价格亲民，却能完成几乎全部力量训练动作。">
+      Dumbbells are the top choice for affordable home fitness gear — compact to store, cheap to buy, yet unlock endless strength training possibilities.
+    </p>
+
+    <p data-lang-en="With just one pair of dumbbells, you can upgrade arm, shoulder, chest, back, leg and core workouts for better muscle building and shaping results." data-lang-zh="一对哑铃在手，手臂、肩胸、背部、下肢、核心训练全面升级，增肌塑形、提升力量效果更明显。">
+      With just one pair of dumbbells, you can upgrade arm, shoulder, chest, back, leg and core workouts for better muscle building and shaping results.
+    </p>
+
+    <p data-lang-en="Leevo Home Workout organizes clear dumbbell-focused routines, helping you integrate equipment training smoothly into your daily fitness plan." data-lang-zh="Leevo居家健身整理系统哑铃专项训练方案，轻松把器械力量训练融入日常计划，练得规范、练得高效。">
+      Leevo Home Workout organizes clear dumbbell-focused routines, helping you integrate equipment training smoothly into your daily fitness plan.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Visual Exercise Guidance — Learn Correct Moves Easily" data-lang-zh="图文视频直观指导，轻松学会标准动作">Visual Exercise Guidance — Learn Correct Moves Easily</h2>
+
+    <p data-lang-en="Knowing exercise names is far from enough — wrong form wastes effort, risks injury and slows progress down." data-lang-zh="光知道动作名字没用！姿势不标准，练了白费力、容易受伤、训练效果大打折扣。">
+      Knowing exercise names is far from enough — wrong form wastes effort, risks injury and slows progress down.
+    </p>
+
+    <p data-lang-en="Leevo Home Workout supports clear exercise images and video demos — watch and learn proper posture, movement rhythm and key form points before starting." data-lang-zh="Leevo居家健身提供高清图解+视频示范，直观看清标准姿势、发力顺序、易错纠正，跟着学就能做对动作。">
+      Leevo Home Workout supports clear exercise images and video demos — watch and learn proper posture, movement rhythm and key form points before starting.
+    </p>
+
+    <p data-lang-en="Perfect for absolute beginners or anyone trying new movements — build good technique habits safely from day one." data-lang-zh="健身新手、尝试新动作都特别友好，从零建立正确发力习惯，安全训练、稳步进步。">
+      Perfect for absolute beginners or anyone trying new movements — build good technique habits safely from day one.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Friendly for Beginners & Experienced Fitness Lovers Alike" data-lang-zh="新手入门、进阶锻炼，都能适配">Friendly for Beginners & Experienced Fitness Lovers Alike</h2>
+
+    <p data-lang-en="You don’t need to be an athlete to start exercising at home! Beginners can kick off with gentle, low-intensity foundational routines and gradually advance." data-lang-zh="不用运动达人也能开启居家锻炼！新手从轻松基础动作起步，循序渐进提升强度，不会一上来就挫败放弃。">
+      You don’t need to be an athlete to start exercising at home! Beginners can kick off with gentle, low-intensity foundational routines and gradually advance.
+    </p>
+
+    <p data-lang-en="If you already have fitness experience, dive into advanced exercise groups, customize intensity and structure to match your training goals perfectly." data-lang-zh="有运动基础的进阶用户，可自由选择高阶训练内容、调整强度编排，贴合进阶增肌减脂提升需求。">
+      If you already have fitness experience, dive into advanced exercise groups, customize intensity and structure to match your training goals perfectly.
+    </p>
+
+    <p data-lang-en="Our core goal is never overcomplicate fitness — just make regular exercise understandable, accessible and sustainable for everyone." data-lang-zh="始终坚持简约实用原则：不搞复杂花哨理论，让普通人看得懂、学得会、能坚持规律运动。">
+      Our core goal is never overcomplicate fitness — just make regular exercise understandable, accessible and sustainable for everyone.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="How to Start Your First Home Workout Routine" data-lang-zh="5步开启你的居家健身计划">How to Start Your First Home Workout Routine</h2>
+
+    <ol>
+      <li data-lang-en="Fill in your personal fitness profile — basic body info & past exercise experience." data-lang-zh="完善个人健身档案：填写基础身体信息、过往运动经历。">
+        <strong>Fill in your personal fitness profile.</strong> Enter basic body info & past exercise experience.
+      </li>
+      <li data-lang-en="Pick your main fitness goal — build muscle, lose weight or stay healthy & active." data-lang-zh="选定核心健身目标：增肌塑形 / 减脂减重 / 强身健体。">
+        <strong>Choose your fitness goal.</strong> Decide whether your main focus is building muscle, losing weight, or staying fit & active.
+      </li>
+      <li data-lang-en="Set realistic daily workout time — match your schedule, don’t force overly long sessions." data-lang-zh="设定每日可用训练时长：贴合作息，量力而行，拒绝盲目追求时长。">
+        <strong>Select your available workout time.</strong> Choose a realistic amount of time that fits your daily schedule.
+      </li>
+      <li data-lang-en="Follow guided exercises & visual demos — perform each movement safely and correctly." data-lang-zh="跟着动作图解/视频示范完成训练，保证姿势标准、发力到位。">
+        <strong>Follow your personalized workout plan.</strong> Use recommended exercises & visual guidance to finish each session safely.
+      </li>
+      <li data-lang-en="Stick to consistent practice — small daily effort beats occasional exhausting workouts." data-lang-zh="坚持规律打卡：每天稳步练习，远比偶尔突击猛练更有效。">
+        <strong>Stay consistent over time.</strong> Sustainable daily routine always outperforms rare, extreme workouts.
+      </li>
+    </ol>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Consistency Beats Perfect Intensity Every Time" data-lang-zh="坚持，远比追求极致强度更重要">Consistency Beats Perfect Intensity Every Time</h2>
+
+    <p data-lang-en="Many people quit quickly after setting overly ambitious, impossible schedules — burning out fast instead of building habits." data-lang-zh="一开始就定下超高强度、根本没法长期执行的计划，热情耗尽很快放弃，反而没法养成习惯。">
+      Many people quit quickly after setting overly ambitious, impossible schedules — burning out fast instead of building habits.
+    </p>
+
+    <p data-lang-en="A simple, doable routine you can keep doing week after week delivers far better long-term fitness results." data-lang-zh="一份简单、能日复一日坚持下去的计划，长期累积带来的健身效果，远超短期高强度突击。">
+      A simple, doable routine you can keep doing week after week delivers far better long-term fitness results.
+    </p>
+
+    <p data-lang-en="Home fitness naturally lowers barriers — skip travel, save time, train in comfort — making steady continuity much easier." data-lang-zh="居家健身天然降低运动门槛：节省通勤、环境舒适、时间灵活，帮你更容易长期坚持。">
+      Home fitness naturally lowers barriers — skip travel, save time, train in comfort — making steady continuity much easier.
+    </p>
+
+    <p data-lang-en="The absolute best workout plan is simply the one you can stick with." data-lang-zh="能长期坚持下去的训练，才是真正适合你的好训练。">
+      The absolute best workout plan is simply the one you can stick with.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Who Is Leevo Home Workout Best Suited For?" data-lang-zh="谁最适合使用Leevo居家健身？">Who Is Leevo Home Workout Best Suited For?</h2>
+
+    <ul>
+      <li data-lang-en="Total beginners building their first home fitness habit" data-lang-zh="从零开始建立运动习惯的健身新手">Total beginners building their first home fitness habit</li>
+      <li data-lang-en="Busy office workers & students with fragmented spare time" data-lang-zh="时间碎片化、日程紧张的上班族/学生">Busy office workers & students with fragmented spare time</li>
+      <li data-lang-en="People preferring private, comfortable home training environments" data-lang-zh="偏爱私密舒适居家环境、不想去公共健身房的朋友">People preferring private, comfortable home training environments</li>
+      <li data-lang-en="Fitness lovers looking for structured dumbbell training routines" data-lang-zh="想要系统哑铃力量训练方案的健身爱好者">Fitness lovers looking for structured dumbbell training routines</li>
+      <li data-lang-en="Anyone needing a clear personal workout planner & tracker" data-lang-zh="需要专业训练规划、科学安排周期的健身人群">Anyone needing a clear personal workout planner & tracker</li>
+      <li data-lang-en="Those wanting varied exercises to train all muscle groups evenly" data-lang-zh="追求全身肌群均衡锻炼、动作丰富不枯燥的练习者">Those wanting varied exercises to train all muscle groups evenly</li>
+      <li data-lang-en="Everyone hoping to keep regular exercise sustainable & enjoyable" data-lang-zh="希望轻松、持久、快乐坚持日常运动的所有人">Everyone hoping to keep regular exercise sustainable & enjoyable</li>
+    </ul>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Home Workout vs. Gym Training — Different Choices, Same Fitness Goal" data-lang-zh="居家训练 vs 健身房锻炼：方式不同，健身目标一致">Home Workout vs. Gym Training — Different Choices, Same Fitness Goal</h2>
+
+    <p data-lang-en="Home training and gym fitness are never rivals — they are two complementary ways to pursue health and strength." data-lang-zh="居家锻炼和健身房健身不是对立选择，只是两种互补、追求健康强健的运动方式。">
+      Home training and gym fitness are never rivals — they are two complementary ways to pursue health and strength.
+    </p>
+
+    <p data-lang-en="Gym offers full professional equipment; home fitness shines with convenience, privacy, zero travel cost and flexible anytime training." data-lang-zh="健身房胜在器械齐全；居家健身强在方便私密、零通勤、随时能练、不受时间地点约束。">
+      Gym offers full professional equipment; home fitness shines with convenience, privacy, zero travel cost and flexible anytime training.
+    </p>
+
+    <p data-lang-en="For anyone struggling to keep gym attendance regular — structured home workouts are a reliable, practical alternative to stay active consistently." data-lang-zh="难以坚持规律去健身房？科学居家训练就是最靠谱、最易落地的替代方案，帮你维持稳定运动状态。">
+      For anyone struggling to keep gym attendance regular — structured home workouts are a reliable, practical alternative to stay active consistently.
+    </p>
+
+    <p data-lang-en="The best fitness environment is simply the one that lets you train safely, comfortably and consistently." data-lang-zh="能让你安全、舒适、持续运动下去的方式，就是最适合你的健身方式。">
+      The best fitness environment is simply the one that lets you train safely, comfortably and consistently.
+    </p>
+  </section>
+
+
+  <section class="faq-section">
+    <h2 data-lang-en="Frequently Asked Questions About Home Workout Apps" data-lang-zh="居家健身常见问题解答">Frequently Asked Questions About Home Workout Apps</h2>
+
+    <div class="faq-item">
+      <h3 data-lang-en="What exactly is a home workout app?" data-lang-zh="什么是居家健身应用？">What exactly is a home workout app?</h3>
+      <p data-lang-en="A home workout app delivers structured exercise routines, movement guides and personalized training plans that you can complete fully at home without needing daily gym visits." data-lang-zh="居家健身应用，提供科学编排动作、标准动作指导、个性化训练计划，帮助你在家完成完整训练，不用频繁前往健身房。">
+        A home workout app delivers structured exercise routines, movement guides and personalized training plans that you can complete fully at home without needing daily gym visits.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3 data-lang-en="Can I really build muscle effectively with home workouts?" data-lang-zh="在家训练真的能有效增肌吗？">Can I really build muscle effectively with home workouts?</h3>
+      <p data-lang-en="Absolutely! Strength progress is totally achievable with progressive bodyweight training or affordable dumbbell routines — proper exercise selection, training volume, rest & nutrition together decide results." data-lang-zh="完全可以！科学进阶自重训练、哑铃力量训练，配合合理训练量、充足休息、均衡饮食，在家一样能稳步提升肌肉量、增强力量。">
+        Absolutely! Strength progress is totally achievable with progressive bodyweight training or affordable dumbbell routines — proper exercise selection, training volume, rest & nutrition together decide results.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3 data-lang-en="Are home workouts suitable for total beginners?" data-lang-zh="居家健身对新手友好吗？">Are home workouts suitable for total beginners?</h3>
+      <p data-lang-en="Yes — gentle foundational routines, detailed movement guides and low-pressure goals make home training an ideal starting point to build fitness confidence and good habits." data-lang-zh="非常友好！从基础入门动作、详细动作指导、轻松达成目标起步，是建立运动自信、养成健身习惯的绝佳起点。">
+        Yes — gentle foundational routines, detailed movement guides and low-pressure goals make home training an ideal starting point to build fitness confidence and good habits.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3 data-lang-en="Can I exercise effectively at home without buying any equipment?" data-lang-zh="完全不用器械，在家能练出效果吗？">Can I exercise effectively at home without buying any equipment?</h3>
+      <p data-lang-en="Definitely — bodyweight exercises alone cover full-body strength, endurance and cardio training perfectly well. Adding dumbbells later just expands exercise options & intensity levels further." data-lang-zh="当然可以！依靠自重动作就能完成全身力量、耐力、心肺训练，后续添置哑铃只是丰富动作选择、方便进阶提升强度。">
+        Definitely — bodyweight exercises alone cover full-body strength, endurance and cardio training perfectly well. Adding dumbbells later just expands exercise options & intensity levels further.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3 data-lang-en="How long should a daily home workout last?" data-lang-zh="每天居家训练多久最合适？">How long should a daily home workout last?</h3>
+      <p data-lang-en="There is no universal fixed number — everything depends on personal fitness level, goals, available free time and recovery needs. Sustainable shorter sessions are always better than forcing overly long exhausting workouts." data-lang-zh="没有统一标准答案！取决于个人体能、健身目标、空闲时长、身体恢复状态。能坚持的短时高效训练，永远优于勉强完成的超长疲惫训练。">
+        There is no universal fixed number — everything depends on personal fitness level, goals, available free time and recovery needs. Sustainable shorter sessions are always better than forcing overly long exhausting workouts.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3 data-lang-en="What is a workout planner app?" data-lang-zh="健身计划规划应用有什么用？">What is a workout planner app?</h3>
+      <p data-lang-en="A workout planner app organizes scattered exercises into logical weekly training cycles, automatically adjusting plans based on your goals, fitness level and available time — saving you time & making training systematic." data-lang-zh="健身规划应用把零散动作编排成科学周期训练，结合个人目标、体能、时间自动调整方案，帮你省去规划烦恼、训练更系统有序。">
+        A workout planner app organizes scattered exercises into logical weekly training cycles, automatically adjusting plans based on your goals, fitness level and available time — saving you time & making training systematic.
+      </p>
+    </div>
+  </section>
+
+
+  <section class="conclusion">
+    <h2 data-lang-en="Build a Workout Routine That Truly Fits Your Life" data-lang-zh="打造融入日常、属于自己的居家健身计划">Build a Workout Routine That Truly Fits Your Life</h2>
+
+    <p data-lang-en="Starting regular home fitness doesn’t need to be complicated, expensive or overwhelming — realistic goals, suitable exercises and a schedule that fits your life are all you need." data-lang-zh="开启居家健身不用复杂昂贵、不用焦虑畏难：贴合现实的目标、适配自己的动作、能融入作息的安排，就能稳步向前。">
+      Starting regular home fitness doesn’t need to be complicated, expensive or overwhelming — realistic goals, suitable exercises and a schedule that fits your life are all you need.
+    </p>
+
+    <p data-lang-en="**Leevo Home Workout** unifies personalized planning, clear movement guides, rich training modes and goal-focused fitness into one dedicated home fitness app." data-lang-zh="**Leevo居家健身**整合个性化训练规划、标准动作示范、多元训练模式、目标导向训练，一站式打造专属居家健身助手。">
+      <strong>Leevo Home Workout</strong> unifies personalized planning, clear movement guides, rich training modes and goal-focused fitness into one dedicated home fitness app.
+    </p>
+
+    <p data-lang-en="Whether you’re just starting out, want structured dumbbell training, or simply hope to stay consistently active — Leevo Home Workout helps you train organized, correctly and happily every day." data-lang-zh="从零起步、系统哑铃力量训练、只想规律维持活力体态，Leevo居家健身陪你每天科学、规范、轻松坚持运动！">
+      Whether you’re just starting out, want structured dumbbell training, or simply hope to stay consistently active — Leevo Home Workout helps you train organized, correctly and happily every day.
+    </p>
+  </section>
+
+</article>
+
+<!-- ✅ 双语联动脚本：和全站统一，自动记忆语言选择、标题/描述同步切换 -->
 <script>
-// ✅ 关键：用 localStorage 记住选中语言，和首页共用同一个语言记忆
 let currentLang = localStorage.getItem('leevoLang') || 'en';
 
-// 统一切换文字函数
-function updateAllText(){
+function switchAllContent(){
+  document.title = document.querySelector('title').getAttribute(`data-lang-${currentLang}`);
+  const metaDesc = document.querySelector('meta[name="description"]');
+  metaDesc.content = metaDesc.getAttribute(`data-lang-${currentLang}`);
+
   document.querySelectorAll('[data-lang-en],[data-lang-zh]').forEach(el=>{
     const txt = el.getAttribute(`data-lang-${currentLang}`);
     if(txt) el.innerHTML = txt;
   });
 }
 
-// 页面加载时：读取记忆语言 → 立刻显示对应语言
-document.addEventListener('DOMContentLoaded',()=>{
-  updateAllText();
+document.getElementById('langSwitch').addEventListener('click',()=>{
+  currentLang = currentLang==='en' ? 'zh' : 'en';
+  localStorage.setItem('leevoLang', currentLang);
+  switchAllContent();
 });
 
-// 点击切换：切换语言 → 保存记忆 → 更新文字
-document.getElementById('pageLangSwitch').addEventListener('click',()=>{
-  currentLang = currentLang === 'en' ? 'zh' : 'en';
-  localStorage.setItem('leevoLang', currentLang); // 永久记住选择
-  updateAllText();
-});
+document.addEventListener('DOMContentLoaded', switchAllContent);
 </script>
+
 </body>
 </html>
