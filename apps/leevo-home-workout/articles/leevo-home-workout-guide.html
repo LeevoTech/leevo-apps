@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-lang-en="Best Free Home Workout Apps — No Equipment Needed" data-lang-zh="最佳免费居家健身应用 — 无需器械">Best Free Home Workout Apps — No Equipment Needed</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:Arial,sans-serif; background:linear-gradient(135deg,#0d2035,#07111f); color:#fff; line-height:1.7; padding:40px 30px; max-width:900px; margin:0 auto;}
+    .back-link{display:inline-block; margin-bottom:40px; color:#f2c86b; text-decoration:none; font-size:18px;}
+    .back-link:hover{text-decoration:underline;}
+    h1{color:#f2c86b; font-size:32px; margin-bottom:30px; line-height:1.4;}
+    h2{color:#ffffff; font-size:24px; margin:30px 0 20px;}
+    p{color:#e6e6e6; font-size:18px; margin-bottom:20px;}
+    .lang-switch-btn{padding:6px 14px; border-radius:6px; border:none; background:#f2c86b; color:#07111f; font-weight:bold; cursor:pointer; margin-bottom:20px;}
+  </style>
+</head>
+<body>
+  <!-- 语言切换按钮：和首页文字一致 -->
+  <button id="pageLangSwitch" class="lang-switch-btn">中文 / EN</button>
 
+  <!-- 返回首页链接：双语 -->
+  <a href="../index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回 Leevo 应用首页">← Back to Leevo Apps Home</a>
+
+  <!-- 标题、正文全部加上 data-lang-en / data-lang-zh 双属性 -->
+  <h1 data-lang-en="Best Free Home Workout Apps — No Equipment Needed" data-lang-zh="最佳免费居家健身应用 — 无需器械">Best Free Home Workout Apps — No Equipment Needed</h1>
+
+  <p data-lang-en="Getting fit doesn't always mean expensive gym memberships or piles of heavy gear. More and more people prefer exercising comfortably in their own living space — flexible, private, and easy to fit into busy daily schedules. A good free home workout app can guide you, keep you consistent, and help you build real progress without extra cost." data-lang-zh="健身并不一定需要昂贵的健身房会员或一大堆重型器械。越来越多人更愿意在自己舒适的居家空间里锻炼——时间灵活、不受打扰，轻松融入繁忙的日常节奏。一款优质免费居家健身应用，能科学引导训练、帮你坚持打卡、实实在在提升体能，完全不用额外花钱。">Getting fit doesn't always mean expensive gym memberships or piles of heavy gear. More and more people prefer exercising comfortably in their own living space — flexible, private, and easy to fit into busy daily schedules. A good free home workout app can guide you, keep you consistent, and help you build real progress without extra cost.</p>
+
+  <h2 data-lang-en="Why choose no-equipment home workouts?" data-lang-zh="为什么选择无器械居家健身？">Why choose no-equipment home workouts?</h2>
+
+  <p data-lang-en="Bodyweight exercises — squats, planks, push-ups, lunges — work your full body, build strength, improve posture and boost energy. You can do them early morning, during lunch breaks, or in the evening. The biggest challenge is staying consistent and knowing exactly what to do — and that's where a well-designed app helps most." data-lang-zh="自重训练动作——深蹲、平板支撑、俯卧撑、弓步等，能锻炼全身肌肉、增强力量、改善体态、提升精力。早起、午休碎片时间、晚间空闲都能随时练。健身最难的是坚持，以及清楚知道该练什么——而一款设计贴心的应用，正好能帮你解决这两点。">Bodyweight exercises — squats, planks, push-ups, lunges — work your full body, build strength, improve posture and boost energy. You can do them early morning, during lunch breaks, or in the evening. The biggest challenge is staying consistent and knowing exactly what to do — and that's where a well-designed app helps most.</p>
+
+
+<script>
+// ✅ 关键：用 localStorage 记住选中语言，和首页共用同一个语言记忆
+let currentLang = localStorage.getItem('leevoLang') || 'en';
+
+// 统一切换文字函数
+function updateAllText(){
+  document.querySelectorAll('[data-lang-en],[data-lang-zh]').forEach(el=>{
+    const txt = el.getAttribute(`data-lang-${currentLang}`);
+    if(txt) el.innerHTML = txt;
+  });
+}
+
+// 页面加载时：读取记忆语言 → 立刻显示对应语言
+document.addEventListener('DOMContentLoaded',()=>{
+  updateAllText();
+});
+
+// 点击切换：切换语言 → 保存记忆 → 更新文字
+document.getElementById('pageLangSwitch').addEventListener('click',()=>{
+  currentLang = currentLang === 'en' ? 'zh' : 'en';
+  localStorage.setItem('leevoLang', currentLang); // 永久记住选择
+  updateAllText();
+});
+</script>
+</body>
+</html>
