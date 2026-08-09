@@ -4,10 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ✅ SEO优化双语言标题&描述，精准植入核心关键词 -->
-  <title data-lang-en="Leevo Home Workout: Personalized Home Fitness & Exercise App" data-lang-zh="Leevo居家健身：个性化家庭训练与居家运动应用">Leevo Home Workout: Personalized Home Fitness & Exercise App</title>
-  <meta name="description" data-lang-en="Discover Leevo Home Workout — your personalized home workout app for muscle building, weight loss, keeping fit, dumbbell routines, no-equipment bodyweight exercises, beginner-friendly plans and visual exercise guides." data-lang-zh="认识Leevo居家健身：专属个性化家庭训练计划，支持增肌、减脂、塑形、哑铃训练、无器械自重运动，新手友好、动作图解指导，轻松养成居家运动习惯。">
-  <meta name="keywords" content="home workout app, home fitness, workout at home, build muscle at home, lose weight at home, dumbbell workout, no equipment exercise, beginner home workout, personal workout planner, bodyweight training">
+  <!-- ✅ 精准指定SEO标题+描述+关键词，完整保留 + 双语切换支持 -->
+  <title data-lang-en="Leevo Home Workout - Home Workout App & Personalized Plans" data-lang-zh="Leevo居家健身 - 居家健身应用与个性化训练计划">Leevo Home Workout - Home Workout App & Personalized Plans</title>
+
+  <meta name="description" 
+        content="Leevo Home Workout is a home workout app with personalized workout plans, exercise guidance, dumbbell workouts, and routines for beginners and home fitness enthusiasts."
+        data-lang-en="Leevo Home Workout is a home workout app with personalized workout plans, exercise guidance, dumbbell workouts, and routines for beginners and home fitness enthusiasts."
+        data-lang-zh="Leevo居家健身：专业居家健身应用，提供个性化训练方案、标准动作指导、哑铃训练计划，新手友好，适合所有居家健身爱好者。">
+
+  <meta name="keywords" 
+        content="home workout app, workout app, home exercise app, workout planner, workout plan at home, beginner workout app, dumbbell workout at home, home fitness app, personalized workout plan, Leevo Home Workout">
+
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://leevotech.github.io/leevo-apps/apps/leevo-home-workout/articles/leevo-home-workout-guide.html">
 
@@ -30,7 +37,6 @@
     a { color: #f2c86b; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* ✅ 统一导航栏：绝对根路径返回首页+双语切换，永久不404 */
     .page-nav {
       display: flex;
       justify-content: space-between;
@@ -120,7 +126,7 @@
 </head>
 <body>
 
-  <!-- ✅ 全站统一导航：绝对路径直达首页、双语切换、语言记忆 -->
+  <!-- ✅ 全站统一导航：绝对路径直达首页、双语切换、语言记忆不404 -->
   <nav class="page-nav">
     <a href="/leevo-apps/index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回Leevo应用首页">← Back to Leevo Apps Home</a>
     <button id="langSwitch" class="lang-switch-btn">中文 / EN</button>
@@ -453,27 +459,31 @@
 
 </article>
 
-<!-- ✅ 双语联动脚本：和全站统一，自动记忆语言选择、标题/描述同步切换 -->
+<!-- ✅ 双语联动脚本：记忆语言、标题/描述/正文完整同步切换 -->
 <script>
 let currentLang = localStorage.getItem('leevoLang') || 'en';
 
 function switchAllContent(){
+  // 切换页面标题
   document.title = document.querySelector('title').getAttribute(`data-lang-${currentLang}`);
+  // 切换meta描述
   const metaDesc = document.querySelector('meta[name="description"]');
   metaDesc.content = metaDesc.getAttribute(`data-lang-${currentLang}`);
-
+  // 切换所有正文双语内容
   document.querySelectorAll('[data-lang-en],[data-lang-zh]').forEach(el=>{
     const txt = el.getAttribute(`data-lang-${currentLang}`);
     if(txt) el.innerHTML = txt;
   });
 }
 
+// 切换按钮点击
 document.getElementById('langSwitch').addEventListener('click',()=>{
   currentLang = currentLang==='en' ? 'zh' : 'en';
   localStorage.setItem('leevoLang', currentLang);
   switchAllContent();
 });
 
+// 页面加载完成自动执行记忆语言
 document.addEventListener('DOMContentLoaded', switchAllContent);
 </script>
 
