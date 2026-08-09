@@ -3,68 +3,398 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-lang-en="Leevo Color – AI Photo Colorize & Restore Guide" data-lang-zh="Leevo照片AI上色 – 老照片修复&特效使用指南">Leevo Color – AI Photo Colorize & Restore Guide</title>
+
+  <!-- ✅ 核心SEO Meta 严格按你优化建议 -->
+  <title>Leevo Color - AI Photo Editor & Old Photo Restoration</title>
+  <meta name="description" content="Discover Leevo Color, an AI photo editor for restoring old photos, enhancing portraits, and creating creative AI photo effects including cartoon and anime-inspired styles.">
+  <meta name="keywords" content="AI photo editor, AI photo restoration, restore old photos, old photo restoration app, old photo enhancer, AI portrait editor, AI photo effects, cartoon photo editor, anime photo effects, Leevo Color">
+
+  <!-- 基础辅助SEO -->
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://leevotech.github.io/leevo-apps/apps/leevo-color/articles/leevo-color-guide.html">
+
   <style>
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:Arial,sans-serif; background:linear-gradient(135deg,#0d2035,#07111f); color:#fff; line-height:1.7; padding:40px 30px; max-width:900px; margin:0 auto;}
-    .back-link{display:inline-block; margin-bottom:40px; color:#f2c86b; text-decoration:none; font-size:18px;}
-    .back-link:hover{text-decoration:underline;}
-    h1{color:#f2c86b; font-size:32px; margin-bottom:30px; line-height:1.4;}
-    h2{color:#ffffff; font-size:24px; margin:30px 0 20px;}
-    p{color:#e6e6e6; font-size:18px; margin-bottom:20px;}
-    ul{color:#e6e6e6; font-size:18px; margin:20px 0 20px 30px;}
-    li{margin-bottom:10px;}
-    .lang-switch-btn{padding:6px 14px; border-radius:6px; border:none; background:#f2c86b; color:#07111f; font-weight:bold; cursor:pointer; margin-bottom:20px;}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #07111f;
+      color: #e6eaf0;
+      line-height: 1.7;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    a { color: #f2c86b; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .back-nav {
+      margin-bottom: 40px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #203b55;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+    }
+
+    .article-header { margin-bottom: 45px; }
+    .article-category {
+      color: #f2c86b;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1.3;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+    .article-intro {
+      font-size: 18px;
+      color: #b7c4d2;
+    }
+
+    section { margin-bottom: 50px; }
+    h2 {
+      font-size: 26px;
+      color: #ffffff;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #1c344c;
+    }
+    h3 {
+      font-size: 20px;
+      color: #f2d28c;
+      margin: 25px 0 12px;
+    }
+    p { margin-bottom: 16px; font-size: 17px; }
+    ul, ol { margin: 20px 0 20px 25px; }
+    li { margin-bottom: 10px; font-size: 17px; }
+
+    .feature-list { display: grid; gap:20px; }
+    .feature-item {
+      background: #101f30;
+      padding:20px;
+      border-radius:12px;
+      border:1px solid #1c344c;
+    }
+    .faq-item {
+      background: #0d1c2c;
+      padding:22px;
+      border-radius:10px;
+      margin-bottom:15px;
+      border:1px solid #203b55;
+    }
+    .conclusion {
+      background: linear-gradient(135deg, #10253a, #0d1c2c);
+      padding:35px;
+      border-radius:16px;
+      border:1px solid #294969;
+    }
+
+    @media (max-width:600px) {
+      body { padding:20px 15px; }
+      h1 { font-size:28px; }
+    }
   </style>
 </head>
 <body>
-  <!-- 语言切换按钮：和首页统一 -->
-  <button id="pageLangSwitch" class="lang-switch-btn">中文 / EN</button>
 
-  <!-- 返回首页链接：双语、金色、位置样式和健身文章完全一致 -->
-  <a href="../index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回 Leevo 应用首页">← Back to Leevo Apps Home</a>
+  <!-- ✅ 标准返回首页链接（../../index.html 永远适配路径） -->
+  <nav class="back-nav">
+    <a href="../../index.html" class="back-link">← Back to Leevo Apps Home</a>
+  </nav>
 
-  <!-- 标题、段落、列表：全部配 data-lang-en / data-lang-zh 双语 -->
-  <h1 data-lang-en="Leevo Color – AI Photo Colorize, Repair & Creative Art Guide" data-lang-zh="Leevo照片AI上色 – 老照片修复 · 趣味AI变图 使用指南">Leevo Color – AI Photo Colorize, Repair & Creative Art Guide</h1>
+<article class="app-article">
 
-  <p data-lang-en="Bring your precious old memories back to life! Leevo Color uses smart AI technology to automatically add natural colors to faded black-and-white photos, fix blurry, scratched or damaged old pictures, and turn ordinary photos into amazing creative artworks with one tap." data-lang-zh="让珍贵老照片重焕光彩！Leevo照片AI上色依托智能AI技术，一键为褪色黑白照片还原自然色彩，修复模糊、划痕、破损老照片，还能把普通照片一键变成创意艺术作品。">Bring your precious old memories back to life! Leevo Color uses smart AI technology to automatically add natural colors to faded black-and-white photos, fix blurry, scratched or damaged old pictures, and turn ordinary photos into amazing creative artworks with one tap.</p>
+  <header class="article-header">
+    <p class="article-category">AI Photo Editing</p>
 
-  <h2 data-lang-en="Core Powerful Features" data-lang-zh="核心强大功能">Core Powerful Features</h2>
-  <ul>
-    <li data-lang-en="✅ AI Black & White Photo Colorization: Intelligent, natural color filling for old monochrome photos." data-lang-zh="✅ 黑白照片AI智能上色：自动识别场景、人物，还原真实自然色彩">✅ AI Black & White Photo Colorization: Intelligent, natural color filling for old monochrome photos.</li>
-    <li data-lang-en="✅ Old Photo Repair & Enhancement: Sharpen blurry faces, remove scratches/stains, restore faded details clearly." data-lang-zh="✅ 老照片清晰修复：模糊人脸变锐利、去除划痕污渍、还原丢失细节，焕然一新">✅ Old Photo Repair & Enhancement: Sharpen blurry faces, remove scratches/stains, restore faded details clearly.</li>
-    <li data-lang-en="✅ Fun AI Art Transformation Effects:" data-lang-zh="✅ 趣味AI创意变图特效：">✅ Fun AI Art Transformation Effects:</li>
+    <h1>Leevo Color: AI Photo Editor for Restoring Old Photos and Creating New Looks</h1>
+
+    <p class="article-intro">
+      Old photos preserve memories that are impossible to replace. But over time,
+      photos can become blurry, faded, scratched, or damaged. Leevo Color combines
+      AI photo restoration with creative AI photo effects, making it easier to
+      restore old pictures and give everyday photos a completely new look.
+    </p>
+  </header>
+
+
+  <section>
+    <h2>What Is Leevo Color?</h2>
+
+    <p>
+      Leevo Color is an AI-powered photo editing app designed for people who want
+      to restore old photographs, improve image quality, and experiment with
+      creative photo effects — a simple, effective <strong>AI photo editor</strong> for everyone.
+    </p>
+
+    <p>
+      Instead of using complicated professional photo editing software, Leevo Color
+      provides AI-powered tools that can help transform a photo with just a few
+      simple steps — perfect if you’re looking for an easy way to <strong>restore old photos</strong>.
+    </p>
+
+    <p>
+      Whether you have an old family photograph, a faded childhood picture, a
+      portrait that needs enhancement, or simply want to try a different artistic
+      style, Leevo Color brings powerful <strong>AI photo restoration</strong> and creative effects together in one app.
+    </p>
+  </section>
+
+
+  <section>
+    <h2>Restore Old Photos with AI</h2>
+
+    <p>
+      One of the main reasons people search for an <strong>old photo restoration app</strong> is to rescue treasured memories.
+      Older photographs often suffer from blur, scratches, faded colors, noise,
+      and loss of detail — exactly where AI works best.
+    </p>
+
+    <p>
+      AI photo restoration can help improve the appearance of these images by
+      analyzing the photograph and enhancing important visual details automatically.
+    </p>
+
+    <p>
+      This makes Leevo Color a trusted choice for restoring personal photographs that have
+      sentimental value: old family pictures, childhood memories, vintage portraits,
+      and scanned photographs — a reliable <strong>old photo enhancer</strong> you can use anytime.
+    </p>
+
+    <h3>Why Restore Old Family Photos?</h3>
+
+    <p>
+      Many old photographs exist only as physical prints or low-quality digital
+      copies. Once damaged or lost, those memories are hard to recover.
+    </p>
+
+    <p>
+      Creating a digital restored version gives an old photograph a new life: you can preserve it permanently,
+      share it with family, or build a personal digital archive with the help of smart AI.
+    </p>
+  </section>
+
+
+  <section>
+    <h2>More Than an Old Photo Restoration App</h2>
+
+    <p>
+      Photo restoration is only one strength. Leevo Color also delivers creative <strong>AI photo effects</strong>
+      for modern portraits and everyday shots — practical repair plus artistic transformation in one tool.
+    </p>
+
+    <p>
+      This means you can use the same app for both preserving memories and expressing creativity.
+    </p>
+
+    <h3>Creative AI Photo Effects</h3>
+
+    <p>
+      AI-powered effects completely change the look of portraits or ordinary photos.
+      Use it as a fun <strong>cartoon photo editor</strong>, try anime-inspired artistic styles,
+      or refine portraits with smart <strong>AI portrait editor</strong> tools — no advanced skills needed.
+    </p>
+
+    <p>
+      Experiment freely, preview different styles, and save your favorite version instantly.
+    </p>
+  </section>
+
+
+  <section>
+    <h2>What Can You Do with Leevo Color?</h2>
+
+    <div class="feature-list">
+
+      <div class="feature-item">
+        <h3>Restore Old Photos</h3>
+        <p>
+          Bring clarity, color, and detail back to faded, scratched, or blurry vintage photos — ideal for anyone wanting to restore old family photos.
+        </p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Enhance Portraits</h3>
+        <p>
+          Use AI-powered enhancement and retouching tools to create cleaner, sharper, more polished portraits in seconds.
+        </p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Create Cartoon-Style Photos</h3>
+        <p>
+          Transform ordinary portraits into lively cartoon-style images — a simple, powerful cartoon photo editor built right in.
+        </p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Try Anime-Inspired Styles</h3>
+        <p>
+          Turn photos into stunning art with unique anime photo effects and artistic filters powered by AI.
+        </p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Artistic & Stylized Portraits</h3>
+        <p>
+          Give photos a creative, professional look with artistic AI filters and smart portrait styling tools.
+        </p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Fun Age Transformation</h3>
+        <p>
+          Play with creative age-shift effects to see how portraits look with AI-powered transformation.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section>
+    <h2>Why Choose AI for Photo Restoration?</h2>
+
+    <p>
+      Traditional editing demands mastering sharpening, color correction, retouching, and layers — hard for beginners.
+    </p>
+
+    <p>
+      AI simplifies everything: it automatically detects damage, fixes blur, restores color, and sharpens details —
+      turning hours of work into minutes.
+    </p>
+
+    <p>
+      Perfect for anyone asking: <em>how do I restore old photos easily?</em> No steep learning curve, just great results fast.
+    </p>
+  </section>
+
+
+  <section>
+    <h2>How to Restore an Old Photo with Leevo Color</h2>
+
+    <ol>
+      <li>
+        <strong>Select your photo.</strong>
+        Pick an old faded picture, damaged print scan, or any portrait you want to improve.
+      </li>
+      <li>
+        <strong>Pick the right AI tool.</strong>
+        Choose Photo Restoration for vintage repair, or try creative AI photo effects for fun new styles.
+      </li>
+      <li>
+        <strong>Let AI process automatically.</strong>
+        The app analyzes, repairs, enhances, and applies effects in seconds — fully AI-driven.
+      </li>
+      <li>
+        <strong>Compare & preview.</strong>
+        Check before/after results, adjust or switch effects until you’re happy with the look.
+      </li>
+      <li>
+        <strong>Save & share easily.</strong>
+        Save high-quality restored images to your device or share them with family and friends instantly.
+      </li>
+    </ol>
+  </section>
+
+
+  <section>
+    <h2>Who Benefits Most from This AI Photo Editor?</h2>
+
     <ul>
-      <li data-lang-en="• Turn people into cute cartoon / comic style characters" data-lang-zh="• 人像一键变成卡通/动漫二次元风格">• Turn people into cute cartoon / comic style characters</li>
-      <li data-lang-en="• Convert photos into artistic pencil sketch drawings" data-lang-zh="• 照片转为细腻素描手绘效果">• Convert photos into artistic pencil sketch drawings</li>
-      <li data-lang-en="• Face aging: turn your look into elderly appearance" data-lang-zh="• 时光变老：一键体验老年模样">• Face aging: turn your look into elderly appearance</li>
-      <li data-lang-en="• Rejuvenation: turn photos back to younger childhood look" data-lang-zh="• 重返年轻：瞬间变回童年稚嫩模样">• Rejuvenation: turn photos back to younger childhood look</li>
+      <li>Anyone wanting to restore precious old family photographs</li>
+      <li>Users searching for a reliable AI photo restoration tool</li>
+      <li>People fixing blurry, faded, or low-quality old pictures</li>
+      <li>Those wanting quick, professional AI portrait editing</li>
+      <li>Creators loving cartoon, anime, and artistic photo transformations</li>
+      <li>Casual users exploring creative AI image ideas</li>
     </ul>
-  </ul>
+  </section>
 
-  <h2 data-lang-en="Simple & Easy to Use" data-lang-zh="操作简单 · 一键出效果">Simple & Easy to Use</h2>
-  <p data-lang-en="Just select a photo from your phone gallery — choose the tool you want — preview instantly — save/share high-quality results easily! No complex professional skills needed, everyone can create stunning works in seconds." data-lang-zh="只需从相册上传照片 → 选择想要的功能 → 实时预览效果 → 一键保存高清成品、随时分享！无需专业修图技术，人人几秒就能做出惊艳效果">Just select a photo from your phone gallery — choose the tool you want — preview instantly — save/share high-quality results easily! No complex professional skills needed, everyone can create stunning works in seconds.</p>
 
-<script>
-// ✅ 和首页共用本地存储语言，自动同步！
-let currentLang = localStorage.getItem('leevoLang') || 'en';
+  <section>
+    <h2>Preserve Memories & Unlock Creative Potential</h2>
 
-function updateAllText(){
-  document.querySelectorAll('[data-lang-en],[data-lang-zh]').forEach(el=>{
-    const txt = el.getAttribute(`data-lang-${currentLang}`);
-    if(txt) el.innerHTML = txt;
-  });
-}
+    <p>
+      AI bridges two powerful goals: saving irreplaceable past memories <em>and</em> inventing fresh new looks for today’s photos.
+    </p>
 
-document.addEventListener('DOMContentLoaded',()=>{
-  updateAllText(); // 打开文章自动读取首页选好的语言
-});
+    <p>
+      Whether you want to rescue a faded childhood photo or turn a selfie into stunning anime art — Leevo Color serves both needs perfectly.
+    </p>
+  </section>
 
-document.getElementById('pageLangSwitch').addEventListener('click',()=>{
-  currentLang = currentLang === 'en' ? 'zh' : 'en';
-  localStorage.setItem('leevoLang', currentLang); // 切换也保存，全站统一
-  updateAllText();
-});
-</script>
+
+  <section class="faq-section">
+    <h2>Frequently Asked Questions About AI Photo Restoration</h2>
+
+    <div class="faq-item">
+      <h3>What is AI photo restoration?</h3>
+      <p>
+        AI photo restoration uses smart technology to analyze aging or damaged photos, automatically fixing blur, fading, scratches, noise, and lost detail — far faster than manual editing.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can AI really restore old family photos?</h3>
+      <p>
+        Yes — it’s ideal for old family photos, childhood snapshots, vintage portraits, and scanned photos that lost quality over time.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What is an AI photo editor?</h3>
+      <p>
+        An AI photo editor automates complex improvements: restoration, sharpening, retouching, and creative artistic effects — making pro-level results easy for everyone.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I make cartoon-style photos here?</h3>
+      <p>
+        Absolutely — built-in AI creative tools turn ordinary photos into fun cartoon and stylized art effortlessly.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is Leevo Color only for repairing old photos?</h3>
+      <p>
+        No — it’s a dual-purpose tool: powerful restoration for old photos plus rich creative AI effects for modern portraits and everyday pictures.
+      </p>
+    </div>
+  </section>
+
+
+  <section class="conclusion">
+    <h2>Try AI-Powered Photo Editing Yourself Today</h2>
+
+    <p>
+      From bringing faded family photos back to life to turning portraits into creative art — AI photo editing opens up amazing possibilities.
+    </p>
+
+    <p>
+      <strong>Leevo Color</strong> is your all-in-one <strong>AI photo editor</strong>: reliable <strong>AI photo restoration</strong>, easy portrait enhancement, and endless creative styles in one simple app.
+    </p>
+
+    <p>
+      Give your precious memories a fresh new look — or discover a fun creative side — starting right now.
+    </p>
+  </section>
+
+</article>
+
 </body>
 </html>
