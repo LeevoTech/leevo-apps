@@ -18,10 +18,19 @@
   </url>
 
   <url>
-  <loc>https://leevotech.github.io/leevo-apps/apps/leevo-home-workout/articles/leevo-home-workout-guide.html</loc>
-  <lastmod>2026-08-09</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
+    <loc>https://leevotech.github.io/leevo-apps/apps/leevo-home-workout/articles/leevo-home-workout-guide.html</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://leevotech.github.io/leevo-apps/apps/leevo-learn-english/articles/psle-english-preparation-guide.html</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  
 
 </urlset>
