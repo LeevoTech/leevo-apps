@@ -3,60 +3,698 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-lang-en="Leevo Learn English – PSLE English Exam Prep Guide" data-lang-zh="Leevo英语学习 – 新加坡小六会考英语备考指南">Leevo Learn English – PSLE English Exam Prep Guide</title>
+
+  <!-- ✅ 指定SEO标题、描述、关键词 + 双语支持 -->
+  <title data-lang-en="PSLE English Preparation Guide | Leevo Learn English" data-lang-zh="新加坡PSLE英语备考指南 | Leevo英语学习">PSLE English Preparation Guide | Leevo Learn English</title>
+
+  <meta name="description"
+        content="Learn how to prepare for PSLE English with practical tips for grammar, vocabulary, comprehension, cloze passages, sentence synthesis, editing, revision and mock tests."
+        data-lang-en="Learn how to prepare for PSLE English with practical tips for grammar, vocabulary, comprehension, cloze passages, sentence synthesis, editing, revision and mock tests."
+        data-lang-zh="科学备考新加坡PSLE英语：语法、词汇、阅读理解、完形填空、句型转换、改错、复习规划、模拟考试实用学习方法，助力小学生稳步提分。">
+
+  <meta name="keywords"
+        content="PSLE English, PSLE English practice, PSLE English revision, PSLE English preparation, PSLE English grammar, PSLE English vocabulary, PSLE English comprehension, PSLE English mock test, PSLE English practice app, English learning app, Leevo Learn English">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://leevotech.github.io/leevo-apps/apps/leevo-learn-english/articles/psle-english-preparation-guide.html">
+
   <style>
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:Arial,sans-serif; background:linear-gradient(135deg,#0d2035,#07111f); color:#fff; line-height:1.7; padding:40px 30px; max-width:900px; margin:0 auto;}
-    .back-link{display:inline-block; margin-bottom:40px; color:#f2c86b; text-decoration:none; font-size:18px;}
-    .back-link:hover{text-decoration:underline;}
-    h1{color:#f2c86b; font-size:32px; margin-bottom:30px; line-height:1.4;}
-    h2{color:#ffffff; font-size:24px; margin:30px 0 20px;}
-    p{color:#e6e6e6; font-size:18px; margin-bottom:20px;}
-    ul{color:#e6e6e6; font-size:18px; margin:20px 0 20px 30px;}
-    li{margin-bottom:10px;}
-    .lang-switch-btn{padding:6px 14px; border-radius:6px; border:none; background:#f2c86b; color:#07111f; font-weight:bold; cursor:pointer; margin-bottom:20px;}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #07111f;
+      color: #e6eaf0;
+      line-height: 1.7;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    a { color: #f2c86b; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #203b55;
+      flex-wrap: wrap;
+      gap:15px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+      font-size:16px;
+    }
+    .lang-switch-btn {
+      padding: 6px 14px;
+      border-radius: 6px;
+      border: none;
+      background: #f2c86b;
+      color: #07111f;
+      font-weight: bold;
+      cursor: pointer;
+      transition:0.2s;
+    }
+    .lang-switch-btn:hover{ transform:scale(1.05); }
+
+    .article-header { margin-bottom: 45px; }
+    .article-category {
+      color: #f2c86b;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1.3;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+    .article-intro {
+      font-size: 18px;
+      color: #b7c4d2;
+    }
+
+    section { margin-bottom: 50px; }
+    h2 {
+      font-size: 26px;
+      color: #ffffff;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #1c344c;
+    }
+    h3 {
+      font-size: 20px;
+      color: #f2d28c;
+      margin: 25px 0 12px;
+    }
+    p { margin-bottom: 16px; font-size: 17px; }
+    ul, ol { margin: 20px 0 20px 25px; }
+    li { margin-bottom: 10px; font-size: 17px; }
+
+    .faq-item {
+      background: #0d1c2c;
+      padding:22px;
+      border-radius:10px;
+      margin-bottom:15px;
+      border:1px solid #203b55;
+    }
+    .conclusion {
+      background: linear-gradient(135deg, #10253a, #0d1c2c);
+      padding:35px;
+      border-radius:16px;
+      border:1px solid #294969;
+    }
+
+    @media (max-width:600px) {
+      body { padding:20px 15px; }
+      h1 { font-size:28px; }
+      .page-nav { flex-direction:column; align-items:flex-start; }
+    }
   </style>
 </head>
 <body>
-  <!-- 语言切换按钮，和首页共用存储 -->
-  <button id="pageLangSwitch" class="lang-switch-btn">中文 / EN</button>
 
-  <!-- 返回首页双语链接 -->
-  <a href="../index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回 Leevo 应用首页">← Back to Leevo Apps Home</a>
+  <!-- ✅ 全站统一导航：根路径返回首页 + 双语切换记忆 -->
+  <nav class="page-nav">
+    <a href="/leevo-apps/index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回Leevo应用首页">← Back to Leevo Apps Home</a>
+    <button id="langSwitch" class="lang-switch-btn">中文 / EN</button>
+  </nav>
 
-  <h1 data-lang-en="Leevo Learn English — Singapore PSLE English Exam Preparation Guide" data-lang-zh="Leevo英语学习 — 新加坡小六会考英语备考指南">Leevo Learn English — Singapore PSLE English Exam Preparation Guide</h1>
+<article class="app-article">
 
-  <p data-lang-en="Specially built for Primary 6 students in Singapore! All practice questions are carefully revised and adapted from nearly 10 years of past Singapore PSLE English examination papers, covering all frequently tested question types, knowledge points and difficulty levels." data-lang-zh="专为新加坡小六学生打造！所有练习题均参考近10年新加坡小六会考英语真题精心改编整理，覆盖历年高频题型、核心知识点与考试难度标准。">Specially built for Primary 6 students in Singapore! All practice questions are carefully revised and adapted from nearly 10 years of past Singapore PSLE English examination papers, covering all frequently tested question types, knowledge points and difficulty levels.</p>
+  <header class="article-header">
+    <p class="article-category" data-lang-en="PSLE English" data-lang-zh="新加坡PSLE英语">PSLE English</p>
 
-  <h2 data-lang-en="Key Features & Purpose" data-lang-zh="核心特点与学习目标">Key Features & Purpose</h2>
-  <ul>
-    <li data-lang-en="✅ Based on real past-year PSLE English papers from the past 10 years — close to actual exam style & requirements" data-lang-zh="✅ 依托近10年真实小六会考英语真题改编，题型、出题思路贴合官方考试标准">✅ Based on real past-year PSLE English papers from the past 10 years — close to actual exam style & requirements</li>
-    <li data-lang-en="✅ Full coverage of key modules: Grammar, Vocabulary, Comprehension, Oral & Writing common exam formats" data-lang-zh="✅ 全面覆盖重点模块：语法、词汇、阅读理解、口语、写作等必考题型">✅ Full coverage of key modules: Grammar, Vocabulary, Comprehension, Oral & Writing common exam formats</li>
-    <li data-lang-en="✅ 100% free for Primary 6 learners — no hidden fees, focus on solid exam revision" data-lang-zh="✅ 面向小六学生完全免费使用，无付费门槛，专心扎实复习备考">✅ 100% free for Primary 6 learners — no hidden fees, focus on solid exam revision</li>
-    <li data-lang-en="✅ Help students get familiar with exam rhythm, strengthen weak points & build confidence for PSLE" data-lang-zh="✅ 帮助学生熟悉考试节奏、查漏补缺、巩固重点，从容备战小六会考">✅ Help students get familiar with exam rhythm, strengthen weak points & build confidence for PSLE</li>
-  </ul>
+    <h1 data-lang-en="How to Prepare for PSLE English: A Practical Guide for Primary School Students" data-lang-zh="新加坡PSLE英语怎么备考？小学生实用学习指南">How to Prepare for PSLE English: A Practical Guide for Primary School Students</h1>
 
-  <h2 data-lang-en="Designed for effective daily review" data-lang-zh="科学设计，适合日常持续复习">Designed for effective daily review</h2>
-  <p data-lang-en="Organized by topic and difficulty, short daily practice sessions let students review steadily without stress — build up language sense, master answering skills and be fully prepared to achieve great results in the Singapore Primary School Leaving Examination." data-lang-zh="按知识点、难度分级编排，每日少量高效练习，轻松坚持不疲惫；培养语感、掌握答题技巧、积累实战手感，扎扎实实做好充分准备，冲刺理想小六会考英语成绩。">Organized by topic and difficulty, short daily practice sessions let students review steadily without stress — build up language sense, master answering skills and be fully prepared to achieve great results in the Singapore Primary School Leaving Examination.</p>
+    <p class="article-intro" data-lang-en="Preparing for PSLE English is not only about memorising vocabulary or completing practice papers. Strong results come from building a solid foundation in grammar, vocabulary, comprehension, writing skills, and regular practice. This guide explains how students can build an effective PSLE English revision routine and how Leevo Learn English can support their preparation." data-lang-zh="备考新加坡PSLE英语，不是死记单词、刷卷子就能拿高分！扎实掌握语法、词汇、阅读理解、写作能力，坚持科学练习才是关键。本文教小学生建立高效复习节奏，同时介绍Leevo英语学习如何辅助系统备考、稳步提升英语水平。">
+      Preparing for PSLE English is not only about memorising vocabulary or
+      completing practice papers. Strong results come from building a solid
+      foundation in grammar, vocabulary, comprehension, writing skills, and
+      regular practice. This guide explains how students can build an effective
+      PSLE English revision routine and how Leevo Learn English can support
+      their preparation.
+    </p>
+  </header>
 
+
+  <section>
+    <h2 data-lang-en="What Is PSLE English?" data-lang-zh="什么是新加坡PSLE英语考试？">What Is PSLE English?</h2>
+
+    <p data-lang-en="PSLE English is an important part of the Primary School Leaving Examination in Singapore. Students need to develop a range of English language skills rather than relying on memorisation alone." data-lang-zh="PSLE英语是新加坡小学毕业会考的核心必考科目。考试核心考察综合英语运用能力，不是靠死记硬背就能通关，需要全面夯实各项语言核心能力。">
+      PSLE English is an important part of the Primary School Leaving
+      Examination in Singapore. Students need to develop a range of English
+      language skills rather than relying on memorisation alone.
+    </p>
+
+    <p data-lang-en="Effective preparation involves understanding grammar, learning vocabulary, improving comprehension, practising sentence construction, and becoming more confident when answering different types of questions." data-lang-zh="高效备考，要吃透语法规则、积累实用词汇、提升阅读理解能力、熟练规范造句答题，慢慢克服畏难心态，从容应对各类题型。">
+      Effective preparation involves understanding grammar, learning vocabulary,
+      improving comprehension, practising sentence construction, and becoming
+      more confident when answering different types of questions.
+    </p>
+
+    <p data-lang-en="Because these skills are connected, regular practice throughout the school year can be more useful than trying to study everything shortly before the examination." data-lang-zh="各项能力环环相扣，靠考前突击根本学不扎实！平时持续、规律练习，循序渐进积累，远比临时抱佛脚效果持久、提分更稳。">
+      Because these skills are connected, regular practice throughout the school
+      year can be more useful than trying to study everything shortly before
+      the examination.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="What Should Students Practise for PSLE English?" data-lang-zh="PSLE英语重点要练哪些核心内容？">What Should Students Practise for PSLE English?</h2>
+
+    <p data-lang-en="A good PSLE English revision plan should cover several areas instead of focusing on only one type of question." data-lang-zh="科学复习不能偏科刷题，必须全面覆盖核心考点，均衡提升各项能力，避免短板拖低整体成绩。">
+      A good PSLE English revision plan should cover several areas instead of
+      focusing on only one type of question.
+    </p>
+
+    <h3 data-lang-en="1. Grammar" data-lang-zh="一、核心语法">1. Grammar</h3>
+
+    <p data-lang-en="Grammar is one of the foundations of English. Students should become comfortable with sentence structure, tenses, subject-verb agreement, prepositions, conjunctions, articles, pronouns, and other commonly tested grammar concepts." data-lang-zh="语法是英语学习根基！必须熟练掌握句子结构、时态、主谓一致、介词、连词、冠词、代词等高频必考知识点，做到理解通透、灵活运用。">
+      Grammar is one of the foundations of English. Students should become
+      comfortable with sentence structure, tenses, subject-verb agreement,
+      prepositions, conjunctions, articles, pronouns, and other commonly tested
+      grammar concepts.
+    </p>
+
+    <p data-lang-en="The goal is not simply to memorise grammar rules. Students should practise applying those rules in different sentences so that they can recognise mistakes and choose appropriate answers more confidently." data-lang-zh="不是死背条文！重点学会在句子语境中灵活运用规则，能快速找出语病、判断对错，答题有理有据、不凭感觉猜测。">
+      The goal is not simply to memorise grammar rules. Students should practise
+      applying those rules in different sentences so that they can recognise
+      mistakes and choose appropriate answers more confidently.
+    </p>
+
+
+    <h3 data-lang-en="2. Vocabulary" data-lang-zh="二、核心词汇积累">2. Vocabulary</h3>
+
+    <p data-lang-en="A strong vocabulary helps students understand passages and express ideas more accurately." data-lang-zh="词汇量扎实，才能读懂长文细节、精准表达想法，是阅读、写作、答题不出错的基础保障。">
+      A strong vocabulary helps students understand passages and express ideas
+      more accurately.
+    </p>
+
+    <p data-lang-en="Instead of memorising long lists of unrelated words, students can learn vocabulary through examples, context, synonyms, antonyms, and regular revision." data-lang-zh="拒绝孤立死记单词表！结合例句、文章语境、近反义词、反复复盘巩固，理解词义用法，记得牢、用得出来。">
+      Instead of memorising long lists of unrelated words, students can learn
+      vocabulary through examples, context, synonyms, antonyms, and regular
+      revision.
+    </p>
+
+    <p data-lang-en="Revisiting previously learned words is also important because vocabulary becomes more useful when students can recognise and use it naturally." data-lang-zh="定期回顾旧词必不可少，反复接触、熟练运用，才能把被动认识的词汇变成能自然读写、答题写作都顺手的实用词汇。">
+      Revisiting previously learned words is also important because vocabulary
+      becomes more useful when students can recognise and use it naturally.
+    </p>
+
+
+    <h3 data-lang-en="3. Comprehension" data-lang-zh="三、阅读理解能力">3. Comprehension</h3>
+
+    <p data-lang-en="Comprehension questions require more than simply reading a passage. Students need to understand the main idea, identify supporting details, interpret information, understand vocabulary in context, and carefully analyse what a question is asking." data-lang-zh="阅读理解不是读完就完事！要学会抓主旨、定位细节、推导隐含信息、结合上下文猜词，逐字看清题干要求，不答偏、不漏答。">
+      Comprehension questions require more than simply reading a passage.
+      Students need to understand the main idea, identify supporting details,
+      interpret information, understand vocabulary in context, and carefully
+      analyse what a question is asking.
+    </p>
+
+    <p data-lang-en="Regular comprehension practice can help students become more comfortable with different passages and question formats." data-lang-zh="坚持多读多练，熟悉记叙文、说明文等各类文本与出题套路，慢慢提升阅读速度、理解深度，遇到长文章不慌不乱。">
+      Regular comprehension practice can help students become more comfortable
+      with different passages and question formats.
+    </p>
+
+
+    <h3 data-lang-en="4. Cloze Passages" data-lang-zh="四、完形填空训练">4. Cloze Passages</h3>
+
+    <p data-lang-en="Cloze exercises test a student's ability to understand context and select words that fit naturally into a passage." data-lang-zh="完形填空核心考察上下文理解能力，结合逻辑、词汇、语法选出最贴合语境、行文通顺的最佳答案。">
+      Cloze exercises test a student's ability to understand context and select
+      words that fit naturally into a passage.
+    </p>
+
+    <p data-lang-en="When practising cloze passages, students should look at the sentence around the blank as well as the overall meaning of the paragraph. Grammar, vocabulary, and context can all provide useful clues." data-lang-zh="做题别盯着单个空！前后句子、段落主旨、固定搭配、语法规则都是关键线索，综合判断正确率更高。">
+      When practising cloze passages, students should look at the sentence
+      around the blank as well as the overall meaning of the paragraph.
+      Grammar, vocabulary, and context can all provide useful clues.
+    </p>
+
+
+    <h3 data-lang-en="5. Sentence Synthesis" data-lang-zh="五、句型转换与改写">5. Sentence Synthesis</h3>
+
+    <p data-lang-en="Sentence synthesis requires students to combine information while maintaining the intended meaning of the original sentences." data-lang-zh="句型改写考察句式灵活运用：重组、合并句子信息，保留原意不变，句式规范、表达流畅。">
+      Sentence synthesis requires students to combine information while
+      maintaining the intended meaning of the original sentences.
+    </p>
+
+    <p data-lang-en="This type of practice helps students develop greater control over sentence structure and understand how different grammatical forms can communicate the same idea." data-lang-zh="多练能打通句式逻辑，学会用不同时态、从句、语态表达同一个意思，写作、答题表达更丰富规范。">
+      This type of practice helps students develop greater control over sentence
+      structure and understand how different grammatical forms can communicate
+      the same idea.
+    </p>
+
+
+    <h3 data-lang-en="6. Editing and Error Correction" data-lang-zh="六、改错与校对能力">6. Editing and Error Correction</h3>
+
+    <p data-lang-en="Editing exercises require students to identify and correct errors in sentences or passages." data-lang-zh="改错题型考验细心与基础功底：精准揪出拼写、标点、语法、用词不当等错误并规范修正。">
+      Editing exercises require students to identify and correct errors in
+      sentences or passages.
+    </p>
+
+    <p data-lang-en="Regular editing practice can improve attention to grammar, spelling, punctuation, and sentence structure." data-lang-zh="坚持练习，养成严谨细致的阅读检查习惯，减少粗心失分，同时反过来巩固语法拼写基础。">
+      Regular editing practice can improve attention to grammar, spelling,
+      punctuation, and sentence structure.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Why Regular PSLE English Practice Matters" data-lang-zh="坚持日常规律练习，比突击刷题更重要">Why Regular PSLE English Practice Matters</h2>
+
+    <p data-lang-en="One of the biggest mistakes students can make is treating revision as something that only happens before an examination." data-lang-zh="很多学生犯的最大误区：平时不学、考前疯狂刷题突击，短期见效、很快遗忘，根本没法真正吃透。">
+      One of the biggest mistakes students can make is treating revision as
+      something that only happens before an examination.
+    </p>
+
+    <p data-lang-en="English is a skill-based subject. Students need repeated exposure to grammar, vocabulary, comprehension, and different question types." data-lang-zh="英语是积累型能力学科！语法、词汇、阅读、各类题型必须反复接触、长期浸润，才能内化成本能语感、稳定发挥。">
+      English is a skill-based subject. Students need repeated exposure to
+      grammar, vocabulary, comprehension, and different question types.
+    </p>
+
+    <p data-lang-en="Short and consistent practice sessions can make revision easier to manage and provide more opportunities to identify areas that need improvement." data-lang-zh="每天短时间、专注坚持，轻松安排不疲惫，更容易发现薄弱环节、针对性补强，越学越有信心。">
+      Short and consistent practice sessions can make revision easier to manage
+      and provide more opportunities to identify areas that need improvement.
+    </p>
+
+    <p data-lang-en="A useful routine could include a small amount of practice each day rather than trying to complete a large number of questions in one sitting." data-lang-zh="每天坚持练一点，远胜过几天不学、一次猛刷几十题——高效不累、效果扎实、不容易厌学。">
+      A useful routine could include a small amount of practice each day rather
+      than trying to complete a large number of questions in one sitting.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="How to Build an Effective PSLE English Revision Routine" data-lang-zh="打造科学高效、不盲目刷题的复习计划">How to Build an Effective PSLE English Revision Routine</h2>
+
+    <p data-lang-en="A structured revision routine can help students avoid spending too much time on areas they already understand while neglecting topics that need more attention." data-lang-zh="有规划复习不浪费时间：不反复刷已经掌握的内容，集中攻克薄弱难点，效率翻倍、进步看得见。">
+      A structured revision routine can help students avoid spending too much
+      time on areas they already understand while neglecting topics that need
+      more attention.
+    </p>
+
+    <ol>
+      <li data-lang-en="<strong>Identify weaker areas.</strong> Start by finding the grammar topics, vocabulary, or question types that cause the most difficulty." data-lang-zh="<strong>找准薄弱短板。</strong>梳理清楚哪些语法、词汇、题型反复出错、理解吃力，优先重点攻克。">
+        <strong>Identify weaker areas.</strong>
+        Start by finding the grammar topics, vocabulary, or question types that
+        cause the most difficulty.
+      </li>
+
+      <li data-lang-en="<strong>Practise regularly.</strong> Use shorter, consistent practice sessions instead of relying entirely on last-minute revision." data-lang-zh="<strong>坚持规律练习。</strong>碎片化每日坚持，拒绝考前突击，细水长流、基础扎实、不容易反弹退步。">
+        <strong>Practise regularly.</strong>
+        Use shorter, consistent practice sessions instead of relying entirely
+        on last-minute revision.
+      </li>
+
+      <li data-lang-en="<strong>Review mistakes deeply.</strong> Understanding why an answer was wrong can be more valuable than simply knowing the correct answer." data-lang-zh="<strong>深挖错题根源。</strong>不只记正确答案，弄懂为什么错、是知识点不懂还是粗心，才能不再重复踩坑。">
+        <strong>Review mistakes.</strong>
+        Understanding why an answer was wrong can be more valuable than simply
+        knowing the correct answer.
+      </li>
+
+      <li data-lang-en="<strong>Revisit difficult topics repeatedly.</strong> Return to areas where mistakes continue to occur until fully mastered." data-lang-zh="<strong>反复复盘攻克难点。</strong>高频出错的知识点、题型，隔几天重做巩固，直到完全吃透、稳定拿分。">
+        <strong>Return to difficult topics.</strong>
+        Revisit areas where mistakes continue to occur.
+      </li>
+
+      <li data-lang-en="<strong>Do timed practice gradually.</strong> As the exam nears, practise under time limits to build speed and finish the paper confidently." data-lang-zh="<strong>逐步限时模拟训练。</strong>临近考试控制答题时长，练速度、练时间分配，考场从容不慌、答完答好。">
+        <strong>Use timed practice.</strong>
+        As the examination approaches, include timed practice to become more
+        comfortable working within a limited amount of time.
+      </li>
+    </ol>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Learn From Mistakes, Not Just Correct Answers" data-lang-zh="错题是最好的学习资源，不只看对错、更要懂原因">Learn From Mistakes, Not Just Correct Answers</h2>
+
+    <p data-lang-en="Getting an answer wrong is not necessarily a bad thing. A mistake can show a student exactly which concept needs more attention." data-lang-zh="做错不是坏事！每一道错题，都精准暴露哪个知识点没吃透、哪个做题习惯要纠正，是查漏补缺最直接的线索。">
+      Getting an answer wrong is not necessarily a bad thing. A mistake can
+      show a student exactly which concept needs more attention.
+    </p>
+
+    <p data-lang-en="The important step is reviewing the mistake and understanding the reason behind it." data-lang-zh="关键不在改个答案，而是静下心复盘：是语法不清、词汇不懂、理解偏差还是粗心漏看，根源找准、针对性补强。">
+      The important step is reviewing the mistake and understanding the reason
+      behind it.
+    </p>
+
+    <p data-lang-en="For example, if a student repeatedly makes errors with subject-verb agreement, simply completing more random questions may not be enough. The student should revisit the underlying grammar concept and then practise similar questions again." data-lang-zh="举例：反复主谓一致出错，盲目刷题没用！回头重学规则、理解原理，集中练同类题型，练到形成正确语感、不再出错。">
+      For example, if a student repeatedly makes errors with subject-verb
+      agreement, simply completing more random questions may not be enough.
+      The student should revisit the underlying grammar concept and then
+      practise similar questions again.
+    </p>
+
+    <p data-lang-en="This is why keeping track of incorrect questions can make revision more focused and efficient." data-lang-zh="整理错题、集中回看、反复重做，复习目标明确、重点突出、时间不浪费、进步更快更扎实。">
+      This is why keeping track of incorrect questions can make revision more
+      focused and efficient.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="How Leevo Learn English Supports PSLE Preparation" data-lang-zh="Leevo英语学习，系统化助力PSLE英语备考提分">How Leevo Learn English Supports PSLE Preparation</h2>
+
+    <p data-lang-en="Leevo Learn English is designed specifically around the different skills students need to practise for PSLE English." data-lang-zh="Leevo英语学习围绕新加坡PSLE英语考试大纲设计，精准覆盖必考核心能力、题型考点，专为小学生备考打造。">
+      Leevo Learn English is designed specifically around the different skills
+      students need to practise for PSLE English.
+    </p>
+
+    <p data-lang-en="Instead of putting every student through exactly the same practice experience, the app provides different levels and practice systems so students can work on the areas that matter to them." data-lang-zh="拒绝一刀切统一刷题！分层练习、灵活选练，薄弱语法、阅读、词汇专项集中突破，个性化补齐短板、稳步进阶。">
+      Instead of putting every student through exactly the same practice
+      experience, the app provides different levels and practice systems so
+      students can work on the areas that matter to them.
+    </p>
+
+    <h3 data-lang-en="Foundation Practice" data-lang-zh="基础巩固练习">Foundation Practice</h3>
+
+    <p data-lang-en="Foundation-level practice is designed to help students strengthen their basic English skills and build confidence before moving to more challenging questions." data-lang-zh="基础专项练习，夯实核心语法、常用词汇、简单阅读，打好地基、消除畏难心态，扎实基础再拔高。">
+      Foundation-level practice is designed to help students strengthen their
+      basic English skills and build confidence before moving to more
+      challenging questions.
+    </p>
+
+
+    <h3 data-lang-en="Advanced Practice" data-lang-zh="进阶提升训练">Advanced Practice</h3>
+
+    <p data-lang-en="Students who are ready for more challenging questions can move into Advanced practice and work on more demanding English concepts and question types." data-lang-zh="基础扎实后，进阶练习攻克复杂长文、难点语法、综合题型，拉高解题能力、冲刺高分。">
+      Students who are ready for more challenging questions can move into
+      Advanced practice and work on more demanding English concepts and
+      question types.
+    </p>
+
+
+    <h3 data-lang-en="AI Challenge" data-lang-zh="智能挑战拓展">AI Challenge</h3>
+
+    <p data-lang-en="Leevo Learn English also includes an AI Challenge level for students who want an additional challenge beyond regular practice." data-lang-zh="智能拓展挑战，跳出常规练习框架，灵活变式、综合考察，锻炼应变理解、综合运用能力，尖子生拔高拓展首选。">
+      Leevo Learn English also includes an AI Challenge level for students who
+      want an additional challenge beyond regular practice.
+    </p>
+
+
+    <h3 data-lang-en="Structured Revision System" data-lang-zh="科学复习体系">Revision System</h3>
+
+    <p data-lang-en="Revision is an important part of learning. Leevo Learn English provides structured revision features so students can return to topics and reinforce what they have learned." data-lang-zh="科学复盘是学习关键一环！系统复习功能，定期回顾重点、温故知新，防止学完就忘、知识断层。">
+      Revision is an important part of learning. Leevo Learn English provides
+      structured revision features so students can return to topics and
+      reinforce what they have learned.
+    </p>
+
+
+    <h3 data-lang-en="Wrong Question Book" data-lang-zh="专属错题本">Wrong Question Book</h3>
+
+    <p data-lang-en="The Wrong Question Book helps students focus on questions they previously answered incorrectly." data-lang-zh="自动归集错题，不用手抄整理，集中回看、重做、攻克高频易错点，精准查漏补缺、高效提分。">
+      The Wrong Question Book helps students focus on questions they previously
+      answered incorrectly.
+    </p>
+
+    <p data-lang-en="Instead of repeatedly practising only questions they already understand, students can use their mistakes as a guide for targeted revision." data-lang-zh="告别无效刷题！错题指明复习重点，集中攻克薄弱环节，每一次练习都有实质进步、不浪费时间精力。">
+      Instead of repeatedly practising only questions they already understand,
+      students can use their mistakes as a guide for targeted revision.
+    </p>
+
+
+    <h3 data-lang-en="Progress Tracking" data-lang-zh="学习进度可视化追踪">Progress Tracking</h3>
+
+    <p data-lang-en="Progress tracking gives students a way to see how their practice is developing over time and identify areas that may require additional attention." data-lang-zh="学习数据清晰记录进步轨迹，直观看到能力提升、短板分布，复习方向更明确、学习动力更足。">
+      Progress tracking gives students a way to see how their practice is
+      developing over time and identify areas that may require additional
+      attention.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="PSLE English Mock Tests" data-lang-zh="全真模拟考试，提前适应考场节奏">PSLE English Mock Tests</h2>
+
+    <p data-lang-en="Practice questions are useful for learning individual concepts, but students should also experience longer examination-style practice." data-lang-zh="分项练习打好基础，完整模考整合能力：连贯答题、切换题型、集中注意力，提前适应正式考试流程。">
+      Practice questions are useful for learning individual concepts, but
+      students should also experience longer examination-style practice.
+    </p>
+
+    <p data-lang-en="Mock tests can help students practise switching between different skills, managing time, and maintaining concentration during a longer session." data-lang-zh="模拟考试限时完成，训练时间分配、专注力、综合答题节奏，减少考场紧张、做不完题、粗心失分等问题。">
+      Mock tests can help students practise switching between different skills,
+      managing time, and maintaining concentration during a longer session.
+    </p>
+
+    <p data-lang-en="Leevo Learn English includes mock examination practice so students can move beyond individual exercises and experience a more complete revision session." data-lang-zh="内置完整PSLE英语模拟试卷，贴合真题题型难度，系统模拟完整答题流程，考前热身、查漏补缺、稳定应试状态。">
+      Leevo Learn English includes mock examination practice so students can
+      move beyond individual exercises and experience a more complete revision
+      session.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="PSLE English Revision: Quality Matters More Than Quantity" data-lang-zh="复习求精不求多：高质量复盘＞盲目海量刷题">PSLE English Revision: Quality Matters More Than Quantity</h2>
+
+    <p data-lang-en="Completing hundreds of questions does not automatically mean that a student is improving." data-lang-zh="一天刷几十题、做完不改、不总结，看似勤奋、收效甚微，只是重复练习已经会的内容，难点始终没突破。">
+      Completing hundreds of questions does not automatically mean that a
+      student is improving.
+    </p>
+
+    <p data-lang-en="Effective revision should combine practice with review. Students should understand why an answer is correct, identify patterns in their mistakes, and return to difficult concepts." data-lang-zh="高效复习=认真做题+细致复盘：弄懂正确逻辑、总结高频错误规律、回头攻克难点，练一道吃透一道，稳步扎实提升。">
+      Effective revision should combine practice with review. Students should
+      understand why an answer is correct, identify patterns in their mistakes,
+      and return to difficult concepts.
+    </p>
+
+    <p data-lang-en="A smaller number of carefully reviewed questions can sometimes provide more useful learning than completing large numbers of questions without reviewing the mistakes." data-lang-zh="精做细复盘10道错题，胜过盲目刷100道不总结习题——抓准核心问题、彻底消化吸收，进步扎实、记忆牢固、不容易反复出错。">
+      A smaller number of carefully reviewed questions can sometimes provide
+      more useful learning than completing large numbers of questions without
+      reviewing the mistakes.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Tips for Parents Supporting PSLE English Revision" data-lang-zh="家长怎么科学陪伴、助力孩子英语备考？">Tips for Parents Supporting PSLE English Revision</h2>
+
+    <p data-lang-en="Parents do not need to become English teachers to support a child's revision. A few simple habits can make home study more productive." data-lang-zh="不用精通英语、不用亲自辅导知识点，做好陪伴鼓励、引导习惯，就能帮孩子在家高效学习、减少抵触、坚持下去。">
+      Parents do not need to become English teachers to support a child's
+      revision. A few simple habits can make home study more productive.
+    </p>
+
+    <ul>
+      <li data-lang-en="Encourage a consistent daily revision schedule." data-lang-zh="引导孩子建立稳定规律学习作息，每天坚持、不中断。">Encourage a consistent revision schedule.</li>
+      <li data-lang-en="Ask gently about difficult topics instead of scolding." data-lang-zh="耐心倾听孩子觉得难、吃力的内容，不指责施压、一起想办法突破。">Ask your child which topics they find difficult.</li>
+      <li data-lang-en="Guide the habit of reviewing and analysing mistakes." data-lang-zh="引导重视错题、复盘错误原因，养成总结反思习惯。">Encourage reviewing incorrect answers.</li>
+      <li data-lang-en="Support reading English books/stories outside exercises." data-lang-zh="鼓励课外绘本、故事、短文阅读，培养语感、积累词汇、提升兴趣。">Allow regular reading outside of practice sessions.</li>
+      <li data-lang-en="Avoid turning revision into stressful pressure-filled moments." data-lang-zh="别把每次学习变成高压批评、过度施压，保护学习兴趣、减少焦虑厌学。">Avoid turning every revision session into a high-pressure experience.</li>
+      <li data-lang-en="Use practice results to spot weak areas calmly, not only scores." data-lang-zh="不只盯着分数，一起看进步、定位薄弱点，针对性补强、正向鼓励为主。">Use practice results to identify areas that need more attention.</li>
+    </ul>
+
+    <p data-lang-en="The purpose of revision is not simply to complete as many questions as possible. It is to gradually build stronger English skills and greater confidence." data-lang-zh="复习不是为了刷完多少题、考满分，核心是慢慢夯实能力、建立自信、学会自主学习、受益长期英语学习。">
+      The purpose of revision is not simply to complete as many questions as
+      possible. It is to gradually build stronger English skills and greater
+      confidence.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Who Is Leevo Learn English For?" data-lang-zh="Leevo英语学习，适合哪些学生使用？">Who Is Leevo Learn English For?</h2>
+
+    <p data-lang-en="Leevo Learn English is designed for primary school students preparing for PSLE English and for students who want structured English practice throughout their primary school years." data-lang-zh="专为新加坡小学生打造：备战PSLE英语系统复习、小学阶段日常巩固提升、查漏补缺、稳步进阶都适配。">
+      Leevo Learn English is designed for primary school students preparing
+      for PSLE English and for students who want structured English practice
+      throughout their primary school years.
+    </p>
+
+    <ul>
+      <li data-lang-en="Students preparing for PSLE English exams" data-lang-zh="正在备考新加坡PSLE英语考试的小学生">Students preparing for PSLE English</li>
+      <li data-lang-en="Students needing targeted grammar improvement" data-lang-zh="语法薄弱、需要专项集中巩固提升的学生">Students who need additional grammar practice</li>
+      <li data-lang-en="Students wanting richer vocabulary & usage skills" data-lang-zh="词汇量不足、想要科学积累、灵活运用词汇的学生">Students who want to improve vocabulary</li>
+      <li data-lang-en="Students struggling with reading comprehension" data-lang-zh="阅读理解看不懂、答不准、容易丢分的学生">Students looking for comprehension practice</li>
+      <li data-lang-en="Students needing full mock exam practice" data-lang-zh="需要完整模拟考试、熟悉流程、练时间分配的备考学生">Students preparing with mock tests</li>
+      <li data-lang-en="Students wanting to focus on weak spots via mistakes" data-lang-zh="重视错题复盘、想要集中攻克高频易错点、高效提分的学生">Students who want to review incorrect questions</li>
+      <li data-lang-en="Students wanting structured guided home English learning" data-lang-zh="在家自主学习、需要系统规划、清晰指引、不盲目刷题的学生">Students who want structured English revision at home</li>
+    </ul>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Build Better English Skills One Practice Session at a Time" data-lang-zh="每天踏实练习，日积月累，英语能力稳步变强">Build Better English Skills One Practice Session at a Time</h2>
+
+    <p data-lang-en="PSLE English preparation does not need to be overwhelming. A structured approach can make it easier for students to understand what they need to practise and where they should focus their attention." data-lang-zh="PSLE英语备考不用焦虑恐慌！理清考点、规划节奏、抓重点补短板，循序渐进、每天进步一点点，就能从容应对、稳步提升。">
+      PSLE English preparation does not need to be overwhelming. A structured
+      approach can make it easier for students to understand what they need to
+      practise and where they should focus their attention.
+    </p>
+
+    <p data-lang-en="Grammar, vocabulary, comprehension, cloze passages, sentence synthesis, editing, revision, and mock tests all play different roles in developing stronger English skills." data-lang-zh="语法、词汇、阅读、完形、句型改写、改错、复盘、模考，一环一环相辅相成，全面均衡练习，才能真正扎实掌握英语综合能力。">
+      Grammar, vocabulary, comprehension, cloze passages, sentence synthesis,
+      editing, revision, and mock tests all play different roles in developing
+      stronger English skills.
+    </p>
+
+    <p data-lang-en="The key is to practise consistently, learn from mistakes, and gradually improve." data-lang-zh="核心秘诀很简单：坚持练习、吃透错题、不贪快、不盲目刷题，日复一日积累，能力与分数自然稳步上涨。">
+      The key is to practise consistently, learn from mistakes, and gradually
+      improve.
+    </p>
+
+    <p data-lang-en="<strong>Leevo Learn English</strong> brings these different areas of PSLE English practice together in one learning app, giving students a structured way to practise, revise, track progress, and prepare for different types of English questions." data-lang-zh="<strong>Leevo英语学习</strong>一站式整合PSLE英语全考点专项练习、错题复盘、进度追踪、全真模考，帮小学生科学规划、高效复习、从容备考、扎实学好英语！">
+      <strong>Leevo Learn English</strong> brings these different areas of
+      PSLE English practice together in one learning app, giving students a
+      structured way to practise, revise, track progress, and prepare for
+      different types of English questions.
+    </p>
+  </section>
+
+
+  <section class="faq-section">
+    <h2 data-lang-en="Frequently Asked Questions About PSLE English" data-lang-zh="PSLE英语备考高频问答">Frequently Asked Questions About PSLE English</h2>
+
+    <div class="faq-item">
+      <h3 data-lang-en="How can I prepare well for PSLE English?" data-lang-zh="怎么科学高效备考PSLE英语？">How can I prepare for PSLE English?</h3>
+
+      <p data-lang-zh="重点抓语法、词汇、阅读理解、完形填空、句型改写、改错六大核心题型，坚持日常规律练习、深入复盘错题、考前限时模考，查漏补缺、均衡提升各项能力，拒绝突击刷题、死记硬背。" data-lang-en="A good PSLE English preparation plan should include regular practice in grammar, vocabulary, comprehension, cloze passages, sentence synthesis, editing, and other relevant English skills. Reviewing mistakes and completing timed practice can also help students prepare more effectively.">
+        A good PSLE English preparation plan should include regular practice in
+        grammar, vocabulary, comprehension, cloze passages, sentence synthesis,
+        editing, and other relevant English skills. Reviewing mistakes and
+        completing timed practice can also help students prepare more effectively.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="How can I improve my PSLE English grammar fast?" data-lang-zh="PSLE英语语法薄弱，怎么有效提升？">How can I improve my PSLE English grammar?</h3>
+
+      <p data-lang-zh="先定位反复出错的语法专题，重学理解核心规则，集中做同类专项练习，重点复盘错题根源，做到理解规则、灵活运用、不再重复犯错。" data-lang-en="Start by identifying grammar topics that cause repeated mistakes. Review the relevant rules, practise questions based on those concepts, and review incorrect answers carefully.">
+        Start by identifying grammar topics that cause repeated mistakes.
+        Review the relevant rules, practise questions based on those concepts,
+        and review incorrect answers carefully.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="How to build strong PSLE English vocabulary?" data-lang-zh="怎么高效积累、活用PSLE英语词汇？">How can I improve my PSLE English vocabulary?</h3>
+
+      <p data-lang-zh="拒绝孤立死记单词！结合文章语境、例句、近反义词、定期循环复习，多读多用，理解词义用法，才能记得牢、阅读写作答题自然能用出来。" data-lang-en="Regular exposure and revision are important. Students can learn words through reading, context, synonyms, antonyms, example sentences, and repeated practice.">
+        Regular exposure and revision are important. Students can learn words
+        through reading, context, synonyms, antonyms, example sentences, and
+        repeated practice.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="How to boost PSLE reading comprehension scores?" data-lang-zh="PSLE阅读理解总丢分，怎么有效提升？">How can I improve PSLE English comprehension?</h3>
+
+      <p data-lang-zh="坚持多读不同题材文章，学会抓主旨、定位细节、结合上下文猜词、看清题干要求，做完复盘错题，理清理解偏差、答题疏漏之处，逐步提升阅读速度与答题准确率。" data-lang-en="Practise reading different types of passages and focus on identifying the main idea, supporting details, context, and the exact requirements of each question. Reviewing incorrect answers can also help students understand where their reading or reasoning went wrong.">
+        Practise reading different types of passages and focus on identifying
+        the main idea, supporting details, context, and the exact requirements
+        of each question. Reviewing incorrect answers can also help students
+        understand where their reading or reasoning went wrong.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="Is there a dedicated practice app for PSLE English?" data-lang-zh="有没有专门适合PSLE英语备考的练习学习App？">Is there an app for PSLE English practice?</h3>
+
+      <p data-lang-zh="有的！Leevo英语学习专为新加坡PSLE英语打造，覆盖语法、词汇、阅读、完形、句型改写、改错、错题本、模拟考试、进度追踪，一站式系统练习复习，居家自主备考超实用。" data-lang-en="Yes. Leevo Learn English is designed as a PSLE English practice and revision app, with grammar, vocabulary, comprehension, cloze passages, sentence synthesis, editing, revision, mock tests, progress tracking, and a Wrong Question Book.">
+        Yes. Leevo Learn English is designed as a PSLE English practice and
+        revision app, with grammar, vocabulary, comprehension, cloze passages,
+        sentence synthesis, editing, revision, mock tests, progress tracking,
+        and a Wrong Question Book.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="What is a PSLE English mock test for?" data-lang-zh="PSLE英语模拟考试有什么用？">What is a PSLE English mock test?</h3>
+
+      <p data-lang-zh="完整模拟正式考试题型、时长、答题流程，集中训练时间分配、综合答题、专注力，提前熟悉考场节奏、发现薄弱点、缓解考前紧张、稳定应试状态。" data-lang-en="A PSLE English mock test is a longer practice session designed to help students experience multiple types of English questions in one sitting. Mock tests can help students practise time management and become more familiar with examination-style practice.">
+        A PSLE English mock test is a longer practice session designed to help
+        students experience multiple types of English questions in one sitting.
+        Mock tests can help students practise time management and become more
+        familiar with examination-style practice.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="When is the best time to start PSLE English preparation?" data-lang-zh="什么时候开始准备PSLE英语最合适？">When should students start preparing for PSLE English?</h3>
+
+      <p data-lang-zh="越早长期稳步积累越好！小学阶段持续夯实基础、培养语感、坚持日常练习，临近六年级针对性强化、查漏补缺、模拟训练，轻松从容、压力更小、基础扎实、成绩更稳。" data-lang-en="There is no single ideal starting point for every student. Building English skills gradually throughout the primary school years can make revision more manageable. Students preparing specifically for PSLE should create a realistic revision schedule based on their current strengths and areas for improvement.">
+        There is no single ideal starting point for every student. Building
+        English skills gradually throughout the primary school years can make
+        revision more manageable. Students preparing specifically for PSLE
+        should create a realistic revision schedule based on their current
+        strengths and areas for improvement.
+      </p>
+    </div>
+  </section>
+
+
+  <section class="conclusion">
+    <h2 data-lang-en="Make PSLE English Revision More Structured & Effective" data-lang-zh="科学规划、系统复习，备考PSLE英语更高效、更有信心">Make PSLE English Revision More Structured</h2>
+
+    <p data-lang-en="Preparing for PSLE English is a long-term learning process. Stronger results come from understanding the language, practising different skills, learning from mistakes, and building confidence over time." data-lang-zh="PSLE英语备考是长期积累、循序渐进的学习过程：理解语言本质、均衡练习各项能力、重视错题复盘、慢慢建立自信，成绩与能力同步扎实提升。">
+      Preparing for PSLE English is a long-term learning process. Stronger
+      results come from understanding the language, practising different skills,
+      learning from mistakes, and building confidence over time.
+    </p>
+
+    <p data-lang-en="<strong>Leevo Learn English</strong> provides a structured environment for PSLE English practice, revision, mock tests, progress tracking, and targeted review." data-lang-zh="<strong>Leevo英语学习</strong>提供完整系统化练习、复习、模考、追踪、错题专项复习环境，帮小学生在家自主学习、高效备考、稳步成长。">
+      <strong>Leevo Learn English</strong> provides a structured environment for
+      PSLE English practice, revision, mock tests, progress tracking, and
+      targeted review.
+    </p>
+
+    <p data-lang-en="Whether a student needs to strengthen the basics, practise more challenging questions, or prepare for a full mock examination, having a clear revision system can make the learning process easier to manage." data-lang-zh="基础薄弱巩固提升、进阶难点突破、考前完整模拟备考，清晰科学的学习体系，让学习不迷茫、不盲目、轻松可控、持续进步！">
+      Whether a student needs to strengthen the basics, practise more
+      challenging questions, or prepare for a full mock examination, having a
+      clear revision system can make the learning process easier to manage.
+    </p>
+  </section>
+
+</article>
+
+<!-- ✅ 双语联动脚本：记忆语言、标题/描述/正文完整同步切换 -->
 <script>
-// 读取与首页共享的语言存储，自动同步
 let currentLang = localStorage.getItem('leevoLang') || 'en';
 
-function updateAllText(){
+function switchAllContent(){
+  // 切换页面标题
+  document.title = document.querySelector('title').getAttribute(`data-lang-${currentLang}`);
+  // 切换meta描述
+  const metaDesc = document.querySelector('meta[name="description"]');
+  metaDesc.content = metaDesc.getAttribute(`data-lang-${currentLang}`);
+  // 切换所有正文双语内容
   document.querySelectorAll('[data-lang-en],[data-lang-zh]').forEach(el=>{
     const txt = el.getAttribute(`data-lang-${currentLang}`);
     if(txt) el.innerHTML = txt;
   });
 }
 
-document.addEventListener('DOMContentLoaded', updateAllText);
-
-document.getElementById('pageLangSwitch').addEventListener('click',()=>{
-  currentLang = currentLang === 'en' ? 'zh' : 'en';
-  localStorage.setItem('leevoLang', currentLang); // 切换保存，全站统一
-  updateAllText();
+// 切换按钮点击
+document.getElementById('langSwitch').addEventListener('click',()=>{
+  currentLang = currentLang==='en' ? 'zh' : 'en';
+  localStorage.setItem('leevoLang', currentLang);
+  switchAllContent();
 });
+
+// 页面加载完成自动执行记忆语言
+document.addEventListener('DOMContentLoaded', switchAllContent);
 </script>
+
 </body>
 </html>
