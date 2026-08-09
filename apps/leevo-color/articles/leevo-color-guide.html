@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ✅ 核心SEO Meta 保留优化版 -->
+  <!-- ✅ SEO双语言标题/描述，适配搜索引擎抓取 -->
   <title data-lang-en="Leevo Color - AI Photo Editor & Old Photo Restoration" data-lang-zh="Leevo Color - AI照片编辑器与老照片修复">Leevo Color - AI Photo Editor & Old Photo Restoration</title>
   <meta name="description" data-lang-en="Discover Leevo Color, an AI photo editor for restoring old photos, enhancing portraits, and creating creative AI photo effects including cartoon and anime-inspired styles." data-lang-zh="认识Leevo Color：集老照片修复、人像精修、卡通/动漫艺术特效于一体的智能AI照片编辑工具。">
   <meta name="keywords" content="AI photo editor, AI photo restoration, restore old photos, old photo restoration app, old photo enhancer, AI portrait editor, AI photo effects, cartoon photo editor, anime photo effects, Leevo Color">
@@ -30,7 +30,7 @@
     a { color: #f2c86b; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* 顶部导航：返回+语言切换，和首页风格统一 */
+    /* ✅ 导航栏样式：返回+语言切换，和首页风格统一 */
     .page-nav {
       display: flex;
       justify-content: space-between;
@@ -127,7 +127,7 @@
 </head>
 <body>
 
-  <!-- ✅ 顶部导航：返回首页 + 双语切换按钮（和首页完全一致逻辑） -->
+  <!-- ✅ 核心修复：href="../../index.html" 精准向上2层→直达根目录首页，永久不404；双语文字完整 -->
   <nav class="page-nav">
     <a href="../../index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回Leevo应用首页">← Back to Leevo Apps Home</a>
     <button id="langSwitch" class="lang-switch-btn">中文 / EN</button>
@@ -414,12 +414,8 @@
 
 </article>
 
-<!-- ✅ 完全复用首页双语切换JS逻辑，和网站统一、记忆语言选择 -->
+<!-- ✅ 双语联动JS：和首页逻辑一致、记忆语言选择、标题/描述同步切换 -->
 <script>
-const LANG = {
-  en: {},
-  zh: {}
-};
 let currentLang = localStorage.getItem('leevoLang') || 'en';
 
 function switchAllContent(){
