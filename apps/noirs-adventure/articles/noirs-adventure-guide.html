@@ -3,60 +3,671 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-lang-en="Noir's Adventure – Magician Saves Princess Retro Platform Adventure Guide" data-lang-zh="诺尔大冒险 — 魔术师救公主 · 复古横版闯关 · 魔法解谜冒险指南">Noir's Adventure – Magician Saves Princess Retro Platform Adventure Guide</title>
+
+  <!-- ✅ 严格采用提供SEO标题、描述、关键词 -->
+  <title data-lang-en="Nori's Adventure - Fun Adventure Game with Boss Battles" data-lang-zh="Nori冒险之旅 - 精彩闯关、挑战BOSS趣味冒险手游">Nori's Adventure - Fun Adventure Game with Boss Battles</title>
+
+  <meta name="description"
+        content="Explore Nori's Adventure, a fun mobile adventure game with challenging levels, boss battles, coins and diamonds. Complete levels, defeat powerful bosses and see how far you can go."
+        data-lang-en="Explore Nori's Adventure, a fun mobile adventure game with challenging levels, boss battles, coins and diamonds. Complete levels, defeat powerful bosses and see how far you can go."
+        data-lang-zh="走进Nori冒险之旅，一款层层进阶关卡、热血BOSS对决、收集金币钻石、趣味十足的移动端冒险游戏！通关闯关、击败强力首领、一路成长突破，看看自己能走多远、闯到哪一步！">
+
+  <meta name="keywords"
+        content="Nori's Adventure, adventure game, adventure game Android, mobile adventure game, platform adventure game, adventure game with boss battles, boss battle game, casual adventure game, action adventure game, Android adventure games, fun adventure game, Nori adventure game">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://leevotech.github.io/leevo-apps/apps/noris-adventure/articles/noris-adventure-guide.html">
+
   <style>
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:Arial,sans-serif; background:linear-gradient(135deg,#0d2035,#07111f); color:#fff; line-height:1.7; padding:40px 30px; max-width:900px; margin:0 auto;}
-    .back-link{display:inline-block; margin-bottom:40px; color:#f2c86b; text-decoration:none; font-size:18px;}
-    .back-link:hover{text-decoration:underline;}
-    h1{color:#f2c86b; font-size:32px; margin-bottom:30px; line-height:1.4;}
-    h2{color:#ffffff; font-size:24px; margin:30px 0 20px;}
-    p{color:#e6e6e6; font-size:18px; margin-bottom:20px;}
-    ul{color:#e6e6e6; font-size:18px; margin:20px 0 20px 30px;}
-    li{margin-bottom:10px;}
-    .lang-switch-btn{padding:6px 14px; border-radius:6px; border:none; background:#f2c86b; color:#07111f; font-weight:bold; cursor:pointer; margin-bottom:20px;}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #07111f;
+      color: #e6eaf0;
+      line-height: 1.7;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    a { color: #f2c86b; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #203b55;
+      flex-wrap: wrap;
+      gap:15px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+      font-size:16px;
+    }
+    .lang-switch-btn {
+      padding: 6px 14px;
+      border-radius: 6px;
+      border: none;
+      background: #f2c86b;
+      color: #07111f;
+      font-weight: bold;
+      cursor: pointer;
+      transition:0.2s;
+    }
+    .lang-switch-btn:hover{ transform:scale(1.05); }
+
+    .article-header { margin-bottom: 45px; }
+    .article-category {
+      color: #f2c86b;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1.3;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+    .article-intro {
+      font-size: 18px;
+      color: #b7c4d2;
+    }
+
+    section { margin-bottom: 50px; }
+    h2 {
+      font-size: 26px;
+      color: #ffffff;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #1c344c;
+    }
+    h3 {
+      font-size: 20px;
+      color: #f2d28c;
+      margin: 25px 0 12px;
+    }
+    p { margin-bottom: 16px; font-size: 17px; }
+    ul, ol { margin: 20px 0 20px 25px; }
+    li { margin-bottom: 10px; font-size: 17px; }
+
+    .faq-item {
+      background: #0d1c2c;
+      padding:22px;
+      border-radius:10px;
+      margin-bottom:15px;
+      border:1px solid #203b55;
+    }
+    .conclusion {
+      background: linear-gradient(135deg, #10253a, #0d1c2c);
+      padding:35px;
+      border-radius:16px;
+      border:1px solid #294969;
+    }
+
+    @media (max-width:600px) {
+      body { padding:20px 15px; }
+      h1 { font-size:28px; }
+      .page-nav { flex-direction:column; align-items:flex-start; }
+    }
   </style>
 </head>
 <body>
-  <!-- 语言切换按钮，与首页共用本地存储，自动同步 -->
-  <button id="pageLangSwitch" class="lang-switch-btn">中文 / EN</button>
 
-  <!-- 返回首页双语链接，样式位置统一 -->
-  <a href="../index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回 Leevo 应用首页">← Back to Leevo Apps Home</a>
+  <!-- 统一导航：返回首页 + 双语切换记忆 -->
+  <nav class="page-nav">
+    <a href="/leevo-apps/index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回Leevo应用首页">← Back to Leevo Apps Home</a>
+    <button id="langSwitch" class="lang-switch-btn">中文 / EN</button>
+  </nav>
 
-  <h1 data-lang-en="Noir's Adventure — A Magician’s Brave Journey to Rescue His Beloved Princess" data-lang-zh="诺尔大冒险 — 燕尾魔术师为爱出征，勇闯巨龙城堡救回公主">Noir's Adventure — A Magician’s Brave Journey to Rescue His Beloved Princess</h1>
+<article class="app-article">
 
-  <p data-lang-en="One peaceful evening by the seaside: a graceful magician in an elegant tuxedo sat hand in hand with the princess he loved, watching the warm golden sunset paint the ocean sky. Suddenly, darkness fell — a terrifying giant dragon swooped down from the clouds, snatched the princess away in a flash and vanished toward its dark castle! Heartbroken but determined, the magician Noir swore he would brave every danger, defeat every monster and bring his beloved back safely — so his great adventure began!" data-lang-zh="宁静海边的黄昏，身着优雅燕尾服的魔术师，正与心爱公主并肩坐着，凝望漫天熔金般的绝美夕阳。就在这一刻，乌云骤聚、巨龙从天而降，凶狠掳走公主，飞向遥远阴森的巨龙城堡！悲痛却坚定的魔术师诺尔立下誓言：无论前路多少凶险、怪物拦路，也要一路奋战，救出挚爱——一场充满魔法、智慧与勇气的传奇冒险，就此拉开序幕！">One peaceful evening by the seaside: a graceful magician in an elegant tuxedo sat hand in hand with the princess he loved, watching the warm golden sunset paint the ocean sky. Suddenly, darkness fell — a terrifying giant dragon swooped down from the clouds, snatched the princess away in a flash and vanished toward its dark castle! Heartbroken but determined, the magician Noir swore he would brave every danger, defeat every monster and bring his beloved back safely — so his great adventure began!</p>
+  <header class="article-header">
+    <p class="article-category" data-lang-en="Adventure Games" data-lang-zh="冒险闯关游戏">Adventure Games</p>
 
-  <h2 data-lang-en="Magical Abilities & Core Gameplay" data-lang-zh="神奇魔法能力与闯关核心玩法">Magical Abilities & Core Gameplay</h2>
-  <ul>
-    <li data-lang-en="✅ Magic Wand Powers: wield your magic wand to conjure solid blocks for climbing & crossing gaps, or cast blazing fireballs to strike down roaming monsters blocking your path" data-lang-zh="✅ 魔术棒双能：挥动魔术棒凭空变出稳固砖块，搭建阶梯、跨越深渊；也能凝聚灼热火球，精准攻击消灭沿途游荡的拦路怪物">✅ Magic Wand Powers: wield your magic wand to conjure solid blocks for climbing & crossing gaps, or cast blazing fireballs to strike down roaming monsters blocking your path</li>
-    <li data-lang-en="✅ Must collect the Golden Key each level: find & pick up the key hidden in the scene to unlock the exit door & advance to the next adventure stage" data-lang-zh="✅ 每关必寻通关金钥匙：在场景角落、平台缝隙中找到钥匙，才能开启通往下一关的大门，继续深入冒险">✅ Must collect the Golden Key each level: find & pick up the key hidden in the scene to unlock the exit door & advance to the next adventure stage</li>
-    <li data-lang-en="✅ Hunt hidden stone coins scattered inside blocks: gather exactly 10 coins to unlock & challenge the powerful guardian Boss waiting every 10 levels!" data-lang-zh="✅ 击碎石块寻找隐藏金币：散落藏在石块中的金币需要细心搜寻，集齐整整10枚，方能唤醒并迎战每10关镇守要道的强力Boss守卫！">✅ Hunt hidden stone coins scattered inside blocks: gather exactly 10 coins to unlock & challenge the powerful guardian Boss waiting every 10 levels!</li>
-    <li data-lang-en="✅ Retro classic platform style: jump, explore, think, fight & overcome traps — feel the nostalgic fun of old-school platform adventure while saving the princess!" data-lang-zh="✅ 复古经典横版风格：跳跃探索、动脑搭路、施法战斗、躲避机关陷阱——重温怀旧闯关乐趣，步步深入巨龙黑暗城堡！">✅ Retro classic platform style: jump, explore, think, fight & overcome traps — feel the nostalgic fun of old-school platform adventure while saving the princess!</li>
-  </ul>
+    <h1 data-lang-en="Nori's Adventure: An Exciting Adventure Game with Boss Battles" data-lang-zh="Nori冒险之旅：热血闯关、挑战首领、精彩不断的趣味冒险游戏">Nori's Adventure: An Exciting Adventure Game with Boss Battles</h1>
 
-  <h2 data-lang-en="Brave through darkness for true love" data-lang-zh="为爱勇闯黑暗，坚持终能重逢">Brave through darkness for true love</h2>
-  <p data-lang-en="From peaceful shorelines to dark monster-filled caves, winding forests and finally the towering dragon castle — use your magic creatively, observe carefully, collect every key & coin, defeat fierce Bosses one by one, never give up until you stand before the dragon & rescue your princess home!" data-lang-zh="从温暖海边，穿越幽暗怪物洞穴、曲折密林，一路挺进阴森巍峨的巨龙城堡！善用魔法巧搭通路、细心观察不漏一枚金币钥匙、沉着应战击败每一位Boss守卫，坚持到最后直面恶龙，冲破黑暗，与心爱公主重逢归来！">From peaceful shorelines to dark monster-filled caves, winding forests and finally the towering dragon castle — use your magic creatively, observe carefully, collect every key & coin, defeat fierce Bosses one by one, never give up until you stand before the dragon & rescue your princess home!</p>
+    <p class="article-intro" data-lang-en="Looking for a fun adventure game with challenging levels, powerful boss battles and a sense of progression? Nori's Adventure takes players on a journey through increasingly challenging stages, where completing levels, collecting coins and defeating bosses are all part of the adventure." data-lang-zh="想找一款关卡层层进阶、首领对决热血刺激、一路成长收获满满成就感的趣味冒险游戏？Nori冒险之旅带你踏上奇妙旅程，一关关突破难关、收集闪耀金币、迎战强力BOSS，每一次通关、每一场胜利，都是冒险路上精彩难忘的珍贵旅程！">
+      Looking for a fun adventure game with challenging levels, powerful boss
+      battles and a sense of progression? Nori's Adventure takes players on a
+      journey through increasingly challenging stages, where completing levels,
+      collecting coins and defeating bosses are all part of the adventure.
+    </p>
+  </header>
 
-<script>
-// 与全站共用语言存储，一键同步切换，体验连贯统一
-let currentLang = localStorage.getItem('leevoLang') || 'en';
 
-function updateAllText(){
-  document.querySelectorAll('[data-lang-en],[data-lang-zh]').forEach(el=>{
-    const txt = el.getAttribute(`data-lang-${currentLang}`);
-    if(txt) el.innerHTML = txt;
-  });
-}
+  <section>
+    <h2 data-lang-en="What Is Nori's Adventure?" data-lang-zh="什么是Nori冒险之旅？">What Is Nori's Adventure?</h2>
 
-document.addEventListener('DOMContentLoaded', updateAllText);
+    <p data-lang-en="Nori's Adventure is a mobile adventure game built around exploration, level progression and challenging encounters." data-lang-zh="专为移动端打造的经典冒险闯关游戏，核心围绕奇妙探索、层层进阶关卡、充满挑战的精彩对决展开，轻松上手、沉浸冒险、乐趣满满！">
+      Nori's Adventure is a mobile adventure game built around exploration,
+      level progression and challenging encounters.
+    </p>
 
-document.getElementById('pageLangSwitch').addEventListener('click',()=>{
-  currentLang = currentLang === 'en' ? 'zh' : 'en';
-  localStorage.setItem('leevoLang', currentLang);
-  updateAllText();
-});
-</script>
-</body>
-</html>
+    <p data-lang-en="The journey starts with easier stages and gradually becomes more challenging as you progress." data-lang-zh="旅程从轻松入门关卡开启，熟悉玩法、积累经验、稳步成长，越往后关卡设计越精妙、难度合理攀升、挑战不断升级、惊喜层层加码！">
+      The journey starts with easier stages and gradually becomes more
+      challenging as you progress.
+    </p>
+
+    <p data-lang-en="Instead of simply completing one level and stopping, the game gives players a reason to keep moving forward by introducing new challenges, boss battles, coins and diamonds." data-lang-zh="通关不是终点、冒险永不停歇！全新难关接踵而至、强力首领坐镇关卡、散落金币随手收集、珍贵钻石击败BOSS解锁，源源不断新目标、新奖励、新挑战，动力满满一路向前、不愿停下脚步！">
+      Instead of simply completing one level and stopping, the game gives
+      players a reason to keep moving forward by introducing new challenges,
+      boss battles, coins and diamonds.
+    </p>
+
+    <p data-lang-en="The goal is simple: <strong>keep progressing, overcome the challenges ahead, and see how far Nori can go.</strong>" data-lang-zh="目标纯粹清晰、信念坚定向前：<strong>坚持闯关、突破重重阻碍、战胜强敌、一路成长变强，看看自己能陪伴Nori闯到多远、抵达怎样精彩的冒险终点！</strong>">
+      The goal is simple:
+      <strong>keep progressing, overcome the challenges ahead, and see how far Nori
+      can go.</strong>
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Why Adventure Games Are So Enjoyable" data-lang-zh="冒险闯关游戏，为何让人沉浸上头、爱不释手？">Why Adventure Games Are So Enjoyable</h2>
+
+    <p data-lang-en="Adventure games are appealing because they combine simple gameplay with a feeling of progression." data-lang-zh="玩法简洁易懂、上手轻松无门槛，核心魅力在于清晰可见、步步扎实的成长进步感——付出努力、攻克难关、收获成就、变得更强，充实满足、治愈解压！">
+      Adventure games are appealing because they combine simple gameplay with
+      a feeling of progression.
+    </p>
+
+    <p data-lang-en="Completing a level gives you a sense of achievement, while reaching the next stage creates curiosity about what comes next." data-lang-zh="成功通关一关，收获满满的成就感；踏入全新关卡，又满怀好奇期待未知新挑战、新风景、新惊喜，心潮澎湃、欲罢不能、总想继续往前走、探索更多精彩！">
+      Completing a level gives you a sense of achievement, while reaching the
+      next stage creates curiosity about what comes next.
+    </p>
+
+    <p data-lang-en="Nori's Adventure builds on this idea by gradually increasing the challenge and introducing boss battles throughout the journey." data-lang-zh="Nori冒险之旅完美诠释这份美好体验：难度循序渐进、层层进阶，中途穿插热血BOSS对决、节奏张弛有度、平淡闯关+震撼激战交替切换，全程新鲜刺激、绝不枯燥乏味！">
+      Nori's Adventure builds on this idea by gradually increasing the
+      challenge and introducing boss battles throughout the journey.
+    </p>
+
+    <p data-lang-en="Every completed section becomes another step toward the larger adventure." data-lang-zh="每一次通关、每一场胜利、每一次突破，都不是孤立片段——一点一滴汇聚成长、铺就通往最终冒险巅峰的完整道路，一步一个脚印、奔赴盛大终点！">
+      Every completed section becomes another step toward the larger adventure.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Progress Through Challenging Levels" data-lang-zh="层层闯关进阶，越挫越勇、突破自我、不断变强">Progress Through Challenging Levels</h2>
+
+    <p data-lang-en="At the heart of Nori's Adventure is level progression." data-lang-zh="层层递进、由易到难、有序闯关，正是整个冒险旅程最核心、最扎实的成长主线！">
+      At the heart of Nori's Adventure is level progression.
+    </p>
+
+    <p data-lang-en="Players move through a series of stages, with the difficulty gradually increasing as the adventure continues." data-lang-zh="从入门熟悉操作、轻松通关，慢慢过渡到机关精妙、考验技巧、反应、耐心的高阶关卡，难度稳步提升、成长循序渐进、能力同步进阶、挑战恰到好处、不会挫败劝退、也不会平淡无聊！">
+      Players move through a series of stages, with the difficulty gradually
+      increasing as the adventure continues.
+    </p>
+
+    <p data-lang-en="Early levels allow players to become familiar with the game, while later stages provide greater challenges and require more careful play." data-lang-zh="前期轻松上手、熟悉基础规则、流畅操作、建立信心；后期关卡设计精巧、考验策略规划、精准操作、冷静耐心，每一步都需专注用心、攻克难关之后成就感爆棚、酣畅淋漓！">
+      Early levels allow players to become familiar with the game, while later
+      stages provide greater challenges and require more careful play.
+    </p>
+
+    <p data-lang-en="This gradual progression gives the adventure a natural rhythm: <strong>play, improve, complete the level, and continue forward.</strong>" data-lang-zh="节奏流畅自然、成长踏实清晰：<strong>尽情体验、磨练技巧、通关突破、整装再出发、奔赴下一场挑战！</strong>循环成长、永不停歇、越玩越厉害、越闯越上头！">
+      This gradual progression gives the adventure a natural rhythm:
+      <strong>play, improve, complete the level, and continue forward.</strong>
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Boss Battles Make the Adventure More Exciting" data-lang-zh="强力首领热血登场！巅峰对决、高潮迭起、冒险旅程精彩翻倍">Boss Battles Make the Adventure More Exciting</h2>
+
+    <p data-lang-en="One of the defining features of Nori's Adventure is its boss battle progression." data-lang-zh="层层闯关之后，重磅BOSS如约登场、震撼对决、高潮拉满，正是这款冒险游戏最亮眼、最让人热血沸腾的核心特色！">
+      One of the defining features of Nori's Adventure is its boss battle
+      progression.
+    </p>
+
+    <p data-lang-en="After progressing through a group of regular levels, players face a powerful boss." data-lang-zh="连续闯过数轮常规关卡、积累实力、做好充分准备，迎来专属强力首领坐镇终极考验、实力悬殊、技能独特、考验操作极限、策略智慧、冷静心态！">
+      After progressing through a group of regular levels, players face a
+      powerful boss.
+    </p>
+
+    <p data-lang-en="Defeating a boss marks an important milestone in the adventure and rewards the player with a diamond." data-lang-zh="历经苦战、巧妙周旋、抓住时机、击败强敌，不仅是冒险旅程浓墨重彩的里程碑、证明实力成长，更能收获珍贵闪耀钻石、专属荣耀奖励、成就感与丰厚回报双丰收！">
+      Defeating a boss marks an important milestone in the adventure and
+      rewards the player with a diamond.
+    </p>
+
+    <p data-lang-en="The boss encounters also provide a change of pace from the regular stages, giving players a major challenge to overcome before continuing their journey." data-lang-zh="告别平稳重复闯关节奏、紧张刺激巅峰对决、心跳加速、酣畅淋漓、突破极限、战胜强敌、短暂休整蓄力、信心满满、重新踏上新一段冒险征程！">
+      The boss encounters also provide a change of pace from the regular
+      stages, giving players a major challenge to overcome before continuing
+      their journey.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="A Series of Different Bosses" data-lang-zh="各具特色首领阵容，层层进阶、强敌不断、挑战从未重样、新鲜感拉满">A Series of Different Bosses</h2>
+
+    <p data-lang-en="Nori's Adventure features a progression of different bosses rather than repeating the same encounter throughout the entire game." data-lang-zh="告别单调重复、千篇一律！从入门到终章，登场首领形象、能力、战斗风格、攻击模式全新独特、层层升级、实力稳步变强、每一场对决都是全新体验、全新考验、全新记忆！">
+      Nori's Adventure features a progression of different bosses rather than
+      repeating the same encounter throughout the entire game.
+    </p>
+
+    <p data-lang-en="The boss sequence includes:</p>
+    <ul>
+      <li data-lang-en="Frog" data-lang-zh="巨型青蛙首领">Frog</li>
+      <li data-lang-en="Skeleton" data-lang-zh="骷髅战士首领">Skeleton</li>
+      <li data-lang-en="Giant Snake" data-lang-zh="巨蟒毒牙首领">Giant Snake</li>
+      <li data-lang-en="Giant Crocodile" data-lang-zh="巨型鳄鱼首领">Giant Crocodile</li>
+      <li data-lang-en="Wizard" data-lang-zh="神秘巫师首领">Wizard</li>
+    </ul>
+
+    <p data-lang-en="Each boss represents another milestone in the adventure." data-lang-zh="从弱小到强大、从简单到棘手，每一位首领都是专属成长里程碑、见证实力蜕变、冒险历程浓墨重彩的精彩篇章！">
+      Each boss represents another milestone in the adventure.
+    </p>
+
+    <p data-lang-en="Defeating them is not simply about finishing another level. It is part of the larger progression toward the final challenge." data-lang-zh="击败强敌，早已超越单纯通关闯关意义——是磨练意志、锤炼技巧、积蓄力量、步步逼近终极神秘最终BOSS、奔赴冒险巅峰的必经之路！">
+      Defeating them is not simply about finishing another level. It is part
+      of the larger progression toward the final challenge.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Collect Diamonds and Work Toward the Final Boss" data-lang-zh="集齐闪耀钻石，解锁终极秘密，直面最终强敌、完成史诗冒险使命">Collect Diamonds and Work Toward the Final Boss</h2>
+
+    <p data-lang-en="Boss battles are connected to the game's diamond progression system." data-lang-zh="珍贵钻石与BOSS对决深度绑定、紧密串联成长主线，每一次苦战胜利、收获钻石、点亮收藏、清晰记录荣耀征程、指引前进方向！">
+      Boss battles are connected to the game's diamond progression system.
+    </p>
+
+    <p data-lang-en="Each defeated boss rewards the player with a diamond." data-lang-zh="战胜一位首领，即刻收获一颗专属璀璨钻石，荣耀勋章、实力证明、收藏积累、看得见、摸得着、成就感满满、激励继续向前！">
+      Each defeated boss rewards the player with a diamond.
+    </p>
+
+    <p data-lang-en="After collecting five diamonds, the adventure leads to the final boss." data-lang-zh="历经重重激战、集齐五颗珍贵钻石，终极秘密大门缓缓开启、传说最终BOSS现身登场、终极考验、巅峰对决、史诗级终极冒险决战正式开启！">
+      After collecting five diamonds, the adventure leads to the final boss.
+    </p>
+
+    <p data-lang-en="This gives players a clear long-term objective beyond simply completing individual levels." data-lang-zh="不再盲目零散闯关、目标清晰明确、长远方向坚定：集齐钻石、挑战终极强敌、完成史诗冒险使命，每一步努力都有意义、每一次坚持都在靠近伟大终点！">
+      This gives players a clear long-term objective beyond simply completing
+      individual levels.
+    </p>
+
+    <p data-lang-en="Every boss victory becomes another step toward the ultimate challenge." data-lang-zh="每一场热血胜利、每一颗钻石闪耀，都是坚实一步、不断缩短与巅峰终点距离、积蓄勇气与力量、为最终决战做好万全准备！">
+      Every boss victory becomes another step toward the ultimate challenge.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Coins and Level Progression" data-lang-zh="金币累积闯关成长，短期收获满满、长期目标坚定、双重成长、乐趣加倍">Coins and Level Progression</h2>
+
+    <p data-lang-en="Coins are another part of the progression system in Nori's Adventure." data-lang-zh="闪闪金币散落旅途，是日常闯关、点滴努力、稳步成长的直观见证，和钻石荣耀相辅相成、共同勾勒完整成长轨迹！">
+      Coins are another part of the progression system in Nori's Adventure.
+    </p>
+
+    <p data-lang-en="Players earn coins as they progress through the regular levels." data-lang-zh="通关普通关卡、完成挑战、一路前行，随手收集散落金币，点滴累积、不断增加、收获即时满足、小奖励持续激励、闯关更有动力、越玩越有成就感！">
+      Players earn coins as they progress through the regular levels.
+    </p>
+
+    <p data-lang-en="The game uses a ten-level progression cycle, with coins building up as players work toward the next boss encounter." data-lang-zh="每十关形成完整成长循环，一路收集金币、稳步累积、见证付出与成长，为即将到来的首领对决积蓄实力、做好准备、层层递进、节奏流畅自然！">
+      The game uses a ten-level progression cycle, with coins building up as
+      players work toward the next boss encounter.
+    </p>
+
+    <p data-lang-en="After completing the relevant boss progression, the coin count resets while the player's diamond collection continues to grow." data-lang-zh="成功击败BOSS、完成阶段性重大挑战，金币重新从零累积、开启新一轮闯关成长；珍贵钻石永久留存、持续点亮收藏、记录荣耀征程、永不清零、一路见证成长变强！">
+      After completing the relevant boss progression, the coin count resets
+      while the player's diamond collection continues to grow.
+    </p>
+
+    <p data-lang-en="This creates two different forms of progression: <strong>short-term coin progress and long-term diamond progress.</strong>" data-lang-zh="双重成长体系相辅相成、完美互补：<strong>金币即时累积、短期闯关收获满满、持续激励；钻石永久珍藏、长期目标清晰坚定、奔赴巅峰！</strong>">
+      This creates two different forms of progression:
+      <strong>short-term coin progress and long-term diamond progress.</strong>
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="How the Level and Boss System Works" data-lang-zh="完整闯关成长流程，清晰有序、层层递进、目标明确、稳步奔赴冒险巅峰">How the Level and Boss System Works</h2>
+
+    <ol>
+      <li data-lang-en="<strong>Complete regular levels.</strong> Progress through the adventure one stage at a time." data-lang-zh="<strong>稳步通关常规关卡。</strong>一关一关扎实突破、熟悉玩法、磨练技巧、积累经验、逐步变强。">
+        <strong>Complete regular levels.</strong>
+        Progress through the adventure one stage at a time.
+      </li>
+      <li data-lang-en="<strong>Build your coin progress.</strong> Continue completing levels and advancing toward the next milestone." data-lang-zh="<strong>累积金币见证成长。</strong>一路闯关收集金币、点滴积累、稳步前行、朝着下一个关键里程碑不断靠近。">
+        <strong>Build your coin progress.</strong>
+        Continue completing levels and advancing toward the next milestone.
+      </li>
+      <li data-lang-en="<strong>Face the boss.</strong> After the regular level sequence, a boss appears." data-lang-zh="<strong>迎战强力首领强敌。</strong>闯完一轮常规关卡、实力积蓄到位，专属BOSS如约登场、开启震撼对决考验。">
+        <strong>Face the boss.</strong>
+        After the regular level sequence, a boss appears.
+      </li>
+      <li data-lang-en="<strong>Defeat the boss.</strong> Overcome the boss to complete the current major stage of the adventure." data-lang-zh="<strong>苦战通关击败首领。</strong>沉着冷静、策略周旋、突破极限、战胜强敌，圆满完成本阶段重大冒险挑战。">
+        <strong>Defeat the boss.</strong>
+        Overcome the boss to complete the current major stage of the adventure.
+      </li>
+      <li data-lang-en="<strong>Earn a diamond.</strong> Each defeated boss contributes another diamond to your collection." data-lang-zh="<strong>收获珍贵闪耀钻石。</strong>每战胜一位BOSS，点亮一颗专属钻石、永久珍藏、荣耀见证、实力勋章、收藏满满成就感！">
+        <strong>Earn a diamond.</strong>
+        Each defeated boss contributes another diamond to your collection.
+      </li>
+      <li data-lang-en="<strong>Continue the journey.</strong> Return to the regular levels and work toward the next boss." data-lang-zh="<strong>整装再出发继续冒险。</strong>回归闯关、从零累积金币、磨练技巧、积蓄力量、迎接下一位全新首领强敌、持续成长突破！">
+        <strong>Continue the journey.</strong>
+        Return to the regular levels and work toward the next boss.
+      </li>
+      <li data-lang-en="<strong>Collect five diamonds.</strong> Reaching five diamonds leads to the final boss challenge." data-lang-zh="<strong>集齐五颗钻石。</strong>完成全部首领挑战、点亮全部钻石、解锁终极秘境、直面传说最终BOSS、开启史诗巅峰决战！">
+        <strong>Collect five diamonds.</strong>
+        Reaching five diamonds leads to the final boss challenge.
+      </li>
+    </ol>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Why Boss Battles Make Mobile Adventure Games Better" data-lang-zh="首领对决，让休闲冒险游戏不再平淡、高潮迭起、体验升华、回味无穷">Why Boss Battles Make Mobile Adventure Games Better</h2>
+
+    <p data-lang-en="A good adventure game needs more than a long list of levels." data-lang-zh="优质耐玩冒险游戏，绝不是枯燥冗长、千篇一律关卡堆砌——缺少高潮、缺少强敌、缺少震撼，旅程平淡乏味、难以坚持、记忆空洞！">
+      A good adventure game needs more than a long list of levels.
+    </p>
+
+    <p data-lang-en="Boss battles create important milestones that give players something meaningful to work toward." data-lang-zh="BOSS登场，就是关键里程碑、终极阶段性目标、值得全力以赴、热血拼搏、为之专注坚持、奋力突破、充满期待、满怀激情奔赴的意义所在！">
+      Boss battles create important milestones that give players something
+      meaningful to work toward.
+    </p>
+
+    <p data-lang-en="Instead of seeing every level as an isolated challenge, players can think about the larger journey: <strong>complete the stages, reach the boss, defeat it, and earn the next diamond.</strong>" data-lang-zh="零散关卡串联成完整壮阔史诗旅程：<strong>扎实闯关→迎战强敌→击败BOSS→收获钻石→继续前行</strong>，每一步都融入宏大冒险叙事、不再孤单零散、充满使命感、成就感、沉浸感！">
+      Instead of seeing every level as an isolated challenge, players can think
+      about the larger journey:
+      <strong>complete the stages, reach the boss, defeat it, and earn the next
+      diamond.</strong>
+    </p>
+
+    <p data-lang-en="This structure helps create a stronger feeling of progression throughout the adventure." data-lang-zh="清晰闭环成长节奏、层层递进、目标连贯、奖励即时、荣耀留存、成长清晰可见、动力源源不断、越玩越投入、越闯越上头、沉浸完整壮阔冒险旅程、久久难忘！">
+      This structure helps create a stronger feeling of progression throughout
+      the adventure.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Tips for Playing an Adventure Game" data-lang-zh="新手进阶实用闯关技巧，稳步成长、少走弯路、从容通关、战胜强敌">Tips for Playing an Adventure Game</h2>
+
+    <h3 data-lang-en="1. Focus on Completing the Current Challenge" data-lang-zh="1.专注当下、一步一个脚印，攻克眼前关卡、不焦虑远方">1. Focus on Completing the Current Challenge</h3>
+
+    <p data-lang-en="Rather than worrying about the final boss immediately, concentrate on the level you are currently playing." data-lang-zh="不必急于求成、焦虑遥远最终BOSS、分心慌乱、手忙脚乱！沉下心、专注眼前关卡、吃透细节、稳扎稳打、一步一步扎实通关、循序渐进、自然成长变强、水到渠成抵达终点！">
+      Rather than worrying about the final boss immediately, concentrate on
+      the level you are currently playing.
+    </p>
+
+    <p data-lang-en="Completing one stage at a time is the easiest way to make consistent progress." data-lang-zh="稳扎稳打、逐个攻克、踏实积累、稳步进阶、不急躁冒进、不盲目求快、能力同步成长、通关越来越顺畅、进步清晰可见、坚持必有丰厚回报！">
+      Completing one stage at a time is the easiest way to make consistent
+      progress.
+    </p>
+
+
+    <h3 data-lang-en="2. Learn From Difficult Levels" data-lang-zh="2.遇阻不气馁、失败善总结，从挫折中吸取经验、磨练技巧、突破瓶颈">2. Learn From Difficult Levels</h3>
+
+    <p data-lang-en="When a level becomes difficult, use failed attempts as a way to understand what needs to change." data-lang-zh="卡关受挫、反复失败，不是白费功夫、不是能力不足！每一次失败都是宝贵经验、看清陷阱、摸清规律、熟悉节奏、调整策略、优化操作、慢慢找到通关关键、越挫越勇、突破瓶颈、豁然开朗！">
+      When a level becomes difficult, use failed attempts as a way to
+      understand what needs to change.
+    </p>
+
+    <p data-lang-en="Adventure games often become easier once you understand the challenges that previously caused problems." data-lang-zh="摸清关卡核心难点、掌握通关规律、理清节奏逻辑、积累操作手感，曾经难如登天、反复卡关的关卡，终将变得从容可控、轻松流畅、顺利通关、成就感爆棚、信心大增！">
+      Adventure games often become easier once you understand the challenges
+      that previously caused problems.
+    </p>
+
+
+    <h3 data-lang-en="3. Prepare for Boss Battles" data-lang-zh="3.重视BOSS对决、沉下心熟悉规律、耐心观察、找准时机、从容迎战">3. Prepare for Boss Battles</h3>
+
+    <p data-lang-en="Boss encounters represent major milestones, so reaching one should feel different from simply completing another regular stage." data-lang-zh="BOSS战是阶段性巅峰考验、重要荣耀里程碑，绝不能像普通闯关草草速战、急躁冒进、盲目输出、白白错失良机、惨败而归！">
+      Boss encounters represent major milestones, so reaching one should feel
+      different from simply completing another regular stage.
+    </p>
+
+    <p data-lang-en="Take your time and focus on understanding the boss encounter before rushing through it." data-lang-zh="放缓节奏、冷静观察、摸清攻击规律、熟悉技能间隙、抓住破绽时机、耐心周旋、找准节奏、沉着应对、蓄力反击、稳扎稳打、方能战胜强敌、收获胜利荣耀！">
+      Take your time and focus on understanding the boss encounter before
+      rushing through it.
+    </p>
+
+
+    <h3 data-lang-en="4. Keep Your Long-Term Goal in Mind" data-lang-zh="4.心怀长远终极目标，点滴努力汇聚力量、坚持不放弃、奔赴冒险巅峰">4. Keep Your Long-Term Goal in Mind</h3>
+
+    <p data-lang-en="Every boss defeated brings you closer to collecting five diamonds and reaching the final boss." data-lang-zh="每一次苦战胜利、每一颗钻石点亮、每一次成长突破，都在缩短与终极终点距离、坚定前行信念、积蓄勇气力量、支撑自己跨过难关、坚持到底、绝不半途而废！">
+      Every boss defeated brings you closer to collecting five diamonds and
+      reaching the final boss.
+    </p>
+
+    <p data-lang-en="Keeping this larger objective in mind can make each individual level feel like part of a bigger journey." data-lang-zh="心怀宏大冒险愿景、明确终极目标，枯燥重复闯关也变得意义非凡、每一步付出都价值满满、点滴努力汇聚成壮阔史诗、坚定前行、奔赴圆满终点！">
+      Keeping this larger objective in mind can make each individual level
+      feel like part of a bigger journey.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="A Gradually Increasing Challenge" data-lang-zh="难度循序渐进、成长合理流畅、新手友好、高手有挑战、人人沉浸收获乐趣">A Gradually Increasing Challenge</h2>
+
+    <p data-lang-en="Nori's Adventure is designed so that the difficulty does not stay the same throughout the entire journey." data-lang-zh="全程拒绝平铺直叙、一成不变、枯燥乏味！精心设计难度曲线、平缓起步、稳步抬升、层层加码、节奏自然、贴合成长、体验流畅舒适！">
+      Nori's Adventure is designed so that the difficulty does not stay the
+      same throughout the entire journey.
+    </p>
+
+    <p data-lang-en="As players progress, the challenges become more demanding." data-lang-zh="随着闯关深入、经验积累、技巧纯熟、能力提升，关卡机关布局、操作精度、反应速度、策略规划要求同步合理提升、挑战适配成长、不会碾压劝退、也不会轻松无聊！">
+      As players progress, the challenges become more demanding.
+    </p>
+
+    <p data-lang-en="This gradual increase is important because it allows players to become familiar with the game before facing more difficult situations." data-lang-zh="循序渐进、温和引导、充足适应学习空间、慢慢建立信心、打磨核心操作、理解游戏逻辑、打好扎实基础，后续高难关卡从容应对、游刃有余、突破成长、收获满满成就感！">
+      This gradual increase is important because it allows players to become
+      familiar with the game before facing more difficult situations.
+    </p>
+
+    <p data-lang-en="The result is an adventure where progress itself becomes part of the challenge." data-lang-zh="成长与挑战相辅相成、同步前行、克服困难就是变强证明、突破难关就是自我超越、越玩越强大、越闯越自信、沉浸体验、回味无穷、爱上冒险、不愿停下脚步！">
+      The result is an adventure where progress itself becomes part of the
+      challenge.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="From Frog to Wizard: A Journey Through Boss Battles" data-lang-zh="从青蛙到巫师，一路血战强敌、见证蜕变成长、完成史诗壮阔冒险征程">From Frog to Wizard: A Journey Through Boss Battles</h2>
+
+    <p data-lang-en="The boss progression gives Nori's Adventure a clear sense of direction." data-lang-zh="层层登场、实力递增、风格迥异的首领阵容，串联清晰主线、指引前进方向、树立阶段性目标、冒险旅程不再迷茫、每一步前进都坚定有力、充满期待！">
+      The boss progression gives Nori's Adventure a clear sense of direction.
+    </p>
+
+    <p data-lang-en="Players first encounter the Frog, followed by increasingly different bosses such as the Skeleton, Giant Snake, Giant Crocodile and Wizard." data-lang-zh="从入门温和青蛙首领起步，一路迎战骷髅战士、剧毒巨蟒、凶猛巨鳄、神秘巫师，强敌层层进阶、能力越发强悍、战斗体验震撼升级、见证从新手到强者的华丽蜕变！">
+      Players first encounter the Frog, followed by increasingly different
+      bosses such as the Skeleton, Giant Snake, Giant Crocodile and Wizard.
+    </p>
+
+    <p data-lang-en="Each victory provides another diamond and brings the player closer to the final challenge." data-lang-zh="每一场苦战胜利、收获璀璨钻石、点亮荣耀收藏、缩短与终极终点距离、积蓄勇气与实力、做好万全准备、奔赴最终史诗决战、完成伟大冒险使命！">
+      Each victory provides another diamond and brings the player closer to
+      the final challenge.
+    </p>
+
+    <p data-lang-en="This gives the adventure a simple but meaningful structure: <strong>every boss defeated represents another milestone achieved.</strong>" data-lang-zh="清晰有力、简洁深刻、铭记于心：<strong>战胜一位强敌，达成一座里程碑，收获一份成长荣耀，留下一段难忘冒险传奇！</strong>">
+      This gives the adventure a simple but meaningful structure:
+      <strong>every boss defeated represents another milestone achieved.</strong>
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Who Is Nori's Adventure For?" data-lang-zh="这款精彩冒险闯关游戏，适合这些玩家沉浸体验、收获满满乐趣">Who Is Nori's Adventure For?</h2>
+
+    <p data-lang-en="Nori's Adventure is suitable for players who enjoy mobile adventure games with level progression and boss battles." data-lang-zh="专为热爱闯关探索、挑战强敌、收集成长、追求清晰成就感、碎片时间随时开启精彩冒险体验的安卓休闲玩家精心打造、友好包容、人人能玩、人人能乐！">
+      Nori's Adventure is suitable for players who enjoy mobile adventure games
+      with level progression and boss battles.
+    </p>
+
+    <ul>
+      <li data-lang-en="Players who enjoy adventure games" data-lang-zh="热爱探索冒险、闯关突破、沉浸精彩故事与奇妙旅程">Players who enjoy adventure games</li>
+      <li data-lang-en="Fans of mobile action and adventure games" data-lang-zh="喜爱移动端便捷流畅、随时开战、轻松上手、热血精彩、动作闯关趣味体验">Fans of mobile action and adventure games</li>
+      <li data-lang-en="Players who enjoy challenging levels" data-lang-zh="不畏惧难关、乐于动脑思考、磨练技巧、突破自我、享受攻克难题酣畅淋漓成就感">Players who enjoy challenging levels</li>
+      <li data-lang-en="Gamers who like boss battles" data-lang-zh="痴迷热血对决、震撼BOSS战、策略周旋、极限操作、战胜强敌、收获荣耀高光时刻">Gamers who like boss battles</li>
+      <li data-lang-en="Players who enjoy collecting rewards and progressing through a game" data-lang-zh="喜欢收集金币钻石、解锁成就、清晰成长、稳步变强、收获看得见、摸得着、充实满足成长回报">Players who enjoy collecting rewards and progressing through a game</li>
+      <li data-lang-en="Casual gamers looking for an adventure game on mobile" data-lang-zh="休闲放松、碎片时间、轻松解压、不肝不累、随时暂停、随时继续、治愈愉悦、充实有趣优质休闲手游">Casual gamers looking for an adventure game on mobile</li>
+      <li data-lang-en="Players who enjoy working toward long-term goals" data-lang-zh="心怀信念、坚定目标、持之以恒、坚持成长、奔赴宏大终点、享受完整史诗壮阔冒险旅程">Players who enjoy working toward long-term goals</li>
+    </ul>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Why Progression Matters in Adventure Games" data-lang-zh="清晰成长轨迹，赋予闯关深层意义、持续动力、长久魅力、越玩越上头">Why Progression Matters in Adventure Games</h2>
+
+    <p data-lang-en="Progression gives players a reason to keep going." data-lang-zh="清晰可见、扎实积累、稳步提升的成长轨迹，就是支撑坚持下去、不愿半途而废、总想再闯一关、继续向前、探索更多精彩的最强动力源泉！">
+      Progression gives players a reason to keep going.
+    </p>
+
+    <p data-lang-en="When a game has clear milestones, completing each stage feels like part of a larger accomplishment." data-lang-zh="关卡有序、BOSS坐镇、奖励明确、里程碑清晰，不再零散孤立、每一次通关、每一次胜利，都是宏大史诗冒险的重要组成、成就感层层叠加、充实难忘、回味无穷！">
+      When a game has clear milestones, completing each stage feels like part
+      of a larger accomplishment.
+    </p>
+
+    <p data-lang-en="In Nori's Adventure, players can see their progress through levels, coins and diamonds." data-lang-zh="闯关进度、累积金币、珍贵钻石三重直观见证成长，数据清晰、收藏闪耀、付出看得见、成长摸得着、努力有回报、坚持有收获、激励持续前行、永不放弃！">
+      In Nori's Adventure, players can see their progress through levels,
+      coins and diamonds.
+    </p>
+
+    <p data-lang-en="The five-diamond goal provides an especially clear long-term objective: collect enough diamonds to unlock the path toward the final boss." data-lang-zh="集齐五颗钻石、解锁终极秘境、直面最终强敌，长期目标简洁有力、坚定清晰、指引前行方向、凝聚坚持信念、激励一路披荆斩棘、完成史诗冒险伟大使命！">
+      The five-diamond goal provides an especially clear long-term objective:
+      collect enough diamonds to unlock the path toward the final boss.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="A Mobile Adventure You Can Keep Coming Back To" data-lang-zh="轻松便捷、随时回归、持续成长、永远有新挑战、永远值得再次启程的优质移动端冒险体验">A Mobile Adventure You Can Keep Coming Back To</h2>
+
+    <p data-lang-en="A good mobile adventure game should make it easy to return to the journey and continue making progress." data-lang-zh="适配手机碎片化场景、操作简洁流畅、上手轻松无门槛、随时上线继续闯关、随时暂停放下、进度留存、成长不中断、不肝不累、轻松愉悦、治愈解压、休闲首选！">
+      A good mobile adventure game should make it easy to return to the journey
+      and continue making progress.
+    </p>
+
+    <p data-lang-en="Nori's Adventure combines individual levels with larger milestones, creating a progression system where there is always another stage or boss ahead." data-lang-zh="单关短时通关、阶段性BOSS高潮、长远终极目标层层串联闭环成长体系，永远有下一关等待突破、下一位强敌等待挑战、下一颗钻石等待点亮、新精彩新惊喜源源不断、永不乏味、值得反复回归、持续探索！">
+      Nori's Adventure combines individual levels with larger milestones,
+      creating a progression system where there is always another stage or boss
+      ahead.
+    </p>
+
+    <p data-lang-en="Whether you want to complete another level or work toward the next diamond, the game provides a simple reason to continue the adventure." data-lang-zh="只想轻松通关放松片刻、或是坚定收集钻石、冲击最终BOSS、追求完整史诗结局，总有充足理由再次开启旅程、沉浸精彩、收获愉悦、充实治愈、回味无穷、乐此不疲！">
+      Whether you want to complete another level or work toward the next
+      diamond, the game provides a simple reason to continue the adventure.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="What Makes Nori's Adventure Different?" data-lang-zh="独特闭环成长体系、流畅节奏、纯粹冒险初心，与众不同、优质耐玩、沉浸难忘">What Makes Nori's Adventure Different?</h2>
+
+    <p data-lang-en="Nori's Adventure focuses on the feeling of moving forward through an adventure rather than simply playing disconnected stages." data-lang-zh="拒绝碎片化割裂体验、拒绝单纯堆砌关卡！始终聚焦「完整壮阔冒险旅程、持续成长前行、奔赴宏大终点」核心初心，所有关卡、BOSS、奖励、成长紧密串联、融为一体、叙事流畅、沉浸完整、体验升华！">
+      Nori's Adventure focuses on the feeling of moving forward through an
+      adventure rather than simply playing disconnected stages.
+    </p>
+
+    <p data-lang-en="Regular levels build toward boss encounters, boss victories provide diamonds, and collecting five diamonds leads toward the final boss." data-lang-zh="常规闯关积蓄实力→迎战强力BOSS→胜利收获钻石→集齐五颗解锁终极决战，逻辑闭环、连贯流畅、层层递进、环环相扣、节奏张弛有度、高潮迭起、精彩不断、回味无穷！">
+      Regular levels build toward boss encounters, boss victories provide
+      diamonds, and collecting five diamonds leads toward the final boss.
+    </p>
+
+    <p data-lang-en="This creates a clear progression loop:</p>
+    <p data-lang-en="<strong>Levels → Boss → Diamond → More Levels → More Bosses → Final Boss</strong>" data-lang-zh="<strong>闯关进阶 → 首领对决 → 钻石荣耀 → 继续前行 → 强敌升级 → 终极决战</strong>">
+      This creates a clear progression loop:
+    </p>
+    <p>
+      <strong>
+        Levels → Boss → Diamond → More Levels → More Bosses → Final Boss
+      </strong>
+    </p>
+
+    <p data-lang-en="The result is a mobile adventure where every major victory contributes to a larger goal." data-lang-zh="每一次苦战通关、每一场热血对决胜利、每一颗闪耀钻石，都汇聚成伟大冒险史诗、成就完整圆满旅程、每一份付出都意义非凡、每一次坚持都闪闪发光、独一无二、难以忘怀！">
+      The result is a mobile adventure where every major victory contributes
+      to a larger goal.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="How to Make Progress in Nori's Adventure" data-lang-zh="一步步完整成长进阶路线，清晰指引、稳步前行、不走弯路、直达冒险巅峰">How to Make Progress in Nori's Adventure</h2>
+
+    <ol>
+      <li data-lang-en="<strong>Complete each level.</strong> Focus on moving forward rather than rushing through the entire game." data-lang-zh="<strong>扎实通关每一关。</strong>不急于求成、不盲目速通、专注当下、吃透细节、稳步前行、扎实积累、自然成长变强。">
+        <strong>Complete each level.</strong>
+        Focus on moving forward rather than rushing through the entire game.
+      </li>
+      <li data-lang-en="<strong>Watch your progression.</strong> Coins and completed levels help mark your progress toward major milestones." data-lang-zh="<strong>关注记录成长轨迹。</strong>金币累积、通关数量清晰见证点滴付出、稳步前进、距离下一个首领挑战越来越近、目标清晰、动力满满。">
+        <strong>Watch your progression.</strong>
+        Coins and completed levels help mark your progress toward major
+        milestones.
+      </li>
+      <li data-lang-en="<strong>Defeat each boss.</strong> Boss victories are essential for building your diamond collection." data-lang-zh="<strong>全力以赴击败每一位首领强敌。</strong>战胜BOSS是解锁珍贵钻石、点亮荣耀收藏、积蓄力量、走向终极终点的必经关键之路！">
+        <strong>Defeat each boss.</strong>
+        Boss victories are essential for building your diamond collection.
+      </li>
+      <li data-lang-en="<strong>Collect diamonds.</strong> Each boss provides another diamond toward the five-diamond goal." data-lang-zh="<strong>用心收集闪耀钻石。</strong>每一颗都是荣耀勋章、实力证明、一步一步靠近集齐五颗、开启终极秘境、直面传说最终BOSS！">
+        <strong>Collect diamonds.</strong>
+        Each boss provides another diamond toward the five-diamond goal.
+      </li>
+      <li data-lang-en="<strong>Keep improving.</strong> Later stages become more challenging, so learning from previous attempts becomes increasingly useful." data-lang-zh="<strong>持续精进、突破自我。</strong>难关层层升级、考验越发严苛、总结失败经验、优化操作策略、磨练耐心心态、越挫越勇、突破瓶颈、成为更强冒险者！">
+        <strong>Keep improving.</strong>
+        Later stages become more challenging, so learning from previous
+        attempts becomes increasingly useful.
+      </li>
+      <li data-lang-en="<strong>Work toward the final boss.</strong> Five diamonds mark the completion of the major boss progression and lead toward the final challenge." data-lang-zh="<strong>坚定奔赴终极最终BOSS。</strong>集齐五颗钻石、完成全部首领挑战、积蓄全部实力、迎接史诗巅峰决战、圆满完成属于自己的伟大冒险传奇！">
+        <strong>Work toward the final boss.</strong>
+        Five diamonds mark the completion of the major boss progression and
+        lead toward the final challenge.
+      </li>
+    </ol>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Adventure, Progress and Boss Battles" data-lang-zh="成长突破、精彩闯关、热血对决，三大核心魅力交织，成就独一无二精彩冒险旅程">Adventure, Progress and Boss Battles</h2>
+
+    <p data-lang-en="Nori's Adventure combines three elements that make mobile adventure games enjoyable: progression, challenges and meaningful milestones." data-lang-zh="清晰扎实成长进步、层层进阶精彩挑战、震撼高光里程碑对决，三大核心魅力完美融合、相辅相成、缺一不可、共同打造流畅沉浸、回味无穷、优质耐玩、与众不同的移动端冒险游戏体验！">
+      Nori's Adventure combines three elements that make mobile adventure games
+      enjoyable: progression, challenges and meaningful milestones.
+    </p>
+
+    <p data-lang-en="Levels give you something to complete." data-lang-zh="一关一关、踏实攻克、收获即时通关满足、磨练技巧、积累经验、稳步变强、充实治愈、轻松愉悦！">
+      Levels give you something to complete.
+    </p>
+
+    <p data-lang-en="Boss battles give you something to overcome." data-lang-zh="强敌坐镇、巅峰对决、突破极限、战胜困难、锤炼意志、收获酣畅淋漓、热血沸腾、高光时刻、成就感爆棚！">
+      Boss battles give you something to overcome.
+    </p>
+
+    <p data-lang-en="Coins and diamonds give you a visible sense of progress." data-lang-zh="金币点滴累积、钻石永久闪耀、数据清晰、收藏完整、付出看得见、成长摸得着、荣耀留得住、动力源源不断、坚持有回报、越玩越上头！">
+      Coins and diamonds give you a visible sense of progress.
+    </p>
+
+    <p data-lang-en="Together, these elements turn a series of levels into a longer adventure with a clear objective." data-lang-zh="点滴汇聚、环环紧扣、流畅串联、目标坚定清晰、不再零散枯燥、成长充实完整、沉浸壮阔史诗、回味无穷、久久难忘、真正爱上这场奇妙精彩冒险旅程！">
+      Together, these elements turn a series of levels into a longer adventure
+      with a clear objective.
+    </p>
+  </section>
+
+
+  <section class="faq-section">
+    <h2 data-lang-en="Frequently Asked Questions About Nori's Adventure" data-lang-zh="Nori冒险之旅常见疑问解答，快速了解核心玩法、成长规则、BOSS奖励">Frequently Asked Questions About Nori's Adventure</h2>
+
+    <div class="faq-item">
+      <h3 data-lang-en="What is Nori's Adventure?" data-lang-zh="什么是Nori冒险之旅？">What is Nori's Adventure?</h3>
+      <p data-lang-en="Nori's Adventure is a mobile adventure game featuring progressively challenging levels, boss battles, coins and diamonds. Players advance through the game and work toward increasingly difficult challenges." data-lang-zh="专为移动端打造经典冒险闯关游戏，层层进阶精妙关卡、热血震撼BOSS对决、收集金币累积成长、击败首领解锁珍贵钻石，一路突破变强、直面终极强敌、完成精彩壮阔冒险旅程！">
+        Nori's Adventure is a mobile adventure game featuring progressively
+        challenging levels, boss battles, coins and diamonds. Players advance
+        through the game and work toward increasingly difficult challenges.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3 data-lang-en="Does Nori's Adventure have boss battles?" data-lang-zh="游戏里真的有BOSS对决吗？">Does Nori's Adventure have boss battles?</h3>
+      <p data-lang-en="Yes. Boss battles are an important part of the game's progression. Players encounter different bosses throughout the adventure and earn a diamond after defeating each boss." data-lang-zh="当然有！是核心成长关键环节、高潮亮点、精彩重头戏！闯关数轮迎来专属强力首领、风格能力各不相同、层层变强、战胜强敌即可收获专属珍贵钻石、荣耀奖励、实力证明！">
+        Yes. Boss battles are an important part of the game's progression.
+        Players encounter different bosses throughout the adventure and earn a
