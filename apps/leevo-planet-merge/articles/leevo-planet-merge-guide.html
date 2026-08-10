@@ -3,60 +3,634 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-lang-en="Leevo Planet Merge — Solar System Merge & Relaxing Game Guide" data-lang-zh="Leevo星球合成 — 太阳系行星合成 · 轻松治愈解压游戏指南">Leevo Planet Merge — Solar System Merge & Relaxing Game Guide</title>
+
+  <!-- ✅ 严格采用提供SEO标题、描述、关键词 -->
+  <title data-lang-en="Leevo Planet Merge - Relaxing Planet Merge Game for Android" data-lang-zh="Leevo星球融合 - 休闲治愈星球合成安卓游戏">Leevo Planet Merge - Relaxing Planet Merge Game for Android</title>
+
+  <meta name="description"
+        content="Discover Leevo Planet Merge, a simple and relaxing planet merge game for Android. Merge planets, discover new possibilities and enjoy casual gameplay at your own pace."
+        data-lang-en="Discover Leevo Planet Merge, a simple and relaxing planet merge game for Android. Merge planets, discover new possibilities and enjoy casual gameplay at your own pace."
+        data-lang-zh="体验Leevo星球融合，一款简洁治愈、轻松休闲的安卓星球合成小游戏。融合相同星球、解锁全新星体，随心所欲慢节奏游玩，碎片时间轻松解压。">
+
+  <meta name="keywords"
+        content="planet merge game, merge planets, planet merging game, merge game Android, merge games Android, casual merge game, relaxing merge game, planet game Android, casual games Android, Leevo Planet Merge">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://leevotech.github.io/leevo-apps/apps/leevo-planet-merge/articles/leevo-planet-merge-guide.html">
+
   <style>
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:Arial,sans-serif; background:linear-gradient(135deg,#0d2035,#07111f); color:#fff; line-height:1.7; padding:40px 30px; max-width:900px; margin:0 auto;}
-    .back-link{display:inline-block; margin-bottom:40px; color:#f2c86b; text-decoration:none; font-size:18px;}
-    .back-link:hover{text-decoration:underline;}
-    h1{color:#f2c86b; font-size:32px; margin-bottom:30px; line-height:1.4;}
-    h2{color:#ffffff; font-size:24px; margin:30px 0 20px;}
-    p{color:#e6e6e6; font-size:18px; margin-bottom:20px;}
-    ul{color:#e6e6e6; font-size:18px; margin:20px 0 20px 30px;}
-    li{margin-bottom:10px;}
-    .lang-switch-btn{padding:6px 14px; border-radius:6px; border:none; background:#f2c86b; color:#07111f; font-weight:bold; cursor:pointer; margin-bottom:20px;}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #07111f;
+      color: #e6eaf0;
+      line-height: 1.7;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    a { color: #f2c86b; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #203b55;
+      flex-wrap: wrap;
+      gap:15px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+      font-size:16px;
+    }
+    .lang-switch-btn {
+      padding: 6px 14px;
+      border-radius: 6px;
+      border: none;
+      background: #f2c86b;
+      color: #07111f;
+      font-weight: bold;
+      cursor: pointer;
+      transition:0.2s;
+    }
+    .lang-switch-btn:hover{ transform:scale(1.05); }
+
+    .article-header { margin-bottom: 45px; }
+    .article-category {
+      color: #f2c86b;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1.3;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+    .article-intro {
+      font-size: 18px;
+      color: #b7c4d2;
+    }
+
+    section { margin-bottom: 50px; }
+    h2 {
+      font-size: 26px;
+      color: #ffffff;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #1c344c;
+    }
+    h3 {
+      font-size: 20px;
+      color: #f2d28c;
+      margin: 25px 0 12px;
+    }
+    p { margin-bottom: 16px; font-size: 17px; }
+    ul, ol { margin: 20px 0 20px 25px; }
+    li { margin-bottom: 10px; font-size: 17px; }
+
+    .faq-item {
+      background: #0d1c2c;
+      padding:22px;
+      border-radius:10px;
+      margin-bottom:15px;
+      border:1px solid #203b55;
+    }
+    .conclusion {
+      background: linear-gradient(135deg, #10253a, #0d1c2c);
+      padding:35px;
+      border-radius:16px;
+      border:1px solid #294969;
+    }
+
+    @media (max-width:600px) {
+      body { padding:20px 15px; }
+      h1 { font-size:28px; }
+      .page-nav { flex-direction:column; align-items:flex-start; }
+    }
   </style>
 </head>
 <body>
-  <!-- 语言切换按钮，与首页共用本地存储，自动同步 -->
-  <button id="pageLangSwitch" class="lang-switch-btn">中文 / EN</button>
 
-  <!-- 返回首页双语链接，样式位置统一 -->
-  <a href="../index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回 Leevo 应用首页">← Back to Leevo Apps Home</a>
+  <!-- 统一导航：返回首页 + 双语切换记忆 -->
+  <nav class="page-nav">
+    <a href="/leevo-apps/index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回Leevo应用首页">← Back to Leevo Apps Home</a>
+    <button id="langSwitch" class="lang-switch-btn">中文 / EN</button>
+  </nav>
 
-  <h1 data-lang-en="Leevo Planet Merge — Grow Planets, Explore the Solar System, Relax Your Mind" data-lang-zh="Leevo星球合成 — 碰撞融合、成长行星、漫游太阳系、轻松治愈身心">Leevo Planet Merge — Grow Planets, Explore the Solar System, Relax Your Mind</h1>
+<article class="app-article">
 
-  <p data-lang-en="A gentle, space-themed puzzle game built for quiet little moments of rest! Inspired by our beautiful solar system: start with tiny scattered asteroids, let them collide and merge into small rocky planets, then keep combining to grow bigger, more magnificent planets step by step — no rush, no pressure, just satisfying merging visuals & peaceful space atmosphere." data-lang-zh="专为碎片片刻放松打造的静谧太空休闲游戏！以真实太阳系为灵感：从漂浮细碎小行星开始，两两碰撞融合形成小型行星，持续不断合成升级，一步步孕育更大、更壮观的星球；不赶时间、不设高压，只有流畅合成反馈与宁静浩瀚宇宙氛围。">A gentle, space-themed puzzle game built for quiet little moments of rest! Inspired by our beautiful solar system: start with tiny scattered asteroids, let them collide and merge into small rocky planets, then keep combining to grow bigger, more magnificent planets step by step — no rush, no pressure, just satisfying merging visuals & peaceful space atmosphere.</p>
+  <header class="article-header">
+    <p class="article-category" data-lang-en="Casual Games" data-lang-zh="休闲小游戏">Casual Games</p>
 
-  <h2 data-lang-en="Gameplay & Highlights" data-lang-zh="玩法特色与体验亮点">Gameplay & Highlights</h2>
-  <ul>
-    <li data-lang-en="✅ Solar system theme: follow the growth path from tiny asteroids → terrestrial planets → larger planets close to the real solar system" data-lang-zh="✅ 太阳系主题成长：从微小小行星起步，逐步合成类地行星、巨型气态行星，贴合真实太阳系行星成长进阶">✅ Solar system theme: follow the growth path from tiny asteroids → terrestrial planets → larger planets close to the real solar system</li>
-    <li data-lang-en="✅ Simple intuitive merge rule: bring two same-level planets together to combine into one larger, higher-level planet" data-lang-zh="✅ 简单易懂合成逻辑：两颗同级星球碰撞融合，生成一颗更大、等级更高的全新星球">✅ Simple intuitive merge rule: bring two same-level planets together to combine into one larger, higher-level planet</li>
-    <li data-lang-en="✅ Low-pressure calm pace: no countdown panic, no difficult reflex demand — pick up anytime, play for 5 minutes to calm down, put down easily" data-lang-zh="✅ 低压力舒缓节奏：无紧迫倒计时、不考验手速反应，随时点开玩几分钟舒缓情绪，随时放下不牵挂">✅ Low-pressure calm pace: no countdown panic, no difficult reflex demand — pick up anytime, play for 5 minutes to calm down, put down easily</li>
-    <li data-lang-en="✅ Beautiful visual & satisfying feedback: smooth merging animation, soft cosmic colors — help ease tired mind & release daily stress" data-lang-zh="✅ 视觉舒适反馈治愈：融合动画流畅自然、星空色调柔和静谧，帮助放松紧绷神经、释放学习工作疲惫压力">✅ Beautiful visual & satisfying feedback: smooth merging animation, soft cosmic colors — help ease tired mind & release daily stress</li>
-  </ul>
+    <h1 data-lang-en="Planet Merge: A Simple and Relaxing Merge Game for Android" data-lang-zh="星球融合：轻松治愈、简洁好玩的安卓休闲合成小游戏">Planet Merge: A Simple and Relaxing Merge Game for Android</h1>
 
-  <h2 data-lang-en="Perfect for short pleasant breaks" data-lang-zh="碎片闲暇时光，轻松治愈小确幸">Perfect for short pleasant breaks</h2>
-  <p data-lang-en="Between work/study, while waiting for a bus, before bed — let yourself drift into quiet space for a little while, watch planets grow slowly, breathe easier, feel lighter & happier after a quick relaxing session." data-lang-zh="学习工作间隙、候车等候时、睡前片刻，短暂沉浸宁静宇宙：静静看着星球慢慢壮大，心绪放缓、压力消散，短短几分钟找回轻松愉悦的好心情。">Between work/study, while waiting for a bus, before bed — let yourself drift into quiet space for a little while, watch planets grow slowly, breathe easier, feel lighter & happier after a quick relaxing session.</p>
+    <p class="article-intro" data-lang-en="Looking for a simple merge game that is easy to understand and enjoyable to play in your spare time? Leevo Planet Merge brings the satisfying idea of merging planets into a relaxing casual game experience. Combine, discover, and keep building your planet collection one merge at a time." data-lang-zh="想找一款规则易懂、碎片时间轻松解压的休闲合成小游戏？Leevo星球融合，把「合并同类、新生惊喜」的核心玩法融入浩瀚宇宙主题，轻松融合、不断解锁全新星球，一步一步搭建属于自己的完整星系，治愈又有成就感。">
+      Looking for a simple merge game that is easy to understand and enjoyable
+      to play in your spare time? Leevo Planet Merge brings the satisfying idea
+      of merging planets into a relaxing casual game experience. Combine,
+      discover, and keep building your planet collection one merge at a time.
+    </p>
+  </header>
 
-<script>
-// 与首页共用语言存储，一键同步切换
-let currentLang = localStorage.getItem('leevoLang') || 'en';
 
-function updateAllText(){
-  document.querySelectorAll('[data-lang-en],[data-lang-zh]').forEach(el=>{
-    const txt = el.getAttribute(`data-lang-${currentLang}`);
-    if(txt) el.innerHTML = txt;
-  });
-}
+  <section>
+    <h2 data-lang-en="What Is a Planet Merge Game?" data-lang-zh="什么是星球合成小游戏？">What Is a Planet Merge Game?</h2>
 
-document.addEventListener('DOMContentLoaded', updateAllText);
+    <p data-lang-en="A planet merge game is a type of casual game built around a simple idea: combine matching objects to create something new." data-lang-zh="星球合成游戏是经典休闲玩法，核心规则简单直白：把两颗相同的星球合并融合，就能诞生全新、等级更高的星体。">
+      A planet merge game is a type of casual game built around a simple idea:
+      combine matching objects to create something new.
+    </p>
 
-document.getElementById('pageLangSwitch').addEventListener('click',()=>{
-  currentLang = currentLang === 'en' ? 'zh' : 'en';
-  localStorage.setItem('leevoLang', currentLang);
-  updateAllText();
-});
-</script>
+    <p data-lang-en="Instead of requiring complicated controls or a long tutorial, merge games are usually easy to understand. Players can focus on combining objects, discovering new results, and deciding what to merge next." data-lang-zh="不用死记复杂操作、不用漫长新手教程，上手就能玩。你只需专注观察、规划合并顺序、期待下一次合成惊喜，轻松享受探索乐趣。">
+      Instead of requiring complicated controls or a long tutorial, merge games
+      are usually easy to understand. Players can focus on combining objects,
+      discovering new results, and deciding what to merge next.
+    </p>
+
+    <p data-lang-en="Leevo Planet Merge takes this familiar merge concept into space, turning the process of combining planets into a simple and enjoyable casual gaming experience." data-lang-zh="Leevo星球融合将经典合成玩法融入浩瀚太空主题，从小行星起步，一步步融合成长，把枯燥重复变成治愈愉悦的星际探索之旅。">
+      Leevo Planet Merge takes this familiar merge concept into space, turning
+      the process of combining planets into a simple and enjoyable casual
+      gaming experience.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Merge Planets and Discover What Comes Next" data-lang-zh="融合星体，解锁未知新星球">Merge Planets and Discover What Comes Next</h2>
+
+    <p data-lang-en="The central idea behind Leevo Planet Merge is simple: merge planets and continue discovering new ones." data-lang-zh="核心玩法纯粹清晰：持续合并相同星球，不断解锁外观、等级、样貌全新的星体，探索没有终点。">
+      The central idea behind Leevo Planet Merge is simple: merge planets and
+      continue discovering new ones.
+    </p>
+
+    <p data-lang-en="Each successful merge gives you another step toward building something new. As your collection develops, you can continue looking for the next combination and see how far your planet journey can go." data-lang-zh="每一次成功融合，都是离更大、更稀有星球更近一步；慢慢丰富你的星体图鉴，不断探索、突破边界，看看自己能一路合成到宇宙中多耀眼的星辰。">
+      Each successful merge gives you another step toward building something
+      new. As your collection develops, you can continue looking for the next
+      combination and see how far your planet journey can go.
+    </p>
+
+    <p data-lang-en="The simplicity is part of the fun. You do not need to spend a long time learning complicated controls before you can start playing." data-lang-zh="简洁，正是乐趣来源。不用花大量时间熟悉繁琐操作，点开游戏、看懂规则、立刻沉浸享受轻松合成。">
+      The simplicity is part of the fun. You do not need to spend a long time
+      learning complicated controls before you can start playing.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Why Are Merge Games So Enjoyable?" data-lang-zh="合成小游戏，为什么让人玩得舒心又上头？">Why Are Merge Games So Enjoyable?</h2>
+
+    <p data-lang-en="Merge games have a satisfying gameplay loop. You start with simple objects, combine them, and gradually work toward something more advanced." data-lang-zh="合成游戏自带治愈正向循环：从小巧基础星体起步，两两合并、层层进阶，从小行星一路成长为巨型行星、恒星，看得见的成长、摸得到的成就感。">
+      Merge games have a satisfying gameplay loop. You start with simple
+      objects, combine them, and gradually work toward something more advanced.
+    </p>
+
+    <p data-lang-en="Every successful combination provides a small sense of progress. That makes the gameplay easy to pick up while still giving players a reason to continue." data-lang-zh="每一次融合成功，都能收获一份充实满足感，轻松上手不费力，又总有下一颗新星球吸引你继续探索、不愿停下。">
+      Every successful combination provides a small sense of progress.
+      That makes the gameplay easy to pick up while still giving players a
+      reason to continue.
+    </p>
+
+    <p data-lang-en="For many players, the appeal comes from the combination of simplicity, progress, and discovery." data-lang-zh="简洁易上手、稳步看得见成长、未知新惊喜不断，三重美好体验叠加，正是合成游戏长久受欢迎的魅力所在。">
+      For many players, the appeal comes from the combination of simplicity,
+      progress, and discovery.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="A Relaxing Game for Short Breaks" data-lang-zh="碎片空闲时刻，轻松解压治愈小游戏">A Relaxing Game for Short Breaks</h2>
+
+    <p data-lang-en="Not every game needs to be a long gaming session." data-lang-zh="不是所有游戏，都需要预留大块完整时间、紧张激烈比拼胜负。">
+      Not every game needs to be a long gaming session.
+    </p>
+
+    <p data-lang-en="Sometimes you simply want something you can open for a few minutes, play at your own pace, and put down when you are ready." data-lang-zh="课间休息、通勤路上、工作间隙、睡前放空，随手点开玩几分钟，节奏快慢自己掌控，随时暂停、随时放下、毫无压力。">
+      Sometimes you simply want something you can open for a few minutes,
+      play at your own pace, and put down when you are ready.
+    </p>
+
+    <p data-lang-en="Leevo Planet Merge is designed around this casual experience. Whether you have a short break during the day or simply want a relaxing game to play in your free time, merging planets gives you an easy way to enjoy a little gameplay without a complicated learning curve." data-lang-zh="Leevo星球融合专为轻松休闲打造，零学习门槛、上手即玩，短短几分钟也能收获合成快乐，帮你舒缓紧绷情绪、放松身心、消磨空闲时光。">
+      Leevo Planet Merge is designed around this casual experience. Whether you
+      have a short break during the day or simply want a relaxing game to play
+      in your free time, merging planets gives you an easy way to enjoy a
+      little gameplay without a complicated learning curve.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Simple Gameplay, Easy to Understand" data-lang-zh="玩法极简清晰，老少皆宜轻松上手">Simple Gameplay, Easy to Understand</h2>
+
+    <p data-lang-en="One of the biggest advantages of a casual merge game is accessibility." data-lang-zh="休闲合成游戏最突出的优点，就是简单易懂、包容友好，几乎所有人都能快速融入。">
+      One of the biggest advantages of a casual merge game is accessibility.
+    </p>
+
+    <p data-lang-en="Players can quickly understand the basic idea and start experimenting with combinations." data-lang-zh="一眼看懂核心规则，不用钻研复杂教程，立刻动手尝试规划、搭配、合并，享受自由探索乐趣。">
+      Players can quickly understand the basic idea and start experimenting
+      with combinations.
+    </p>
+
+    <p data-lang-en="You do not need to memorise a complicated set of controls. The focus is on the objects in front of you and deciding which planets should be merged." data-lang-zh="无需背诵繁琐按键、操作指令，注意力只需集中在眼前一颗颗星球上，冷静思考、合理规划，选择最合适的两颗完成融合。">
+      You do not need to memorise a complicated set of controls. The focus is
+      on the objects in front of you and deciding which planets should be
+      merged.
+    </p>
+
+    <p data-lang-en="This makes Leevo Planet Merge suitable for players who prefer casual games with straightforward mechanics." data-lang-zh="纯粹干净、不堆砌冗余复杂系统，特别偏爱轻松休闲、简单直接玩法的玩家，一定会喜欢这份简洁纯粹。">
+      This makes Leevo Planet Merge suitable for players who prefer casual
+      games with straightforward mechanics.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="From Small Planets to Bigger Discoveries" data-lang-zh="从小小行星起步，逐步解锁浩瀚宇宙">From Small Planets to Bigger Discoveries</h2>
+
+    <p data-lang-en="The fun of merging comes from seeing what your previous combinations can lead to." data-lang-zh="合成最迷人的乐趣，永远来自期待：这次融合之后，会诞生怎样前所未见、光彩夺目的全新星球？">
+      The fun of merging comes from seeing what your previous combinations can
+      lead to.
+    </p>
+
+    <p data-lang-en="A small planet can become part of a larger combination, which can then contribute to your next discovery." data-lang-zh="不起眼的小小基础星体，用心积累、两两融合，慢慢成长为庞大行星、璀璨恒星，一步一步串联起完整星际探索之路。">
+      A small planet can become part of a larger combination, which can then
+      contribute to your next discovery.
+    </p>
+
+    <p data-lang-en="Instead of rushing through a complicated sequence of levels, the gameplay encourages players to think about their next merge and gradually build their collection." data-lang-zh="不用赶进度、不用限时通关、不用焦虑失败，从容思考最优合并策略，慢慢完善收藏图鉴、解锁更多星空风景。">
+      Instead of rushing through a complicated sequence of levels, the gameplay
+      encourages players to think about their next merge and gradually build
+      their collection.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Why Play a Planet Merge Game?" data-lang-zh="为什么值得体验星球合成小游戏？">Why Play a Planet Merge Game?</h2>
+
+    <p data-lang-en="There are many types of mobile games available, but merge games offer a different kind of experience." data-lang-zh="手游种类繁多、竞技激烈、节奏紧绷，而休闲合成游戏，提供一份难得温柔舒缓、治愈放松的独特体验。">
+      There are many types of mobile games available, but merge games offer a
+      different kind of experience.
+    </p>
+
+    <ul>
+      <li data-lang-en="Easy-to-understand gameplay" data-lang-zh="规则简单易懂，零门槛上手">Easy-to-understand gameplay</li>
+      <li data-lang-en="Simple controls" data-lang-zh="操作轻松简洁，点击即可游玩">Simple controls</li>
+      <li data-lang-en="A satisfying merge mechanic" data-lang-zh="融合瞬间成就感满满，治愈舒心">A satisfying merge mechanic</li>
+      <li data-lang-en="A sense of continuous progress" data-lang-zh="稳步进阶，看得见的成长与收获">A sense of continuous progress</li>
+      <li data-lang-en="Planet-themed discovery" data-lang-zh="宇宙星空主题，探索未知新星球">Planet-themed discovery</li>
+      <li data-lang-en="Suitable for short casual gaming sessions" data-lang-zh="适配碎片化时间，随时玩随时停">Suitable for short casual gaming sessions</li>
+      <li data-lang-en="A relaxing alternative to more intense games" data-lang-zh="告别紧张竞技，休闲解压、舒缓身心">A relaxing alternative to more intense games</li>
+    </ul>
+
+    <p data-lang-en="If you enjoy games where small actions gradually create something bigger, planet merging can be a particularly satisfying concept." data-lang-zh="享受点滴积累、量变催生质变、亲手创造美好事物的过程，那么星球合成玩法，一定能给你带来满满的满足与治愈。">
+      If you enjoy games where small actions gradually create something bigger,
+      planet merging can be a particularly satisfying concept.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Leevo Planet Merge: Play at Your Own Pace" data-lang-zh="Leevo星球融合：快慢随心，自在轻松游玩">Leevo Planet Merge: Play at Your Own Pace</h2>
+
+    <p data-lang-en="Leevo Planet Merge is designed to keep the experience simple and focused on the fun of merging." data-lang-zh="始终坚持简洁纯粹设计，剥离繁杂干扰，回归合成探索本身带来的纯粹乐趣。">
+      Leevo Planet Merge is designed to keep the experience simple and focused
+      on the fun of merging.
+    </p>
+
+    <p data-lang-en="There is no need to treat every gaming session like a competition. You can simply open the game, make some merges, continue developing your planets, and return whenever you want another casual session." data-lang-zh="不用比拼手速、不用追求高分、不用焦虑输赢胜负，随时上线合成几颗星球、慢慢壮大星图，空闲再来继续探索，轻松自在毫无压力。">
+      There is no need to treat every gaming session like a competition.
+      You can simply open the game, make some merges, continue developing your
+      planets, and return whenever you want another casual session.
+    </p>
+
+    <p data-lang-en="This makes the game suitable for players who prefer a more relaxed mobile gaming experience." data-lang-zh="特别适合追求轻松自在、舒缓解压、不想被任务/时限束缚的休闲玩家。">
+      This makes the game suitable for players who prefer a more relaxed mobile
+      gaming experience.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Good for Casual Players" data-lang-zh="休闲友好，人人都能轻松享受乐趣">Good for Casual Players</h2>
+
+    <p data-lang-en="You do not need to consider yourself a serious gamer to enjoy a merge game." data-lang-zh="不用是资深游戏玩家、不用高超操作技巧，任何人都能轻松上手、沉浸享受合成乐趣。">
+      You do not need to consider yourself a serious gamer to enjoy a merge
+      game.
+    </p>
+
+    <p data-lang-en="The basic concept is easy to understand, making it suitable for people who simply want something enjoyable to play during spare moments." data-lang-zh="规则直白清晰、门槛极低，学生、上班族、长辈，都能在碎片空闲时刻获得轻松愉悦的游戏体验。">
+      The basic concept is easy to understand, making it suitable for people
+      who simply want something enjoyable to play during spare moments.
+    </p>
+
+    <p data-lang-en="If you enjoy puzzles, casual games, collecting, or watching a simple progression develop over time, Leevo Planet Merge offers a straightforward way to experience those ideas through planet merging." data-lang-zh="喜欢轻松益智、收集图鉴、循序渐进成长、治愈舒缓氛围，通过星球融合一步步解锁星空，满足收集欲、探索欲、成就感。">
+      If you enjoy puzzles, casual games, collecting, or watching a simple
+      progression develop over time, Leevo Planet Merge offers a straightforward
+      way to experience those ideas through planet merging.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="How to Enjoy Leevo Planet Merge" data-lang-zh="轻松上手游玩，简单五步开启星际合成">How to Enjoy Leevo Planet Merge</h2>
+
+    <ol>
+      <li data-lang-en="<strong>Start playing.</strong> Begin with the available planets and explore the basic merge mechanic." data-lang-zh="<strong>轻松开启游戏。</strong>从基础小行星开始，熟悉核心合成规则、轻松上手。">
+        <strong>Start playing.</strong>
+        Begin with the available planets and explore the basic merge mechanic.
+      </li>
+
+      <li data-lang-en="<strong>Look for matching planets.</strong> Identify opportunities to combine planets and create new results." data-lang-zh="<strong>寻找相同星体。</strong>观察布局、规划策略，找到两颗相同星球，准备融合新生。">
+        <strong>Look for matching planets.</strong>
+        Identify opportunities to combine planets and create new results.
+      </li>
+
+      <li data-lang-en="<strong>Keep merging.</strong> Continue combining planets as your collection develops." data-lang-zh="<strong>持续融合进阶。</strong>不断合成升级、积累更多星体，慢慢扩充你的专属星际收藏。">
+        <strong>Keep merging.</strong>
+        Continue combining planets as your collection develops.
+      </li>
+
+      <li data-lang-en="<strong>Discover new planets.</strong> Enjoy the satisfaction of seeing your progress and finding new possibilities." data-lang-zh="<strong>解锁全新星球。</strong>收获成功喜悦、见证成长突破，不断探索未知星空、解锁惊喜新样貌。">
+        <strong>Discover new planets.</strong>
+        Enjoy the satisfaction of seeing your progress and finding new
+        possibilities.
+      </li>
+
+      <li data-lang-en="<strong>Play whenever you have time.</strong> Return for another short session whenever you want a relaxing casual game." data-lang-zh="<strong>空闲随时畅玩。</strong>碎片时间随手打开、轻松玩一会儿，随时退出、下次继续，治愈解压不费精力。">
+        <strong>Play whenever you have time.</strong>
+        Return for another short session whenever you want a relaxing casual
+        game.
+      </li>
+    </ol>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Merge Games Are About Progress" data-lang-zh="点滴积累，稳步成长，收获满满成就感">Merge Games Are About Progress</h2>
+
+    <p data-lang-en="One reason merge games are easy to return to is the feeling of gradual progress." data-lang-zh="合成游戏让人愿意反复打开、持续游玩，核心在于看得见、摸得着、踏实安心的稳步成长感。">
+      One reason merge games are easy to return to is the feeling of gradual
+      progress.
+    </p>
+
+    <p data-lang-en="You begin with simple objects, but your decisions can eventually lead to more advanced results." data-lang-zh="从最基础微小星体起步，用心规划、耐心积累，一步步突破、进阶、蜕变，最终收获璀璨壮丽的高阶星辰。">
+      You begin with simple objects, but your decisions can eventually lead to
+      more advanced results.
+    </p>
+
+    <p data-lang-en="This creates a natural gameplay cycle: merge, discover, progress, and decide what to do next." data-lang-zh="形成流畅舒适正向循环：融合新生→解锁惊喜→稳步进阶→规划下一步，轻松沉浸、治愈解压、乐在其中。">
+      This creates a natural gameplay cycle: merge, discover, progress, and
+      decide what to do next.
+    </p>
+
+    <p data-lang-en="Leevo Planet Merge uses this simple idea to create a planet-themed casual experience that can be enjoyed without requiring complicated game mechanics." data-lang-zh="Leevo星球融合依托这份纯粹核心玩法，打造沉浸式宇宙星空休闲体验，剔除冗余复杂机制，回归轻松治愈、纯粹享受。">
+      Leevo Planet Merge uses this simple idea to create a planet-themed casual
+      experience that can be enjoyed without requiring complicated game
+      mechanics.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Planet Merge for Android" data-lang-zh="专属安卓设备，随时随地轻松畅玩">Planet Merge for Android</h2>
+
+    <p data-lang-en="Mobile games work best when they are easy to pick up whenever you have a spare moment." data-lang-zh="手机小游戏，最珍贵的就是「随时点开、轻松上手、随手放下」的便捷自由。">
+      Mobile games work best when they are easy to pick up whenever you have a
+      spare moment.
+    </p>
+
+    <p data-lang-en="A planet merge game fits naturally into this style of gaming because the basic concept is straightforward and the gameplay can be enjoyed in short sessions." data-lang-zh="星球合成玩法简洁直观、节奏舒缓，完美适配碎片化短暂游玩场景，几分钟就能收获一份轻松治愈小快乐。">
+      A planet merge game fits naturally into this style of gaming because the
+      basic concept is straightforward and the gameplay can be enjoyed in short
+      sessions.
+    </p>
+
+    <p data-lang-en="Leevo Planet Merge brings the merge concept to Android with a space and planet theme, giving casual players another simple game to enjoy on their mobile device." data-lang-zh="Leevo星球融合专为安卓打造，浩瀚宇宙星空唯美主题加持，给休闲玩家带来一款干净纯粹、轻松解压、值得体验的优质休闲小游戏。">
+      Leevo Planet Merge brings the merge concept to Android with a space and
+      planet theme, giving casual players another simple game to enjoy on their
+      mobile device.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Who Is Leevo Planet Merge For?" data-lang-zh="这款休闲星球合成小游戏，适合这些玩家体验">Who Is Leevo Planet Merge For?</h2>
+
+    <p data-lang-en="Leevo Planet Merge is suitable for players who enjoy simple and casual mobile games." data-lang-zh="专为偏爱轻松休闲、简洁干净、治愈解压手游体验的玩家打造，包容友好、门槛极低。">
+      Leevo Planet Merge is suitable for players who enjoy simple and casual
+      mobile games.
+    </p>
+
+    <ul>
+      <li data-lang-en="Players looking for a simple merge game" data-lang-zh="想要规则简洁、轻松上手合成小游戏">Players looking for a simple merge game</li>
+      <li data-lang-en="People who enjoy planet-themed games" data-lang-zh="热爱宇宙星空、星际主题、向往浩瀚太空探索乐趣">People who enjoy planet-themed games</li>
+      <li data-lang-en="Players who like collecting and discovering new objects" data-lang-zh="享受收集图鉴、解锁未知、探索发现、收获惊喜满足感">Players who like collecting and discovering new objects</li>
+      <li data-lang-en="Casual gamers looking for short gaming sessions" data-lang-zh="学生/上班族/碎片时间有限，追求短时间轻松休闲娱乐">Casual gamers looking for short gaming sessions</li>
+      <li data-lang-en="Players who enjoy gradual progression" data-lang-zh="喜欢循序渐进、点滴积累、稳步成长、踏实收获成就感">Players who enjoy gradual progression</li>
+      <li data-lang-en="People who prefer easy-to-understand mobile games" data-lang-zh="厌倦复杂教程、硬核竞技、繁琐系统，偏爱简单易懂、干净纯粹玩法">People who prefer easy-to-understand mobile games</li>
+      <li data-lang-en="Players looking for a relaxing game for their spare time" data-lang-zh="需要放松解压、舒缓情绪、打发无聊空闲时光、治愈身心休闲小游戏">Players looking for a relaxing game for their spare time</li>
+    </ul>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="A Simple Game With a Satisfying Goal" data-lang-zh="简洁纯粹，目标清晰，收获满满治愈满足">A Simple Game With a Satisfying Goal</h2>
+
+    <p data-lang-en="Sometimes the best mobile games are the ones that do not try to do too much." data-lang-zh="不堆砌花哨功能、不强行捆绑社交、不制造焦虑竞争，专注做好一件事，往往就是最优秀、最舒心的小游戏。">
+      Sometimes the best mobile games are the ones that do not try to do too
+      much.
+    </p>
+
+    <p data-lang-en="Leevo Planet Merge focuses on one enjoyable idea: merge planets and see what you can create." data-lang-zh="Leevo星球融合始终聚焦核心乐趣：融合相同星球、解锁全新星辰、亲手创造属于自己的璀璨星空。">
+      Leevo Planet Merge focuses on one enjoyable idea: merge planets and see
+      what you can create.
+    </p>
+
+    <p data-lang-en="The simple gameplay makes it easy to start, while the process of discovering new planets provides a reason to keep playing." data-lang-zh="简洁规则零门槛快速开局，持续解锁未知新星球带来源源不断探索动力，轻松愉悦、治愈舒心、玩了还想玩。">
+      The simple gameplay makes it easy to start, while the process of
+      discovering new planets provides a reason to keep playing.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Take a Break and Explore the Planets" data-lang-zh="放下疲惫放空身心，沉浸星际探索治愈时光">Take a Break and Explore the Planets</h2>
+
+    <p data-lang-en="Mobile gaming does not always need to be fast, competitive, or demanding." data-lang-zh="手游不必永远紧张激烈、比拼手速、追求排名、焦虑输赢、身心紧绷。">
+      Mobile gaming does not always need to be fast, competitive, or demanding.
+    </p>
+
+    <p data-lang-en="Sometimes a quiet few minutes of merging planets is exactly the kind of break you are looking for." data-lang-zh="片刻安静悠闲，专注融合几颗星球，放空思绪、舒缓压力、平复情绪，正是忙碌生活里最温柔治愈的放松休憩。">
+      Sometimes a quiet few minutes of merging planets is exactly the kind of
+      break you are looking for.
+    </p>
+
+    <p data-lang-en="Leevo Planet Merge offers a simple way to step away from everyday tasks, make a few combinations, and enjoy a small sense of progress." data-lang-zh="暂时抛开日常工作学习压力琐事，沉浸浩瀚星空，完成几次舒心融合，收获点滴成长满足，轻松回血、重新焕发活力。">
+      Leevo Planet Merge offers a simple way to step away from everyday tasks,
+      make a few combinations, and enjoy a small sense of progress.
+    </p>
+
+    <p data-lang-en="<strong>Merge. Discover. Keep exploring.</strong>" data-lang-zh="<strong>融合新生，解锁惊喜，漫游浩瀚星海。</strong>">
+      <strong>Merge. Discover. Keep exploring.</strong>
+    </p>
+  </section>
+
+
+  <section class="faq-section">
+    <h2 data-lang-en="Frequently Asked Questions About Planet Merge Games" data-lang-zh="星球合成小游戏常见疑问解答">Frequently Asked Questions About Planet Merge Games</h2>
+
+    <div class="faq-item">
+      <h3 data-lang-en="What is a planet merge game?" data-lang-zh="什么是星球合成小游戏？">What is a planet merge game?</h3>
+
+      <p data-lang-en="A planet merge game is a casual game where players combine planets or similar objects to create new results. The main gameplay focuses on merging, discovering, and progressing." data-lang-zh="属于休闲益智类小游戏，核心玩法：将两颗相同星球合并融合，生成更高等级、全新样貌星体，持续探索解锁新星球、逐步完善收藏图鉴、稳步成长进阶。">
+        A planet merge game is a casual game where players combine planets or
+        similar objects to create new results. The main gameplay focuses on
+        merging, discovering, and progressing.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="What is Leevo Planet Merge?" data-lang-zh="Leevo星球融合是什么游戏？">What is Leevo Planet Merge?</h3>
+
+      <p data-lang-en="Leevo Planet Merge is a casual mobile game built around the idea of merging planets. Players can combine planets, discover new results, and gradually develop their collection." data-lang-zh="一款主打宇宙太空主题、轻松治愈休闲合成手游，融合相同星球、解锁璀璨新星、慢慢搭建专属星系图鉴，节奏舒缓、简单纯粹、解压治愈。">
+        Leevo Planet Merge is a casual mobile game built around the idea of
+        merging planets. Players can combine planets, discover new results,
+        and gradually develop their collection.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="Is Leevo Planet Merge easy to play?" data-lang-zh="上手难度高吗？好不好玩？">Is Leevo Planet Merge easy to play?</h3>
+
+      <p data-lang-en="Yes. The game is designed around a simple merge concept that is easy to understand, making it suitable for casual players." data-lang-zh="非常简单易懂！核心合并规则清晰直白、无复杂操作、无需漫长教程，任何人都能快速上手、轻松沉浸享受休闲乐趣。">
+        Yes. The game is designed around a simple merge concept that is easy to
+        understand, making it suitable for casual players.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="What can you do in a planet merge game?" data-lang-zh="在游戏里主要可以体验哪些玩法内容？">What can you do in a planet merge game?</h3>
+
+      <p data-lang-en="The main activity is combining matching planets to create new results. Players can continue merging and discovering as their collection develops." data-lang-zh="核心玩法就是合并相同星体、解锁全新稀有星球、逐步扩充收藏图鉴、规划布局策略、一路探索宇宙深处更多惊喜。">
+        The main activity is combining matching planets to create new results.
+        Players can continue merging and discovering as their collection
+        develops.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="Are merge games good for short gaming sessions?" data-lang-zh="碎片时间玩几分钟，合适吗？">Are merge games good for short gaming sessions?</h3>
+
+      <p data-lang-en="Merge games are well suited to casual play because their simple gameplay can be picked up quickly. Players can enjoy a short session whenever they have some free time." data-lang-zh="特别适配碎片化游玩！随时点开、几分钟就能完成几次融合收获小满足，随时暂停退出、进度留存，不占用大块时间、轻松方便。">
+        Merge games are well suited to casual play because their simple gameplay
+        can be picked up quickly. Players can enjoy a short session whenever
+        they have some free time.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="Why are merge games relaxing?" data-lang-zh="为什么说合成小游戏能放松解压、舒缓心情？">Why are merge games relaxing?</h3>
+
+      <p data-lang-en="Many merge games use straightforward mechanics and gradual progression rather than requiring constant fast reactions. This can make them a comfortable choice for players looking for a more relaxed gaming experience." data-lang-zh="没有限时竞速、激烈对抗、手速比拼、排名压力，节奏舒缓从容、稳步成长、视觉氛围温柔治愈，专注合成放空思绪，自然舒缓紧绷情绪、释放日常压力。">
+        Many merge games use straightforward mechanics and gradual progression
+        rather than requiring constant fast reactions. This can make them a
+        comfortable choice for players looking for a more relaxed gaming
+        experience.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="Is there a planet merge game for Android?" data-lang-zh="有适配安卓手机的星球合成休闲小游戏吗？">Is there a planet merge game for Android?</h3>
+
+      <p data-lang-en="Yes. Leevo Planet Merge is designed as a planet-themed casual merge game for Android players who enjoy simple merging and discovery." data-lang-zh="有的！Leevo星球融合专为安卓设备优化打造，宇宙星空唯美主题、简洁干净界面、流畅轻松体验，安卓用户随时下载开启星际合成之旅。">
+        Yes. Leevo Planet Merge is designed as a planet-themed casual merge
+        game for Android players who enjoy simple merging and discovery.
+      </p>
+    </div>
+  </section>
+
+
+  <section class="conclusion">
+    <h2 data-lang-en="Start Your Planet Merge Journey" data-lang-zh="即刻启程，开启专属星际合成探索之旅">Start Your Planet Merge Journey</h2>
+
+    <p data-lang-en="A good casual game does not need complicated rules to be enjoyable." data-lang-zh="真正优质治愈休闲小游戏，从不需要复杂繁琐规则堆砌，简洁纯粹、轻松舒心，本身就是最大魅力。">
+      A good casual game does not need complicated rules to be enjoyable.
+    </p>
+
+    <p data-lang-en="<strong>Leevo Planet Merge</strong> takes a simple idea and turns it into a relaxing planet-themed merge experience. Combine planets, discover new possibilities, and gradually build your collection." data-lang-zh="<strong>Leevo星球融合</strong>秉持简洁初心，把经典合成玩法融入浩瀚宇宙星空，轻松融合、解锁惊喜、慢慢收藏、搭建专属璀璨星图。">
+      <strong>Leevo Planet Merge</strong> takes a simple idea and turns it into
+      a relaxing planet-themed merge experience. Combine planets, discover new
+      possibilities, and gradually build your collection.
+    </p>
+
+    <p data-lang-en="Whether you have a few minutes to spare or simply want a casual game to return to during the day, Leevo Planet Merge gives you an easy way to enjoy a little gaming at your own pace." data-lang-zh="短短几分钟碎片空闲、或是想找个轻松陪伴日常的休闲小游戏，节奏快慢完全由你掌控，随时上线探索、随时放下回归生活，温柔治愈、自在舒心。">
+      Whether you have a few minutes to spare or simply want a casual game to
+      return to during the day, Leevo Planet Merge gives you an easy way to
+      enjoy a little gaming at your own pace.
+    </p>
+
+    <p data-lang-en="<strong>Merge your planets. Discover what's next.</strong>" data-lang-zh="<strong>融合每一颗星球，解锁未知新惊喜，漫游璀璨星海。</strong>">
+      <strong>Merge your planets. Discover what's next.</strong>
+    </p>
+  </section>
+
+</article>
+
+
+  <!-- ✅ 双语切换+本地存储记忆脚本 -->
+  <script>
+    const langSwitchBtn = document.getElementById('langSwitch');
+    const html = document.documentElement;
+
+    // 读取上次选择语言，默认英文
+    let currentLang = localStorage.getItem('leevo-lang') || 'en';
+
+    // 切换语言并更新页面所有data-lang内容
+    function switchLang(lang) {
+      document.querySelectorAll('[data-lang-en], [data-lang-zh]').forEach(el => {
+        const text = el.getAttribute(`data-lang-${lang}`);
+        if (text) {
+          if(el.tagName === 'META'){
+            el.setAttribute(el.name === 'description' ? 'content' : el.name, text);
+          } else {
+            el.textContent = text;
+          }
+        }
+      });
+      html.lang = lang;
+      localStorage.setItem('leevo-lang', lang);
+    }
+
+    // 初始化加载
+    switchLang(currentLang);
+
+    // 点击切换
+    langSwitchBtn.addEventListener('click', () => {
+      currentLang = currentLang === 'en' ? 'zh' : 'en';
+      switchLang(currentLang);
+    });
+  </script>
+
 </body>
 </html>
