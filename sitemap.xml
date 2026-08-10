@@ -62,4 +62,15 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://leevotech.github.io/leevo-apps/apps/leevo-zombie-shooter/articles/leevo-zombie-shooter-guide.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- 👇 多语言SEO核心：标注对应语言版本（双语同页切换也建议加上，搜索引擎识别更好） -->
+    <xhtml:link rel="alternate" hreflang="en" href="https://leevotech.github.io/leevo-apps/apps/leevo-zombie-shooter/articles/leevo-zombie-shooter-guide.html?lang=en" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://leevotech.github.io/leevo-apps/apps/leevo-zombie-shooter/articles/leevo-zombie-shooter-guide.html?lang=zh" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://leevotech.github.io/leevo-apps/apps/leevo-zombie-shooter/articles/leevo-zombie-shooter-guide.html" />
+  </url>
+
 </urlset>
