@@ -48,4 +48,11 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://leevotech.github.io/leevo-apps/apps/leevo-planet-merge/articles/leevo-planet-merge-guide.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
