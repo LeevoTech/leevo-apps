@@ -3,60 +3,679 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-lang-en="Leevo Zombie Shooter – Fast Reflex Shooting, 100 Levels & Global Deathmatch Guide" data-lang-zh="Leevo僵尸射击 — 手速精准反应挑战 · 百关Boss武器进阶 · 无尽生存冲榜指南">Leevo Zombie Shooter – Fast Reflex Shooting, 100 Levels & Global Deathmatch Guide</title>
+
+  <!-- ✅ 严格采用提供SEO标题、描述、关键词 -->
+  <title data-lang-en="Leevo Zombie Shooter - First-Person Zombie Shooter Game for Android" data-lang-zh="Leevo僵尸射击 - 第一人称末日射击生存安卓游戏">Leevo Zombie Shooter - First-Person Zombie Shooter Game for Android</title>
+
+  <meta name="description"
+        content="Learn how to survive a first-person zombie shooter game. Aim carefully, stop approaching zombies, survive increasingly difficult rounds, upgrade your gun, and see how far you can go in Leevo Zombie Shooter."
+        data-lang-en="Learn how to survive a first-person zombie shooter game. Aim carefully, stop approaching zombies, survive increasingly difficult rounds, upgrade your gun, and see how far you can go in Leevo Zombie Shooter."
+        data-lang-zh="掌握第一人称僵尸射击生存技巧：精准瞄准、阻击逼近丧尸、突破层层进阶关卡、升级武器火力，在Leevo僵尸射击里挑战极限生存、看看自己能坚持到第几轮。">
+
+  <meta name="keywords"
+        content="zombie shooter game, zombie shooting game, zombie shooter Android, zombie game Android, first person zombie shooter, first person zombie game, zombie survival game, zombie wave shooter, FPS zombie game, mobile zombie shooter, zombie shooting game Android, Leevo Zombie Shooter">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://leevotech.github.io/leevo-apps/apps/leevo-zombie-shooter/articles/leevo-zombie-shooter-guide.html">
+
   <style>
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:Arial,sans-serif; background:linear-gradient(135deg,#0d2035,#07111f); color:#fff; line-height:1.7; padding:40px 30px; max-width:900px; margin:0 auto;}
-    .back-link{display:inline-block; margin-bottom:40px; color:#f2c86b; text-decoration:none; font-size:18px;}
-    .back-link:hover{text-decoration:underline;}
-    h1{color:#f2c86b; font-size:32px; margin-bottom:30px; line-height:1.4;}
-    h2{color:#ffffff; font-size:24px; margin:30px 0 20px;}
-    p{color:#e6e6e6; font-size:18px; margin-bottom:20px;}
-    ul{color:#e6e6e6; font-size:18px; margin:20px 0 20px 30px;}
-    li{margin-bottom:10px;}
-    .lang-switch-btn{padding:6px 14px; border-radius:6px; border:none; background:#f2c86b; color:#07111f; font-weight:bold; cursor:pointer; margin-bottom:20px;}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #07111f;
+      color: #e6eaf0;
+      line-height: 1.7;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    a { color: #f2c86b; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #203b55;
+      flex-wrap: wrap;
+      gap:15px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+      font-size:16px;
+    }
+    .lang-switch-btn {
+      padding: 6px 14px;
+      border-radius: 6px;
+      border: none;
+      background: #f2c86b;
+      color: #07111f;
+      font-weight: bold;
+      cursor: pointer;
+      transition:0.2s;
+    }
+    .lang-switch-btn:hover{ transform:scale(1.05); }
+
+    .article-header { margin-bottom: 45px; }
+    .article-category {
+      color: #f2c86b;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1.3;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+    .article-intro {
+      font-size: 18px;
+      color: #b7c4d2;
+    }
+
+    section { margin-bottom: 50px; }
+    h2 {
+      font-size: 26px;
+      color: #ffffff;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #1c344c;
+    }
+    h3 {
+      font-size: 20px;
+      color: #f2d28c;
+      margin: 25px 0 12px;
+    }
+    p { margin-bottom: 16px; font-size: 17px; }
+    ul, ol { margin: 20px 0 20px 25px; }
+    li { margin-bottom: 10px; font-size: 17px; }
+
+    .faq-item {
+      background: #0d1c2c;
+      padding:22px;
+      border-radius:10px;
+      margin-bottom:15px;
+      border:1px solid #203b55;
+    }
+    .conclusion {
+      background: linear-gradient(135deg, #10253a, #0d1c2c);
+      padding:35px;
+      border-radius:16px;
+      border:1px solid #294969;
+    }
+
+    @media (max-width:600px) {
+      body { padding:20px 15px; }
+      h1 { font-size:28px; }
+      .page-nav { flex-direction:column; align-items:flex-start; }
+    }
   </style>
 </head>
 <body>
-  <!-- 语言切换按钮，与首页共用本地存储，自动同步 -->
-  <button id="pageLangSwitch" class="lang-switch-btn">中文 / EN</button>
 
-  <!-- 返回首页双语链接，样式位置统一 -->
-  <a href="../index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回 Leevo 应用首页">← Back to Leevo Apps Home</a>
+  <!-- 统一导航：返回首页 + 双语切换记忆 -->
+  <nav class="page-nav">
+    <a href="/leevo-apps/index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回Leevo应用首页">← Back to Leevo Apps Home</a>
+    <button id="langSwitch" class="lang-switch-btn">中文 / EN</button>
+  </nav>
 
-  <h1 data-lang-en="Leevo Zombie Shooter — Test Your Speed, Aim & Reflexes! Survive & Fight for Global Glory" data-lang-zh="Leevo僵尸射击 — 极致手速 · 精准瞄准 · 瞬时反应 · 百关挑战 · 无尽生存 · 全球巅峰排名">Leevo Zombie Shooter — Test Your Speed, Aim & Reflexes! Survive & Fight for Global Glory</h1>
+<article class="app-article">
 
-  <p data-lang-en="A high-intensity action shooter built to push your fingertips & reaction speed to the limit! Your core mission is simple & intense: shoot down every incoming zombie before they get close — rely on fast tapping, steady precise aiming & lightning-fast reflexes to stay alive & advance through thrilling challenges." data-lang-zh="一款高强度快节奏射击游戏，专门考验手指点击速度、瞄准精准度与临场应变反应！核心目标纯粹又紧张：消灭源源不断逼近的僵尸，靠极速点击、精准瞄准、瞬间反应守住防线，层层闯关、突破极限、冲击世界顶尖名次！">A high-intensity action shooter built to push your fingertips & reaction speed to the limit! Your core mission is simple & intense: shoot down every incoming zombie before they get close — rely on fast tapping, steady precise aiming & lightning-fast reflexes to stay alive & advance through thrilling challenges.</p>
+  <header class="article-header">
+    <p class="article-category" data-lang-en="Action Games" data-lang-zh="动作射击游戏">Action Games</p>
 
-  <h2 data-lang-en="Main Gameplay & Core Features" data-lang-zh="完整玩法与核心特色">Main Gameplay & Core Features</h2>
-  <ul>
-    <li data-lang-en="✅ 100 Exciting Main Levels: progress wave by wave, difficulty rises gradually — keep focus & reaction sharp!" data-lang-zh="✅ 整整100关主线闯关：一波波僵尸来袭，难度逐步升级，时刻考验专注与反应极限！">✅ 100 Exciting Main Levels: progress wave by wave, difficulty rises gradually — keep focus & reaction sharp!</li>
-    <li data-lang-en="✅ Powerful Boss Battles every 10 Levels: tougher, larger, dangerous zombie bosses appear — need concentrated fire & smart timing to defeat!" data-lang-zh="✅ 每10关开启强力Boss战：巨型高血量特殊僵尸登场，攻击更强、威胁更大，集中火力抓准时机才能击败通关！">✅ Powerful Boss Battles every 10 Levels: tougher, larger, dangerous zombie bosses appear — need concentrated fire & smart timing to defeat!</li>
-    <li data-lang-en="✅ Unlock New Deadly Weapons every 20 Levels: from basic fast pistol, shotgun, rapid SMG to powerful sniper & heavy explosive guns — stronger firepower helps survive harder waves!" data-lang-zh="✅ 每20关解锁全新强力武器：从基础速射手枪、霰弹枪、冲锋枪，逐步解锁狙击、重火力爆炸枪械，火力升级，助你突破更密集僵尸围攻！">✅ Unlock New Deadly Weapons every 20 Levels: from basic fast pistol, shotgun, rapid SMG to powerful sniper & heavy explosive guns — stronger firepower helps survive harder waves!</li>
-    <li data-lang-en="✅ Unlimited Deathmatch Survival Mode: endless waves of zombies never stop spawning — no level limits, survive as long as you can & compete on the global leaderboard for the best score & top rank!" data-lang-zh="✅ 无尽生存Deathmatch模式：僵尸无限涌出、永不停歇，没有关卡终点，拼存活时长、击杀极限，与全球玩家同台竞技，冲击排行榜巅峰名次！">✅ Unlimited Deathmatch Survival Mode: endless waves of zombies never stop spawning — no level limits, survive as long as you can & compete on the global leaderboard for the best score & top rank!</li>
-  </ul>
+    <h1 data-lang-en="How to Survive a Zombie Shooter Game: Aim, Shoot and Survive the Waves" data-lang-zh="丧尸射击生存全攻略：精准瞄准、火力阻击、突破无尽尸潮">How to Survive a Zombie Shooter Game: Aim, Shoot and Survive the Waves</h1>
 
-  <h2 data-lang-en="Sharpen your skills & enjoy intense fun" data-lang-zh="锤炼手速反应，畅享紧张刺激快感">Sharpen your skills & enjoy intense fun</h2>
-  <p data-lang-en="Whether you want to train faster reaction & better control, enjoy quick intense shooting bursts in spare minutes, or aim to climb up the global leaderboard & show off your reflex talent — Leevo Zombie Shooter delivers fast, satisfying, adrenaline-pumping action every time you play!" data-lang-zh="想要锻炼手指灵活度、瞬时反应、精准瞄准能力，或是碎片时间享受几分钟爽快射击解压，又或是冲刺全球榜单、证明自己顶尖反应实力——Leevo僵尸射击节奏紧凑、击杀反馈爽快、挑战永无止境，每一局都充满热血刺激与超越自我的乐趣！">Whether you want to train faster reaction & better control, enjoy quick intense shooting bursts in spare minutes, or aim to climb up the global leaderboard & show off your reflex talent — Leevo Zombie Shooter delivers fast, satisfying, adrenaline-pumping action every time you play!</p>
+    <p class="article-intro" data-lang-en="Zombie shooter games are all about staying calm when the undead start getting closer. In Leevo Zombie Shooter, you face approaching zombies from a first-person perspective, aim with your crosshair, shoot before they reach you, and try to survive as many rounds as possible." data-lang-zh="丧尸步步逼近，越是危急越要冷静沉着！Leevo僵尸射击采用沉浸式第一人称视角，拖动准星锁定目标、抢在丧尸近身之前精准开火，坚守阵地、一波波抵御尸潮，挑战极限生存轮数、看看自己能撑到哪一刻！">
+      Zombie shooter games are all about staying calm when the undead start
+      getting closer. In Leevo Zombie Shooter, you face approaching zombies
+      from a first-person perspective, aim with your crosshair, shoot before
+      they reach you, and try to survive as many rounds as possible.
+    </p>
+  </header>
 
-<script>
-// 与首页共用语言存储，一键同步切换
-let currentLang = localStorage.getItem('leevoLang') || 'en';
 
-function updateAllText(){
-  document.querySelectorAll('[data-lang-en],[data-lang-zh]').forEach(el=>{
-    const txt = el.getAttribute(`data-lang-${currentLang}`);
-    if(txt) el.innerHTML = txt;
-  });
-}
+  <section>
+    <h2 data-lang-en="What Is a Zombie Shooter Game?" data-lang-zh="什么是丧尸射击生存游戏？">What Is a Zombie Shooter Game?</h2>
 
-document.addEventListener('DOMContentLoaded', updateAllText);
+    <p data-lang-en="A zombie shooter game combines shooting mechanics with the pressure of surviving waves of approaching enemies." data-lang-zh="融合爽快射击手感与紧张生存压力：一波波丧尸从远处不断逼近，你必须拿起武器、精准开火、扫清威胁、守住防线、活下去就是唯一目标。">
+      A zombie shooter game combines shooting mechanics with the pressure of
+      surviving waves of approaching enemies.
+    </p>
 
-document.getElementById('pageLangSwitch').addEventListener('click',()=>{
-  currentLang = currentLang === 'en' ? 'zh' : 'en';
-  localStorage.setItem('leevoLang', currentLang);
-  updateAllText();
-});
-</script>
-</body>
-</html>
+    <p data-lang-en="Unlike a traditional shooting range, the enemies in a zombie game are constantly moving toward the player. This means that aiming accurately is only part of the challenge. You also need to react to movement, manage incoming threats, and decide which zombie should be eliminated first." data-lang-zh="不是静止靶场练习！敌人持续向前压进、步步紧逼——考验的不只是瞄准准度，更要快速反应、分清威胁优先级、优先清除最危险目标，预判移动轨迹、果断开火，才能守住防线。">
+      Unlike a traditional shooting range, the enemies in a zombie game are
+      constantly moving toward the player. This means that aiming accurately is
+      only part of the challenge. You also need to react to movement, manage
+      incoming threats, and decide which zombie should be eliminated first.
+    </p>
+
+    <p data-lang-en="Leevo Zombie Shooter takes this idea and places the player directly in a first-person perspective on a ruined city road." data-lang-zh="Leevo僵尸射击将这份紧张刺激完美还原：沉浸式第一人称视角，置身破败末日城市街道，孤身一人直面汹涌尸潮，压迫感、临场感拉满！">
+      Leevo Zombie Shooter takes this idea and places the player directly in a
+      first-person perspective on a ruined city road.
+    </p>
+
+    <p data-lang-en="Zombies appear in the distance and gradually move toward the player. Your objective is simple: <strong>aim, shoot, and stop them before they reach you.</strong>" data-lang-zh="丧尸从道路尽头缓缓出现、持续逼近、越来越近、威胁剧增！目标清晰、生死一线：<strong>精准瞄准、果断开火、绝不让丧尸突破防线、近身伤害自己！</strong>">
+      Zombies appear in the distance and gradually move toward the player.
+      Your objective is simple:
+      <strong>aim, shoot, and stop them before they reach you.</strong>
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="A First-Person Zombie Shooting Experience" data-lang-zh="沉浸式第一人称，身临其境末日射击体验">A First-Person Zombie Shooting Experience</h2>
+
+    <p data-lang-en="Leevo Zombie Shooter is designed as a vertical first-person zombie shooter for mobile devices." data-lang-zh="专为手机竖屏操作优化打造，单手轻松掌控全局，随时随地开启紧张刺激的末日射击生存之旅！">
+      Leevo Zombie Shooter is designed as a vertical first-person zombie
+      shooter for mobile devices.
+    </p>
+
+    <p data-lang-en="The player's pistol is visible at the bottom of the screen while the crosshair is used to aim at approaching zombies." data-lang-zh="屏幕下方清晰展示手持枪械，拖动中心准星自由移动、精准锁定道路上逼近的丧尸目标，视角聚焦、代入感极强。">
+      The player's pistol is visible at the bottom of the screen while the
+      crosshair is used to aim at approaching zombies.
+    </p>
+
+    <p data-lang-en="Drag the crosshair to search for targets and tap to fire." data-lang-zh="操作简洁直观：拖动准星搜寻移动目标、对准丧尸、点击屏幕即可开火射击，上手零门槛、一秒进入战斗状态。">
+      Drag the crosshair to search for targets and tap to fire.
+    </p>
+
+    <p data-lang-en="The weapon follows the direction of the crosshair, creating a direct relationship between where you aim and where the gun points." data-lang-zh="枪械实时跟随准星方向同步转向，瞄准哪里、枪口指向哪里，操控精准流畅、指哪打哪、反馈即时不拖沓。">
+      The weapon follows the direction of the crosshair, creating a direct
+      relationship between where you aim and where the gun points.
+    </p>
+
+    <p data-lang-en="Each shot includes visual shooting effects such as muzzle flash, recoil, and a bullet trajectory, making the shooting action feel more responsive and immediate." data-lang-zh="开火瞬间伴随枪口火光、真实后坐力、子弹飞行轨迹特效，每一次扣动扳机都冲击力十足、爽快硬核、临场战斗沉浸感拉满！">
+      Each shot includes visual shooting effects such as muzzle flash, recoil,
+      and a bullet trajectory, making the shooting action feel more responsive
+      and immediate.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="The Zombies Keep Getting Closer" data-lang-zh="步步紧逼！丧尸持续逼近，防线压力不断攀升">The Zombies Keep Getting Closer</h2>
+
+    <p data-lang-en="The biggest threat in Leevo Zombie Shooter is not simply the number of zombies. It is the fact that they are constantly approaching you." data-lang-zh="真正致命威胁，从来不是单纯数量多少——而是它们一刻不停、稳步向前、越来越近、压迫感层层加码、容不得半点松懈拖延！">
+      The biggest threat in Leevo Zombie Shooter is not simply the number of
+      zombies. It is the fact that they are constantly approaching you.
+    </p>
+
+    <p data-lang-en="Regular zombies start farther away on the road and gradually move toward the player." data-lang-zh="普通丧尸从道路远处缓缓出现、一步一步朝你的位置逼近，距离越近、身形越大、威胁越紧迫、容错时间越短。">
+      Regular zombies start farther away on the road and gradually move toward
+      the player.
+    </p>
+
+    <p data-lang-en="Because of the perspective of the road, zombies appear to become larger as they get closer." data-lang-zh="道路纵深透视效果清晰还原：远处渺小、逐渐放大、越来越清晰，直观感受威胁步步压近、心跳加速、紧张刺激感拉满！">
+      Because of the perspective of the road, zombies appear to become larger
+      as they get closer.
+    </p>
+
+    <p data-lang-en="This creates a simple but important gameplay question: <strong>Can you eliminate the zombie before it reaches you?</strong>" data-lang-zh="生死拷问、每一秒都悬在心间：<strong>能不能抢在丧尸冲到身前、造成致命伤害之前，精准命中、彻底消灭？</strong>">
+      This creates a simple but important gameplay question:
+      <strong>Can you eliminate the zombie before it reaches you?</strong>
+    </p>
+
+    <p data-lang-en="If you wait too long, the zombie can reach the player and attack, reducing your health." data-lang-zh="犹豫迟疑、出手稍慢半步，丧尸突破防线近身啃咬、血量直接削减、生存危机瞬间降临！">
+      If you wait too long, the zombie can reach the player and attack,
+      reducing your health.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="How Regular Zombies Move" data-lang-zh="普通丧尸：稳步前行、步步逼近">How Regular Zombies Move</h2>
+
+    <p data-lang-en="Regular zombies use an eight-frame walking animation." data-lang-zh="普通丧尸拥有流畅八帧行走动画，蹒跚迈步、真实还原不死者僵硬缓慢、持续向前的恐怖姿态。">
+      Regular zombies use an eight-frame walking animation.
+    </p>
+
+    <p data-lang-en="Instead of simply sliding across the road, they actually animate as they approach the player." data-lang-zh="不是生硬平移滑动！迈步动作连贯自然、一步一步向前挪动，真实压迫感扑面而来、仿佛下一秒就冲到眼前。">
+      Instead of simply sliding across the road, they actually animate as they
+      approach the player.
+    </p>
+
+    <p data-lang-en="A regular zombie takes approximately ten movement steps to reach the player." data-lang-zh="从道路远端走到身前，普通丧尸大约需要十步移动时间，给你充足反应窗口、从容瞄准、精准击杀。">
+      A regular zombie takes approximately ten movement steps to reach the
+      player.
+    </p>
+
+    <p data-lang-en="This gives the player a limited amount of time to identify the target, move the crosshair into position, and fire." data-lang-zh="时间有限、分秒珍贵！快速锁定目标、平稳拖动准星、精准对齐要害、果断扣动扳机，把握短暂窗口期、消灭威胁。">
+      This gives the player a limited amount of time to identify the target,
+      move the crosshair into position, and fire.
+    </p>
+
+    <p data-lang-en="The farther a zombie is from the player, the more time you have to react. As it approaches, the situation becomes increasingly urgent." data-lang-zh="距离越远、反应时间越充裕、从容微调瞄准；步步靠近、时间飞速压缩、紧迫感飙升、考验临场冷静与精准枪法！">
+      The farther a zombie is from the player, the more time you have to react.
+      As it approaches, the situation becomes increasingly urgent.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Watch Out for Fast Zombies" data-lang-zh="警惕高速突袭丧尸！移动迅猛、威胁致命、优先清除">Watch Out for Fast Zombies</h2>
+
+    <p data-lang-en="Not every zombie moves at the same speed." data-lang-zh="不是所有丧尸都缓慢蹒跚！危险升级、速度分化、危机四伏、绝不能一概而论放松警惕。">
+      Not every zombie moves at the same speed.
+    </p>
+
+    <p data-lang-en="Leevo Zombie Shooter also introduces a faster zombie type designed to increase the pressure during later rounds." data-lang-zh="中后期轮次登场专属高速丧尸，大幅压缩反应时间、瞬间拉高战场紧张程度、考验极速反应与精准枪法双重极限！">
+      Leevo Zombie Shooter also introduces a faster zombie type designed to
+      increase the pressure during later rounds.
+    </p>
+
+    <p data-lang-en="Fast zombies are smaller than regular zombies but move more quickly. They can reach the player in approximately six movement steps instead of around ten." data-lang-zh="身形更小巧灵活、移动迅猛迅捷！原本十步路程，高速丧尸仅需六步就能冲到身前，反应窗口大幅缩水、容错空间急剧缩小、威胁优先级最高！">
+      Fast zombies are smaller than regular zombies but move more quickly.
+      They can reach the player in approximately six movement steps instead of
+      around ten.
+    </p>
+
+    <p data-lang-en="This difference is important because a fast zombie gives you less time to react." data-lang-zh="速度差距就是生死差距！留给瞄准、调整、开火的时间大幅压缩，稍有迟疑、瞬间突破防线、造成致命伤害。">
+      This difference is important because a fast zombie gives you less time
+      to react.
+    </p>
+
+    <p data-lang-en="Fast zombies begin appearing from the second round, and their appearance becomes more likely as the rounds continue." data-lang-zh="从第二轮开始高速丧尸就会登场现身！随着轮数不断推进、生存越久、出现概率越来越高、混合尸潮夹击、战场局势愈发凶险复杂！">
+      Fast zombies begin appearing from the second round, and their appearance
+      becomes more likely as the rounds continue.
+    </p>
+
+    <p data-lang-en="Later rounds can therefore contain a mixture of regular and fast zombies, forcing you to identify threats quickly." data-lang-zh="后期轮次，缓慢普通丧尸+迅猛高速丧尸成群同步来袭！必须瞬间分辨威胁等级、优先清除高速致命目标、冷静统筹全局、才能守住防线！">
+      Later rounds can therefore contain a mixture of regular and fast zombies,
+      forcing you to identify threats quickly.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="The Best Way to Survive a Zombie Wave" data-lang-zh="尸潮生存核心制胜法则，五大关键技巧稳守防线、走得更远">The Best Way to Survive a Zombie Wave</h2>
+
+    <h3 data-lang-en="1. Find the Most Dangerous Target First" data-lang-zh="1. 优先锁定清除最危险、移动最快、距离最近致命目标">1. Find the Most Dangerous Target First</h3>
+
+    <p data-lang-en="When several zombies are approaching, pay attention to which one is closest to the player." data-lang-zh="成群丧尸同时逼近，永远紧盯离自己最近、即将突破防线、瞬间能造成伤害的目标，优先开火消灭、消除眼前致命危机！">
+      When several zombies are approaching, pay attention to which one is
+      closest to the player.
+    </p>
+
+    <p data-lang-en="Fast zombies deserve particular attention because they have less travel time before reaching you." data-lang-zh="高速移动丧尸必须重点紧盯、优先集火！移动速度快、时间极短、威胁爆发最快、一旦漏过瞬间近身、致命打击、绝不能放任不管！">
+      Fast zombies deserve particular attention because they have less travel
+      time before reaching you.
+    </p>
+
+
+    <h3 data-lang-en="2. Do Not Ignore Distant Zombies" data-lang-zh="2. 别放任远处丧尸慢慢逼近！提前瞄准、从容消灭、减少后续压力">2. Do Not Ignore Distant Zombies</h3>
+
+    <p data-lang-en="A zombie that is far away may not look dangerous yet, but every zombie continues moving toward you." data-lang-zh="看着遥远、暂时安全放松警惕？它们一刻不停稳步向前、慢慢压缩反应空间、扎堆逼近、瞬间陷入腹背受敌绝境！">
+      A zombie that is far away may not look dangerous yet, but every zombie
+      continues moving toward you.
+    </p>
+
+    <p data-lang-en="Use the extra distance as an opportunity to aim carefully and eliminate threats before they become urgent." data-lang-zh="距离远=时间充裕、瞄准空间充足！从容精准瞄准、提前消灭隐患、减少后续扎堆高压局面、一步步扫清威胁、掌控战场节奏！">
+      Use the extra distance as an opportunity to aim carefully and eliminate
+      threats before they become urgent.
+    </p>
+
+
+    <h3 data-lang-en="3. Keep the Crosshair Under Control" data-lang-zh="3. 平稳精准控准星，不盲目乱甩、精准定位、快速切换目标">3. Keep the Crosshair Under Control</h3>
+
+    <p data-lang-en="The crosshair is one of the most important tools in a first-person zombie shooter." data-lang-zh="准星就是生死命脉、精准射击核心关键！稳住准星、精准对齐、一击命中、高效消灭、不浪费每一次开火机会！">
+      The crosshair is one of the most important tools in a first-person zombie
+      shooter.
+    </p>
+
+    <p data-lang-en="Move it deliberately rather than making unnecessary large movements. The goal is to keep your aim under control so that you can quickly place the target in your sights." data-lang-zh="平稳精准小幅拖动、不盲目大幅度乱甩、慌乱失控错失良机！精准定位、平滑切换目标、瞬间锁定新威胁、流畅衔接连续击杀！">
+      Move it deliberately rather than making unnecessary large movements.
+      The goal is to keep your aim under control so that you can quickly place
+      the target in your sights.
+    </p>
+
+
+    <h3 data-lang-en="4. Watch the Entire Road" data-lang-zh="4. 放眼全局、扫视整条道路，不局限单点、警惕两侧突袭、不漏任何威胁">4. Watch the Entire Road</h3>
+
+    <p data-lang-en="Do not focus on only one part of the screen for too long." data-lang-zh="紧盯单一目标不放、忽略周边、顾此失彼、侧面漏怪、被偷袭减血、得不偿失！时刻保持全局视野、快速扫视整条道路、捕捉任何新出现威胁！">
+      Do not focus on only one part of the screen for too long.
+    </p>
+
+    <p data-lang-en="Zombies can approach from different positions, so regularly check the road and look for the next immediate threat." data-lang-zh="丧尸分散道路各处、从不同位置同步逼近！持续扫视、提前发现、预判威胁、及时调转枪口、无缝衔接、守住全线防线、不给任何敌人可乘之机！">
+      Zombies can approach from different positions, so regularly check the
+      road and look for the next immediate threat.
+    </p>
+
+
+    <h3 data-lang-en="5. Stay Calm When Zombies Get Close" data-lang-zh="5. 大敌压境、越近越要冷静沉着，不慌乱、不手抖、精准一击定生死">5. Stay Calm When Zombies Get Close</h3>
+
+    <p data-lang-en="The closer a zombie gets, the easier it is to panic and lose control of your aim." data-lang-zh="丧尸冲到眼前、身形巨大、压迫感爆炸、心跳加速、手忙脚乱、准星乱抖、盲目放空、错失最后击杀时机、瞬间受伤崩盘！">
+      The closer a zombie gets, the easier it is to panic and lose control of
+      your aim.
+    </p>
+
+    <p data-lang-en="Try to maintain deliberate movements even when the pressure increases. A controlled shot is usually more useful than simply moving the crosshair randomly." data-lang-zh="高压危急时刻，强制稳住心态、平稳呼吸、精准锁定要害、沉着冷静开火！精准受控一击，远比慌乱乱晃、盲目扫射、浪费子弹、徒劳无功靠谱得多！">
+      Try to maintain deliberate movements even when the pressure increases.
+      A controlled shot is usually more useful than simply moving the
+      crosshair randomly.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Understanding the Round System" data-lang-zh="层层递进轮次机制，越往后越凶险、挑战极限生存上限">Understanding the Round System</h2>
+
+    <p data-lang-en="Leevo Zombie Shooter uses a progressive round system." data-lang-zh="采用循序渐进、难度稳步攀升的轮次闯关机制，每一轮都是新考验、每一关都刷新极限、越往后越刺激凶险！">
+      Leevo Zombie Shooter uses a progressive round system.
+    </p>
+
+    <p data-lang-en="The first round begins with two zombies. After all zombies in the current round have been eliminated, the next round begins." data-lang-zh="开局第一轮仅两只丧尸、熟悉操作、轻松上手；清完当前轮全部敌人、即刻开启下一轮挑战、永不停歇、尸潮永无止境！">
+      The first round begins with two zombies. After all zombies in the current
+      round have been eliminated, the next round begins.
+    </p>
+
+    <p data-lang-en="As you progress, the number of zombies increases and the overall difficulty becomes higher." data-lang-zh="坚持存活越久、轮数越高、出场丧尸数量持续增多、密集围攻、高速敌人频发、战场压力层层加码、极限挑战不断升级！">
+      As you progress, the number of zombies increases and the overall
+      difficulty becomes higher.
+    </p>
+
+    <p data-lang-en="There is also a limit to how many zombies can appear at the same time, keeping the gameplay manageable while still increasing the pressure as you advance." data-lang-zh="同时出场数量合理上限控制，保证画面流畅、操作可控、不瞬间满屏崩盘、循序渐进提升压迫感、层层递进、越玩越沉浸上头！">
+      There is also a limit to how many zombies can appear at the same time,
+      keeping the gameplay manageable while still increasing the pressure as
+      you advance.
+    </p>
+
+    <p data-lang-en="The objective is simple: <strong>clear the current round and survive the next one.</strong>" data-lang-zh="目标纯粹清晰、信念坚定：<strong>杀光本轮所有丧尸、活下来、撑到下一轮、继续坚持、挑战无尽生存极限！</strong>">
+      The objective is simple:
+      <strong>clear the current round and survive the next one.</strong>
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Your Health Becomes More Important as You Progress" data-lang-zh="生命值随生存时长成长，坚守生命底线、越久越坚韧、挑战越强">Your Health Becomes More Important as You Progress</h2>
+
+    <p data-lang-en="Zombies that reach the player can attack and reduce your health." data-lang-zh="防线失守、丧尸近身啃咬，直接扣除生命点数、每一滴血量都无比珍贵、是继续战斗、冲击更高轮次的根本保障！">
+      Zombies that reach the player can attack and reduce your health.
+    </p>
+
+    <p data-lang-en="During rounds 1 through 10, the player has two health points." data-lang-zh="开局前十轮，初始两点生命值、容错空间极小、每一次失误代价沉重、必须谨慎精准、绝不轻易放敌人近身！">
+      During rounds 1 through 10, the player has two health points.
+    </p>
+
+    <p data-lang-en="After every ten rounds, one additional health point is added, up to a maximum of eight health points." data-lang-zh="每成功挺过十轮考验，额外增加一点生命上限、越坚持越坚韧、最高累积八点生命储备、给后期高压尸潮更多容错缓冲、支撑你走得更远、突破极限！">
+      After every ten rounds, one additional health point is added, up to a
+      maximum of eight health points.
+    </p>
+
+    <p data-lang-en="This creates an interesting progression system. Surviving longer gives you more health, but the increasing number and speed of zombies continue to raise the challenge." data-lang-zh="精妙平衡成长机制：坚持存活越久、血量储备越充足、底气更足；但丧尸数量、移动速度、威胁强度同步飙升、难度水涨船高、永远充满新鲜刺激挑战、不会乏味疲软！">
+      This creates an interesting progression system. Surviving longer gives
+      you more health, but the increasing number and speed of zombies continue
+      to raise the challenge.
+    </p>
+
+    <p data-lang-en="When all health is lost, the game ends." data-lang-zh="生命点数彻底耗尽归零，防线彻底崩塌、生存挑战宣告结束、记录当前战绩、总结经验、重新整装再战、刷新生存极限！">
+      When all health is lost, the game ends.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Upgrade Your Gun as You Survive" data-lang-zh="坚持存活、火力同步升级！枪械进阶变强、助你横扫尸潮、突破难关">Upgrade Your Gun as You Survive</h2>
+
+    <p data-lang-en="Your weapon also progresses as you advance through the game." data-lang-zh="不止血量成长、坚持存活、手中枪械火力同步进阶变强、越往后威力越强、应对密集强敌、攻坚破局、扫清障碍、助力极限生存！">
+      Your weapon also progresses as you advance through the game.
+    </p>
+
+    <p data-lang-en="The gun upgrades every five rounds, and the current gun level is shown on the game interface." data-lang-zh="每成功挺过五轮挑战，枪械自动进阶升级！界面清晰直观显示当前等级、成长进度一目了然、持续变强、手感威力同步提升！">
+      The gun upgrades every five rounds, and the current gun level is shown
+      on the game interface.
+    </p>
+
+    <p data-lang-en="You can see the gun level displayed as: <strong>GUN LV.1</strong> and later: <strong>GUN LV.2</strong>" data-lang-zh="界面清晰标注等级变化：从初始<strong>1级枪械</strong>，逐步进阶成长、解锁更强火力、升级为<strong>2级、3级…</strong>，成长轨迹清晰可见、变强实实在在、信心满满迎战更强尸潮！">
+      You can see the gun level displayed as:
+      <strong>GUN LV.1</strong>
+      and later:
+      <strong>GUN LV.2</strong>
+    </p>
+
+    <p data-lang-en="Higher gun levels improve your shooting capability as the difficulty increases." data-lang-zh="等级越高、火力越猛、射击性能全面提升、伤害更强、压制力更足、清敌效率更高、从容应对后期海量高速丧尸围攻、突破生存瓶颈、创造更高纪录！">
+      Higher gun levels improve your shooting capability as the difficulty
+      increases.
+    </p>
+
+    <p data-lang-en="This gives players another reason to keep surviving through the rounds." data-lang-zh="变强、进阶、突破、成长，每多撑一轮、离更强武器更近一步、动力满满、不愿轻易倒下、坚持再战、挑战极限生存巅峰！">
+      This gives players another reason to keep surviving through the rounds.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Score, Kills and Survival Time" data-lang-zh="战绩数据全程记录，每一份努力、击杀、坚持都清晰留存、见证成长突破">Score, Kills and Survival Time</h2>
+
+    <p data-lang-en="Leevo Zombie Shooter tracks several important statistics during gameplay." data-lang-zh="全程实时精准记录核心战斗数据、每一次击杀、每一秒坚持、每一轮突破都清晰留存、复盘成长、刷新纪录、成就感满满！">
+      Leevo Zombie Shooter tracks several important statistics during gameplay.
+    </p>
+
+    <ul>
+      <li data-lang-en="<strong>ROUND</strong> — shows your current round." data-lang-zh="<strong>轮数</strong> — 实时显示当前坚守到第几轮、生存进度一目了然、见证突破极限！">
+        <strong>ROUND</strong> — shows your current round.
+      </li>
+      <li data-lang-en="<strong>KILLS</strong> — tracks the number of zombies you have defeated." data-lang-zh="<strong>击杀数</strong> — 累计消灭丧尸数量、每一个倒下敌人、都是坚守防线、英勇奋战的证明！">
+        <strong>KILLS</strong> — tracks the number of zombies you have defeated.
+      </li>
+      <li data-lang-en="<strong>TIME</strong> — records how long you have survived." data-lang-zh="<strong>生存时长</strong> — 精确记录坚持战斗时间、每一秒顽强抵抗、每一刻绝不放弃、用时间证明坚韧意志！">
+        <strong>TIME</strong> — records how long you have survived.
+      </li>
+      <li data-lang-en="<strong>SCORE</strong> — records your accumulated points." data-lang-zh="<strong>总得分</strong> — 累计击杀、通关奖励综合计分、击杀高速丧尸分数更高、追求高分、比拼实力、刷新排行榜巅峰！">
+        <strong>SCORE</strong> — records your accumulated points.
+      </li>
+      <li data-lang-en="<strong>GUN LV.</strong> — displays your current weapon level." data-lang-zh="<strong>枪械等级</strong> — 实时展示当前武器进阶等级、见证火力成长变强、越打越猛、横扫千军！">
+        <strong>GUN LV.</strong> — displays your current weapon level.
+      </li>
+    </ul>
+
+    <p data-lang-en="Eliminating zombies earns score, while fast zombies can provide more points than regular zombies." data-lang-zh="消灭丧尸累计得分、击杀高速威胁丧尸奖励分数更高、高风险高回报、优先清除危险目标、兼顾生存安全+高分战绩、策略抉择、收获双倍成就感！">
+      Eliminating zombies earns score, while fast zombies can provide more
+      points than regular zombies.
+    </p>
+
+    <p data-lang-en="This means that survival is not the only thing being measured. Your kills, score, survival time, and gun progression all contribute to the overall experience." data-lang-zh="不止单纯活下去！击杀数量、高分战绩、坚持时长、武器进阶成长，全方位记录战斗历程、收获满满成就感、激励自己不断突破、刷新极限、越战越强！">
+      This means that survival is not the only thing being measured. Your
+      kills, score, survival time, and gun progression all contribute to the
+      overall experience.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Why Fast Zombies Change the Strategy" data-lang-zh="高速丧尸彻底改写战术思路！不再盲目扫射、精准判断、优先清除、灵活应变">Why Fast Zombies Change the Strategy</h2>
+
+    <p data-lang-en="The introduction of fast zombies changes how you need to approach later rounds." data-lang-zh="高速丧尸登场之后，后期战场玩法、思维策略必须彻底调整升级、不能再沿用前期悠闲打法、必须更敏锐、果断、高效！">
+      The introduction of fast zombies changes how you need to approach later
+      rounds.
+    </p>
+
+    <p data-lang-en="A regular zombie gives you more time to react because it takes roughly ten movement steps to reach the player." data-lang-zh="普通丧尸缓慢前行、十步路程、时间充裕、从容微调瞄准、精准击杀、容错充足、压力平缓可控。">
+      A regular zombie gives you more time to react because it takes roughly
+      ten movement steps to reach the player.
+    </p>
+
+    <p data-lang-en="A fast zombie can reach you in around six steps." data-lang-zh="高速丧尸仅六步就能冲到身前、时间压缩近一半、反应窗口急剧缩短、容不得半点犹豫、拖延、失误、瞬间生死危机！">
+      A fast zombie can reach you in around six steps.
+    </p>
+
+    <p data-lang-en="That difference means you cannot simply focus on the nearest target without considering movement speed." data-lang-zh="差距就是生死分水岭！不能只看距离远近、忽略移动速度——远处高速丧尸、威胁往往比近处普通丧尸致命得多、必须综合距离+速度、快速判定优先级、优先清除致命威胁！">
+      That difference means you cannot simply focus on the nearest target
+      without considering movement speed.
+    </p>
+
+    <p data-lang-en="When regular and fast zombies appear together, you need to quickly decide which target represents the greatest immediate threat." data-lang-zh="快慢丧尸混合扎堆、同步压境、局势错综复杂、瞬间权衡利弊、精准锁定最致命高速目标、优先开火清除、稳住防线、再从容清理普通丧尸、步步为营、化险为夷！">
+      When regular and fast zombies appear together, you need to quickly decide
+      which target represents the greatest immediate threat.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Why Aim Matters in a First-Person Zombie Shooter" data-lang-zh="精准瞄准=生存命脉！准星操控、跟枪切换、指哪打哪、高效击杀、不浪费每一次开火机会">Why Aim Matters in a First-Person Zombie Shooter</h2>
+
+    <p data-lang-en="In Leevo Zombie Shooter, the crosshair and gun direction are closely connected." data-lang-zh="核心操控逻辑紧密联动：准星移动方向=枪口指向方向、完全同步、精准跟随、指哪打哪、丝滑流畅、操控感极强、手感真实硬核！">
+      In Leevo Zombie Shooter, the crosshair and gun direction are closely
+      connected.
+    </p>
+
+    <p data-lang-en="Dragging the crosshair to the right moves the gun toward the right. Moving the crosshair to the left moves the gun toward the left." data-lang-zh="向右拖动准星、枪口同步右转；向左拖动、枪口同步左转、零延迟反馈、精准贴合操作意图、平滑跟随、瞄准切换丝滑连贯、上手极易精通流畅！">
+      Dragging the crosshair to the right moves the gun toward the right.
+      Moving the crosshair to the left moves the gun toward the left.
+    </p>
+
+    <p data-lang-en="This makes aiming an important part of the gameplay rather than simply tapping anywhere on the screen." data-lang-zh="不是随便点屏幕就能打中！精准瞄准、平稳控枪、精准锁定要害、一击命中、高效消灭、减少无效空枪、节省时间、争取宝贵生存窗口、真正考验射击功底、手感、专注力！">
+      This makes aiming an important part of the gameplay rather than simply
+      tapping anywhere on the screen.
+    </p>
+
+    <p data-lang-en="Learning to control the crosshair smoothly can help you move between targets more efficiently." data-lang-zh="熟练掌握准星平滑拖动、精准定位、快速切换多个逼近目标、流畅衔接连续击杀、不卡顿、不跑偏、高效清场、从容应对多面夹击、守住防线、走得更远！">
+      Learning to control the crosshair smoothly can help you move between
+      targets more efficiently.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="A Simple Control System With Increasing Pressure" data-lang-zh="操作极简易懂、零门槛上手，层层进阶高压挑战、越玩越上头、越打越沉浸">A Simple Control System With Increasing Pressure</h2>
+
+    <p data-lang-en="The controls in Leevo Zombie Shooter are intentionally straightforward." data-lang-zh="核心操作设计极致简洁纯粹、不搞复杂冗余按键、新手秒懂、一秒上手、轻松开启末日射击生存之旅！">
+      The controls in Leevo Zombie Shooter are intentionally straightforward.
+    </p>
+
+    <p data-lang-en="Move the crosshair, find a zombie, and tap to shoot." data-lang-zh="三步循环流畅战斗：拖动准星锁定逼近丧尸→精准对齐目标→点击开火消灭敌人，简单清晰、直击核心、专注战斗、沉浸流畅、不被繁琐操作分心！">
+      Move the crosshair, find a zombie, and tap to shoot.
+    </p>
+
+    <p data-lang-en="The challenge comes from what happens around those simple controls." data-lang-zh="操作简单≠挑战平庸！真正刺激、紧张、热血的核心压力，来自源源不断、步步紧逼、数量激增、速度加快、混合突袭的汹涌尸潮围攻！">
+      The challenge comes from what happens around those simple controls.
+    </p>
+
+    <p data-lang-en="Zombies keep moving, fast zombies become more common, rounds become more difficult, and your health can be reduced when enemies reach you." data-lang-zh="敌人永不停歇向前压进、高速致命威胁频发、轮次难度持续飙升、血量岌岌可危、失误代价沉重、每一秒都紧绷神经、心跳加速、热血上头、沉浸刺激无法自拔！">
+      Zombies keep moving, fast zombies become more common, rounds become more
+      difficult, and your health can be reduced when enemies reach you.
+    </p>
+
+    <p data-lang-en="Simple controls do not necessarily mean a simple challenge." data-lang-zh="简洁干净操控背后，藏着层层递进、凶险刺激、极限考验、越玩越上头、不断挑战自我、刷新生存极限的硬核战斗体验！">
+      Simple controls do not necessarily mean a simple challenge.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Who Is Leevo Zombie Shooter For?" data-lang-zh="这款热血末日射击生存游戏，适合这些玩家沉浸体验">Who Is Leevo Zombie Shooter For?</h2>
+
+    <p data-lang-en="Leevo Zombie Shooter is designed for players who enjoy straightforward mobile shooting games with an increasing survival challenge." data-lang-zh="专为热爱简洁爽快射击手感、紧张刺激生存氛围、享受层层进阶突破、追求极限挑战、碎片时间随时热血战斗的安卓玩家打造！">
+      Leevo Zombie Shooter is designed for players who enjoy straightforward
+      mobile shooting games with an increasing survival challenge.
+    </p>
+
+    <ul>
+      <li data-lang-en="Players who enjoy zombie shooter games" data-lang-zh="痴迷丧尸题材、末日生存、热血射击、沉浸紧张氛围">Players who enjoy zombie shooter games</li>
+      <li data-lang-en="Fans of first-person shooting games" data-lang-zh="热爱第一人称沉浸式视角、真实临场代入感、精准射击手感、硬核战斗体验">Fans of first-person shooting games</li>
+      <li data-lang-en="Players looking for a zombie game on Android" data-lang-zh="寻找适配安卓手机、流畅优化、竖屏单手可玩、随时开战优质丧尸射击手游">Players looking for a zombie game on Android</li>
+      <li data-lang-en="People who enjoy wave-based survival gameplay" data-lang-zh="喜欢一波波突破、层层进阶、逐步变强、挑战极限、记录成长、刷新战绩成就感">People who enjoy wave-based survival gameplay</li>
+      <li data-lang-en="Players who like aiming and shooting mechanics" data-lang-zh="追求精准瞄准、流畅控枪、爽快命中反馈、真实射击手感、考验专注力与反应力">Players who like aiming and shooting mechanics</li>
+      <li data-lang-en="Gamers who enjoy progressively harder rounds" data-lang-zh="不畏惧挑战、乐于突破自我、越难越上头、坚持到底、突破极限、追求更高轮次、更强战绩">Gamers who enjoy progressively harder rounds</li>
+      <li data-lang-en="Players who want to test how long they can survive" data-lang-zh="想亲身挑战、看看自己极限在哪、能在汹涌尸潮里坚守多久、创造属于自己的生存传奇">Players who want to test how long they can survive</li>
+    </ul>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Zombie Shooter Tips for New Players" data-lang-zh="新手入门避坑进阶指南，从零快速上手、稳步变强、撑过更多轮次">Zombie Shooter Tips for New Players</h2>
+
+    <p data-lang-en="If you are new to zombie shooting games, start by focusing on accuracy rather than simply shooting as quickly as possible." data-lang-zh="刚接触别盲目狂点、追求手速乱射放空！优先练准度、稳心态、精准命中、一枪消灭一个敌人、不浪费开火机会、慢慢熟悉手感、建立信心、稳步进阶！">
+      If you are new to zombie shooting games, start by focusing on accuracy
+      rather than simply shooting as quickly as possible.
+    </p>
+
+    <p data-lang-en="Learn how the crosshair responds to your movement and become comfortable moving your aim across the screen." data-lang-zh="熟悉准星跟随拖动、同步转向、平滑移动手感、练习小幅精准微调、流畅切换两侧目标、不慌乱甩动、慢慢养成精准控枪肌肉记忆、越用越顺手、反应越来越快！">
+      Learn how the crosshair responds to your movement and become comfortable
+      moving your aim across the screen.
+    </p>
+
+    <p data-lang-en="Once you understand the controls, pay more attention to the distance and speed of each zombie." data-lang-zh="熟练操作之后，学会观察、综合判断：距离远近+移动速度快慢、双重评估威胁等级、优先清除高速近距致命目标、策略清晰、防守高效、压力大幅减轻！">
+      Once you understand the controls, pay more attention to the distance and
+      speed of each zombie.
+    </p>
+
+    <p data-lang-en="Remember that the objective is not simply to get the highest number of kills. You need to eliminate the approaching zombies before they reach you." data-lang-zh="别盲目追求击杀数字、只顾乱杀、放任漏网之鱼近身减血！核心永远是守住防线、绝不让丧尸冲到身前、优先生存活下去、才有机会走得更远、冲击更高轮次、更强战绩！">
+      Remember that the objective is not simply to get the highest number of
+      kills. You need to eliminate the approaching zombies before they reach
+      you.
+    </p>
+
+    <p data-lang-en="As the rounds become harder, controlling your aim and prioritising the most dangerous targets becomes increasingly important." data-lang-zh="轮次越高、尸潮越密集、高速敌人越多、局势越凶险！稳住准星、冷静判断、优先清除致命威胁、沉着应对、步步为营、突破重重难关、创造惊人生存纪录！">
+      As the rounds become harder, controlling your aim and prioritising the
+      most dangerous targets becomes increasingly important.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="A Zombie Shooter That Gets Harder as You Survive" data-lang-zh="坚持越久、挑战越强、成长越足、成就感越爆棚！层层进阶、永无止境、突破自我">A Zombie Shooter That Gets Harder as You Survive</h2>
+
+    <p data-lang-en="One of the most important parts of a wave-based zombie game is progression." data-lang-zh="一波波闯关、稳步进阶、从简单入门、熟悉手感、逐步面对密集尸潮、高速突袭、多重夹击、难度合理攀升、成长清晰可见、越玩越有动力、越坚持越强大！">
+      One of the most important parts of a wave-based zombie game is
+      progression.
+    </p>
+
+    <p data-lang-en="The first round should introduce the basic concept. Later rounds should test whether the player has learned how to aim, react, and prioritise targets." data-lang-zh="开局轻松引导熟悉核心玩法、掌握瞄准开火基础；后续轮次层层考验精准枪法、极速反应、威胁优先级判断、全局统筹、冷静抗压、综合实战能力、不断突破、持续变强！">
+      The first round should introduce the basic concept. Later rounds should
+      test whether the player has learned how to aim, react, and prioritise
+      targets.
+    </p>
+
+    <p data-lang-en="Leevo Zombie Shooter follows this progression through increasing zombie numbers, faster enemies, additional health as you reach longer survival milestones, and gun upgrades every five rounds." data-lang-zh="丧尸数量递增、高速敌人频发、达成生存里程碑自动提升血量上限、每五轮枪械火力进阶变强——挑战强度稳步升级、自身实力同步成长、平衡流畅、越玩越上头、沉浸热血无法自拔！">
+      Leevo Zombie Shooter follows this progression through increasing zombie
+      numbers, faster enemies, additional health as you reach longer survival
+      milestones, and gun upgrades every five rounds.
+    </p>
+
+    <p data-lang-en="The longer you survive, the more important every decision becomes." data-lang-zh="坚持存活越久、局势越复杂、每一次瞄准、开火、优先选择、控枪微调，都生死攸关、决定防线存亡、能否继续向前、创造更高生存传奇！">
+      The longer you survive, the more important every decision becomes.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Chinese and English Language Support" data-lang-zh="中英双语完整适配，自由切换、流畅阅读、无障碍沉浸体验">Chinese and English Language Support</h2>
+
+    <p data-lang-en="Leevo Zombie Shooter is designed with both Chinese and English language support in mind." data-lang-zh="从设计之初就完整规划、深度适配中英双语内容，界面文字、游戏提示、数据展示、说明内容，双语独立完整、翻译自然流畅、原汁原味、阅读舒适！">
+      Leevo Zombie Shooter is designed with both Chinese and English language
+      support in mind.
+    </p>
+
+    <p data-lang-en="The game interface can be presented in the language selected by the player's device, while the game also provides an option to change the language through the settings." data-lang-zh="自动跟随手机系统语言智能匹配切换，也可进入游戏设置界面自由手动切换、即时生效、流畅不卡顿、贴合个人使用习惯、无障碍畅玩、沉浸体验！">
+      The game interface can be presented in the language selected by the
+      player's device, while the game also provides an option to change the
+      language through the settings.
+    </p>
+
+    <p data-lang-en="This allows players to use important game information such as round, kills, time, score, gun level, game-over messages, and other prompts in the language they prefer." data-lang-zh="轮数、击杀数量、生存时长、累计得分、枪械等级、结局提示、战斗信息、FAQ解答、通关建议，全部双语精准呈现、用词地道专业、阅读清晰易懂、获取关键信息零障碍！">
+      This allows players to use important game information such as round,
+      kills, time, score, gun level, game-over messages, and other prompts in
+      the language they prefer.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="What Makes Leevo Zombie Shooter Different?" data-lang-zh="独特亮点、纯粹硬核、沉浸刺激、流畅爽快、与众不同的优质射击生存体验">What Makes Leevo Zombie Shooter Different?</h2>
+
+    <p data-lang-en="Leevo Zombie Shooter keeps its core gameplay focused on a simple idea: zombies are coming, and you need to stop them." data-lang-zh="剔除冗余花哨功能、回归射击生存纯粹核心：
