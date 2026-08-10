@@ -4,708 +4,655 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ✅ 严格采用你提供的SEO标题、描述、关键词 -->
-  <title data-lang-en="PSLE Math Preparation Guide | Leevo Learn: PSLE Math" data-lang-zh="新加坡PSLE数学备考指南 | Leevo学习：PSLE数学">PSLE Math Preparation Guide | Leevo Learn: PSLE Math</title>
+  <title>Leevo Learn: PSLE Math - Math Practice & Revision for Primary Students</title>
 
   <meta name="description"
-        content="Learn how to prepare for PSLE Math with practical tips for problem solving, word problems, revision, topic practice and mock tests. Discover Leevo Learn: PSLE Math."
-        data-lang-en="Learn how to prepare for PSLE Math with practical tips for problem solving, word problems, revision, topic practice and mock tests. Discover Leevo Learn: PSLE Math."
-        data-lang-zh="科学备考新加坡PSLE数学：解题思路、应用题技巧、复习规划、专项练习、模拟考试实用方法，一站式了解Leevo学习：PSLE数学高效学习方式。">
+        content="Discover Leevo Learn: PSLE Math, a learning app designed to help primary school students practise Mathematics, strengthen problem-solving skills and prepare for PSLE Math. Explore structured practice, revision and progressive challenges in English and Chinese.">
 
   <meta name="keywords"
-        content="PSLE Math, PSLE Mathematics, PSLE Math practice, PSLE Math revision, PSLE Math preparation, PSLE Math questions, PSLE Math problem solving, PSLE Math word problems, PSLE Math mock test, PSLE Math practice app, PSLE Math revision app, Primary 6 Math Singapore, P6 Math, Leevo Learn PSLE Math">
+        content="Leevo Learn PSLE Math, PSLE Math, PSLE Mathematics, PSLE Math practice, PSLE Math revision, Primary School Mathematics Singapore, Primary Math practice, Singapore Math practice, PSLE Math preparation, Math word problems, Primary School Math app, Math learning app, 小学数学, PSLE数学, 新加坡小学数学, 小学数学练习, PSLE数学练习, PSLE数学复习, 小学数学学习App">
 
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://leevotech.github.io/leevo-apps/apps/leevo-learn-psle-math/articles/psle-math-preparation-guide.html">
+  <link rel="canonical" href="https://yourdomain.com/guides/leevo-learn-psle-math">
+  <!-- 多语言SEO标注 -->
+  <link rel="alternate" hreflang="en" href="https://yourdomain.com/guides/leevo-learn-psle-math" />
+  <link rel="alternate" hreflang="zh-CN" href="https://yourdomain.com/guides/leevo-learn-psle-math" />
+  <link rel="alternate" hreflang="x-default" href="https://yourdomain.com/guides/leevo-learn-psle-math" />
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #07111f;
-      color: #e6eaf0;
-      line-height: 1.7;
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 30px 20px;
-    }
-    a { color: #f2c86b; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    * {box-sizing: border-box; margin: 0; padding: 0;}
+    html {scroll-behavior: smooth;}
+    body {font-family: Arial, Helvetica, sans-serif; background: #07111f; color: #e6eaf0; line-height: 1.7; max-width: 850px; margin: 0 auto; padding: 30px 20px;}
+    a {color: #f2c86b; text-decoration: none;}
+    a:hover {text-decoration: underline;}
 
-    .page-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 40px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #203b55;
-      flex-wrap: wrap;
-      gap:15px;
-    }
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-weight: 500;
-      font-size:16px;
-    }
-    .lang-switch-btn {
-      padding: 6px 14px;
-      border-radius: 6px;
-      border: none;
-      background: #f2c86b;
-      color: #07111f;
-      font-weight: bold;
-      cursor: pointer;
-      transition:0.2s;
-    }
-    .lang-switch-btn:hover{ transform:scale(1.05); }
+    /* 导航+切换按钮，统一站点风格 */
+    .page-nav {display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; padding-bottom:15px; border-bottom:1px solid #203b55; flex-wrap:wrap; gap:15px;}
+    .back-link {display:inline-flex; align-items:center; gap:6px; font-weight:500; font-size:16px;}
+    .lang-switch-btn {padding:6px 14px; border-radius:6px; border:none; background:#f2c86b; color:#07111f; font-weight:bold; cursor:pointer; transition:0.2s;}
+    .lang-switch-btn:hover {transform:scale(1.05);}
 
-    .article-header { margin-bottom: 45px; }
-    .article-category {
-      color: #f2c86b;
-      font-weight: 700;
-      text-transform: uppercase;
-      font-size: 14px;
-      letter-spacing: 1.5px;
-      margin-bottom: 12px;
-    }
-    h1 {
-      font-size: clamp(28px, 5vw, 40px);
-      line-height: 1.3;
-      margin-bottom: 20px;
-      color: #ffffff;
-    }
-    .article-intro {
-      font-size: 18px;
-      color: #b7c4d2;
-    }
+    /* 核心：语言区块默认隐藏，激活显示+淡入动画 */
+    .language-section {display: none;}
+    .language-section.active {display: block; animation: fadeIn 0.3s ease;}
+    @keyframes fadeIn {from{opacity:0;} to{opacity:1;}}
 
-    section { margin-bottom: 50px; }
-    h2 {
-      font-size: 26px;
-      color: #ffffff;
-      margin-bottom: 20px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid #1c344c;
-    }
-    h3 {
-      font-size: 20px;
-      color: #f2d28c;
-      margin: 25px 0 12px;
-    }
-    p { margin-bottom: 16px; font-size: 17px; }
-    ul, ol { margin: 20px 0 20px 25px; }
-    li { margin-bottom: 10px; font-size: 17px; }
+    /* 正文统一排版样式 */
+    .article-header {margin-bottom:45px;}
+    .article-category {color:#f2c86b; font-weight:700; text-transform:uppercase; font-size:14px; letter-spacing:1.5px; margin-bottom:12px;}
+    h1 {font-size:clamp(28px,5vw,40px); line-height:1.3; margin-bottom:20px; color:#fff;}
+    .article-intro {font-size:18px; color:#b7c4d2;}
 
-    .faq-item {
-      background: #0d1c2c;
-      padding:22px;
-      border-radius:10px;
-      margin-bottom:15px;
-      border:1px solid #203b55;
-    }
-    .conclusion {
-      background: linear-gradient(135deg, #10253a, #0d1c2c);
-      padding:35px;
-      border-radius:16px;
-      border:1px solid #294969;
-    }
+    section {margin-bottom:50px;}
+    h2 {font-size:26px; color:#fff; margin-bottom:20px; padding-bottom:8px; border-bottom:1px solid #1c344c;}
+    h3 {font-size:20px; color:#f2d28c; margin:25px 0 12px;}
+    p {margin-bottom:16px; font-size:17px;}
+    ul,ol {margin:20px 0 20px 25px;}
+    li {margin-bottom:10px; font-size:17px;}
 
-    @media (max-width:600px) {
-      body { padding:20px 15px; }
-      h1 { font-size:28px; }
-      .page-nav { flex-direction:column; align-items:flex-start; }
-    }
+    .faq-item {background:#0d1c2c; padding:22px; border-radius:10px; margin-bottom:15px; border:1px solid #203b55;}
+    .conclusion {background:linear-gradient(135deg,#10253a,#0d1c2c); padding:35px; border-radius:16px; border:1px solid #294969;}
+
+    @media(max-width:600px){body{padding:20px 15px;} h1{font-size:28px;} .page-nav{flex-direction:column; align-items:flex-start;}}
   </style>
 </head>
 <body>
 
-  <!-- ✅ 统一导航：返回首页 + 双语切换记忆 -->
-  <nav class="page-nav">
-    <a href="/leevo-apps/index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回Leevo应用首页">← Back to Leevo Apps Home</a>
-    <button id="langSwitch" class="lang-switch-btn">中文 / EN</button>
-  </nav>
+<!-- 导航+双语切换按钮 -->
+<nav class="page-nav">
+  <a href="/leevo-apps/index.html" class="back-link">← Back to Leevo Apps Home</a>
+  <button id="langSwitch" class="lang-switch-btn">中文 / EN</button>
+</nav>
 
 <article class="app-article">
 
-  <header class="article-header">
-    <p class="article-category" data-lang-en="PSLE Mathematics" data-lang-zh="新加坡PSLE数学">PSLE Mathematics</p>
-
-    <h1 data-lang-en="How to Prepare for PSLE Math: A Practical Guide to Practice, Revision and Problem Solving" data-lang-zh="新加坡PSLE数学怎么备考？刷题、复习、解题实用学习指南">How to Prepare for PSLE Math: A Practical Guide to Practice, Revision and Problem Solving</h1>
-
-    <p class="article-intro" data-lang-en="Preparing for PSLE Math is about more than memorising formulas. Students need to understand mathematical concepts, recognise different question types, apply the right methods, and solve problems carefully. This guide explains how to build an effective PSLE Math revision routine and how Leevo Learn: PSLE Math can support students throughout their preparation." data-lang-zh="备考PSLE数学，绝不是死背公式就能拿高分！真正学好数学，要吃透核心概念、熟悉各类题型、灵活选用解题方法、细心严谨计算。本文教小学生建立高效复习计划，同时介绍Leevo学习：PSLE数学如何全程助力科学备考、稳步提升解题能力。">
-      Preparing for PSLE Math is about more than memorising formulas.
-      Students need to understand mathematical concepts, recognise different
-      question types, apply the right methods, and solve problems carefully.
-      This guide explains how to build an effective PSLE Math revision routine
-      and how Leevo Learn: PSLE Math can support students throughout their
-      preparation.
-    </p>
-  </header>
-
-
-  <section>
-    <h2 data-lang-en="What Makes PSLE Math Challenging?" data-lang-zh="PSLE数学难在哪？核心原因解析">What Makes PSLE Math Challenging?</h2>
-
-    <p data-lang-en="PSLE Mathematics covers a wide range of mathematical concepts and question types. Students may be comfortable with one topic but struggle when the same concept appears in a different form." data-lang-zh="PSLE数学知识点覆盖广、题型灵活多变。很多学生单个知识点能做会，换一种出题形式、换个情景，就看不出考什么、无从下手。">
-      PSLE Mathematics covers a wide range of mathematical concepts and
-      question types. Students may be comfortable with one topic but struggle
-      when the same concept appears in a different form.
-    </p>
-
-    <p data-lang-en="Many questions also require students to understand information, identify the important details, choose an appropriate strategy, and complete several steps before reaching the final answer." data-lang-zh="大量考题不是一步算出结果！需要读懂题意、筛选关键条件、理清数量关系、选定解题思路、分步严谨运算，一步出错、结果全错，综合能力要求高。">
-      Many questions also require students to understand information,
-      identify the important details, choose an appropriate strategy, and
-      complete several steps before reaching the final answer.
-    </p>
-
-    <p data-lang-en="This is why effective PSLE Math preparation should focus not only on getting answers right, but also on developing strong problem-solving habits." data-lang-zh="所以科学备考，不能只求算出答案、刷够题量，核心是养成规范审题、逻辑思考、细心验算、举一反三的优质解题习惯。">
-      This is why effective PSLE Math preparation should focus not only on
-      getting answers right, but also on developing strong problem-solving
-      habits.
-    </p>
-  </section>
-
-
-  <section>
-    <h2 data-lang-en="What Should Students Practise for PSLE Math?" data-lang-zh="PSLE数学重点夯实哪些核心内容？">What Should Students Practise for PSLE Math?</h2>
-
-    <p data-lang-en="A balanced PSLE Math revision plan should cover different mathematical concepts and question types rather than repeatedly practising only the topics a student already knows well." data-lang-zh="均衡复习、拒绝偏科刷题！全面覆盖核心知识模块，不反复做已经熟练的简单题，集中攻克薄弱专题，补齐短板、均衡提分。">
-      A balanced PSLE Math revision plan should cover different mathematical
-      concepts and question types rather than repeatedly practising only the
-      topics a student already knows well.
-    </p>
-
-    <h3 data-lang-en="1. Number and Arithmetic Skills" data-lang-zh="一、数与基础运算能力">1. Number and Arithmetic Skills</h3>
-
-    <p data-lang-en="Strong number skills provide an important foundation for many PSLE Math questions. Students should become comfortable working with numbers, operations, fractions, decimals, percentages, ratios, and other related concepts." data-lang-zh="扎实的数感、运算基本功是所有数学题的根基！熟练掌握整数、分数、小数、百分数、比等各类数的运算规则，理解本质、不混淆、运算流畅。">
-      Strong number skills provide an important foundation for many PSLE Math
-      questions. Students should become comfortable working with numbers,
-      operations, fractions, decimals, percentages, ratios, and other related
-      concepts.
-    </p>
-
-    <p data-lang-en="Accuracy is especially important. A small calculation error can affect the result of an otherwise correct solution." data-lang-zh="计算准确率是得分底线！思路方法全对，一步粗心算错，整题丢分，严谨细致、规范演算、养成验算习惯至关重要。">
-      Accuracy is especially important. A small calculation error can affect
-      the result of an otherwise correct solution.
-    </p>
-
-
-    <h3 data-lang-en="2. Fractions, Decimals and Percentages" data-lang-zh="二、分数、小数、百分数互化与应用">2. Fractions, Decimals and Percentages</h3>
-
-    <p data-lang-en="Fractions, decimals, and percentages appear in many different mathematical situations. Students should understand how these representations relate to one another rather than treating them as completely separate topics." data-lang-zh="三者贯穿应用题、计算、统计高频考点！不要孤立死记，重点掌握互相转化关系、适用场景，灵活切换形式简化复杂运算、理清题意。">
-      Fractions, decimals, and percentages appear in many different mathematical
-      situations. Students should understand how these representations relate
-      to one another rather than treating them as completely separate topics.
-    </p>
-
-    <p data-lang-en="Regular practice can help students recognise which form is most useful for a particular problem." data-lang-zh="坚持针对性练习，慢慢培养敏感度：快速判断什么时候用分数、小数、百分数最简便、不容易出错，提速又提正确率。">
-      Regular practice can help students recognise which form is most useful
-      for a particular problem.
-    </p>
-
-
-    <h3 data-lang-en="3. Ratio" data-lang-zh="三、比与比例应用">3. Ratio</h3>
-
-    <p data-lang-en="Ratio questions can require careful interpretation of relationships between quantities." data-lang-zh="比类题目核心考察数量对应关系、份数思维，审题稍不注意就搞反、混淆前后项、分配出错。">
-      Ratio questions can require careful interpretation of relationships
-      between quantities.
-    </p>
-
-    <p data-lang-en="Students should practise identifying what each number represents and understanding how changes in one quantity affect another." data-lang-zh="练习重点：找准每一份对应实际数值、理清总量/分量变化逻辑、学会画图辅助分析，做到灵活迁移、变式题也能快速拆解。">
-      Students should practise identifying what each number represents and
-      understanding how changes in one quantity affect another.
-    </p>
-
-
-    <h3 data-lang-en="4. Geometry and Measurement" data-lang-zh="四、几何图形与单位度量">4. Geometry and Measurement</h3>
-
-    <p data-lang-en="Geometry and measurement questions require students to understand shapes, lengths, areas, volumes, angles, and other mathematical relationships." data-lang-zh="几何度量要熟记公式、理解推导逻辑、区分周长/面积/体积概念、单位换算不出错，平面立体图形特征清晰、角度边长关系能推导。">
-      Geometry and measurement questions require students to understand shapes,
-      lengths, areas, volumes, angles, and other mathematical relationships.
-    </p>
-
-    <p data-lang-en="Drawing a diagram or identifying known information can often make a complicated question easier to understand." data-lang-zh="学会画图、标注已知条件、拆解组合图形，把抽象文字转化直观图形，难题瞬间清晰、思路自然浮现。">
-      Drawing a diagram or identifying known information can often make a
-      complicated question easier to understand.
-    </p>
-
-
-    <h3 data-lang-en="5. Data and Graphs" data-lang-zh="五、统计图表信息解读">5. Data and Graphs</h3>
-
-    <p data-lang-en="Students may also need to interpret information presented in tables, charts, graphs, or other visual formats." data-lang-zh="表格、柱状图、折线图、扇形图等读图题，重点看懂横纵轴、图例、数据含义，提取关键数值、计算分析、回答问题。">
-      Students may also need to interpret information presented in tables,
-      charts, graphs, or other visual formats.
-    </p>
-
-    <p data-lang-en="Careful reading is important because the mathematical operation itself may be simple while the challenge lies in understanding the information provided." data-lang-zh="计算不难、陷阱常在！看错数据、漏看单位、理解图表偏差，白白丢分，细致耐心、逐行核对是拿分关键。">
-      Careful reading is important because the mathematical operation itself
-      may be simple while the challenge lies in understanding the information
-      provided.
-    </p>
-  </section>
-
-
-  <section>
-    <h2 data-lang-en="Why PSLE Math Problem Solving Matters" data-lang-zh="掌握科学解题步骤，数学不再盲目算">Why PSLE Math Problem Solving Matters</h2>
-
-    <p data-lang-en="Mathematics is not only about remembering formulas. Students also need to know when and how to use mathematical concepts." data-lang-zh="数学不是套公式机器！明白公式原理、分清适用场景、知道什么时候用、怎么灵活变通，才是真正学会数学。">
-      Mathematics is not only about remembering formulas. Students also need
-      to know when and how to use mathematical concepts.
-    </p>
-
-    <p data-lang-en="A problem-solving approach can help students break a difficult question into smaller parts:" data-lang-zh="养成标准化解题流程，把复杂大题拆成小步骤，思路不乱、不容易漏条件：">
-      A problem-solving approach can help students break a difficult question
-      into smaller parts:
-    </p>
-
-    <ol>
-      <li data-lang-en="Read the question carefully." data-lang-zh="仔细通读题目，不着急动笔计算">Read the question carefully.</li>
-      <li data-lang-en="Identify what information is given." data-lang-zh="梳理、圈出已知条件、关键数值、单位">Identify what information is given.</li>
-      <li data-lang-en="Determine what needs to be found." data-lang-zh="明确题目最终/分步要求求什么">Determine what needs to be found.</li>
-      <li data-lang-en="Choose a suitable method." data-lang-zh="匹配对应知识点、选用合适解题思路/画图/方程/份数法">Choose a suitable method.</li>
-      <li data-lang-en="Work through the calculations step by step." data-lang-zh="分步规范书写、严谨演算、不跳关键步骤">Work through the calculations step by step.</li>
-      <li data-lang-en="Check whether the final answer makes sense." data-lang-zh="代入验算、逻辑合理性、单位统一，确认结果无误">Check whether the final answer makes sense.</li>
-    </ol>
-
-    <p data-lang-en="These habits can be useful across many different types of PSLE Math questions." data-lang-zh="坚持练熟这套思维流程，不管应用题、几何、综合压轴题，都能从容拆解、稳定发挥、减少无谓失分。">
-      These habits can be useful across many different types of PSLE Math
-      questions.
-    </p>
-  </section>
-
-
-  <section>
-    <h2 data-lang-en="How to Improve at PSLE Math Word Problems" data-lang-zh="应用题看不懂、做不对？这样高效突破">How to Improve at PSLE Math Word Problems</h2>
-
-    <p data-lang-en="Word problems can be challenging because students must first translate written information into a mathematical situation." data-lang-zh="应用题难点不在计算，在于文字转数学：读懂情景、剥离无关描述、提炼数量关系、建立数学模型，这一步卡住，再会算也没用。">
-      Word problems can be challenging because students must first translate
-      written information into a mathematical situation.
-    </p>
-
-    <p data-lang-en="Instead of immediately searching for numbers to calculate, students can first ask:" data-lang-zh="别急着抓数字乱加减乘除！养成先思考这几个核心问题的习惯：">
-      Instead of immediately searching for numbers to calculate, students can
-      first ask:
-    </p>
-
-    <ul>
-      <li data-lang-en="What information is given?" data-lang-zh="题目给出哪些确定条件、数值、限制？">What information is given?</li>
-      <li data-lang-en="What is the question asking?" data-lang-zh="最终要解决、求算出什么结果？">What is the question asking?</li>
-      <li data-lang-en="What is the relationship between the quantities?" data-lang-zh="各个数量之间是和差、倍数、比例、增减哪种逻辑关系？">What is the relationship between the quantities?</li>
-      <li data-lang-en="Can the problem be represented with a diagram?" data-lang-zh="能不能画线段图、示意图、表格把关系直观画出来？">Can the problem be represented with a diagram?</li>
-      <li data-lang-en="Which mathematical concept applies?" data-lang-zh="对应分数/比/几何/平均数哪一块知识点、解题方法？">Which mathematical concept applies?</li>
-    </ul>
-
-    <p data-lang-en="Practising different word problems helps students become more familiar with the process of identifying the mathematical structure behind a question." data-lang-zh="坚持练习不同情景应用题，慢慢学会透过文字表象，一眼抓住数学核心结构，换故事包装、不变解题逻辑，越练思路越灵活、越不怕长难题。">
-      Practising different word problems helps students become more familiar
-      with the process of identifying the mathematical structure behind a
-      question.
-    </p>
-  </section>
-
-
-  <section>
-    <h2 data-lang-en="Why Regular PSLE Math Practice Is Important" data-lang-zh="坚持规律练习，远胜考前突击刷题">Why Regular PSLE Math Practice Is Important</h2>
-
-    <p data-lang-en="Mathematics improves through practice. However, effective practice is not simply about completing as many questions as possible." data-lang-zh="数学靠练，但不是盲目堆题量！刷得多、不总结、不改错，只是重复巩固会做的题，薄弱点一直没突破，越刷越累、进步很慢。">
-      Mathematics improves through practice. However, effective practice is
-      not simply about completing as many questions as possible.
-    </p>
-
-    <p data-lang-en="Students should review incorrect answers, understand why they made the mistake, and try similar questions again." data-lang-zh="做完必复盘错题：分清是概念不懂、审题看错、计算粗心、思路不对，弄懂根源、重做同类题，不再二次踩坑，每道错题都变成加分点。">
-      Students should review incorrect answers, understand why they made the
-      mistake, and try similar questions again.
-    </p>
-
-    <p data-lang-en="Regular practice also helps students become familiar with different ways that the same mathematical concept can be tested." data-lang-zh="长期规律练习，接触同一知识点多样变式、综合融合题型，理解本质、灵活迁移，不怕题目花样翻新、灵活应变。">
-      Regular practice also helps students become familiar with different ways
-      that the same mathematical concept can be tested.
-    </p>
-
-    <p data-lang-en="Short and consistent practice sessions can be easier to maintain than relying entirely on intensive revision shortly before the examination." data-lang-zh="每天专注短时间坚持练习，细水长流、轻松不累、基础扎实、思维连贯，远比考前熬夜猛刷题、短期记忆、考完就忘效果好得多。">
-      Short and consistent practice sessions can be easier to maintain than
-      relying entirely on intensive revision shortly before the examination.
-    </p>
-  </section>
-
-
-  <section>
-    <h2 data-lang-en="Learn From Mistakes Instead of Ignoring Them" data-lang-zh="错题不是失败，是查漏补缺最珍贵的学习资源">Learn From Mistakes Instead of Ignoring Them</h2>
-
-    <p data-lang-en="An incorrect answer can provide useful information about a student's learning." data-lang-zh="做错不是坏事！错题精准暴露薄弱环节、思维漏洞、坏习惯，比做对10道熟练题更能帮自己找准复习重点。">
-      An incorrect answer can provide useful information about a student's
-      learning.
-    </p>
-
-    <p data-lang-en="For example, a student may understand percentages but repeatedly make mistakes when percentages are presented inside a word problem. In this situation, simply completing more basic percentage questions may not solve the underlying problem." data-lang-zh="举例：单独百分数计算没问题，放进应用题就频繁出错——盲目刷计算题没用！根源是文字理解、数量转化能力不足，针对性练应用题、画图分析才解决核心问题。">
-      For example, a student may understand percentages but repeatedly make
-      mistakes when percentages are presented inside a word problem. In this
-      situation, simply completing more basic percentage questions may not
-      solve the underlying problem.
-    </p>
-
-    <p data-lang-en="Reviewing incorrect questions can reveal whether the difficulty comes from the mathematical concept, the calculation, the interpretation of the question, or the chosen problem-solving method." data-lang-zh="复盘错题，清晰区分：是概念没吃透、运算粗心、理解题意偏差、思路方法选错，对症下药补强，不盲目无效刷题。">
-      Reviewing incorrect questions can reveal whether the difficulty comes
-      from the mathematical concept, the calculation, the interpretation of
-      the question, or the chosen problem-solving method.
-    </p>
-
-    <p data-lang-en="This is why a dedicated wrong-question review system can be useful during PSLE Math preparation." data-lang-zh="建立系统化错题归集、回看、重做机制，集中攻克高频易错点，复习效率翻倍、进步看得见、提分扎实稳定。">
-      This is why a dedicated wrong-question review system can be useful during
-      PSLE Math preparation.
-    </p>
-  </section>
-
-
-  <section>
-    <h2 data-lang-en="How Leevo Learn: PSLE Math Supports Students" data-lang-zh="Leevo学习：PSLE数学，分层科学练习、全程高效助力备考">How Leevo Learn: PSLE Math Supports Students</h2>
-
-    <p data-lang-en="Leevo Learn: PSLE Math is designed to give students a structured environment for practising Mathematics and preparing for PSLE." data-lang-zh="Leevo学习：PSLE数学围绕新加坡PSLE大纲设计，搭建系统化、分层、可追踪的练习复习平台，帮学生科学规划、高效刷题、精准补强、稳步进阶。">
-      Leevo Learn: PSLE Math is designed to give students a structured
-      environment for practising Mathematics and preparing for PSLE.
-    </p>
-
-    <p data-lang-en="Instead of treating every student in exactly the same way, the app provides different practice levels and learning systems so students can work according to their current ability and goals." data-lang-zh="拒绝一刀切统一刷题！基础薄弱夯实根基、能力优秀拔高拓展，自由选专题、选难度，个性化补齐短板、突破瓶颈、冲刺高分。">
-      Instead of treating every student in exactly the same way, the app
-      provides different practice levels and learning systems so students can
-      work according to their current ability and goals.
-    </p>
-
-
-    <h3 data-lang-en="Foundation Practice" data-lang-zh="基础巩固练习">Foundation Practice</h3>
-
-    <p data-lang-en="Foundation practice provides an opportunity for students to strengthen core mathematical concepts and build confidence before moving to more challenging questions." data-lang-zh="基础专项练习，吃透核心定义、公式、基础题型，练稳计算准确率、建立解题信心，筑牢地基、消除畏难心理，再稳步拔高。">
-      Foundation practice provides an opportunity for students to strengthen
-      core mathematical concepts and build confidence before moving to more
-      challenging questions.
-    </p>
-
-
-    <h3 data-lang-en="Advanced Practice" data-lang-zh="进阶提升训练">Advanced Practice</h3>
-
-    <p data-lang-en="Students who are ready for more challenging questions can use Advanced practice to work on more demanding mathematical problems and develop stronger problem-solving skills." data-lang-zh="基础扎实后，进阶攻克综合融合、复杂应用题、几何压轴、灵活变式题，训练逻辑思维、多方法解题、综合分析能力，冲刺高分难题。">
-      Students who are ready for more challenging questions can use Advanced
-      practice to work on more demanding mathematical problems and develop
-      stronger problem-solving skills.
-    </p>
-
-
-    <h3 data-lang-en="AI Challenge" data-lang-zh="智能拓展挑战">AI Challenge</h3>
-
-    <p data-lang-en="The AI Challenge provides an additional level of difficulty for students who want to push their mathematical thinking further." data-lang-zh="智能拔高挑战，跳出常规题型框架、灵活变式、综合创新，锻炼深度思考、迁移活用、灵活应变能力，尖子生突破上限、拓展思维首选。">
-      The AI Challenge provides an additional level of difficulty for students
-      who want to push their mathematical thinking further.
-    </p>
-
-    <p data-lang-en="It gives students another way to challenge themselves beyond regular practice." data-lang-zh="跳出机械刷题，激发数学思维乐趣、培养钻研习惯、提升综合解题素养。">
-      It gives students another way to challenge themselves beyond regular
-      practice.
-    </p>
-
-
-    <h3 data-lang-en="Topic-Based Practice" data-lang-zh="专项专题集中练习">Topic-Based Practice</h3>
-
-    <p data-lang-en="Topic-based practice allows students to focus on particular areas of Mathematics rather than always completing mixed questions." data-lang-zh="精准锁定薄弱专题：分数、比、几何、统计集中突破，专项集中训练、集中复盘、快速补齐短板、攻克痛点难点。">
-      Topic-based practice allows students to focus on particular areas of
-      Mathematics rather than always completing mixed questions.
-    </p>
-
-    <p data-lang-en="This can be useful when a student knows which topics require additional attention." data-lang-zh="复习重点明确、不盲目撒网、时间精力集中投入短板，进步速度更快、复习效率大幅提升。">
-      This can be useful when a student knows which topics require additional
-      attention.
-    </p>
-
-
-    <h3 data-lang-en="Revision System" data-lang-zh="科学复盘复习体系">Revision System</h3>
-
-    <p data-lang-en="Revision allows students to return to previously studied concepts and reinforce their understanding." data-lang-zh="科学循环复习，定期回顾前期学过、练过的知识点，温故知新、防止遗忘、串联打通知识关联、构建完整数学知识网络。">
-      Revision allows students to return to previously studied concepts and
-      reinforce their understanding.
-    </p>
-
-    <p data-lang-en="Regular revision can be especially useful for topics that students have learned earlier but may no longer remember confidently." data-lang-zh="重点回看容易淡忘、掌握不扎实、反复出错的旧知识点，巩固记忆、加深理解、避免学新忘旧、综合练习崩盘。">
-      Regular revision can be especially useful for topics that students have
-      learned earlier but may no longer remember confidently.
-    </p>
-
-
-    <h3 data-lang-en="Wrong Question Book" data-lang-zh="专属错题归集本">Wrong Question Book</h3>
-
-    <p data-lang-en="Leevo Learn: PSLE Math includes a Wrong Question Book so students can review questions they previously answered incorrectly." data-lang-zh="自动收录错题、分类归集、随时回看重做，不用手抄整理、省时省力，精准聚焦薄弱点、反复攻克、杜绝同类错误重复发生。">
-      Leevo Learn: PSLE Math includes a Wrong Question Book so students can
-      review questions they previously answered incorrectly.
-    </p>
-
-    <p data-lang-en="Instead of treating mistakes as something to forget, students can use them as a guide for targeted revision." data-lang-zh="正视错题、用好错题，把错误转化为复习导航地图，每一次错题复盘，都是精准查漏、高效提分的关键一步。">
-      Instead of treating mistakes as something to forget, students can use
-      them as a guide for targeted revision.
-    </p>
-
-
-    <h3 data-lang-en="Progress Tracking" data-lang-zh="学习进度可视化追踪">Progress Tracking</h3>
-
-    <p data-lang-en="Progress tracking helps students see how their practice is developing and identify areas that may require more attention." data-lang-zh="学习数据清晰记录练习时长、正确率、专题强弱、进步轨迹，直观看到努力成果、明确短板分布、调整复习重心、学习动力持续提升。">
-      Progress tracking helps students see how their practice is developing
-      and identify areas that may require more attention.
-    </p>
-  </section>
-
-
-  <section>
-    <h2 data-lang-en="PSLE Math Mock Tests" data-lang-zh="全真模拟考试，提前适应考场节奏、练稳应试状态">PSLE Math Mock Tests</h2>
-
-    <p data-lang-en="Topic practice is useful for learning individual concepts, but students should also experience longer sessions that combine different types of Mathematics questions." data-lang-zh="专项练习打好单科基础，完整模考整合综合能力：连贯切换题型、综合调用知识点、长时间集中注意力，模拟真实考试流程。">
-      Topic practice is useful for learning individual concepts, but students
-      should also experience longer sessions that combine different types of
-      Mathematics questions.
-    </p>
-
-    <p data-lang-en="Mock tests can help students practise concentration, time management, question selection, calculation accuracy, and problem solving in a more complete practice environment." data-lang-zh="限时完成完整试卷，训练合理分配答题时间、先易后难取舍、专注力耐力、规范书写验算，减少考场紧张慌乱、做不完题、粗心丢分等常见问题。">
-      Mock tests can help students practise concentration, time management,
-      question selection, calculation accuracy, and problem solving in a more
-      complete practice environment.
-    </p>
-
-    <p data-lang-en="Leevo Learn: PSLE Math provides mock-test practice to help students move from individual topic exercises towards more comprehensive examination preparation." data-lang-zh="内置贴合PSLE真题难度、题型分布的完整模拟试卷，系统全真演练、考前热身查漏补缺、稳定应试心态、从容迎接正式考试。">
-      Leevo Learn: PSLE Math provides mock-test practice to help students move
-      from individual topic exercises towards more comprehensive examination
-      preparation.
-    </p>
-  </section>
-
-
-  <section>
-    <h2 data-lang-en="A Better PSLE Math Revision Strategy" data-lang-zh="分阶段科学复习规划，循序渐进、稳步冲刺">A Better PSLE Math Revision Strategy</h2>
-
-    <p data-lang-en="An effective revision strategy should change as the examination gets closer." data-lang-zh="复习不是一成不变！跟随备考周期调整重心，从夯实基础→专项补强→综合融合→全真模拟，层层递进、效率最大化、压力最小化。">
-      An effective revision strategy should change as the examination gets
-      closer.
-    </p>
-
-    <h3 data-lang-en="Start With Understanding" data-lang-zh="起步阶段：吃透原理，拒绝死记硬背">Start With Understanding</h3>
-
-    <p data-lang-en="At the beginning of revision, focus on understanding mathematical concepts rather than simply memorising procedures." data-lang-zh="复习初期核心不是刷题、背解题套路！深挖定义、推导公式、理解逻辑原理，知道为什么成立、适用边界在哪，才能灵活变通、不怕变式题。">
-      At the beginning of revision, focus on understanding mathematical
-      concepts rather than simply memorising procedures.
-    </p>
-
-
-    <h3 data-lang-en="Identify Weak Topics" data-lang-zh="梳理排查：精准定位薄弱短板">Identify Weak Topics</h3>
-
-    <p data-lang-en="Use practice results and incorrect answers to identify topics that need additional attention." data-lang-zh="通过日常练习、错题集中复盘，客观统计正确率、反复出错专题，明确列出薄弱清单，不盲目刷题、不回避难点、针对性攻坚。">
-      Use practice results and incorrect answers to identify topics that need
-      additional attention.
-    </p>
-
-
-    <h3 data-lang-en="Practise Targeted Questions" data-lang-zh="集中突破：专项刷题补强短板">Practise Targeted Questions</h3>
-
-    <p data-lang-en="Once weaker areas are identified, practise questions that specifically target those concepts." data-lang-zh="锁定薄弱专题集中训练、由易到难、同类变式巩固、做完复盘总结规律，练到思路清晰、正确率稳定提升、不再频繁出错。">
-      Once weaker areas are identified, practise questions that specifically
-      target those concepts.
-    </p>
-
-
-    <h3 data-lang-en="Mix Different Question Types" data-lang-zh="综合融合：混合练习、自主判断方法">Mix Different Question Types</h3>
-
-    <p data-lang-en="After strengthening individual topics, include mixed practice so students learn to recognise which mathematical method is appropriate without being told the topic in advance." data-lang-zh="专题扎实后，大量综合混合练习，不再标注知识点，学会自主审题、识别考点、匹配解法、灵活切换思路，适应真实考试随机出题、综合考察特点。">
-      After strengthening individual topics, include mixed practice so students
-      learn to recognise which mathematical method is appropriate without
-      being told the topic in advance.
-    </p>
-
-
-    <h3 data-lang-en="Complete Mock Tests" data-lang-zh="冲刺阶段：全真限时模考、模拟实战">Complete Mock Tests</h3>
-
-    <p data-lang-en="As the examination approaches, longer mock-test sessions can help students become more comfortable with completing different types of questions in one sitting." data-lang-zh="临近考试高频完整限时模考，练时间分配、应试心态、耐力专注力、查漏补缺，适应高强度答题节奏，正式考场从容稳定发挥最佳水平。">
-      As the examination approaches, longer mock-test sessions can help students
-      become more comfortable with completing different types of questions in
-      one sitting.
-    </p>
-  </section>
-
-
-  <section>
-    <h2 data-lang-en="How Parents Can Support PSLE Math Revision" data-lang-zh="家长不用精通数学，这样陪伴助力孩子高效备考">How Parents Can Support PSLE Math Revision</h2>
-
-    <p data-lang-en="Parents do not need to solve every Mathematics question for their child. In many cases, providing a consistent study environment and encouraging good problem-solving habits can be more useful." data-lang-zh="家长不必亲自解题辅导、讲高深知识点！安静专注学习环境、规律作息陪伴、正向鼓励引导、督促好习惯养成，就是最有力的支持。">
-      Parents do not need to solve every Mathematics question for their child.
-      In many cases, providing a consistent study environment and encouraging
-      good problem-solving habits can be more useful.
-    </p>
-
-    <ul>
-      <li data-lang-en="Encourage regular Mathematics practice." data-lang-zh="引导坚持每日规律练习，不三天打鱼两天晒网">Encourage regular Mathematics practice.</li>
-      <li data-lang-en="Ask your child to explain how they reached an answer." data-lang-zh="鼓励讲思路、说推导过程，检验理解深度、查漏思维漏洞">Ask your child to explain how they reached an answer.</li>
-      <li data-lang-en="Encourage reviewing incorrect questions." data-lang-zh="引导重视错题复盘、弄懂根源、重做巩固，不一带而过">Encourage reviewing incorrect questions.</li>
-      <li data-lang-en="Help identify topics that repeatedly cause difficulty." data-lang-zh="一起统计高频薄弱专题、重点突破、不回避难点">Help identify topics that repeatedly cause difficulty.</li>
-      <li data-lang-en="Encourage careful reading of word problems." data-lang-zh="提醒耐心审题、圈关键条件、画图辅助，杜绝粗心漏看">Encourage careful reading of word problems.</li>
-      <li data-lang-en="Include timed practice as the examination approaches." data-lang-zh="考前配合限时练习、适应答题节奏、提升速度与专注力">Include timed practice as the examination approaches.</li>
-      <li data-lang-en="Avoid focusing only on the final score." data-lang-zh="不只盯着分数批评指责，关注进步、习惯、思维成长，减少焦虑厌学">Avoid focusing only on the final score.</li>
-    </ul>
-
-    <p data-lang-en="Understanding the thinking behind a solution is often more valuable than simply knowing whether an answer is correct." data-lang-zh="思路清晰、逻辑严谨、理解透彻，远比单次分数高低重要，扎实思维能力，长期学习受益无穷。">
-      Understanding the thinking behind a solution is often more valuable than
-      simply knowing whether an answer is correct.
-    </p>
-  </section>
-
-
-  <section>
-    <h2 data-lang-en="PSLE Math Practice: Quality Over Quantity" data-lang-zh="刷题求精不求多：高质量复盘＞盲目海量刷题">PSLE Math Practice: Quality Over Quantity</h2>
-
-    <p data-lang-en="Completing a large number of questions does not automatically mean that a student is improving." data-lang-zh="一天刷几十题、做完不改、不总结、不回看，看似勤奋、收效甚微，只是重复巩固已经熟练内容，难点一直没突破、思维原地踏步。">
-      Completing a large number of questions does not automatically mean that
-      a student is improving.
-    </p>
-
-    <p data-lang-en="A better approach is to combine practice with reflection. After making an error, students should understand what went wrong and determine what they can do differently next time." data-lang-zh="高效练习=认真做题+深度反思：出错深挖根源、总结规律、优化审题演算步骤、形成避坑经验，练一道吃透一道、稳步扎实提升解题能力。">
-      A better approach is to combine practice with reflection. After making
-      an error, students should understand what went wrong and determine what
-      they can do differently next time.
-    </p>
-
-    <p data-lang-en="Over time, this approach can help students recognise common patterns, avoid repeated mistakes, and become more confident when facing unfamiliar questions." data-lang-zh="长期坚持高质量复盘，能总结高频易错规律、形成系统解题思维、不再畏惧新颖难题、从容灵活应对、信心稳步增强。">
-      Over time, this approach can help students recognise common patterns,
-      avoid repeated mistakes, and become more confident when facing unfamiliar
-      questions.
-    </p>
-  </section>
-
-
-  <section>
-    <h2 data-lang-en="Who Is Leevo Learn: PSLE Math For?" data-lang-zh="Leevo学习：PSLE数学，适合哪些小学生使用？">Who Is Leevo Learn: PSLE Math For?</h2>
-
-    <p data-lang-en="Leevo Learn: PSLE Math is designed for primary school students who want structured Mathematics practice and PSLE preparation." data-lang-zh="专为新加坡小学生打造：六年级备战PSLE数学系统复习、低年级日常夯实基础、查漏补缺、专项突破、拔高拓展，全阶段适配、科学规划学习。">
-      Leevo Learn: PSLE Math is designed for primary school students who want
-      structured Mathematics practice and PSLE preparation.
-    </p>
-
-    <ul>
-      <li data-lang-en="Primary 6 students preparing for PSLE Math" data-lang-zh="六年级正在全力备考PSLE数学、冲刺提分的学生">Primary 6 students preparing for PSLE Math</li>
-      <li data-lang-en="Students who need additional Mathematics practice" data-lang-zh="课堂基础薄弱、需要补充巩固、多加练习夯实能力的学生">Students who need additional Mathematics practice</li>
-      <li data-lang-en="Students who want to strengthen problem-solving skills" data-lang-zh="审题思路混乱、应用题卡壳、解题方法单一、想提升逻辑思维与解题灵活性的学生">Students who want to strengthen problem-solving skills</li>
-      <li data-lang-en="Students who need targeted revision for specific topics" data-lang-zh="分数、几何、比等个别专题薄弱、需要集中专项突破补强短板的学生">Students who need targeted revision for specific topics</li>
-      <li data-lang-en="Students who want to review incorrect Mathematics questions" data-lang-zh="重视错题复盘、归集重做、避免重复犯错、追求高效精准复习提分的学生">Students who want to review incorrect Mathematics questions</li>
-      <li data-lang-en="Students preparing with mock tests" data-lang-zh="需要完整限时模拟、熟悉考试流程、练时间分配、稳定应试状态的备考学生">Students preparing with mock tests</li>
-      <li data-lang-en="Students who want an additional challenge through AI Challenge practice" data-lang-zh="基础扎实、思维活跃、追求拓展拔高、挑战灵活综合难题、突破上限的优秀学生">Students who want an additional challenge through AI Challenge practice</li>
-    </ul>
-  </section>
-
-
-  <section>
-    <h2 data-lang-en="Build Stronger PSLE Math Skills One Question at a Time" data-lang-zh="一题一题扎实练，日积月累，数学能力稳步变强">Build Stronger PSLE Math Skills One Question at a Time</h2>
-
-    <p data-lang-en="PSLE Math preparation does not need to be based entirely on memorising formulas or completing endless worksheets." data-lang-zh="PSLE数学备考不用焦虑恐慌、死背公式、无休止刷练习册！回归理解本质、科学规划、抓重点补短板、高质量复盘，学习轻松不枯燥、进步扎实看得见。">
-      PSLE Math preparation does not need to be based entirely on memorising
-      formulas or completing endless worksheets.
-    </p>
-
-    <p data-lang-en="Students can improve by understanding mathematical concepts, practising different question types, learning how to approach word problems, reviewing mistakes, and gradually becoming more comfortable with challenging questions." data-lang-zh="吃透概念、多样题型练习、规范应用题解题思路、深挖错题复盘、循序渐进攻克难题，能力与分数同步稳步提升，不再畏惧数学、养成自信钻研习惯。">
-      Students can improve by understanding mathematical concepts, practising
-      different question types, learning how to approach word problems,
-      reviewing mistakes, and gradually becoming more comfortable with
-      challenging questions.
-    </p>
-
-    <p data-lang-en="A structured revision system can make it easier to identify what needs more practice and what has already been mastered." data-lang-zh="系统化复习框架清晰明了：明确哪些已熟练掌握、哪些需要重点攻坚，不盲目消耗精力、高效利用有限备考时间、每一次练习都有实质成长。">
-      A structured revision system can make it easier to identify what needs
-      more practice and what has already been mastered.
-    </p>
-
-    <p data-lang-en="<strong>Leevo Learn: PSLE Math</strong> brings Mathematics practice, topic-based revision, Foundation and Advanced levels, AI Challenge, Wrong Question Book, progress tracking, and mock-test practice together in one learning app." data-lang-zh="<strong>Leevo学习：PSLE数学</strong>一站式整合基础进阶分层练习、专项专题训练、智能拔高挑战、错题归集复盘、学习进度追踪、全真模拟考试，系统化科学备考，助力新加坡小学生扎实学好数学、从容冲刺PSLE！">
-      <strong>Leevo Learn: PSLE Math</strong> brings Mathematics practice,
-      topic-based revision, Foundation and Advanced levels, AI Challenge,
-      Wrong Question Book, progress tracking, and mock-test practice together
-      in one learning app.
-    </p>
-  </section>
-
-
-  <section class="faq-section">
-    <h2 data-lang-en="Frequently Asked Questions About PSLE Math" data-lang-zh="PSLE数学备考高频问答">Frequently Asked Questions About PSLE Math</h2>
-
-
-    <div class="faq-item">
-      <h3 data-lang-en="How can I prepare for PSLE Math?" data-lang-zh="怎么科学高效备考PSLE数学？">How can I prepare for PSLE Math?</h3>
-
-      <p data-lang-en="A good PSLE Math preparation plan should include regular practice, concept revision, problem-solving exercises, review of incorrect questions, and mock tests. Students should focus on understanding mathematical concepts rather than relying only on memorisation." data-lang-zh="制定科学复习计划：坚持日常规律练习、回归吃透核心概念、专项训练解题方法、重点复盘错题、考前全真模拟，拒绝死记硬背、盲目刷题，理解优先、稳步扎实提升综合数学能力。">
-        A good PSLE Math preparation plan should include regular practice,
-        concept revision, problem-solving exercises, review of incorrect
-        questions, and mock tests. Students should focus on understanding
-        mathematical concepts rather than relying only on memorisation.
+  <!-- =====================================================
+       ENGLISH VERSION 完整保留原文
+       ===================================================== -->
+  <section class="language-section language-en" lang="en">
+    <header class="article-header">
+      <p class="article-category">PSLE Math & Primary Mathematics</p>
+      <h1>Leevo Learn: PSLE Math - A Smarter Way to Practise and Revise Mathematics</h1>
+      <p class="article-intro">
+        Looking for a practical way to help your child improve Mathematics
+        skills and prepare for PSLE Math? Leevo Learn: PSLE Math is designed
+        around structured practice, revision and progressively challenging
+        questions to help primary school students build confidence and improve
+        their mathematical thinking.
       </p>
-    </div>
+    </header>
 
+    <section>
+      <h2>What Is Leevo Learn: PSLE Math?</h2>
+      <p>Leevo Learn: PSLE Math is a Mathematics learning app designed for primary school students who want to practise their mathematical skills and prepare more effectively for PSLE Math.</p>
+      <p>Instead of simply giving students a large collection of questions, the app focuses on structured practice and progressive learning.</p>
+      <p>Students can practise different levels of difficulty and gradually work toward more challenging mathematical problems.</p>
+      <p>The goal is simple: <strong>help students practise consistently, understand mathematical problems and become more confident when solving questions.</strong></p>
+    </section>
 
-    <div class="faq-item">
-      <h3 data-lang-en="How can I improve my PSLE Math problem solving?" data-lang-zh="PSLE数学解题能力弱、思路打不开，怎么有效提升？">How can I improve my PSLE Math problem solving?</h3>
+    <section>
+      <h2>Why Regular Math Practice Matters</h2>
+      <p>Mathematics is a subject where regular practice can make a significant difference.</p>
+      <p>Understanding a mathematical concept is only the beginning. Students also need opportunities to apply that knowledge to different types of questions.</p>
+      <p>Regular practice helps students become more familiar with mathematical patterns, calculations and problem-solving strategies.</p>
+      <p>More importantly, consistent practice can help students identify areas where they need additional revision.</p>
+    </section>
 
-      <p data-lang-en="Start by reading each question carefully, identifying the information provided, determining what needs to be found, choosing an appropriate strategy, and checking the final answer. Practising different types of word problems can also help develop problem-solving flexibility." data-lang-zh="养成规范解题流程：细心审题梳理已知条件、明确所求目标、选用合适方法分步演算、最后验算合理性；多练各类应用题、学习画图辅助分析，慢慢培养灵活应变、举一反三的解题思维。">
-        Start by reading each question carefully, identifying the information
-        provided, determining what needs to be found, choosing an appropriate
-        strategy, and checking the final answer. Practising different types of
-        word problems can also help develop problem-solving flexibility.
+    <section>
+      <h2>PSLE Math Is More Than Just Calculation</h2>
+      <p>One common misconception about primary school Mathematics is that being good at calculation is enough.</p>
+      <p>PSLE Mathematics also requires students to understand information, identify relationships, choose suitable methods and apply mathematical concepts to problems.</p>
+      <p>This is particularly important when students encounter word problems or questions that require several steps of reasoning.</p>
+      <p>Developing mathematical thinking is therefore just as important as improving calculation accuracy.</p>
+    </section>
+
+    <section>
+      <h2>Practising Different Levels of Difficulty</h2>
+      <p>Students do not all learn Mathematics at exactly the same pace.</p>
+      <p>Some students need more time to strengthen fundamental concepts, while others are ready for more challenging questions.</p>
+      <p>Leevo Learn: PSLE Math uses progressive difficulty to support different stages of learning.</p>
+      <p>Students can build their confidence with foundational practice before moving toward more advanced and challenging questions.</p>
+      <p>This creates a more natural learning path:</p>
+      <p><strong>Build the basics → Practise → Improve → Challenge yourself</strong></p>
+    </section>
+
+    <section>
+      <h2>Foundation, Advanced and AI Challenge</h2>
+      <p>Leevo Learn: PSLE Math provides different levels of challenge to make Mathematics practice more progressive.</p>
+      <h3>Foundation</h3>
+      <p>The Foundation level focuses on strengthening essential mathematical skills and building confidence with core concepts.</p>
+      <h3>Advanced</h3>
+      <p>The Advanced level introduces more challenging questions that require students to apply their knowledge more carefully.</p>
+      <h3>AI Challenge</h3>
+      <p>The AI Challenge provides an additional level of difficulty for students who want to push their problem-solving skills further.</p>
+      <p>Having different challenge levels allows students to gradually move beyond basic practice and work toward stronger mathematical reasoning.</p>
+    </section>
+
+    <section>
+      <h2>Why Word Problems Are Important in PSLE Math</h2>
+      <p>Word problems are an important part of Mathematics learning because they require students to translate written information into mathematical thinking.</p>
+      <p>A student may know how to perform a calculation but still struggle to decide which calculation should be used.</p>
+      <p>This is why practising problem-solving is so important.</p>
+      <p>Students should learn to identify:</p>
+      <ul>
+        <li>What information is given?</li>
+        <li>What is the question asking?</li>
+        <li>Which mathematical concept is relevant?</li>
+        <li>What operation or method should be used?</li>
+        <li>Does the final answer make sense?</li>
+      </ul>
+      <p>These habits can help students approach unfamiliar questions more confidently.</p>
+    </section>
+
+    <section>
+      <h2>A Better Way to Approach Difficult Math Questions</h2>
+      <p>When a student encounters a difficult Mathematics question, immediately searching for the answer is not always the best learning strategy.</p>
+      <p>A better approach is to break the problem into smaller parts.</p>
+      <ol>
+        <li>Read the question carefully.</li>
+        <li>Identify the important information.</li>
+        <li>Determine what needs to be found.</li>
+        <li>Think about the mathematical concept involved.</li>
+        <li>Choose a suitable method.</li>
+        <li>Solve the problem step by step.</li>
+        <li>Check whether the answer is reasonable.</li>
+      </ol>
+      <p>Practising this process repeatedly can help students develop stronger problem-solving habits.</p>
+    </section>
+
+    <section>
+      <h2>Practice Should Be Consistent, Not Overwhelming</h2>
+      <p>Effective Mathematics revision does not necessarily mean studying for many hours every day.</p>
+      <p>For many students, shorter and more consistent practice sessions can be easier to maintain.</p>
+      <p>A regular routine allows students to revisit concepts, practise problem-solving and gradually identify their weaker areas.</p>
+      <p>The goal should be sustainable improvement rather than simply completing as many questions as possible.</p>
+    </section>
+
+    <section>
+      <h2>Revision Is About More Than Repeating Questions</h2>
+      <p>Good revision should help students understand why an answer is correct, not simply remember the answer.</p>
+      <p>When revising Mathematics, students should ask themselves:</p>
+      <ul>
+        <li>Do I understand the concept?</li>
+        <li>Can I solve a similar problem using a different set of numbers?</li>
+        <li>Can I explain why my method works?</li>
+        <li>Can I identify the important information in a word problem?</li>
+        <li>Can I avoid the same mistake next time?</li>
+      </ul>
+      <p>These questions encourage deeper learning instead of simple memorisation.</p>
+    </section>
+
+    <section>
+      <h2>Track Progress and Learn From Mistakes</h2>
+      <p>Mistakes are a normal part of learning Mathematics.</p>
+      <p>Instead of treating every wrong answer as a failure, students can use mistakes as information about what needs more practice.</p>
+      <p>For example, a student may discover that they regularly make errors because they:</p>
+      <ul>
+        <li>Read questions too quickly</li>
+        <li>Misunderstand what the question is asking</li>
+        <li>Choose the wrong operation</li>
+        <li>Make calculation mistakes</li>
+        <li>Forget to check the final answer</li>
+      </ul>
+      <p>Identifying these patterns can make future revision much more useful.</p>
+    </section>
+
+    <section>
+      <h2>Preparing for PSLE Math Step by Step</h2>
+      <p>PSLE preparation is usually more effective when students build their skills gradually rather than waiting until the examination is close.</p>
+      <p>A practical learning cycle can look like this:</p>
+      <ol>
+        <li>Strengthen fundamental concepts.</li>
+        <li>Practise common question types.</li>
+        <li>Work on word problems and reasoning.</li>
+        <li>Attempt more challenging questions.</li>
+        <li>Review mistakes.</li>
+        <li>Repeat the areas that need improvement.</li>
+      </ol>
+      <p>This approach helps turn revision into a continuous learning process instead of a last-minute activity.</p>
+    </section>
+
+    <section>
+      <h2>Who Is Leevo Learn: PSLE Math For?</h2>
+      <p>Leevo Learn: PSLE Math is designed for primary school students who want additional Mathematics practice and structured revision.</p>
+      <ul>
+        <li>Primary school students practising Mathematics</li>
+        <li>Students preparing for PSLE Math</li>
+        <li>Students who need additional Mathematics practice</li>
+        <li>Students who want to improve problem-solving skills</li>
+        <li>Students looking for progressively challenging questions</li>
+        <li>Parents looking for an additional Math learning resource</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>A Structured Learning Journey for Primary Mathematics</h2>
+      <p>Learning Mathematics becomes easier to manage when students have a clear progression.</p>
+      <p>Instead of jumping randomly between questions, students can gradually strengthen their foundations before moving toward more difficult problems.</p>
+      <p>Leevo Learn: PSLE Math is designed around this idea.</p>
+      <p>The learning journey can be summarised as:</p>
+      <p><strong>Learn → Practise → Review → Improve → Challenge</strong></p>
+    </section>
+
+    <section>
+      <h2>Building Confidence in Mathematics</h2>
+      <p>Confidence in Mathematics does not come from getting every question correct on the first attempt.</p>
+      <p>It develops when students learn how to approach unfamiliar problems, recognise mistakes and try again.</p>
+      <p>Regular practice gives students more opportunities to experience this process.</p>
+      <p>Over time, students can become more comfortable with difficult questions and less afraid of making mistakes.</p>
+    </section>
+
+    <section>
+      <h2>A Practical PSLE Math Practice Routine</h2>
+      <p>A simple Mathematics practice routine can be more useful than trying to complete a large amount of work at once.</p>
+      <h3>Step 1: Practise</h3>
+      <p>Start with a manageable number of questions.</p>
+      <h3>Step 2: Identify Mistakes</h3>
+      <p>Look at the questions that caused difficulty.</p>
+      <h3>Step 3: Understand the Problem</h3>
+      <p>Work out why the mistake happened.</p>
+      <h3>Step 4: Practise Again</h3>
+      <p>Try similar questions to reinforce the concept.</p>
+      <h3>Step 5: Increase the Challenge</h3>
+      <p>Once the fundamentals are stronger, move toward more difficult questions.</p>
+      <p>This creates a continuous improvement cycle rather than a one-time revision session.</p>
+    </section>
+
+    <section>
+      <h2>Why Parents Can Use Leevo Learn: PSLE Math as an Additional Learning Tool</h2>
+      <p>Parents often want their children to practise Mathematics outside the classroom without making revision unnecessarily stressful.</p>
+      <p>A structured learning app can provide an additional opportunity for students to practise independently and consistently.</p>
+      <p>Leevo Learn: PSLE Math is intended to complement regular learning and revision, giving students another way to practise Mathematics and develop problem-solving skills.</p>
+      <p>It is not about replacing teachers or classroom learning. It is about giving students another useful tool for practice.</p>
+    </section>
+
+    <section>
+      <h2>Leevo Learn: PSLE Math at a Glance</h2>
+      <ul>
+        <li>Designed for primary school Mathematics practice</li>
+        <li>Focused on PSLE Math preparation</li>
+        <li>Progressive levels of difficulty</li>
+        <li>Foundation practice</li>
+        <li>Advanced challenges</li>
+        <li>AI Challenge for additional problem-solving practice</li>
+        <li>Supports regular revision</li>
+        <li>Encourages mathematical thinking and problem-solving</li>
+      </ul>
+    </section>
+
+    <section class="faq-section">
+      <h2>Frequently Asked Questions About PSLE Math</h2>
+      <div class="faq-item">
+        <h3>What is Leevo Learn: PSLE Math?</h3>
+        <p>Leevo Learn: PSLE Math is a Mathematics learning app designed to help primary school students practise Mathematics, strengthen problem-solving skills and prepare for PSLE Math.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is Leevo Learn: PSLE Math suitable for PSLE preparation?</h3>
+        <p>Yes. The app is designed around primary school Mathematics practice, progressive difficulty and problem-solving, making it suitable as an additional resource for PSLE Math preparation.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why is Mathematics practice important for PSLE?</h3>
+        <p>Regular practice helps students become more familiar with mathematical concepts, calculations, problem-solving and different types of questions.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does PSLE Math require problem-solving skills?</h3>
+        <p>Yes. Students need more than calculation skills. They also need to understand information, choose appropriate methods and apply mathematical concepts to problems.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What difficulty levels are available?</h3>
+        <p>Leevo Learn: PSLE Math includes Foundation, Advanced and AI Challenge levels to provide progressively more challenging Mathematics practice.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How can students improve at Mathematics?</h3>
+        <p>Consistent practice, reviewing mistakes, strengthening fundamental concepts and gradually attempting more challenging problems can help students improve their Mathematics skills.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can parents use the app as an additional Math learning resource?</h3>
+        <p>Yes. Leevo Learn: PSLE Math can be used as an additional practice and revision resource alongside classroom learning and other educational materials.</p>
+      </div>
+    </section>
+
+    <section class="conclusion">
+      <h2>Start Building Stronger PSLE Math Skills</h2>
+      <p>Strong Mathematics skills are built over time.</p>
+      <p>With regular practice, careful revision and a willingness to learn from mistakes, students can gradually become more confident when facing challenging Mathematics questions.</p>
+      <p><strong>Learn the fundamentals. Practise consistently. Solve problems. Review mistakes. Keep improving.</strong></p>
+      <p>Leevo Learn: PSLE Math is designed to support that learning journey.</p>
+    </section>
+  </section>
+
+  <!-- =====================================================
+       中文版本 完整保留原文
+       ===================================================== -->
+  <section class="language-section language-zh" lang="zh-CN">
+    <header class="article-header">
+      <p class="article-category">PSLE 数学与小学数学</p>
+      <h1>Leevo Learn: PSLE Math —— 帮助小学生练习与复习数学的学习 App</h1>
+      <p class="article-intro">
+        想帮助孩子更有效地练习数学并准备 PSLE Math？
+        Leevo Learn: PSLE Math 通过有系统的练习、复习以及逐渐增加难度的题目，
+        帮助小学学生建立数学基础、提升解题能力，并逐渐建立数学学习信心。
       </p>
-    </div>
+    </header>
 
+    <section>
+      <h2>什么是 Leevo Learn: PSLE Math？</h2>
+      <p>Leevo Learn: PSLE Math 是一款专为小学数学练习而设计的学习 App，主要帮助学生加强数学基础、练习解题能力，并为 PSLE Math 做更有系统的准备。</p>
+      <p>它并不是简单地提供大量题目，而是通过有结构的练习和逐渐增加的难度，让学生按照自己的学习进度不断提升。</p>
+      <p>学生可以从基础练习开始，然后逐渐挑战更高难度的数学问题。</p>
+      <p>简单来说：<strong>学习基础、持续练习、理解问题、提升解题能力，并建立数学信心。</strong></p>
+    </section>
 
-    <div class="faq-item">
-      <h3 data-lang-en="How can I improve at PSLE Math word problems?" data-lang-zh="PSLE数学应用题看不懂、总丢分，怎么突破？">How can I improve at PSLE Math word problems?</h3>
+    <section>
+      <h2>为什么持续练习数学很重要？</h2>
+      <p>数学是一门需要持续练习的科目。</p>
+      <p>理解一个数学概念只是第一步，学生还需要通过不同类型的问题，学习如何实际应用这些知识。</p>
+      <p>定期练习可以帮助学生更加熟悉数学概念、计算方法以及不同的解题方式。</p>
+      <p>更重要的是，持续练习能够帮助学生发现自己比较薄弱的地方，从而进行针对性的复习。</p>
+    </section>
 
-      <p data-lang-en="Try to understand the relationship between the quantities before performing calculations. Drawing a diagram, identifying known and unknown information, and breaking a complex problem into smaller steps can make word problems easier to approach." data-lang-zh="不要急着算数字！先理清数量逻辑关系，善用线段图、示意图转化文字、拆分复杂大题为小步骤、梳理已知未知，坚持练习、总结题型规律，慢慢就能读懂题意、找对思路、稳拿分数。">
-        Try to understand the relationship between the quantities before
-        performing calculations. Drawing a diagram, identifying known and
-        unknown information, and breaking a complex problem into smaller steps
-        can make word problems easier to approach.
-      </p>
-    </div>
+    <section>
+      <h2>PSLE Math 不只是考计算能力</h2>
+      <p>很多人认为数学成绩好主要就是计算快和计算准确。但对于 PSLE Math 来说，单纯的计算能力并不足够。</p>
+      <p>学生还需要理解题目提供的信息、找出数字之间的关系、选择合适的方法，并把数学概念应用到实际问题中。</p>
+      <p>特别是在面对文字题时，学生必须先理解问题，再决定应该使用什么数学方法。</p>
+      <p>因此，培养数学思维和解题能力，与提高计算准确率同样重要。</p>
+    </section>
 
+    <section>
+      <h2>从基础开始，逐渐挑战更难的数学题</h2>
+      <p>每个学生学习数学的速度并不完全一样。</p>
+      <p>有些学生需要更多时间巩固基础，而有些学生已经准备好挑战更加困难的问题。</p>
+      <p>Leevo Learn: PSLE Math 采用逐渐增加难度的学习方式，让学生能够从基础练习开始，再逐步向更高难度前进。</p>
+      <p>一个比较自然的学习过程就是：</p>
+      <p><strong>打好基础 → 持续练习 → 提高能力 → 挑战更难的问题</strong></p>
+    </section>
 
-    <div class="faq-item">
-      <h3 data-lang-en="How often should students practise PSLE Math?" data-lang-zh="PSLE数学多久练习一次、每天练多久最合适？">How often should students practise PSLE Math?</h3>
+    <section>
+      <h2>Foundation、Advanced 和 AI Challenge</h2>
+      <h3>Foundation 基础练习</h3>
+      <p>Foundation 主要帮助学生巩固基本数学能力和核心概念，建立更稳定的数学基础。</p>
+      <h3>Advanced 进阶练习</h3>
+      <p>Advanced 提供更具挑战性的数学问题，让学生进一步练习如何应用已经掌握的数学知识。</p>
+      <h3>AI Challenge AI 挑战</h3>
+      <p>AI Challenge 为希望进一步提升解题能力的学生提供更高层次的挑战。</p>
+      <p>通过不同的难度层级，学生可以逐渐从基础练习走向更复杂的数学思考。</p>
+    </section>
 
-      <p data-lang-en="There is no single practice schedule that works for every student. Regular and manageable practice sessions are generally easier to maintain than relying entirely on last-minute revision. The amount of practice should also depend on the student's current level and areas that need improvement." data-lang-zh="没有统一标准答案！核心是规律坚持、劳逸结合、力所能及，每天短时间专注练习、长期稳定，远比考前突击熬夜刷题效果持久扎实，时长频率结合个人基础、薄弱点、学习状态灵活调整。">
-        There is no single practice schedule that works for every student.
-        Regular and manageable practice sessions are generally easier to
-        maintain than relying entirely on last-minute revision. The amount of
-        practice should also depend on the student's current level and areas
-        that need improvement.
-      </p>
-    </div>
+    <section>
+      <h2>为什么 PSLE Math 的文字题非常重要？</h2>
+      <p>文字题能够训练学生把语言信息转化成数学思维。</p>
+      <p>有些学生可能会计算，却不知道题目真正要求他们计算什么。</p>
+      <p>因此，练习解题过程非常重要。</p>
+      <p>学生可以养成以下习惯：</p>
+      <ul>
+        <li>题目提供了什么信息？</li>
+        <li>题目要求寻找什么？</li>
+        <li>哪一个数学概念与问题有关？</li>
+        <li>应该使用什么运算或方法？</li>
+        <li>最后的答案是否合理？</li>
+      </ul>
+      <p>这些思考习惯能够帮助学生更加有信心地面对陌生题型。</p>
+    </section>
 
+    <section>
+      <h2>面对困难数学题，可以这样思考</h2>
+      <p>当学生遇到困难的数学题时，马上寻找答案并不一定是最好的学习方法。</p>
+      <p>更好的方式是把问题拆成几个较小的部分。</p>
+      <ol>
+        <li>仔细阅读题目。</li>
+        <li>找出重要的信息。</li>
+        <li>确定题目要求什么。</li>
+        <li>思考涉及哪一个数学概念。</li>
+        <li>选择适合的解题方法。</li>
+        <li>一步一步完成计算。</li>
+        <li>最后检查答案是否合理。</li>
+      </ol>
+      <p>通过不断重复这个过程，学生可以逐渐建立更好的解题习惯。</p>
+    </section>
 
-    <div class="faq-item">
-      <h3 data-lang-en="What is a PSLE Math mock test?" data-lang-zh="PSLE数学模拟考试有什么作用、价值在哪？">What is a PSLE Math mock test?</h3>
+    <section>
+      <h2>数学复习应该持续，而不是一次完成大量题目</h2>
+      <p>有效的数学复习并不一定意味着每天学习很多个小时。</p>
+      <p>对很多学生来说，短时间但持续的练习反而更加容易坚持。</p>
+      <p>有规律的练习可以帮助学生不断重新接触数学概念，练习解题，并逐渐发现自己的弱点。</p>
+      <p>真正重要的不是一天完成多少题，而是能不能持续进步。</p>
+    </section>
 
-      <p data-lang-en="A PSLE Math mock test is a longer practice session that allows students to work through different Mathematics question types in a more complete examination-style setting. It can help students practise time management, concentration, accuracy, and problem solving." data-lang-zh="全真模拟完整复刻正式考试题型、题量、限时环境，综合切换知识点、训练时间分配、专注力耐力、计算准确率、综合解题能力，提前暴露短板、适应考场压力、稳定应试发挥状态。">
-        A PSLE Math mock test is a longer practice session that allows students
-        to work through different Mathematics question types in a more complete
-        examination-style setting. It can help students practise time
-        management, concentration, accuracy, and problem solving.
-      </p>
-    </div>
+    <section>
+      <h2>数学复习不应该只是重复做题</h2>
+      <p>好的数学复习应该帮助学生理解为什么答案正确，而不是单纯记住答案。</p>
+      <p>在复习数学时，可以问自己：</p>
+      <ul>
+        <li>我真的理解这个概念吗？</li>
+        <li>如果数字改变，我还能解决类似的问题吗？</li>
+        <li>我能解释为什么要使用这个方法吗？</li>
+        <li>我能找出文字题中的重要信息吗？</li>
+        <li>下一次我能避免同样的错误吗？</li>
+      </ul>
+      <p>这些问题能够帮助学生从单纯记忆，逐渐转向真正理解数学。</p>
+    </section>
 
+    <section>
+      <h2>从错误中学习</h2>
+      <p>做错数学题是学习过程中非常正常的一部分。</p>
+      <p>与其把错误看成失败，不如把错误当成一种学习信息，找出自己真正需要加强的地方。</p>
+      <p>例如，有些学生可能经常因为以下原因失分：</p>
+      <ul>
+        <li>阅读题目太快</li>
+        <li>没有真正理解题目要求</li>
+        <li>选择了错误的运算方式</li>
+        <li>计算过程中出现错误</li>
+        <li>没有检查最终答案</li>
+      </ul>
+      <p>找到错误的规律之后，之后的复习就可以更加有针对性。</p>
+    </section>
 
-    <div class="faq-item">
-      <h3 data-lang-en="Is there an app for PSLE Math practice?" data-lang-zh="有没有专门适配新加坡PSLE数学备考练习的学习App？">Is there an app for PSLE Math practice?</h3>
+    <section>
+      <h2>如何一步一步准备 PSLE Math？</h2>
+      <p>PSLE 数学准备通常不应该等到考试前才开始。</p>
+      <p>更有效的方法，是让数学能力在日常练习中逐渐建立起来。</p>
+      <ol>
+        <li>巩固基本数学概念。</li>
+        <li>练习常见题型。</li>
+        <li>加强文字题和解题思维。</li>
+        <li>尝试更加困难的问题。</li>
+        <li>复习错误。</li>
+        <li>针对薄弱部分再次练习。</li>
+      </ol>
+      <p>这样的方式可以让 PSLE Math 复习变成持续的学习过程，而不是最后阶段才进行的临时冲刺。</p>
+    </section>
 
-      <p data-lang-en="Yes. Leevo Learn: PSLE Math is designed for PSLE Mathematics practice and revision, with topic-based practice, different difficulty levels, AI Challenge, a Wrong Question Book, progress tracking, and mock-test practice." data-lang-zh="有的！Leevo学习：PSLE数学专为新加坡PSLE数学打造，专题分层练习、智能拔高挑战、错题归集复习、学习进度追踪、全真模拟考试功能齐全，一站式科学系统练习复习、居家自主备考超实用高效。">
-        Yes. Leevo Learn: PSLE Math is designed for PSLE Mathematics practice
-        and revision, with topic-based practice, different difficulty levels,
-        AI Challenge, a Wrong Question Book, progress tracking, and mock-test
-        practice.
-      </p>
-    </div>
+    <section>
+      <h2>Leevo Learn: PSLE Math 适合哪些学生？</h2>
+      <p>Leevo Learn: PSLE Math 适合希望加强小学数学练习、解题能力和 PSLE Math 准备的学生。</p>
+      <ul>
+        <li>正在学习小学数学的学生</li>
+        <li>正在准备 PSLE Math 的学生</li>
+        <li>需要额外数学练习的学生</li>
+        <li>希望加强解题能力的学生</li>
+        <li>想挑战更高难度数学题的学生</li>
+        <li>希望寻找额外数学学习资源的家长</li>
+      </ul>
+    </section>
 
+    <section>
+      <h2>建立有系统的小学数学学习过程</h2>
+      <p>当学生拥有清晰的学习过程时，数学学习会更加容易管理。</p>
+      <p>与其随机完成不同题目，不如先巩固基础，再逐渐进入更加困难的问题。</p>
+      <p>Leevo Learn: PSLE Math 正是围绕这种逐渐提升的学习方式设计。</p>
+      <p>整个学习过程可以概括为：</p>
+      <p><strong>学习 → 练习 → 复习 → 改进 → 挑战</strong></p>
+    </section>
 
-    <div class="faq-item">
-      <h3 data-lang-en="How can students learn from incorrect PSLE Math answers?" data-lang-zh="数学错题怎么复盘、才能真正查漏补缺、不再重复犯错？">How can students learn from incorrect PSLE Math answers?</h3>
+    <section>
+      <h2>建立孩子的数学信心</h2>
+      <p>数学信心并不是来自于每一道题第一次都答对。</p>
+      <p>真正的数学信心来自于：面对不会的问题时知道如何思考，做错之后知道如何改进，并愿意再次尝试。</p>
+      <p>持续练习能够给学生更多这样的机会。</p>
+      <p>随着时间增加，学生会逐渐更加熟悉困难题型，也不会那么害怕犯错。</p>
+    </section>
 
-      <p data-lang-en="Students should review the question, identify the reason for the mistake, understand the correct method, and then practise similar problems. Keeping incorrect questions together can make revision more targeted and easier to organise." data-lang-zh="重做原题、深挖错误根源（概念/审题/计算/思路）、
+    <section>
+      <h2>一个简单实用的 PSLE Math 练习方式</h2>
+      <h3>第一步：练习</h3>
+      <p>每次完成适量的数学题。</p>
+      <h3>第二步：找出错误</h3>
+      <p>特别注意那些自己不会或者做错的题目。</p>
+      <h3>第三步：理解问题</h3>
+      <p>找出自己为什么会做错。</p>
+      <h3>第四步：再次练习</h3>
+      <p>通过类似的问题加强刚刚学习的概念。</p>
+      <h3>第五步：提高难度</h3>
+      <p>当基础更加稳定后，再挑战更高难度的问题。</p>
+      <p>这样就可以形成一个持续进步的数学学习循环。</p>
+    </section>
+
+    <section>
+      <h2>为什么家长可以把 Leevo Learn: PSLE Math 当作额外学习工具？</h2>
+      <p>很多家长希望孩子在课堂之外也能练习数学，但又不希望复习变成一种过度的压力。</p>
+      <p>有系统的学习 App 可以为学生提供额外练习机会，帮助他们建立比较稳定的数学练习习惯。</p>
+      <p>Leevo Learn: PSLE Math 的定位是作为课堂学习和其他学习资源的补充，为学生提供另一种练习数学和培养解题能力的方式。</p>
+      <p>它不是用来取代老师，而是为学生增加一个有价值的数学练习工具。</p>
+    </section>
+
+    <section>
+      <h2>Leevo Learn: PSLE Math 功能概览</h2>
+      <ul>
+        <li>专为小学数学练习设计</li>
+        <li>针对 PSLE Math 准备</li>
+        <li>逐渐增加的题目难度</li>
+        <li>Foundation 基础练习</li>
+        <li>Advanced 进阶挑战</li>
+        <li>AI Challenge AI 挑战</li>
+        <li>支持日常数学复习</li>
+        <li>鼓励数学思维和解题能力</li>
+      </ul>
+    </section>
+
+    <section class="faq-section">
+      <h2>PSLE Math 常见问题</h2>
+      <div class="faq-item">
+        <h3>Leevo Learn: PSLE Math 是什么？</h3>
+        <p>Leevo Learn: PSLE Math 是一款小学数学学习 App，帮助学生练习数学、加强解题能力，并为 PSLE Math 做准备。</p>
+      </div>
+      <div class="faq-item">
+        <h3>Leevo Learn: PSLE Math 适合 PSLE 准备吗？</h3>
+        <p>适合。App 围绕小学数学练习、逐渐增加的难度和解题能力设计，可以作为学生准备 PSLE Math 时的额外学习和练习资源。</p>
+      </div>
+      <div class="faq-item">
+        <h3>为什么 PSLE Math 需要持续练习？</h3>
+        <p>持续练习能够帮助学生熟悉数学概念、计算方法、文字题以及不同类型的解题过程。</p>
+      </div>
+      <div class="faq-item">
+        <h3>PSLE Math 需要解题能力吗？</h3>
+        <p>需要。学生除了掌握计算，还需要理解题目信息、选择适合的方法，并把数学概念应用到实际问题中。</p>
+      </div>
+      <div class="faq-item">
+        <h3>Leevo Learn: PSLE Math 有哪些难度？</h3>
+        <p>App 提供 Foundation、Advanced 和 AI Challenge，让学生可以从基础练习逐渐挑战更高难度的问题。</p>
+      </div>
+      <div class="faq-item">
+        <h3>如何提高小学数学成绩？</h3>
+        <p>持续练习、复习错误、巩固基础概念，并逐渐挑战更困难的问题，都可以帮助学生提高数学能力。</p>
+      </div>
+      <div class="faq-item">
+        <h3>家长可以使用这个 App 帮助孩子复习数学吗？</h3>
+        <p>可以。Leevo Learn: PSLE Math 可以作为课堂学习、家庭复习和其他教育资源之外的额外数学练习工具。</p>
+      </div>
+    </section>
+
+    <section class="conclusion">
+      <h2>从今天开始建立更好的 PSLE Math 基础</h2>
+      <p>扎实的数学能力需要时间慢慢建立。</p>
+      <p>通过持续练习、认真复习，并从错误中学习，学生可以逐渐提高面对困难数学题时的信心。</p>
+      <p><strong>打好基础、持续练习、学会解题、复习错误、不断进步。</strong></p>
+      <p>Leevo Learn: PSLE Math 就是为了支持这样的数学学习过程而设计。</p>
+    </section>
+  </section>
+
+  <!-- =====================================================
+       保留完整JSON-LD结构化数据，利于搜索引擎收录识别
+       ===================================================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Leevo Learn: PSLE Math",
+    "description": "A Mathematics learning app designed to help primary school students practise Mathematics, strengthen problem-solving skills and prepare for PSLE Math.",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Android",
+    "inLanguage": ["en", "zh-CN"]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question", "name": "What is Leevo Learn: PSLE Math?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Leevo Learn: PSLE Math is a Mathematics learning app designed to help primary school students practise Mathematics, strengthen problem-solving skills and prepare for PSLE Math."}
+      },
+      {
+        "@type": "Question", "name": "Is Leevo Learn: PSLE Math suitable for PSLE preparation?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. The app is designed around primary school Mathematics practice, progressive difficulty and problem-solving."}
+      },
+      {
+        "@type": "Question", "name": "Does PSLE Math require problem-solving skills?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. Students need more than calculation skills. They also need to understand information, choose appropriate methods and apply mathematical concepts to problems."}
+      },
+      {
+        "@type": "Question", "name": "What difficulty levels are available?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Leevo Learn: PSLE Math includes Foundation, Advanced and AI Challenge levels."}
+      },
+      {
+        "@type": "Question", "name": "How can students improve at Mathematics?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Consistent practice, reviewing mistakes, strengthening fundamental concepts and gradually attempting more challenging problems can help students improve their Mathematics skills."}
+      }
+    ]
+  }
+  </script>
+
+</article>
+
+<!-- ✅ 稳定后置切换脚本：DOM加载完成执行、记忆语言、切换整块显示隐藏、更新按钮与页面语言 -->
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const langSwitchBtn = document.getElementById('langSwitch');
+  const enSection = document.querySelector('.language-en');
+  const zhSection = document.querySelector('.language-zh');
+
+  // 读取本地存储上次语言，默认英文
+  let currentLang = localStorage.getItem('preferredLang') || 'en';
+
+  // 核心切换逻辑
+  function switchLang(lang){
+    if(lang === 'en'){
+      enSection.classList.add('active');
+      zhSection.classList.remove('active');
+      langSwitchBtn.textContent = '中文 / EN';
+      document.documentElement.lang = 'en';
+    }else{
+      zhSection.classList.add('active');
+      enSection.classList.remove('active');
+      langSwitchBtn.textContent = 'EN / 中文';
+      document.documentElement.lang = 'zh-CN';
+    }
+    localStorage.setItem('preferredLang', lang);
+  }
+
+  // 初始化加载上次语言
+  switchLang(currentLang);
+
+  // 点击切换
+  langSwitchBtn.addEventListener('click', function(){
+    currentLang = currentLang === 'en' ? 'zh' : 'en';
+    switchLang(currentLang);
+  });
+});
+</script>
+
+</body>
+</html>
