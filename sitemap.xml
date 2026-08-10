@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <!-- 网站首页（最高优先级） -->
   <url>
@@ -33,14 +35,16 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- ✅ 新增：Leevo Learn: PSLE Math 备考指南文章 -->
+  <!-- Leevo Learn: PSLE Math 备考指南文章 -->
   <url>
     <loc>https://leevotech.github.io/leevo-apps/apps/leevo-learn-psle-math/articles/psle-math-preparation-guide.html</loc>
+    <lastmod>
     <lastmod>2026-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Leevo Music 指南文章 -->
   <url>
     <loc>https://leevotech.github.io/leevo-apps/apps/leevo-music/articles/leevo-music-guide.html</loc>
     <lastmod>2026-08-09</lastmod>
@@ -48,6 +52,7 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Leevo Planet Merge 指南文章 -->
   <url>
     <loc>https://leevotech.github.io/leevo-apps/apps/leevo-planet-merge/articles/leevo-planet-merge-guide.html</loc>
     <lastmod>2026-08-10</lastmod>
@@ -55,6 +60,7 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Leevo Push Box 指南文章 -->
   <url>
     <loc>https://leevotech.github.io/leevo-apps/apps/leevo-push-box/articles/leevo-push-box-guide.html</loc>
     <lastmod>2026-08-10</lastmod>
@@ -62,6 +68,7 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Leevo Zombie Shooter 指南文章 -->
   <url>
     <loc>https://leevotech.github.io/leevo-apps/apps/leevo-zombie-shooter/articles/leevo-zombie-shooter-guide.html</loc>
     <lastmod>2026-08-10</lastmod>
@@ -69,12 +76,12 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Noris Adventure 双语指南页面 -->
   <url>
     <loc>https://leevotech.github.io/leevo-apps/guides/noris-adventure</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <!-- 双语标注，避免重复内容、优化多语言SEO -->
     <xhtml:link rel="alternate" hreflang="en" href="https://leevotech.github.io/leevo-apps/guides/noris-adventure?lang=en" />
     <xhtml:link rel="alternate" hreflang="zh" href="https://leevotech.github.io/leevo-apps/guides/noris-adventure?lang=zh" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://leevotech.github.io/leevo-apps/guides/noris-adventure" />
