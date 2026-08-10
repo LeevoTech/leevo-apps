@@ -3,186 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 标题严格配双语属性，文本默认英文（你的原文） -->
+  <title data-lang-en="Leevo Zombie Shooter - Exciting Zombie Shooting Action Game" 
+        data-lang-zh="Leevo僵尸射击 - 热血刺激僵尸射击闯关动作游戏">Leevo Zombie Shooter - Exciting Zombie Shooting Action Game</title>
 
-  <!-- SEO标题、描述、关键词可按需微调 -->
-  <title data-lang-en="Leevo Zombie Shooter - Exciting Zombie Shooting Action Game" data-lang-zh="Leevo僵尸射击 - 热血刺激僵尸射击闯关动作游戏">Leevo Zombie Shooter - Exciting Zombie Shooting Action Game</title>
-
-  <meta name="description"
+  <meta name="description" 
         content="Play Leevo Zombie Shooter: an action-packed shooting game, fight endless zombie waves, unlock powerful weapons, survive intense battles and challenge high scores."
         data-lang-en="Play Leevo Zombie Shooter: an action-packed shooting game, fight endless zombie waves, unlock powerful weapons, survive intense battles and challenge high scores."
         data-lang-zh="畅玩Leevo僵尸射击：紧张刺激射击闯关，击退一波波僵尸大军、解锁强力枪械武器、极限生存挑战、冲击最高分数、热血停不下来！">
 
   <meta name="keywords"
         content="Leevo Zombie Shooter, zombie shooting game, action shooter, mobile shooting game, offline zombie game, survival shooting game, zombie wave defense, fun shooting game">
-
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://leevotech.github.io/leevo-apps/apps/leevo-zombie-shooter/articles/leevo-zombie-shooter-guide.html">
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #07111f;
-      color: #e6eaf0;
-      line-height: 1.7;
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 30px 20px;
-    }
-    a { color: #f2c86b; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    .page-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 40px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #203b55;
-      flex-wrap: wrap;
-      gap:15px;
-    }
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-weight: 500;
-      font-size:16px;
-    }
-    .lang-switch-btn {
-      padding: 6px 14px;
-      border-radius: 6px;
-      border: none;
-      background: #f2c86b;
-      color: #07111f;
-      font-weight: bold;
-      cursor: pointer;
-      transition:0.2s;
-    }
-    .lang-switch-btn:hover{ transform:scale(1.05); }
-
-    .article-header { margin-bottom: 45px; }
-    .article-category {
-      color: #f2c86b;
-      font-weight: 700;
-      text-transform: uppercase;
-      font-size: 14px;
-      letter-spacing: 1.5px;
-      margin-bottom: 12px;
-    }
-    h1 {
-      font-size: clamp(28px, 5vw, 40px);
-      line-height: 1.3;
-      margin-bottom: 20px;
-      color: #ffffff;
-    }
-    .article-intro {
-      font-size: 18px;
-      color: #b7c4d2;
-    }
-
-    section { margin-bottom: 50px; }
-    h2 {
-      font-size: 26px;
-      color: #ffffff;
-      margin-bottom: 20px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid #1c344c;
-    }
-    h3 {
-      font-size: 20px;
-      color: #f2d28c;
-      margin: 25px 0 12px;
-    }
-    p { margin-bottom: 16px; font-size: 17px; }
-    ul, ol { margin: 20px 0 20px 25px; }
-    li { margin-bottom: 10px; font-size: 17px; }
-
-    .faq-item {
-      background: #0d1c2c;
-      padding:22px;
-      border-radius:10px;
-      margin-bottom:15px;
-      border:1px solid #203b55;
-    }
-    .conclusion {
-      background: linear-gradient(135deg, #10253a, #0d1c2c);
-      padding:35px;
-      border-radius:16px;
-      border:1px solid #294969;
-    }
-
-    @media (max-width:600px) {
-      body { padding:20px 15px; }
-      h1 { font-size:28px; }
-      .page-nav { flex-direction:column; align-items:flex-start; }
-    }
+    * {box-sizing: border-box; margin: 0; padding: 0;}
+    html {scroll-behavior: smooth;}
+    body {font-family: Arial, Helvetica, sans-serif; background: #07111f; color: #e6eaf0; line-height: 1.7; max-width: 850px; margin: 0 auto; padding: 30px 20px;}
+    a {color: #f2c86b; text-decoration: none;}
+    a:hover {text-decoration: underline;}
+    .page-nav {display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; padding-bottom:15px; border-bottom:1px solid #203b55; flex-wrap:wrap; gap:15px;}
+    .back-link {display:inline-flex; align-items:center; gap:6px; font-weight:500; font-size:16px;}
+    .lang-switch-btn {padding:6px 14px; border-radius:6px; border:none; background:#f2c86b; color:#07111f; font-weight:bold; cursor:pointer; transition:0.2s;}
+    .lang-switch-btn:hover {transform:scale(1.05);}
+    .article-header {margin-bottom:45px;}
+    .article-category {color:#f2c86b; font-weight:700; text-transform:uppercase; font-size:14px; letter-spacing:1.5px; margin-bottom:12px;}
+    h1 {font-size:clamp(28px,5vw,40px); line-height:1.3; margin-bottom:20px; color:#fff;}
+    .article-intro {font-size:18px; color:#b7c4d2;}
+    section {margin-bottom:50px;}
+    h2 {font-size:26px; color:#fff; margin-bottom:20px; padding-bottom:8px; border-bottom:1px solid #1c344c;}
+    h3 {font-size:20px; color:#f2d28c; margin:25px 0 12px;}
+    p {margin-bottom:16px; font-size:17px;}
+    ul,ol {margin:20px 0 20px 25px;}
+    li {margin-bottom:10px; font-size:17px;}
+    .faq-item {background:#0d1c2c; padding:22px; border-radius:10px; margin-bottom:15px; border:1px solid #203b55;}
+    .conclusion {background:linear-gradient(135deg,#10253a,#0d1c2c); padding:35px; border-radius:16px; border:1px solid #294969;}
+    @media(max-width:600px){body{padding:20px 15px;} h1{font-size:28px;} .page-nav{flex-direction:column; align-items:flex-start;}}
   </style>
 </head>
 <body>
 
-  <!-- 导航栏：返回首页 + 语言切换按钮 -->
-  <nav class="page-nav">
-    <a href="/leevo-apps/index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回Leevo应用首页">← Back to Leevo Apps Home</a>
-    <button id="langSwitch" class="lang-switch-btn">中文 / EN</button>
-  </nav>
+<!-- 导航+按钮ID精准无误 -->
+<nav class="page-nav">
+  <a href="/leevo-apps/index.html" class="back-link" 
+     data-lang-en="← Back to Leevo Apps Home" 
+     data-lang-zh="← 返回Leevo应用首页">← Back to Leevo Apps Home</a>
+  <button id="langSwitch" class="lang-switch-btn">中文 / EN</button>
+</nav>
 
 <article class="app-article">
-
   <header class="article-header">
     <p class="article-category" data-lang-en="Shooting & Action Games" data-lang-zh="射击动作游戏">Shooting & Action Games</p>
 
-    <h1 data-lang-en="Leevo Zombie Shooter: Survive Endless Zombie Waves & Unlock Powerful Weapons" data-lang-zh="Leevo僵尸射击：血战无尽僵尸狂潮、解锁强力武器、极限生存闯关">Leevo Zombie Shooter: Survive Endless Zombie Waves & Unlock Powerful Weapons</h1>
+    <h1 data-lang-en="Leevo Zombie Shooter: Survive Endless Zombie Waves & Unlock Powerful Weapons" 
+        data-lang-zh="Leevo僵尸射击：血战无尽僵尸狂潮、解锁强力武器、极限生存闯关">Leevo Zombie Shooter: Survive Endless Zombie Waves & Unlock Powerful Weapons</h1>
 
-    <p class="article-intro" data-lang-en="Step into intense combat! Leevo Zombie Shooter puts you in a survival battle against endless zombie hordes—aim precisely, shoot fast, upgrade guns, survive tougher waves and fight for the highest score!" data-lang-zh="即刻投身热血火线战场！Leevo僵尸射击带你直面一波波汹涌无尽僵尸大军——精准瞄准、极速开火、升级强力枪械、突破层层危机、顽强生存到底、全力冲刺巅峰最高分！">
+    <p class="article-intro" 
+       data-lang-en="Step into intense combat! Leevo Zombie Shooter puts you in a survival battle against endless zombie hordes—aim precisely, shoot fast, upgrade guns, survive tougher waves and fight for the highest score!" 
+       data-lang-zh="即刻投身热血火线战场！Leevo僵尸射击带你直面一波波汹涌无尽僵尸大军——精准瞄准、极速开火、升级强力枪械、突破层层危机、顽强生存到底、全力冲刺巅峰最高分！">
       Step into intense combat! Leevo Zombie Shooter puts you in a survival battle against endless zombie hordes—aim precisely, shoot fast, upgrade guns, survive tougher waves and fight for the highest score!
     </p>
   </header>
 
-
   <section>
     <h2 data-lang-en="What Is Leevo Zombie Shooter?" data-lang-zh="什么是Leevo僵尸射击游戏？">What Is Leevo Zombie Shooter?</h2>
 
-    <p data-lang-en="Leevo Zombie Shooter is a fast-paced mobile action shooting survival game focused on quick reflexes, precise aiming and non-stop zombie combat." data-lang-zh="专为移动端打造、节奏紧凑、爽快解压的射击生存闯关游戏，考验精准瞄准、反应手速、冷静走位，枪火不停、激战不休、杀退僵尸、保卫阵地、热血过瘾！">
+    <p data-lang-en="Leevo Zombie Shooter is a fast-paced mobile action shooting survival game focused on quick reflexes, precise aiming and non-stop zombie combat." 
+       data-lang-zh="专为移动端打造、节奏紧凑、爽快解压的射击生存闯关游戏，考验精准瞄准、反应手速、冷静走位，枪火不停、激战不休、杀退僵尸、保卫阵地、热血过瘾！">
       Leevo Zombie Shooter is a fast-paced mobile action shooting survival game focused on quick reflexes, precise aiming and non-stop zombie combat.
     </p>
 
-    <p data-lang-en="Fight through continuous waves of incoming zombies—from slow common walkers to fast, dangerous special variants—each round grows harder and more thrilling." data-lang-zh="普通行尸、极速疾跑僵尸、特殊变异强敌轮番来袭，一波接一波、数量激增、攻势猛烈、步步紧逼、越往后越惊险刺激、极限挑战不断升级！">
+    <p data-lang-en="Fight through continuous waves of incoming zombies—from slow common walkers to fast, dangerous special variants—each round grows harder and more thrilling." 
+       data-lang-zh="普通行尸、极速疾跑僵尸、特殊变异强敌轮番来袭，一波接一波、数量激增、攻势猛烈、步步紧逼、越往后越惊险刺激、极限挑战不断升级！">
       Fight through continuous waves of incoming zombies—from slow common walkers to fast, dangerous special variants—each round grows harder and more thrilling.
     </p>
 
-    <p data-lang-en="Collect coins, unlock and upgrade powerful firearms, unlock special abilities, defend your position and see how long you can survive the undead siege." data-lang-zh="击杀僵尸收获金币财富，解锁冲锋枪、霰弹枪、狙击步枪、重火力机枪等强力武器，升级伤害射速、解锁爆发技能、构筑坚固防线、死守阵地、看看自己能在尸潮围攻之下坚持多久、创造生存奇迹！">
+    <p data-lang-en="Collect coins, unlock and upgrade powerful firearms, unlock special abilities, defend your position and see how long you can survive the undead siege." 
+       data-lang-zh="击杀僵尸收获金币财富，解锁冲锋枪、霰弹枪、狙击步枪、重火力机枪等强力武器，升级伤害射速、解锁爆发技能、构筑坚固防线、死守阵地、看看自己能在尸潮围攻之下坚持多久、创造生存奇迹！">
       Collect coins, unlock and upgrade powerful firearms, unlock special abilities, defend your position and see how long you can survive the undead siege.
     </p>
   </section>
 
-
   <section>
     <h2 data-lang-en="Exciting Core Gameplay" data-lang-zh="酣畅淋漓核心射击玩法，上手轻松、停不下来">Exciting Core Gameplay</h2>
 
-    <p data-lang-en="Simple tap/aim controls make shooting easy to pick up instantly—perfect for quick play sessions while delivering intense action moments." data-lang-zh="瞄准点击开火、操作简洁直观、零门槛轻松上手，碎片时间随时开一局、爽快解压、紧张刺激、短短几分钟就能体验火线激战、爆头击杀、连杀爆发、热血沸腾极致快感！">
+    <p data-lang-en="Simple tap/aim controls make shooting easy to pick up instantly—perfect for quick play sessions while delivering intense action moments." 
+       data-lang-zh="瞄准点击开火、操作简洁直观、零门槛轻松上手，碎片时间随时开一局、爽快解压、紧张刺激、短短几分钟就能体验火线激战、爆头击杀、连杀爆发、热血沸腾极致快感！">
       Simple tap/aim controls make shooting easy to pick up instantly—perfect for quick play sessions while delivering intense action moments.
     </p>
 
-    <p data-lang-en="Survive endless progressive waves: defeat every zombie in a wave to advance, face bigger crowds and stronger elite zombies as you go." data-lang-zh="无尽递进闯关模式：清空一波僵尸立刻进入下一轮，尸群规模暴涨、精英狂暴僵尸、高血厚甲、速度飙升、危机四伏、压迫感拉满、每一秒都心跳加速、生死一线、极限考验！">
+    <p data-lang-en="Survive endless progressive waves: defeat every zombie in a wave to advance, face bigger crowds and stronger elite zombies as you go." 
+       data-lang-zh="无尽递进闯关模式：清空一波僵尸立刻进入下一轮，尸群规模暴涨、精英狂暴僵尸、高血厚甲、速度飙升、危机四伏、压迫感拉满、每一秒都心跳加速、生死一线、极限考验！">
       Survive endless progressive waves: defeat every zombie in a wave to advance, face bigger crowds and stronger elite zombies as you go.
     </p>
 
-    <p data-lang-en="Earn rewards for every kill and wave cleared—spend earnings to unlock better guns, boost firepower, reload speed, ammo capacity and unlock special blast/rapid-fire skills." data-lang-zh="击杀敌人、通关波数、即时奖励金币丰厚！自由消费升级武器伤害、射速、弹匣容量、换弹速度，解锁范围爆炸、极限连发、临时增伤等强力技能，火力碾压尸潮、横扫千军、酣畅过瘾！">
+    <p data-lang-en="Earn rewards for every kill and wave cleared—spend earnings to unlock better guns, boost firepower, reload speed, ammo capacity and unlock special blast/rapid-fire skills." 
+       data-lang-zh="击杀敌人、通关波数、即时奖励金币丰厚！自由消费升级武器伤害、射速、弹匣容量、换弹速度，解锁范围爆炸、极限连发、临时增伤等强力技能，火力碾压尸潮、横扫千军、酣畅过瘾！">
       Earn rewards for every kill and wave cleared—spend earnings to unlock better guns, boost firepower, reload speed, ammo capacity and unlock special blast/rapid-fire skills.
     </p>
   </section>
 
-
   <section>
     <h2 data-lang-en="Weapons & Power-Ups to Crush Zombies" data-lang-zh="海量枪械武器、强力增益加成，火力全开、横扫尸潮、无人能挡">Weapons & Power-Ups to Crush Zombies</h2>
 
-    <p data-lang-en="Start with a reliable basic pistol, then unlock an arsenal of distinct weapons suited for different combat situations:" data-lang-zh="初始便携手枪稳扎稳打，逐步解锁风格迥异、各司其职全套火力装备，应对密集尸群、高速突袭、重甲精英各种危险战局：">
+    <p data-lang-en="Start with a reliable basic pistol, then unlock an arsenal of distinct weapons suited for different combat situations:" 
+       data-lang-zh="初始便携手枪稳扎稳打，逐步解锁风格迥异、各司其职全套火力装备，应对密集尸群、高速突袭、重甲精英各种危险战局：">
       Start with a reliable basic pistol, then unlock an arsenal of distinct weapons suited for different combat situations:
     </p>
 
@@ -194,119 +120,131 @@
       <li data-lang-en="Heavy Machine Gun — massive continuous firepower to hold back overwhelming hordes" data-lang-zh="重机枪 — 弹药充足、持续疯狂扫射、压制海量尸潮冲锋、死守防线、火力屏障无可撼动">Heavy Machine Gun — massive continuous firepower to hold back overwhelming hordes</li>
     </ul>
 
-    <p data-lang-en="Temporary power-ups also spawn mid-battle: instant rapid fire, explosive rounds, shield protection or ammo refills to turn desperate moments into glorious victories." data-lang-zh="战场随机掉落限时强力增益：极限爆发连发、爆炸穿透子弹、临时无敌护盾、瞬间补满弹药，绝境逆风翻盘、极限反杀、扭转战局、高光时刻、成就感爆棚！">
+    <p data-lang-en="Temporary power-ups also spawn mid-battle: instant rapid fire, explosive rounds, shield protection or ammo refills to turn desperate moments into glorious victories." 
+       data-lang-zh="战场随机掉落限时强力增益：极限爆发连发、爆炸穿透子弹、临时无敌护盾、瞬间补满弹药，绝境逆风翻盘、极限反杀、扭转战局、高光时刻、成就感爆棚！">
       Temporary power-ups also spawn mid-battle: instant rapid fire, explosive rounds, shield protection or ammo refills to turn desperate moments into glorious victories.
     </p>
   </section>
 
-
   <section>
     <h2 data-lang-en="Game Modes & Challenges" data-lang-zh="多元趣味玩法模式、挑战不断、百玩不厌、刷新极限">Game Modes & Challenges</h2>
 
-    <p data-lang-en="Endless Survival Mode — push your limits, survive as long as possible, beat your personal high score and compete for top ranks." data-lang-zh="无尽生存模式 — 突破极限、坚持更久、冲击个人最高分记录、不断超越自我、冲刺排行榜巅峰名次、成为最强生存射击高手！">
+    <p data-lang-en="Endless Survival Mode — push your limits, survive as long as possible, beat your personal high score and compete for top ranks." 
+       data-lang-zh="无尽生存模式 — 突破极限、坚持更久、冲击个人最高分记录、不断超越自我、冲刺排行榜巅峰名次、成为最强生存射击高手！">
       Endless Survival Mode — push your limits, survive as long as possible, beat your personal high score and compete for top ranks.
     </p>
 
-    <p data-lang-en="Wave Challenge Mode — complete fixed tough stages, face special boss zombies, unlock exclusive rewards and test mastery of every weapon." data-lang-zh="关卡挑战模式 — 攻克精心设计难关、迎战巨型BOSS变异僵尸、特殊技能、高额血量、致命攻击、考验走位策略、精准射击、通关解锁专属奖励、证明硬核实力！">
+    <p data-lang-en="Wave Challenge Mode — complete fixed tough stages, face special boss zombies, unlock exclusive rewards and test mastery of every weapon." 
+       data-lang-zh="关卡挑战模式 — 攻克精心设计难关、迎战巨型BOSS变异僵尸、特殊技能、高额血量、致命攻击、考验走位策略、精准射击、通关解锁专属奖励、证明硬核实力！">
       Wave Challenge Mode — complete fixed tough stages, face special boss zombies, unlock exclusive rewards and test mastery of every weapon.
     </p>
   </section>
-
 
   <section>
     <h2 data-lang-en="Top Survival & Shooting Tips" data-lang-zh="实用通关生存技巧，轻松打得更远、活得更久、分数更高">Top Survival & Shooting Tips</h2>
 
     <h3 data-lang-en="1. Prioritize Fast & Dangerous Zombies First" data-lang-zh="1.优先击杀高速突袭、远程自爆、特殊危险僵尸，避免被包围偷袭">1. Prioritize Fast & Dangerous Zombies First</h3>
-    <p data-lang-en="Don’t only shoot slow walkers—take out runners, jumpers or explosive zombies quickly before they rush close and overwhelm you." data-lang-zh="别只顾慢吞吞普通行尸！优先瞄准疾跑、跳跃、自爆高危单位，防止近身包围、突袭偷袭、瞬间崩盘、提前清除致命隐患！">
+    <p data-lang-en="Don’t only shoot slow walkers—take out runners, jumpers or explosive zombies quickly before they rush close and overwhelm you." 
+       data-lang-zh="别只顾慢吞吞普通行尸！优先瞄准疾跑、跳跃、自爆高危单位，防止近身包围、突袭偷袭、瞬间崩盘、提前清除致命隐患！">
       Don’t only shoot slow walkers—take out runners, jumpers or explosive zombies quickly before they rush close and overwhelm you.
     </p>
 
     <h3 data-lang-en="2. Upgrade Smartly, Don’t Save Too Long" data-lang-zh="2.合理规划金币、及时升级核心武器，别囤积浪费、火力跟不上必被尸潮淹没">2. Upgrade Smartly, Don’t Save Too Long</h3>
-    <p data-lang-en="Balance firepower, reload speed and ammo capacity early—stronger guns let you clear waves faster and earn more coins to keep growing stronger." data-lang-zh="均衡提升伤害、换弹速度、弹匣续航，前期优先拉满主力武器、清怪提速、收益滚雪球、越打越强、良性循环、轻松扛住后期海量高压尸潮！">
+    <p data-lang-en="Balance firepower, reload speed and ammo capacity early—stronger guns let you clear waves faster and earn more coins to keep growing stronger." 
+       data-lang-zh="均衡提升伤害、换弹速度、弹匣续航，前期优先拉满主力武器、清怪提速、收益滚雪球、越打越强、良性循环、轻松扛住后期海量高压尸潮！">
       Balance firepower, reload speed and ammo capacity early—stronger guns let you clear waves faster and earn more coins to keep growing stronger.
     </p>
 
     <h3 data-lang-en="3. Keep Moving & Watch All Directions" data-lang-zh="3.灵活走位、保持移动、环顾四周、不留死角、避免被包围夹击">3. Keep Moving & Watch All Directions</h3>
-    <p data-lang-en="Standing still makes you an easy target—shift position constantly, create safe shooting angles and watch corners for enemies sneaking up behind." data-lang-zh="原地不动等于活靶子！灵活走位拉扯、拉开安全射击距离、避开密集尸群、警惕侧后方偷袭、全方位警戒、不给僵尸包围夹击机会、从容掌控战场主动权！">
+    <p data-lang-en="Standing still makes you an easy target—shift position constantly, create safe shooting angles and watch corners for enemies sneaking up behind." 
+       data-lang-zh="原地不动等于活靶子！灵活走位拉扯、拉开安全射击距离、避开密集尸群、警惕侧后方偷袭、全方位警戒、不给僵尸包围夹击机会、从容掌控战场主动权！">
       Standing still makes you an easy target—shift position constantly, create safe shooting angles and watch corners for enemies sneaking up behind.
     </p>
 
     <h3 data-lang-en="4. Grab Power-Ups Immediately" data-lang-zh="4.看见增益道具立刻拾取、抓住爆发窗口、关键时刻救命翻盘">4. Grab Power-Ups Immediately</h3>
-    <p data-lang-en="Don’t ignore glowing items—short boosts can save you during overwhelming crowds or boss fights and push your survival record much further." data-lang-zh="发光掉落增益千万别错过！短暂爆发加成，刚好顶住尸潮爆发、BOSS狂暴危机，极限续命、逆风翻盘、突破生存瓶颈、刷新高分关键契机！">
+    <p data-lang-en="Don’t ignore glowing items—short boosts can save you during overwhelming crowds or boss fights and push your survival record much further." 
+       data-lang-zh="发光掉落增益千万别错过！短暂爆发加成，刚好顶住尸潮爆发、BOSS狂暴危机，极限续命、逆风翻盘、突破生存瓶颈、刷新高分关键契机！">
       Don’t ignore glowing items—short boosts can save you during overwhelming crowds or boss fights and push your survival record much further.
     </p>
   </section>
-
 
   <section class="faq-section">
     <h2 data-lang-en="Frequently Asked Questions" data-lang-zh="常见问题解答，快速上手、扫清疑惑、畅快射击">Frequently Asked Questions</h2>
 
     <div class="faq-item">
       <h3 data-lang-en="Can I play Leevo Zombie Shooter offline?" data-lang-zh="可以离线游玩吗？">Can I play Leevo Zombie Shooter offline?</h3>
-      <p data-lang-en="Yes! Enjoy smooth shooting battles anytime, anywhere without needing a constant internet connection." data-lang-zh="支持离线畅玩！无需联网、随时随地、打开就能开战，通勤碎片时间、休闲放空时刻、随时解压爽玩、不受网络限制！">
+      <p data-lang-en="Yes! Enjoy smooth shooting battles anytime, anywhere without needing a constant internet connection." 
+         data-lang-zh="支持离线畅玩！无需联网、随时随地、打开就能开战，通勤碎片时间、休闲放空时刻、随时解压爽玩、不受网络限制！">
         Yes! Enjoy smooth shooting battles anytime, anywhere without needing a constant internet connection.
       </p>
     </div>
 
     <div class="faq-item">
       <h3 data-lang-en="How do I unlock new weapons?" data-lang-zh="怎么解锁新武器？">How do I unlock new weapons?</h3>
-      <p data-lang-en="Earn coins by killing zombies and completing waves—spend collected coins in the weapon shop to unlock and upgrade guns gradually." data-lang-zh="击杀僵尸、通关生存波数积累金币，前往武器商店消耗金币逐步解锁、升级各式强力枪械，越往后火力越猛、清场越轻松、战斗越酣畅！">
+      <p data-lang-en="Earn coins by killing zombies and completing waves—spend collected coins in the weapon shop to unlock and upgrade guns gradually." 
+         data-lang-zh="击杀僵尸、通关生存波数积累金币，前往武器商店消耗金币逐步解锁、升级各式强力枪械，越往后火力越猛、清场越轻松、战斗越酣畅！">
         Earn coins by killing zombies and completing waves—spend collected coins in the weapon shop to unlock and upgrade guns gradually.
       </p>
     </div>
 
     <div class="faq-item">
       <h3 data-lang-en="Is the game free to play?" data-lang-zh="游戏免费可以玩吗？">Is the game free to play?</h3>
-      <p data-lang-en="Absolutely free to download, play and progress—enjoy full core shooting survival gameplay without forced payments." data-lang-zh="完全免费下载、免费畅玩、自由闯关成长！核心射击生存完整玩法全部开放，无强制付费、轻松享受纯粹热血射击乐趣！">
+      <p data-lang-en="Absolutely free to download, play and progress—enjoy full core shooting survival gameplay without forced payments." 
+         data-lang-zh="完全免费下载、免费畅玩、自由闯关成长！核心射击生存完整玩法全部开放，无强制付费、轻松享受纯粹热血射击乐趣！">
         Absolutely free to download, play and progress—enjoy full core shooting survival gameplay without forced payments.
       </p>
     </div>
   </section>
 
-
   <section class="conclusion">
     <h2 data-lang-en="Start Your Zombie Survival Battle Now!" data-lang-zh="即刻开战，开启火线生存、横扫僵尸、创造高分传奇！">Start Your Zombie Survival Battle Now!</h2>
 
-    <p data-lang-en="Ready to pick up your gun and fight back against the undead horde? Leevo Zombie Shooter delivers fast action, satisfying gunfire, endless challenge and pure shooting fun." data-lang-zh="握紧枪械、子弹上膛、直面汹涌尸潮、绝不退缩！Leevo僵尸射击带来爽快射击手感、炸裂枪声反馈、层层进阶挑战、解压热血、纯粹射击快感、一局接一局、根本停不下来！">
+    <p data-lang-en="Ready to pick up your gun and fight back against the undead horde? Leevo Zombie Shooter delivers fast action, satisfying gunfire, endless challenge and pure shooting fun." 
+       data-lang-zh="握紧枪械、子弹上膛、直面汹涌尸潮、绝不退缩！Leevo僵尸射击带来爽快射击手感、炸裂枪声反馈、层层进阶挑战、解压热血、纯粹射击快感、一局接一局、根本停不下来！">
       Ready to pick up your gun and fight back against the undead horde? Leevo Zombie Shooter delivers fast action, satisfying gunfire, endless challenge and pure shooting fun.
     </p>
 
-    <p data-lang-en="Unlock powerful weapons, master your aim, survive tougher waves and beat your own high score again and again." data-lang-zh="解锁神兵利器、磨练精准枪法、突破极限生存、不断刷新最高分记录、超越昨天自己、成为最强僵尸射击生存勇士！">
+    <p data-lang-en="Unlock powerful weapons, master your aim, survive tougher waves and beat your own high score again and again." 
+       data-lang-zh="解锁神兵利器、磨练精准枪法、突破极限生存、不断刷新最高分记录、超越昨天自己、成为最强僵尸射击生存勇士！">
       Unlock powerful weapons, master your aim, survive tougher waves and beat your own high score again and again.
     </p>
 
-    <p data-lang-en="<strong>Aim true, shoot fast, survive longer — the undead siege waits for no one!</strong>" data-lang-zh="<strong>精准瞄准、极速开火、顽强生存到底！尸潮压境、刻不容缓、立刻参战、守护阵地、血战到底！</strong>">
+    <p data-lang-en="<strong>Aim true, shoot fast, survive longer — the undead siege waits for no one!</strong>" 
+       data-lang-zh="<strong>精准瞄准、极速开火、顽强生存到底！尸潮压境、刻不容缓、立刻参战、守护阵地、血战到底！</strong>">
       <strong>Aim true, shoot fast, survive longer — the undead siege waits for no one!</strong>
     </p>
   </section>
 
 </article>
 
-
-<!-- ✅ 核心修复JS：放在</body>前，DOM加载完成再执行、绑定成功、带本地存储记忆 -->
+<!-- ✅ 纯净、放在最后、DOM加载完成后执行、带容错、本地存储记忆 -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function(){
   const langSwitchBtn = document.getElementById('langSwitch');
   let currentLang = localStorage.getItem('preferredLang') || 'en';
 
-  function switchLanguage(lang) {
-    // 切换页面标题
+  function switchLanguage(lang){
+    // 切换标题
     const titleEl = document.querySelector('title');
-    if(titleEl) titleEl.textContent = titleEl.getAttribute(`data-lang-${lang}`);
-    // 遍历统一切换所有配置双语属性元素
+    if(titleEl){
+      const titleText = titleEl.getAttribute(`data-lang-${lang}`);
+      if(titleText) titleEl.textContent = titleText;
+    }
+    // 遍历所有带双语属性元素，加容错避免报错
     document.querySelectorAll('[data-lang-en]').forEach(el => {
-      el.textContent = el.getAttribute(`data-lang-${lang}`);
+      const text = el.getAttribute(`data-lang-${lang}`);
+      if(text) el.textContent = text;
     });
-    // 保存语言偏好、更新按钮文字
+    // 保存语言+更新按钮文字
     localStorage.setItem('preferredLang', lang);
     langSwitchBtn.textContent = lang === 'en' ? '中文 / EN' : 'EN / 中文';
   }
 
-  // 初始化读取上次语言设置
+  // 初始化加载上次保存语言
   switchLanguage(currentLang);
 
-  // 点击切换逻辑
-  langSwitchBtn.addEventListener('click', function() {
+  // 点击切换事件
+  langSwitchBtn.addEventListener('click', function(){
     currentLang = currentLang === 'en' ? 'zh' : 'en';
     switchLanguage(currentLang);
   });
