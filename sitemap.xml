@@ -73,4 +73,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://leevotech.github.io/leevo-apps/apps/leevo-zombie-shooter/articles/leevo-zombie-shooter-guide.html" />
   </url>
 
+  <url>
+    <loc>https://leevotech.github.io/leevo-apps/guides/noris-adventure</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- 双语标注，避免重复内容、优化多语言SEO -->
+    <xhtml:link rel="alternate" hreflang="en" href="https://leevotech.github.io/leevo-apps/guides/noris-adventure?lang=en" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://leevotech.github.io/leevo-apps/guides/noris-adventure?lang=zh" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://leevotech.github.io/leevo-apps/guides/noris-adventure" />
+  </url>
+
 </urlset>
