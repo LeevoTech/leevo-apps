@@ -3,60 +3,708 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-lang-en="Leevo Push Box – Classic Logic Puzzle Game Guide" data-lang-zh="Leevo推箱子 – 经典益智逻辑闯关游戏指南">Leevo Push Box – Classic Logic Puzzle Game Guide</title>
+
+  <!-- ✅ 严格采用提供SEO标题、描述、关键词 -->
+  <title data-lang-en="Leevo Push Box - Sokoban & Logic Puzzle Game for Android" data-lang-zh="Leevo推箱子 - 经典 Sokoban 逻辑解谜安卓游戏">Leevo Push Box - Sokoban & Logic Puzzle Game for Android</title>
+
+  <meta name="description"
+        content="Learn how to solve Push Box and Sokoban puzzles with practical tips for planning moves, avoiding dead ends and solving box puzzles. Discover Leevo Push Box for Android."
+        data-lang-en="Learn how to solve Push Box and Sokoban puzzles with practical tips for planning moves, avoiding dead ends and solving box puzzles. Discover Leevo Push Box for Android."
+        data-lang-zh="掌握推箱子经典解谜技巧，学会规划路线、避开死局、一步步通关。带你了解专为安卓打造的Leevo推箱子经典逻辑益智游戏。">
+
+  <meta name="keywords"
+        content="Push Box, push box game, Sokoban, Sokoban game, Sokoban Android, box puzzle game, box pushing puzzle, logic puzzle game, brain puzzle game, puzzle game Android, strategy puzzle game, Leevo Push Box">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://leevotech.github.io/leevo-apps/apps/leevo-push-box/articles/leevo-push-box-guide.html">
+
   <style>
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:Arial,sans-serif; background:linear-gradient(135deg,#0d2035,#07111f); color:#fff; line-height:1.7; padding:40px 30px; max-width:900px; margin:0 auto;}
-    .back-link{display:inline-block; margin-bottom:40px; color:#f2c86b; text-decoration:none; font-size:18px;}
-    .back-link:hover{text-decoration:underline;}
-    h1{color:#f2c86b; font-size:32px; margin-bottom:30px; line-height:1.4;}
-    h2{color:#ffffff; font-size:24px; margin:30px 0 20px;}
-    p{color:#e6e6e6; font-size:18px; margin-bottom:20px;}
-    ul{color:#e6e6e6; font-size:18px; margin:20px 0 20px 30px;}
-    li{margin-bottom:10px;}
-    .lang-switch-btn{padding:6px 14px; border-radius:6px; border:none; background:#f2c86b; color:#07111f; font-weight:bold; cursor:pointer; margin-bottom:20px;}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #07111f;
+      color: #e6eaf0;
+      line-height: 1.7;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+    a { color: #f2c86b; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #203b55;
+      flex-wrap: wrap;
+      gap:15px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+      font-size:16px;
+    }
+    .lang-switch-btn {
+      padding: 6px 14px;
+      border-radius: 6px;
+      border: none;
+      background: #f2c86b;
+      color: #07111f;
+      font-weight: bold;
+      cursor: pointer;
+      transition:0.2s;
+    }
+    .lang-switch-btn:hover{ transform:scale(1.05); }
+
+    .article-header { margin-bottom: 45px; }
+    .article-category {
+      color: #f2c86b;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1.3;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+    .article-intro {
+      font-size: 18px;
+      color: #b7c4d2;
+    }
+
+    section { margin-bottom: 50px; }
+    h2 {
+      font-size: 26px;
+      color: #ffffff;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #1c344c;
+    }
+    h3 {
+      font-size: 20px;
+      color: #f2d28c;
+      margin: 25px 0 12px;
+    }
+    p { margin-bottom: 16px; font-size: 17px; }
+    ul, ol { margin: 20px 0 20px 25px; }
+    li { margin-bottom: 10px; font-size: 17px; }
+
+    .faq-item {
+      background: #0d1c2c;
+      padding:22px;
+      border-radius:10px;
+      margin-bottom:15px;
+      border:1px solid #203b55;
+    }
+    .conclusion {
+      background: linear-gradient(135deg, #10253a, #0d1c2c);
+      padding:35px;
+      border-radius:16px;
+      border:1px solid #294969;
+    }
+
+    @media (max-width:600px) {
+      body { padding:20px 15px; }
+      h1 { font-size:28px; }
+      .page-nav { flex-direction:column; align-items:flex-start; }
+    }
   </style>
 </head>
 <body>
-  <!-- 语言切换按钮，与首页共用本地存储，自动同步 -->
-  <button id="pageLangSwitch" class="lang-switch-btn">中文 / EN</button>
 
-  <!-- 返回首页双语链接，样式位置统一 -->
-  <a href="../index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回 Leevo 应用首页">← Back to Leevo Apps Home</a>
+  <!-- 统一导航：返回首页 + 双语切换记忆 -->
+  <nav class="page-nav">
+    <a href="/leevo-apps/index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回Leevo应用首页">← Back to Leevo Apps Home</a>
+    <button id="langSwitch" class="lang-switch-btn">中文 / EN</button>
+  </nav>
 
-  <h1 data-lang-en="Leevo Push Box — Classic Logic Puzzle, Think Carefully & Clear Levels" data-lang-zh="Leevo推箱子 — 经典益智闯关 · 巧思规划 · 步步通关 · 越玩越聪明">Leevo Push Box — Classic Logic Puzzle, Think Carefully & Clear Levels</h1>
+<article class="app-article">
 
-  <p data-lang-en="Leevo Push Box is a timeless brain-teasing puzzle game loved by players of all ages! Simple core rule: control the character to push boxes one by one onto the glowing marked target positions — once all boxes are in place, you clear the level! Sounds easy, but needs careful planning, avoid pushing into dead corners or blocking paths." data-lang-zh="Leevo推箱子是一款老少皆宜、永不过时的经典益智游戏！核心玩法简单易懂：操控角色移动，将箱子逐个推到场地标记好的目标位置上，所有箱子就位即可成功通关！看似轻松，却需要提前规划路线、步步谨慎，避免把箱子推进死角、堵死通路，考验耐心与智慧。">Leevo Push Box is a timeless brain-teasing puzzle game loved by players of all ages! Simple core rule: control the character to push boxes one by one onto the glowing marked target positions — once all boxes are in place, you clear the level! Sounds easy, but needs careful planning, avoid pushing into dead corners or blocking paths.</p>
+  <header class="article-header">
+    <p class="article-category" data-lang-en="Puzzle Games" data-lang-zh="解谜益智游戏">Puzzle Games</p>
 
-  <h2 data-lang-en="Game & Brain Benefits" data-lang-zh="游戏特色与益智价值">Game & Brain Benefits</h2>
-  <ul>
-    <li data-lang-en="✅ Easy to start: simple control, clear objective — pick up quickly without complicated tutorials" data-lang-zh="✅ 上手零门槛：操作直观、目标明确，不用复杂教程，几分钟就能懂玩法开始闯关">✅ Easy to start: simple control, clear objective — pick up quickly without complicated tutorials</li>
-    <li data-lang-en="✅ Step-by-step challenge: levels go from easy warm-up to tricky hard puzzles — keep thinking, never get boring fast" data-lang-zh="✅ 难度循序渐进：从入门热身关卡慢慢过渡到烧脑难题，层层递进、越玩越有挑战，久玩不腻">✅ Step-by-step challenge: levels go from easy warm-up to tricky hard puzzles — keep thinking, never get boring fast</li>
-    <li data-lang-en="✅ Exercise key abilities: train logical reasoning, space layout & forward planning — good brain workout for kids & adults alike" data-lang-zh="✅ 益智锻炼大脑：提升逻辑推理、空间想象、预判规划能力，学生锻炼思维、成人放松动脑，老少皆宜">✅ Exercise key abilities: train logical reasoning, space layout & forward planning — good brain workout for kids & adults alike</li>
-    <li data-lang-en="✅ Great time-killer: play a few rounds during breaks, waiting time or before bed — short sessions, full sense of achievement when clearing a level" data-lang-zh="✅ 绝佳休闲消遣：课间休息、候车等候、睡前空闲都能玩几关，用时灵活，解开谜题通关瞬间成就感满满">✅ Great time-killer: play a few rounds during breaks, waiting time or before bed — short sessions, full sense of achievement when clearing a level</li>
-  </ul>
+    <h1 data-lang-en="How to Solve Push Box Puzzles: A Beginner's Guide to Sokoban and Logic Games" data-lang-zh="推箱子通关技巧：经典Sokoban逻辑解谜新手入门指南">How to Solve Push Box Puzzles: A Beginner's Guide to Sokoban and Logic Games</h1>
 
-  <h2 data-lang-en="Small tips to play better" data-lang-zh="轻松通关小提示">Small tips to play better</h2>
-  <p data-lang-en="Think ahead before pushing — do not rush! Observe the whole map first, plan which target to finish first, avoid pushing boxes into corners you can’t pull them out from. Take your time, try different ideas, reset & rethink freely — thinking process itself is the fun!" data-lang-zh="别急着盲目推动！先观察整体地图布局，规划优先完成哪个目标位置，避免将箱子推进死角无法移出。卡住可以重新开局、换思路慢慢尝试，思考探索的过程本身就是乐趣所在！">Think ahead before pushing — do not rush! Observe the whole map first, plan which target to finish first, avoid pushing boxes into corners you can’t pull them out from. Take your time, try different ideas, reset & rethink freely — thinking process itself is the fun!</p>
+    <p class="article-intro" data-lang-en="Push Box puzzles are simple to understand but surprisingly challenging to master. You move around a puzzle board, push boxes, and try to place them in their correct positions. Leevo Push Box brings this classic logic puzzle experience to Android with straightforward gameplay that rewards careful planning rather than fast reactions." data-lang-zh="推箱子一看就懂、深入才知精妙！操控角色在方格地图中移动，推动箱子、精准送入目标点位。Leevo推箱子将经典逻辑解谜原汁原味带到安卓设备，不拼手速、考验缜密规划，一步一步感受动脑通关的满满成就感。">
+      Push Box puzzles are simple to understand but surprisingly challenging to
+      master. You move around a puzzle board, push boxes, and try to place them
+      in their correct positions. Leevo Push Box brings this classic logic
+      puzzle experience to Android with straightforward gameplay that rewards
+      careful planning rather than fast reactions.
+    </p>
+  </header>
 
-<script>
-// 与首页共用语言存储，一键同步切换
-let currentLang = localStorage.getItem('leevoLang') || 'en';
 
-function updateAllText(){
-  document.querySelectorAll('[data-lang-en],[data-lang-zh]').forEach(el=>{
-    const txt = el.getAttribute(`data-lang-${currentLang}`);
-    if(txt) el.innerHTML = txt;
-  });
-}
+  <section>
+    <h2 data-lang-en="What Is a Push Box Game?" data-lang-zh="什么是推箱子游戏？">What Is a Push Box Game?</h2>
 
-document.addEventListener('DOMContentLoaded', updateAllText);
+    <p data-lang-en="Push Box is a classic type of logic puzzle in which the player moves a character around a board and pushes boxes toward designated locations." data-lang-zh="推箱子是流传已久的经典逻辑益智玩法：操控角色在方格地图里行走移动，推动箱子，将所有箱子一一推到指定终点位置即可通关。">
+      Push Box is a classic type of logic puzzle in which the player moves a
+      character around a board and pushes boxes toward designated locations.
+    </p>
 
-document.getElementById('pageLangSwitch').addEventListener('click',()=>{
-  currentLang = currentLang === 'en' ? 'zh' : 'en';
-  localStorage.setItem('leevoLang', currentLang);
-  updateAllText();
-});
-</script>
+    <p data-lang-en="The basic rules are easy to understand: you can move around the available spaces, but boxes can generally be pushed rather than pulled." data-lang-zh="核心规则简单直白：角色可以在空地上自由行走；箱子**只能向前推、无法向后拉**——这也是整个游戏最核心、最考验布局思维的关键限制。">
+      The basic rules are easy to understand: you can move around the available
+      spaces, but boxes can generally be pushed rather than pulled.
+    </p>
+
+    <p data-lang-en="That simple rule creates the main challenge. A move that looks useful at first can sometimes make a box impossible to move later." data-lang-zh="正是这条简单规则，衍生出层层挑战：当下顺手一步，很可能把箱子卡死、堵死退路、后续再也无法调整位置，一步不慎满盘皆输。">
+      That simple rule creates the main challenge. A move that looks useful at
+      first can sometimes make a box impossible to move later.
+    </p>
+
+    <p data-lang-en="Push Box is also commonly associated with the name <strong>Sokoban</strong>, a well-known style of box-pushing puzzle game." data-lang-zh="经典推箱子在国际上也被广泛称作<strong>Sokoban（仓库番）</strong>，是全球公认、经久不衰的经典箱式逻辑解谜代表玩法。">
+      Push Box is also commonly associated with the name
+      <strong>Sokoban</strong>, a well-known style of box-pushing puzzle game.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Why Are Push Box Puzzles So Challenging?" data-lang-zh="推箱子难在哪？步步规划、环环相扣">Why Are Push Box Puzzles So Challenging?</h2>
+
+    <p data-lang-en="The difficulty of a Push Box puzzle does not necessarily come from complicated controls. It comes from having to think ahead." data-lang-zh="难点从来不是操作复杂，而是**必须前瞻思考、预判后果**——每一步推动都要想到后续连锁影响。">
+      The difficulty of a Push Box puzzle does not necessarily come from
+      complicated controls. It comes from having to think ahead.
+    </p>
+
+    <p data-lang-en="Players need to consider not only where a box should go, but also whether the player will still be able to reach the correct position to push it again." data-lang-zh="不只要盯着「箱子最终去哪」，更要提前规划：推完这一步后，自己能不能绕到箱子另一侧、继续完成后续关键推动？">
+      Players need to consider not only where a box should go, but also whether
+      the player will still be able to reach the correct position to push it
+      again.
+    </p>
+
+    <p data-lang-en="This makes every movement important." data-lang-zh="每一步走位、每一次推动，都举足轻重、不容随意。">
+      This makes every movement important.
+    </p>
+
+    <p data-lang-en="A successful solution often requires several steps of planning before making the first push." data-lang-zh="真正通关，往往需要先在脑海推演完整路线、规划全局策略，再从容迈出第一步。">
+      A successful solution often requires several steps of planning before
+      making the first push.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Push Box Is About Planning, Not Speed" data-lang-zh="拼智慧不拼手速，慢思考、巧规划、稳通关">Push Box Is About Planning, Not Speed</h2>
+
+    <p data-lang-en="Unlike many action games, Push Box does not require fast reflexes." data-lang-zh="和紧张刺激的竞技动作游戏截然不同——推箱子，完全不需要极速反应、手速比拼。">
+      Unlike many action games, Push Box does not require fast reflexes.
+    </p>
+
+    <p data-lang-en="You can take your time, study the board, and think about what should happen next." data-lang-zh="静下心观察整张地图、从容推演路线、反复斟酌最优方案，节奏完全由自己掌控。">
+      You can take your time, study the board, and think about what should
+      happen next.
+    </p>
+
+    <p data-lang-en="The most important question is often not: <strong>"Where can I move now?"</strong>" data-lang-zh="别只顾着问自己：<strong>「现在能往哪走？」</strong>">
+      The most important question is often not:
+      <strong>"Where can I move now?"</strong>
+    </p>
+
+    <p data-lang-en="Instead, ask: <strong>"Where do I need this box to end up, and how can I get it there?"</strong>" data-lang-zh="更该反问核心关键：<strong>「最终要把箱子送到哪？我该通过什么路线、顺序、位置一步步推过去？」</strong>">
+      Instead, ask:
+      <strong>"Where do I need this box to end up, and how can I get it there?"</strong>
+    </p>
+
+    <p data-lang-en="Thinking backwards from the destination can often reveal a better solution." data-lang-zh="甚至可以从终点反向推演、倒推可行路线，常常豁然开朗、找到简洁高效的通关思路。">
+      Thinking backwards from the destination can often reveal a better
+      solution.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="5 Useful Tips for Solving Push Box Puzzles" data-lang-zh="新手必学5大实用通关技巧">5 Useful Tips for Solving Push Box Puzzles</h2>
+
+    <h3 data-lang-en="1. Look at the Whole Board Before Moving" data-lang-zh="1. 全局观察地图，别急着动手">1. Look at the Whole Board Before Moving</h3>
+
+    <p data-lang-en="Before making your first move, take a moment to understand the entire puzzle." data-lang-zh="盲目走动最容易陷入死局！开局先花几秒完整看清整张布局。">
+      Before making your first move, take a moment to understand the entire
+      puzzle.
+    </p>
+
+    <p data-lang-en="Identify the boxes, their destinations, narrow passages, corners, and areas where movement may become restricted." data-lang-zh="找准箱子位置、目标点位、狭窄通道、死角角落、容易堵死的关键区域，提前标记风险位置。">
+      Identify the boxes, their destinations, narrow passages, corners, and
+      areas where movement may become restricted.
+    </p>
+
+    <p data-lang-en="A few seconds of planning can prevent many unnecessary moves." data-lang-zh="短短几秒全局预判，能帮你省下大量无效折返、避免从头重玩，事半功倍。">
+      A few seconds of planning can prevent many unnecessary moves.
+    </p>
+
+
+    <h3 data-lang-en="2. Be Careful With Corners" data-lang-zh="2. 警惕角落、靠墙位置，别把箱子卡死">2. Be Careful With Corners</h3>
+
+    <p data-lang-en="Corners are especially important in Push Box puzzles." data-lang-zh="角落、墙角，是推箱子里最危险、最容易翻车的位置！">
+      Corners are especially important in Push Box puzzles.
+    </p>
+
+    <p data-lang-en="If a box is pushed into a corner that is not its destination, it may become impossible to move it again." data-lang-zh="一旦把箱子推进**不是终点**的死角角落、紧贴两墙夹角，再也无法绕到后方继续推动，直接陷入无解死局。">
+      If a box is pushed into a corner that is not its destination, it may
+      become impossible to move it again.
+    </p>
+
+    <p data-lang-en="Before pushing a box toward a wall or corner, consider whether the box will still be useful afterward." data-lang-zh="朝墙壁、角落推动前，务必三思：推过去之后，后续还有调整空间、能继续推进目标位置吗？">
+      Before pushing a box toward a wall or corner, consider whether the box
+      will still be useful afterward.
+    </p>
+
+
+    <h3 data-lang-en="3. Think About Where You Need to Stand" data-lang-zh="3. 角色站位是核心：推箱子，必须站在箱子后方">3. Think About Where You Need to Stand</h3>
+
+    <p data-lang-en="Remember that pushing a box requires your character to stand on the opposite side." data-lang-zh="记住核心规则：要向前推动箱子，角色必须站在箱子**相反后方**，才能发力向前推送。">
+      Remember that pushing a box requires your character to stand on the
+      opposite side.
+    </p>
+
+    <p data-lang-en="A box may appear to be moving toward the correct destination, but if you cannot reach the next position needed to push it, the solution may fail." data-lang-zh="看着箱子离目标越来越近，却发现自己绕不到另一侧、没法继续往前推——差之毫厘，功亏一篑。">
+      A box may appear to be moving toward the correct destination, but if you
+      cannot reach the next position needed to push it, the solution may fail.
+    </p>
+
+    <p data-lang-en="Always consider both the box's position and your own position." data-lang-zh="规划路线，永远要**箱子位置+角色站位**双重考量，缺一不可。">
+      Always consider both the box's position and your own position.
+    </p>
+
+
+    <h3 data-lang-en="4. Plan Important Box Movements First" data-lang-zh="4. 优先规划路线受限、难移动的关键箱子">4. Plan Important Box Movements First</h3>
+
+    <p data-lang-en="Some boxes have fewer possible routes than others." data-lang-zh="地图里总有部分箱子，通道狭窄、路线单一、可移动空间极小，最容易被堵死。">
+      Some boxes have fewer possible routes than others.
+    </p>
+
+    <p data-lang-en="If a box must pass through a narrow area, think about its route before moving other boxes into that space." data-lang-zh="优先给这类必经窄道、难移动箱子规划通行路线，别盲目移动其他箱子，抢先堵住关键通道。">
+      If a box must pass through a narrow area, think about its route before
+      moving other boxes into that space.
+    </p>
+
+    <p data-lang-en="This can prevent one box from blocking another." data-lang-zh="分清主次、有序推进，避免互相卡位、互相阻挡、无法通行。">
+      This can prevent one box from blocking another.
+    </p>
+
+
+    <h3 data-lang-en="5. Do Not Rush a Difficult Puzzle" data-lang-zh="5. 卡关别急躁，必要时暂时后撤、腾出空间">5. Do Not Rush a Difficult Puzzle</h3>
+
+    <p data-lang-en="Push Box is a thinking game. If a solution is not immediately obvious, stop and look at the board from another perspective." data-lang-zh="推箱子本就是动脑游戏！卡住走不通，别硬冲、别乱推，停下来换视角、换思路重新审视全局。">
+      Push Box is a thinking game. If a solution is not immediately obvious,
+      stop and look at the board from another perspective.
+    </p>
+
+    <p data-lang-en="Sometimes the best move is not the move that gets a box closest to its destination." data-lang-zh="不是每一步都要拼命往终点靠——有时候暂时远离目标、挪开腾出通行空间，反而是通关必经关键一步！">
+      Sometimes the best move is not the move that gets a box closest to its
+      destination.
+    </p>
+
+    <p data-lang-en="A temporary move away from the goal may be necessary to create space for the final solution." data-lang-zh="懂得迂回、灵活调整、预留空间，才能打破僵局、顺利通关。">
+      A temporary move away from the goal may be necessary to create space for
+      the final solution.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Common Mistakes in Push Box Games" data-lang-zh="新手常犯误区，避开就能少走弯路">Common Mistakes in Push Box Games</h2>
+
+    <p data-lang-en="New players often make the same types of mistakes when learning box-pushing puzzles." data-lang-zh="刚接触推箱子，几乎都会踩这些典型坑，提前了解、及时规避，进步更快！">
+      New players often make the same types of mistakes when learning
+      box-pushing puzzles.
+    </p>
+
+    <h3 data-lang-en="Pushing Without Planning" data-lang-zh="盲目随手推，走一步算一步">Pushing Without Planning</h3>
+
+    <p data-lang-en="Because moving a character is usually easy, it can be tempting to push a box whenever an opportunity appears." data-lang-zh="角色走动轻松自由，很容易随手看到能推就推、只顾眼前方便，完全不考虑后续连锁后果。">
+      Because moving a character is usually easy, it can be tempting to push a
+      box whenever an opportunity appears.
+    </p>
+
+    <p data-lang-en="However, pushing is usually more important than ordinary movement. Think before every critical push." data-lang-zh="**推动箱子远比普通走位关键、不可逆、代价更大！** 每一次关键推动前，务必停下思考、确认风险再动手。">
+      However, pushing is usually more important than ordinary movement.
+      Think before every critical push.
+    </p>
+
+
+    <h3 data-lang-en="Blocking a Passage" data-lang-zh="乱堆箱子，堵死关键通行要道">Blocking a Passage</h3>
+
+    <p data-lang-en="A box placed in the wrong position can prevent access to another part of the puzzle." data-lang-zh="随意放置、扎堆堵路，一个箱子放错位置，直接切断通往其他区域、其他目标点位的必经通道，全局卡死无解。">
+      A box placed in the wrong position can prevent access to another part of
+      the puzzle.
+    </p>
+
+    <p data-lang-en="Always consider whether moving one box will affect your ability to reach another." data-lang-zh="移动之前，务必多想一步：这一下，会不会挡住后续需要绕路、需要通行、需要调整其他箱子的路线？">
+      Always consider whether moving one box will affect your ability to reach
+      another.
+    </p>
+
+
+    <h3 data-lang-en="Ignoring the Final Position" data-lang-zh="只追求靠近终点，忽略最终朝向、到位细节">Ignoring the Final Position</h3>
+
+    <p data-lang-en="Getting a box close to its destination does not necessarily mean the puzzle is close to being solved." data-lang-zh="看着离目标只差一步，不代表即将通关——方向不对、推不进点位、堵死无法微调，前功尽弃。">
+      Getting a box close to its destination does not necessarily mean the
+      puzzle is close to being solved.
+    </p>
+
+    <p data-lang-en="The final direction of the push can be just as important as the distance travelled." data-lang-zh="最后一步推动方向、切入角度、预留空间，和走了多远同样至关重要，细节决定成败。">
+      The final direction of the push can be just as important as the distance
+      travelled.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Why Logic Puzzle Games Are Good for Brain Training" data-lang-zh="经典逻辑解谜，趣味锻炼思维、提升脑力">Why Logic Puzzle Games Are Good for Brain Training</h2>
+
+    <p data-lang-en="Logic puzzles encourage players to think carefully about relationships between actions and results." data-lang-zh="逻辑解谜游戏，核心锻炼「行为→连锁结果」的因果预判、缜密思考习惯。">
+      Logic puzzles encourage players to think carefully about relationships
+      between actions and results.
+    </p>
+
+    <p data-lang-en="Push Box puzzles can involve planning, spatial reasoning, sequencing, problem solving, and recognising potential consequences before making a move." data-lang-zh="玩推箱子，全程锻炼全局规划、空间想象、逻辑顺序、问题拆解、预判风险后果等核心思维能力。">
+      Push Box puzzles can involve planning, spatial reasoning, sequencing,
+      problem solving, and recognising potential consequences before making a
+      move.
+    </p>
+
+    <p data-lang-en="These are the kinds of mental skills that make logic puzzle games interesting even though their controls may be very simple." data-lang-zh="操作极简、规则干净，却能层层递进磨练大脑、激活思维、越玩越聪慧，这正是经典益智游戏长久迷人的魅力。">
+      These are the kinds of mental skills that make logic puzzle games
+      interesting even though their controls may be very simple.
+    </p>
+
+    <p data-lang-en="The goal is not simply to move a character around the board. The goal is to find a sequence of actions that works." data-lang-zh="游戏精髓，不是到处乱跑走动，而是层层推演、找到唯一可行、逻辑通顺的完整操作顺序，收获动脑思考、攻克难关带来的满满成就感。">
+      The goal is not simply to move a character around the board. The goal is
+      to find a sequence of actions that works.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Leevo Push Box: A Simple Puzzle Experience" data-lang-zh="Leevo推箱子：纯粹经典、干净简洁的沉浸式解谜体验">Leevo Push Box: A Simple Puzzle Experience</h2>
+
+    <p data-lang-en="Leevo Push Box brings the classic Push Box concept to Android in a straightforward puzzle game." data-lang-zh="Leevo推箱子，原汁原味复刻经典Sokoban推箱子核心玩法，简洁界面、干净设计、流畅操作，完美适配安卓手机。">
+      Leevo Push Box brings the classic Push Box concept to Android in a
+      straightforward puzzle game.
+    </p>
+
+    <p data-lang-en="The gameplay focuses on the essential idea behind box-pushing puzzles: move carefully, plan your route, and place the boxes where they belong." data-lang-zh="回归解谜本质：谨慎走位、精心布局、有序推动、精准归位，不堆砌花哨冗余功能，专注纯粹动脑思考、享受通关乐趣。">
+      The gameplay focuses on the essential idea behind box-pushing puzzles:
+      move carefully, plan your route, and place the boxes where they belong.
+    </p>
+
+    <p data-lang-en="There is no need to rely on fast reactions. The challenge comes from thinking about your next move and understanding how each push changes the puzzle." data-lang-zh="零限时、无竞速、不拼手速，每一步推动如何改变全局布局、如何连锁影响后续走向，才是真正挑战、乐趣所在。">
+      There is no need to rely on fast reactions. The challenge comes from
+      thinking about your next move and understanding how each push changes the
+      puzzle.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Play at Your Own Pace" data-lang-zh="节奏自在从容，碎片时间随时动脑放松">Play at Your Own Pace</h2>
+
+    <p data-lang-en="Push Box is naturally suited to players who enjoy taking their time." data-lang-zh="推箱子天生适配慢节奏、爱思考、享受沉浸专注过程的玩家。">
+      Push Box is naturally suited to players who enjoy taking their time.
+    </p>
+
+    <p data-lang-en="You can study the board, consider several possible moves, and try to understand the consequences before committing to a push." data-lang-zh="慢慢观察、反复推演、尝试不同思路、权衡利弊后果，确认无误再动手推动，从容不迫、毫无压力。">
+      You can study the board, consider several possible moves, and try to
+      understand the consequences before committing to a push.
+    </p>
+
+    <p data-lang-en="This makes Leevo Push Box a good choice for casual puzzle sessions, whether you have a few minutes available or want to spend longer working through a challenging puzzle." data-lang-zh="短短几分钟碎片时间动脑放松、或是静下心沉浸攻克高难度关卡，都能从容享受，适配日常休闲、锻炼思维、放空解压多种需求。">
+      This makes Leevo Push Box a good choice for casual puzzle sessions,
+      whether you have a few minutes available or want to spend longer working
+      through a challenging puzzle.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Push Box vs. Fast-Paced Games" data-lang-zh="与紧张竞速游戏截然不同：慢下来，思考才是核心乐趣">Push Box vs. Fast-Paced Games</h2>
+
+    <p data-lang-en="Fast-paced games often reward quick reactions and immediate decisions." data-lang-zh="多数竞技快节奏游戏，比拼瞬时反应、手速快慢、临场爆发。">
+      Fast-paced games often reward quick reactions and immediate decisions.
+    </p>
+
+    <p data-lang-en="Push Box rewards something different: patience and planning." data-lang-zh="推箱子，奖励的是耐心沉稳、全局规划、缜密逻辑、长远眼光。">
+      Push Box rewards something different: patience and planning.
+    </p>
+
+    <p data-lang-en="There is no need to rush through the puzzle. Taking an extra moment to understand the board can be more valuable than making several quick moves." data-lang-zh="不用赶时间、不用慌慌张张乱走一通，多花几秒理清布局、预判风险，远比盲目快速无效移动更高效、更有价值。">
+      There is no need to rush through the puzzle. Taking an extra moment to
+      understand the board can be more valuable than making several quick moves.
+    </p>
+
+    <p data-lang-en="If you enjoy games that challenge your thinking rather than your reaction speed, a Push Box puzzle can be a refreshing alternative." data-lang-zh="厌倦紧绷神经、比拼手速，偏爱沉静专注、动脑思考、收获智慧成就感，经典推箱子会是一份清爽治愈、充实有趣的绝佳选择。">
+      If you enjoy games that challenge your thinking rather than your reaction
+      speed, a Push Box puzzle can be a refreshing alternative.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="How to Approach a Difficult Push Box Puzzle" data-lang-zh="高难度关卡通关思路拆解，一步步理清破局逻辑">How to Approach a Difficult Push Box Puzzle</h2>
+
+    <ol>
+      <li data-lang-en="<strong>Study the board.</strong> Identify the boxes, destinations, walls, corners, and narrow paths." data-lang-zh="<strong>全面观察地图。</strong>理清箱子位置、目标点位、墙体边界、危险死角、狭窄必经通道。">
+        <strong>Study the board.</strong>
+        Identify the boxes, destinations, walls, corners, and narrow paths.
+      </li>
+
+      <li data-lang-en="<strong>Identify difficult boxes.</strong> Look for boxes that have limited movement options." data-lang-zh="<strong>优先锁定难移动箱子。</strong>找出通道受限、路线单一、最容易卡死、最难调整位置的关键箱子。">
+        <strong>Identify difficult boxes.</strong>
+        Look for boxes that have limited movement options.
+      </li>
+
+      <li data-lang-en="<strong>Think about destinations.</strong> Consider which box should eventually reach each destination." data-lang-zh="<strong>规划终点匹配。</strong>思考哪个箱子适配哪个点位、避免互相挤占、无法到位。">
+        <strong>Think about destinations.</strong>
+        Consider which box should eventually reach each destination.
+      </li>
+
+      <li data-lang-en="<strong>Plan the pushing direction.</strong> Remember that you need to reach the correct side of a box before you can push it." data-lang-zh="<strong>规划推动方向与角色站位。</strong>牢记核心规则：必须绕到箱子后方、才能向前推送，提前预留绕行空间。">
+        <strong>Plan the pushing direction.</strong>
+        Remember that you need to reach the correct side of a box before you
+        can push it.
+      </li>
+
+      <li data-lang-en="<strong>Make one important move at a time.</strong> After each push, reassess the board." data-lang-zh="<strong>步步推进、及时复盘。</strong>完成关键一步推动，重新观察全局布局变化、调整后续规划，不盲目连续乱推。">
+        <strong>Make one important move at a time.</strong>
+        After each push, reassess the board.
+      </li>
+
+      <li data-lang-en="<strong>Learn from failed attempts.</strong> If a sequence does not work, identify where the position became unsolvable and try a different approach." data-lang-zh="<strong>从失败总结经验。</strong>陷入死局不用气馁，定位哪一步埋下隐患、卡死无解，换策略、换思路、重新规划路线。">
+        <strong>Learn from failed attempts.</strong>
+        If a sequence does not work, identify where the position became
+        unsolvable and try a different approach.
+      </li>
+    </ol>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Who Is Leevo Push Box For?" data-lang-zh="这款经典逻辑解谜游戏，适合这些玩家体验">Who Is Leevo Push Box For?</h2>
+
+    <p data-lang-en="Leevo Push Box is suitable for players who enjoy classic logic and problem-solving games." data-lang-zh="专为热爱经典动脑解谜、享受攻克难题成就感、偏爱沉静思考、拒绝浮躁竞速的玩家打造。">
+      Leevo Push Box is suitable for players who enjoy classic logic and
+      problem-solving games.
+    </p>
+
+    <ul>
+      <li data-lang-en="Players who enjoy Push Box or Sokoban-style puzzles" data-lang-zh="喜爱经典推箱子、Sokoban仓库番玩法的老玩家">Players who enjoy Push Box or Sokoban-style puzzles</li>
+      <li data-lang-en="Fans of logic puzzle games" data-lang-zh="热爱逻辑推理、益智动脑、锻炼思维的解谜爱好者">Fans of logic puzzle games</li>
+      <li data-lang-en="Players who enjoy strategic thinking" data-lang-zh="喜欢全局布局、策略规划、长远思考、拒绝无脑操作">Players who enjoy strategic thinking</li>
+      <li data-lang-en="People looking for a casual brain puzzle" data-lang-zh="想找轻松休闲、碎片化时间健脑益智、激活思维的小游戏">People looking for a casual brain puzzle</li>
+      <li data-lang-en="Players who prefer games based on planning rather than speed" data-lang-zh="厌倦比拼手速、追求从容思考、享受动脑规划乐趣">Players who prefer games based on planning rather than speed</li>
+      <li data-lang-en="People who enjoy solving problems one step at a time" data-lang-zh="习惯拆解难题、循序渐进、一步一步攻克难关、收获满足感">People who enjoy solving problems one step at a time</li>
+      <li data-lang-en="Casual gamers looking for a simple puzzle experience on Android" data-lang-zh="安卓设备上，追求简洁干净、纯粹经典、无繁杂干扰优质休闲解谜体验">Casual gamers looking for a simple puzzle experience on Android</li>
+    </ul>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="A Puzzle Where Every Push Matters" data-lang-zh="一步一推皆关键，简洁规则藏无限智慧">A Puzzle Where Every Push Matters</h2>
+
+    <p data-lang-en="The beauty of Push Box is that the rules are simple but the possibilities can be surprisingly challenging." data-lang-zh="推箱子最迷人之处：规则极简易懂、寥寥数语讲清，组合布局千变万化、层层进阶、越深入越惊叹精妙无穷。">
+      The beauty of Push Box is that the rules are simple but the possibilities
+      can be surprisingly challenging.
+    </p>
+
+    <p data-lang-en="You only need to understand how to move and push boxes, yet solving a difficult board can require careful planning several steps ahead." data-lang-zh="掌握行走+推动两个基础操作，却需要推演数步、全局统筹、空间想象、缜密逻辑，才能解开复杂精妙关卡。">
+      You only need to understand how to move and push boxes, yet solving a
+      difficult board can require careful planning several steps ahead.
+    </p>
+
+    <p data-lang-en="That combination makes Push Box a timeless style of logic puzzle." data-lang-zh="简洁纯粹、智慧内核、百玩不厌、跨越时代，成就流传数十年、经久不衰的经典逻辑解谜。">
+      That combination makes Push Box a timeless style of logic puzzle.
+    </p>
+
+    <p data-lang-en="<strong>Leevo Push Box</strong> keeps that idea at the centre of the experience: think carefully, plan your moves, and find the solution." data-lang-zh="<strong>Leevo推箱子</strong>坚守初心、回归经典：沉静思考、步步规划、谨慎推动、耐心探索、找到通关答案、收获智慧喜悦。">
+      <strong>Leevo Push Box</strong> keeps that idea at the centre of the
+      experience: think carefully, plan your moves, and find the solution.
+    </p>
+  </section>
+
+
+  <section>
+    <h2 data-lang-en="Take Your Time. Think Ahead. Solve the Puzzle." data-lang-zh="放慢节奏、前瞻思考、缜密规划、攻克难关、收获满满成就感">Take Your Time. Think Ahead. Solve the Puzzle.</h2>
+
+    <p data-lang-en="You do not need to be a professional puzzle player to enjoy Push Box." data-lang-zh="无需成为解谜大神、高手玩家，从零开始、慢慢摸索、积累经验、享受思考乐趣，人人都能沉浸其中。">
+      You do not need to be a professional puzzle player to enjoy Push Box.
+    </p>
+
+    <p data-lang-en="Start with the basic idea, learn to recognise dangerous positions, and gradually develop the habit of thinking about what each push will make possible—or impossible." data-lang-zh="从基础规则入门、学会识别危险死角、避开常见死局、慢慢养成「预判每一步推动会开启什么机会、堵死什么可能」的前瞻思维习惯。">
+      Start with the basic idea, learn to recognise dangerous positions, and
+      gradually develop the habit of thinking about what each push will make
+      possible—or impossible.
+    </p>
+
+    <p data-lang-en="The more you play, the more naturally you may begin to look several moves ahead." data-lang-zh="坚持动脑、持续练习，慢慢就能一眼看清全局、提前预判多步走向、思路越来越清晰、通关越来越顺畅！">
+      The more you play, the more naturally you may begin to look several moves
+      ahead.
+    </p>
+  </section>
+
+
+  <section class="faq-section">
+    <h2 data-lang-en="Frequently Asked Questions About Push Box Games" data-lang-zh="推箱子经典疑问解答">Frequently Asked Questions About Push Box Games</h2>
+
+    <div class="faq-item">
+      <h3 data-lang-en="What is a Push Box game?" data-lang-zh="什么是推箱子游戏？">What is a Push Box game?</h3>
+
+      <p data-lang-en="A Push Box game is a logic puzzle where players move a character around a board and push boxes toward designated locations. The challenge comes from planning movements because boxes can usually be pushed but not pulled." data-lang-zh="经典逻辑益智游戏：操控角色在方格地图行走，推动箱子至指定目标点位；核心难点在于箱子**只能向前推、无法向后拉**，必须提前规划路线、谨慎布局、避免卡死。">
+        A Push Box game is a logic puzzle where players move a character around
+        a board and push boxes toward designated locations. The challenge comes
+        from planning movements because boxes can usually be pushed but not
+        pulled.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="What is Sokoban?" data-lang-zh="Sokoban是什么意思？">What is Sokoban?</h3>
+
+      <p data-lang-en="Sokoban is a classic box-pushing puzzle game concept. The player moves around a board and pushes boxes onto their target locations. Many modern Push Box games are based on this style of puzzle." data-lang-zh="Sokoban（仓库番）是源自日本、风靡全球的经典推箱子原型名称，奠定「推箱归位、规划路线、不能回拉」核心玩法，如今绝大多数现代推箱子游戏，都传承源自这一经典设计理念。">
+        Sokoban is a classic box-pushing puzzle game concept. The player moves
+        around a board and pushes boxes onto their target locations. Many modern
+        Push Box games are based on this style of puzzle.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="How do you solve a Push Box puzzle?" data-lang-zh="推箱子有什么通用通关思路？">How do you solve a Push Box puzzle?</h3>
+
+      <p data-lang-en="Start by studying the entire board. Identify the destinations, corners, narrow passages, and boxes with limited movement. Plan important pushes before moving and always consider whether you will still be able to reach the correct side of a box." data-lang-zh="先全局看清整张地图，标记目标点位、危险死角、狭窄通道、移动受限关键箱子；优先规划核心路线、重要推动顺序，时刻牢记角色站位要求，确保推完仍能绕到后方继续调整，步步谨慎、有序推进。">
+        Start by studying the entire board. Identify the destinations, corners,
+        narrow passages, and boxes with limited movement. Plan important pushes
+        before moving and always consider whether you will still be able to
+        reach the correct side of a box.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="How do I avoid getting a box stuck?" data-lang-zh="怎么避免箱子卡死、陷入无解死局？">How do I avoid getting a box stuck?</h3>
+
+      <p data-lang-en="Be especially careful when pushing boxes against walls or into corners. Unless the position is part of the intended solution, a box in a corner may become impossible to move." data-lang-zh="格外谨慎向墙壁、角落方向推动！除非那个位置恰好就是最终终点，否则别轻易把箱子卡进墙角死角、紧贴双墙夹角，一旦卡死无法回拉、无法绕后，基本宣告关卡无解重玩。">
+        Be especially careful when pushing boxes against walls or into corners.
+        Unless the position is part of the intended solution, a box in a
+        corner may become impossible to move.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="Is Push Box a strategy game?" data-lang-zh="推箱子属于策略游戏吗？">Is Push Box a strategy game?</h3>
+
+      <p data-lang-en="Push Box is primarily a logic and puzzle game, but it requires strategic thinking because players need to plan movements and consider the consequences of each push." data-lang-zh="核心归类为逻辑益智解谜游戏，但处处离不开策略思维：全局布局、预判连锁影响、规划先后顺序、预留调整空间，本质就是一场安静、专注、层层推理的脑力策略博弈。">
+        Push Box is primarily a logic and puzzle game, but it requires strategic
+        thinking because players need to plan movements and consider the
+        consequences of each push.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="Is Push Box good for people who enjoy brain puzzles?" data-lang-zh="玩推箱子，真的能锻炼大脑、提升逻辑思维吗？">Is Push Box good for people who enjoy brain puzzles?</h3>
+
+      <p data-lang-en="Yes. Push Box puzzles encourage planning, spatial reasoning, problem-solving, and careful decision-making, making them a natural choice for players who enjoy logic-based challenges." data-lang-zh="非常适合！持续锻炼空间想象、逻辑推理、统筹规划、问题拆解、谨慎决策、预判后果等核心思维能力，动脑沉浸、专注思考、放松解压、越玩思路越清晰、思维越活跃。">
+        Yes. Push Box puzzles encourage planning, spatial reasoning,
+        problem-solving, and careful decision-making, making them a natural
+        choice for players who enjoy logic-based challenges.
+      </p>
+    </div>
+
+
+    <div class="faq-item">
+      <h3 data-lang-en="Is there a Push Box game for Android?" data-lang-zh="有适配安卓手机的经典推箱子游戏吗？">Is there a Push Box game for Android?</h3>
+
+      <p data-lang-en="Yes. Leevo Push Box brings the classic box-pushing puzzle concept to Android for players who enjoy simple controls and challenging logic puzzles." data-lang-zh="当然有！Leevo推箱子完美复刻经典Sokoban核心玩法、简洁干净界面、流畅操作体验、精心设计层层进阶关卡，专为安卓手机打造，随时开启沉浸式动脑解谜之旅。">
+        Yes. Leevo Push Box brings the classic box-pushing puzzle concept to
+        Android for players who enjoy simple controls and challenging logic
+        puzzles.
+      </p>
+    </div>
+  </section>
+
+
+  <section class="conclusion">
+    <h2 data-lang-en="Ready to Push Your Way to the Solution?" data-lang-zh="准备好开动脑筋，一步步推动、找到通关答案了吗？">Ready to Push Your Way to the Solution?</h2>
+
+    <p data-lang-en="Push Box proves that a game does not need complicated controls to provide a meaningful challenge." data-lang-zh="推箱子完美诠释：真正优秀耐玩的游戏，从不需要花哨特效、复杂操作堆砌，简洁纯粹、充满智慧内核，就能带来深刻、充实、回味无穷的脑力挑战。">
+      Push Box proves that a game does not need complicated controls to provide
+      a meaningful challenge.
+    </p>
+
+    <p data-lang-en="With simple rules and carefully designed puzzles, every push can change the entire board." data-lang-zh="规则寥寥数语、关卡层层精妙，每一次推动，都牵动全局布局、改写后续走向、蕴藏无限可能。">
+      With simple rules and carefully designed puzzles, every push can change
+      the entire board.
+    </p>
+
+    <p data-lang-en="<strong>Leevo Push Box</strong> brings this classic logic puzzle experience to Android, giving players a simple way to practise planning, spatial thinking, and problem solving." data-lang-zh="<strong>Leevo推箱子</strong>将这份跨越时代经典智慧，完整带到安卓移动端，随时随地沉浸体验，在休闲玩乐中锻炼全局规划、空间想象、逻辑推理、解决问题核心能力。">
+      <strong>Leevo Push Box</strong> brings this classic logic puzzle experience
+      to Android, giving players a simple way to practise planning, spatial
+      thinking, and problem solving.
+    </p>
+
+    <p data-lang-en="Study the board. Think ahead. Push carefully." data-lang-zh="静心观察全局、前瞻预判推演、谨慎有序推动、耐心灵活调整。">
+      Study the board. Think ahead. Push carefully.
+    </p>
+
+    <p data-lang-en="<strong>And find your way to the solution.</strong>" data-lang-zh="<strong>开动智慧，拨开迷雾，找到属于自己的通关之路！</strong>">
+      <strong>And find your way to the solution.</strong>
+    </p>
+  </section>
+
+</article>
+
+
+  <!-- ✅ 双语切换+本地存储记忆脚本 -->
+  <script>
+    const langSwitchBtn = document.getElementById('langSwitch');
+    const html = document.documentElement;
+
+    // 读取上次选择语言，默认英文
+    let currentLang = localStorage.getItem('leevo-lang') || 'en';
+
+    // 切换语言并更新页面所有data-lang内容
+    function switchLang(lang) {
+      document.querySelectorAll('[data-lang-en], [data-lang-zh]').forEach(el => {
+        const text = el.getAttribute(`data-lang-${lang}`);
+        if (text) {
+          if(el.tagName === 'META'){
+            el.setAttribute(el.name === 'description' ? 'content' : el.name, text);
+          } else {
+            el.textContent = text;
+          }
+        }
+      });
+      html.lang = lang;
+      localStorage.setItem('leevo-lang', lang);
+    }
+
+    // 初始化加载
+    switchLang(currentLang);
+
+    // 点击切换
+    langSwitchBtn.addEventListener('click', () => {
+      currentLang = currentLang === 'en' ? 'zh' : 'en';
+      switchLang(currentLang);
+    });
+  </script>
+
 </body>
 </html>
