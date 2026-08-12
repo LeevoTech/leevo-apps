@@ -1,90 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset 
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- 网站首页（最高优先级） -->
+  <!-- 网站首页 -->
   <url>
-    <loc>https://leevotech.github.io/leevo-apps/index.html</loc>
-    <lastmod>2026-08-09</lastmod>
+    <loc>https://leevo-apps.web.app/</loc>
+    <lastmod>2026-08-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Leevo Color 指南文章 -->
+  <!-- Leevo Color -->
   <url>
-    <loc>https://leevotech.github.io/leevo-apps/apps/leevo-color/articles/leevo-color-guide.html</loc>
+    <loc>https://leevo-apps.web.app/apps/leevo-color/articles/leevo-color-guide.html</loc>
     <lastmod>2026-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Leevo Home Workout 指南文章 -->
+  <!-- Leevo Home Workout -->
   <url>
-    <loc>https://leevotech.github.io/leevo-apps/apps/leevo-home-workout/articles/leevo-home-workout-guide.html</loc>
+    <loc>https://leevo-apps.web.app/apps/leevo-home-workout/articles/leevo-home-workout-guide.html</loc>
     <lastmod>2026-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Leevo Learn English PSLE英语备考指南文章 -->
+  <!-- Leevo Learn English -->
   <url>
-    <loc>https://leevotech.github.io/leevo-apps/apps/leevo-learn-english/articles/psle-english-preparation-guide.html</loc>
+    <loc>https://leevo-apps.web.app/apps/leevo-learn-english/articles/leevo-learn-english-guide.html</loc>
     <lastmod>2026-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Leevo Learn: PSLE Math 备考指南文章 -->
+  <!-- Leevo Learn: PSLE Math -->
   <url>
-    <loc>https://leevotech.github.io/leevo-apps/apps/leevo-learn-psle-math/articles/psle-math-preparation-guide.html</loc>
-    <lastmod>
+    <loc>https://leevo-apps.web.app/apps/leevo-learn-psle-math/articles/leevo-learn-psle-math-guide.html</loc>
     <lastmod>2026-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Leevo Music 指南文章 -->
+  <!-- Leevo Music -->
   <url>
-    <loc>https://leevotech.github.io/leevo-apps/apps/leevo-music/articles/leevo-music-guide.html</loc>
+    <loc>https://leevo-apps.web.app/apps/leevo-music/articles/leevo-music-guide.html</loc>
     <lastmod>2026-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Leevo Planet Merge 指南文章 -->
+  <!-- Leevo Planet Merge -->
   <url>
-    <loc>https://leevotech.github.io/leevo-apps/apps/leevo-planet-merge/articles/leevo-planet-merge-guide.html</loc>
+    <loc>https://leevo-apps.web.app/apps/leevo-planet-merge/articles/leevo-planet-merge-guide.html</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Leevo Push Box 指南文章 -->
+  <!-- Leevo Push Box -->
   <url>
-    <loc>https://leevotech.github.io/leevo-apps/apps/leevo-push-box/articles/leevo-push-box-guide.html</loc>
+    <loc>https://leevo-apps.web.app/apps/leevo-push-box/articles/leevo-push-box-guide.html</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Leevo Zombie Shooter 指南文章 -->
+  <!-- Leevo Zombie Shooter -->
   <url>
-    <loc>https://leevotech.github.io/leevo-apps/apps/leevo-zombie-shooter/articles/leevo-zombie-shooter-guide.html</loc>
+    <loc>https://leevo-apps.web.app/apps/leevo-zombie-shooter/articles/leevo-zombie-shooter-guide.html</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Noris Adventure 双语指南页面 -->
+  <!-- Nori's Adventure -->
   <url>
-    <loc>https://leevotech.github.io/leevo-apps/guides/noris-adventure</loc>
+    <loc>https://leevo-apps.web.app/apps/noirs-adventure/articles/noirs-adventure-guide.html</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://leevotech.github.io/leevo-apps/guides/noris-adventure?lang=en" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://leevotech.github.io/leevo-apps/guides/noris-adventure?lang=zh" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://leevotech.github.io/leevo-apps/guides/noris-adventure" />
   </url>
 
 </urlset>
