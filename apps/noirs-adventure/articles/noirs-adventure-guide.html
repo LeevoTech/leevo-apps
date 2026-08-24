@@ -3,71 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Nori's Adventure - Adventure Game with Boss Battles | Nori's 冒险游戏</title>
-
+  <!-- ✅ 双语标题+描述，与全站统一 -->
+  <title data-lang-en="Nori's Adventure - Fun Adventure Game with Boss Battles" 
+        data-lang-zh="Nori's Adventure - 丰富关卡Boss战冒险游戏">Nori's Adventure - Adventure Game with Boss Battles | Nori's 冒险游戏</title>
   <meta name="description"
-        content="Discover Nori's Adventure, a fun mobile adventure game with challenging levels, boss battles, coins and diamonds. Explore the journey, defeat bosses, collect five diamonds and prepare for the final challenge. 了解 Nori's Adventure，一款拥有丰富关卡、Boss 战、金币和钻石收集系统的手机冒险游戏。">
-
+        data-lang-en="Discover Nori's Adventure, a fun mobile adventure game with challenging levels, boss battles, coins and diamonds. Explore the journey, defeat bosses and collect five diamonds to face the final challenge."
+        data-lang-zh="了解Nori's Adventure：一款拥有丰富关卡、Boss战、金币和钻石收集系统的手机冒险游戏。完成关卡、击败Boss、集齐五颗钻石，挑战最终冒险！">
   <meta name="keywords"
         content="Nori's Adventure, Nori adventure game, adventure game, mobile adventure game, adventure game Android, boss battle game, adventure game with boss battles, casual adventure game, action adventure game, Android adventure games, fun adventure game, 冒险游戏, 手机冒险游戏, Android冒险游戏, Boss游戏, Boss战, 休闲冒险游戏, Nori冒险">
-
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://yourdomain.com/guides/noris-adventure">
-  <!-- ✅ 适配独立双区块模式的hreflang标注 -->
-  <link rel="alternate" hreflang="en" href="https://yourdomain.com/guides/noris-adventure" />
-  <link rel="alternate" hreflang="zh-CN" href="https://yourdomain.com/guides/noris-adventure" />
-  <link rel="alternate" hreflang="x-default" href="https://yourdomain.com/guides/noris-adventure" />
-
+  <!-- ✅ 真实线上域名，SEO正确 -->
+  <link rel="canonical" href="https://leevotech.github.io/leevo-apps/apps/noris-adventure/articles/noris-adventure-guide.html">
+  <link rel="alternate" hreflang="en" href="https://leevotech.github.io/leevo-apps/apps/noris-adventure/articles/noris-adventure-guide.html" />
+  <link rel="alternate" hreflang="zh-CN" href="https://leevotech.github.io/leevo-apps/apps/noris-adventure/articles/noris-adventure-guide.html" />
+  <link rel="alternate" hreflang="x-default" href="https://leevotech.github.io/leevo-apps/apps/noris-adventure/articles/noris-adventure-guide.html" />
   <style>
     * {box-sizing: border-box; margin: 0; padding: 0;}
     html {scroll-behavior: smooth;}
     body {font-family: Arial, Helvetica, sans-serif; background: #07111f; color: #e6eaf0; line-height: 1.7; max-width: 850px; margin: 0 auto; padding: 30px 20px;}
     a {color: #f2c86b; text-decoration: none;}
     a:hover {text-decoration: underline;}
-
-    /* 导航+切换按钮样式，统一站点风格 */
     .page-nav {display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; padding-bottom:15px; border-bottom:1px solid #203b55; flex-wrap:wrap; gap:15px;}
     .back-link {display:inline-flex; align-items:center; gap:6px; font-weight:500; font-size:16px;}
     .lang-switch-btn {padding:6px 14px; border-radius:6px; border:none; background:#f2c86b; color:#07111f; font-weight:bold; cursor:pointer; transition:0.2s;}
     .lang-switch-btn:hover {transform:scale(1.05);}
-
-    /* 核心：语言区块默认隐藏，激活显示 */
     .language-section {display: none;}
     .language-section.active {display: block; animation: fadeIn 0.3s ease;}
     @keyframes fadeIn {from{opacity:0;} to{opacity:1;}}
-
-    /* 正文排版样式 */
     .article-header {margin-bottom:45px;}
     .article-category {color:#f2c86b; font-weight:700; text-transform:uppercase; font-size:14px; letter-spacing:1.5px; margin-bottom:12px;}
     h1 {font-size:clamp(28px,5vw,40px); line-height:1.3; margin-bottom:20px; color:#fff;}
     .article-intro {font-size:18px; color:#b7c4d2;}
-
     section {margin-bottom:50px;}
     h2 {font-size:26px; color:#fff; margin-bottom:20px; padding-bottom:8px; border-bottom:1px solid #1c344c;}
     h3 {font-size:20px; color:#f2d28c; margin:25px 0 12px;}
     p {margin-bottom:16px; font-size:17px;}
     ul,ol {margin:20px 0 20px 25px;}
     li {margin-bottom:10px; font-size:17px;}
-
     .faq-item {background:#0d1c2c; padding:22px; border-radius:10px; margin-bottom:15px; border:1px solid #203b55;}
     .conclusion {background:linear-gradient(135deg,#10253a,#0d1c2c); padding:35px; border-radius:16px; border:1px solid #294969;}
-
     @media(max-width:600px){body{padding:20px 15px;} h1{font-size:28px;} .page-nav{flex-direction:column; align-items:flex-start;}}
   </style>
 </head>
 <body>
-
-<!-- ✅ 统一导航+语言切换按钮 -->
+<!-- ✅ 返回链接已修正：../../../index.html 本地+线上双环境正常 -->
 <nav class="page-nav">
   <a href="../../../index.html" class="back-link" data-lang-en="← Back to Leevo Apps Home" data-lang-zh="← 返回Leevo应用首页">← Back to Leevo Apps Home</a>
   <button id="langSwitch" class="lang-switch-btn">中文 / EN</button>
 </nav>
-
 <article class="app-article">
-
   <!-- =====================================================
-       ENGLISH VERSION 完整保留原文
+       ENGLISH VERSION
        ===================================================== -->
   <section class="language-section language-en" lang="en">
     <header class="article-header">
@@ -80,7 +66,6 @@
         the next boss and the ultimate final challenge.
       </p>
     </header>
-
     <section>
       <h2>What Is Nori's Adventure?</h2>
       <p>Nori's Adventure is a mobile adventure game built around level progression, challenging stages and boss battles.</p>
@@ -89,7 +74,6 @@
       <p>The long-term objective is to collect five diamonds and reach the final boss.</p>
       <p>In simple terms: <strong>complete levels, defeat bosses, collect diamonds and continue the adventure.</strong></p>
     </section>
-
     <section>
       <h2>Why Nori's Adventure Is More Than Just Another Level-Based Game</h2>
       <p>Many mobile games are built around repeating individual levels. Nori's Adventure adds a larger progression system that connects multiple levels together.</p>
@@ -97,7 +81,6 @@
       <p>This gives players a reason to think beyond the level they are currently playing.</p>
       <p>Every completed stage is another step toward the next major milestone.</p>
     </section>
-
     <section>
       <h2>Progress Through Adventure Levels</h2>
       <p>The adventure begins with regular levels and gradually becomes more challenging as the player moves forward.</p>
@@ -105,7 +88,6 @@
       <p>This gradual difficulty curve gives players an opportunity to become familiar with the game before facing more demanding challenges.</p>
       <p>The goal is not simply to finish one level. The goal is to keep progressing through the entire adventure.</p>
     </section>
-
     <section>
       <h2>Coins and Level Progression</h2>
       <p>Coins are part of the regular level progression in Nori's Adventure.</p>
@@ -115,7 +97,6 @@
       <p>This creates a simple progression cycle:</p>
       <p><strong>10 Levels → Boss → Diamond → New Progression</strong></p>
     </section>
-
     <section>
       <h2>Boss Battles Are a Major Part of the Adventure</h2>
       <p>Boss battles provide major milestones throughout Nori's Adventure.</p>
@@ -130,7 +111,6 @@
       </ul>
       <p>Each defeated boss represents another major achievement in the adventure.</p>
     </section>
-
     <section>
       <h2>Collect Five Diamonds to Reach the Final Boss</h2>
       <p>One of the most important progression goals in Nori's Adventure is collecting diamonds.</p>
@@ -140,7 +120,6 @@
       <p>The journey can be viewed as:</p>
       <p><strong>Levels → Bosses → Diamonds → Five Diamonds → Final Boss</strong></p>
     </section>
-
     <section>
       <h2>The Boss Progression in Nori's Adventure</h2>
       <p>The boss system gives the adventure a clear sense of progression.</p>
@@ -149,7 +128,6 @@
       <p>Each boss victory adds another diamond to the player's collection.</p>
       <p>Reaching five diamonds represents the completion of the major boss progression and leads toward the final boss.</p>
     </section>
-
     <section>
       <h2>How to Make Better Progress in an Adventure Game</h2>
       <h3>1. Focus on One Level at a Time</h3>
@@ -161,7 +139,6 @@
       <h3>4. Keep Track of Your Long-Term Goal</h3>
       <p>Remember that every boss defeated brings you one step closer to collecting five diamonds and reaching the final boss.</p>
     </section>
-
     <section>
       <h2>Why Boss Battles Make Adventure Games More Interesting</h2>
       <p>Boss battles give players something meaningful to work toward.</p>
@@ -169,7 +146,6 @@
       <p>This creates a stronger sense of achievement when a boss is finally defeated.</p>
       <p>In Nori's Adventure, the reward of a diamond makes every boss victory even more meaningful because the diamonds contribute to the final progression goal.</p>
     </section>
-
     <section>
       <h2>A Gradually Increasing Challenge</h2>
       <p>Nori's Adventure is designed around gradual difficulty progression.</p>
@@ -177,7 +153,6 @@
       <p>This structure gives new players time to learn while providing more experienced players with increasingly difficult stages.</p>
       <p>The further you go, the more important each successful level becomes.</p>
     </section>
-
     <section>
       <h2>Who Is Nori's Adventure For?</h2>
       <p>Nori's Adventure is suitable for players who enjoy mobile adventure games with progression and boss battles.</p>
@@ -191,14 +166,12 @@
         <li>Players who enjoy long-term progression goals</li>
       </ul>
     </section>
-
     <section>
       <h2>The Nori's Adventure Progression Loop</h2>
       <p>The game can be understood through a simple progression loop:</p>
       <p><strong>Complete Levels → Reach the Boss → Defeat the Boss → Earn a Diamond → Start the Next Progression</strong></p>
       <p>Repeat this process until five diamonds have been collected and the final boss becomes the next major objective.</p>
     </section>
-
     <section>
       <h2>What Makes Nori's Adventure Different?</h2>
       <p>Nori's Adventure combines short-term and long-term progression.</p>
@@ -206,7 +179,6 @@
       <p>This means that every level has a place within the larger adventure.</p>
       <p>You are not simply completing another stage. You are moving closer to the next boss and ultimately toward the final challenge.</p>
     </section>
-
     <section>
       <h2>Nori's Adventure: From the First Level to the Final Boss</h2>
       <p>The adventure starts with the first regular level.</p>
@@ -216,7 +188,6 @@
       <p>Once five diamonds have been collected, the final boss becomes the ultimate goal.</p>
       <p>The journey is therefore about more than reaching the next level. It is about seeing how far you can go.</p>
     </section>
-
     <section class="faq-section">
       <h2>Frequently Asked Questions About Nori's Adventure</h2>
       <div class="faq-item">
@@ -248,7 +219,6 @@
         <p>Yes. Nori's Adventure is designed as a mobile adventure game with level progression, boss battles and collectible rewards.</p>
       </div>
     </section>
-
     <section class="conclusion">
       <h2>Start the Adventure</h2>
       <p>Every adventure begins with one level.</p>
@@ -257,9 +227,8 @@
       <p><strong>How far can you take Nori's adventure?</strong></p>
     </section>
   </section>
-
   <!-- =====================================================
-       中文版本 完整保留原文
+       中文版本
        ===================================================== -->
   <section class="language-section language-zh" lang="zh-CN">
     <header class="article-header">
@@ -271,7 +240,6 @@
         完成关卡、挑战 Boss、收集钻石，并一步一步向最终 Boss 前进。
       </p>
     </header>
-
     <section>
       <h2>什么是 Nori's Adventure？</h2>
       <p>Nori's Adventure 是一款以关卡推进、挑战和 Boss 战为核心的手机冒险游戏。</p>
@@ -280,7 +248,6 @@
       <p>游戏的长期目标是收集五颗钻石，并最终挑战最终 Boss。</p>
       <p>简单来说就是：<strong>完成关卡、击败 Boss、收集钻石，然后继续冒险。</strong></p>
     </section>
-
     <section>
       <h2>为什么 Nori's Adventure 不只是普通的闯关游戏？</h2>
       <p>很多手机游戏都是一个关卡接着一个关卡进行。Nori's Adventure 在此基础上加入了更完整的成长和 Boss 推进系统。</p>
@@ -288,7 +255,6 @@
       <p>因此，玩家不仅是在完成眼前的一个关卡，同时也是在为更大的目标不断前进。</p>
       <p>每完成一个阶段，都是整个冒险旅程中的一次进步。</p>
     </section>
-
     <section>
       <h2>不断挑战新的冒险关卡</h2>
       <p>Nori's Adventure 从普通关卡开始，随着玩家不断前进，游戏挑战也会逐渐增加。</p>
@@ -296,7 +262,6 @@
       <p>这种逐渐增加难度的设计，让玩家有机会先熟悉游戏，再面对更加困难的挑战。</p>
       <p>因此，目标并不是只完成一个关卡，而是不断向整个冒险的更深处前进。</p>
     </section>
-
     <section>
       <h2>金币与十关推进系统</h2>
       <p>金币是 Nori's Adventure 普通关卡推进系统的一部分。</p>
@@ -306,7 +271,6 @@
       <p>因此，游戏形成了一个清晰的循环：</p>
       <p><strong>10 个关卡 → Boss → 钻石 → 新一轮关卡</strong></p>
     </section>
-
     <section>
       <h2>Boss 战是冒险旅程的重要部分</h2>
       <p>Boss 战是 Nori's Adventure 中非常重要的游戏里程碑。</p>
@@ -321,7 +285,6 @@
       </ul>
       <p>每击败一个 Boss，都意味着玩家完成了一个重要的冒险阶段。</p>
     </section>
-
     <section>
       <h2>收集五颗钻石，挑战最终 Boss</h2>
       <p>钻石是 Nori's Adventure 中非常重要的长期进度目标。</p>
@@ -331,7 +294,6 @@
       <p>整个进度可以简单理解为：</p>
       <p><strong>关卡 → Boss → 钻石 → 五颗钻石 → 最终 Boss</strong></p>
     </section>
-
     <section>
       <h2>Nori's Adventure 的 Boss 推进路线</h2>
       <p>Boss 系统让整个游戏拥有非常清晰的冒险目标。</p>
@@ -340,7 +302,6 @@
       <p>每击败一个 Boss，玩家都会获得一颗新的钻石。</p>
       <p>当五颗钻石全部收集完成后，玩家将继续向最终 Boss 挑战。</p>
     </section>
-
     <section>
       <h2>如何更好地推进冒险游戏？</h2>
       <h3>1. 一次专注完成一个关卡</h3>
@@ -352,7 +313,6 @@
       <h3>4. 记住长期目标</h3>
       <p>每击败一个 Boss，就距离五颗钻石和最终 Boss 更近一步。</p>
     </section>
-
     <section>
       <h2>为什么 Boss 战让冒险游戏更加有趣？</h2>
       <p>Boss 战能够给玩家一个非常明确的阶段性目标。</p>
@@ -360,7 +320,6 @@
       <p>当 Boss 最终被击败时，玩家也会获得更加明显的成就感。</p>
       <p>在 Nori's Adventure 中，Boss 战胜利后获得的钻石还会继续推动长期游戏进度，因此每一次 Boss 胜利都具有更大的意义。</p>
     </section>
-
     <section>
       <h2>随着冒险深入，挑战逐渐增加</h2>
       <p>Nori's Adventure 采用逐渐增加挑战的游戏进度。</p>
@@ -368,7 +327,6 @@
       <p>这样的设计可以让新玩家先熟悉游戏，同时也让持续挑战的玩家在后面的关卡中获得更大的挑战。</p>
       <p>你走得越远，每一次成功完成关卡也就越有价值。</p>
     </section>
-
     <section>
       <h2>Nori's Adventure 适合哪些玩家？</h2>
       <p>Nori's Adventure 适合喜欢手机冒险游戏、关卡挑战和 Boss 战的玩家。</p>
@@ -382,14 +340,12 @@
         <li>喜欢长期成长目标的玩家</li>
       </ul>
     </section>
-
     <section>
       <h2>Nori's Adventure 的游戏推进循环</h2>
       <p>游戏的整体推进可以用一个简单的循环来理解：</p>
       <p><strong>完成关卡 → 到达 Boss → 击败 Boss → 获得钻石 → 开始下一阶段</strong></p>
       <p>不断重复这个过程，直到收集五颗钻石，并向最终 Boss 发起挑战。</p>
     </section>
-
     <section>
       <h2>Nori's Adventure 有什么特别之处？</h2>
       <p>Nori's Adventure 将短期目标和长期目标结合在一起。</p>
@@ -397,7 +353,6 @@
       <p>因此，每一个关卡都属于整个冒险旅程的一部分。</p>
       <p>你并不是单纯完成又一个关卡，而是在不断接近下一个 Boss，以及最终的挑战。</p>
     </section>
-
     <section>
       <h2>从第一个关卡一直走向最终 Boss</h2>
       <p>Nori's Adventure 的旅程从第一个普通关卡开始。</p>
@@ -407,7 +362,6 @@
       <p>当五颗钻石全部收集完成后，最终 Boss 将成为你的终极目标。</p>
       <p>因此，这场冒险真正的意义并不只是完成下一个关卡，而是看看自己究竟可以走多远。</p>
     </section>
-
     <section class="faq-section">
       <h2>Nori's Adventure 常见问题</h2>
       <div class="faq-item">
@@ -439,19 +393,15 @@
         <p>是的。Nori's Adventure 是一款手机冒险游戏，主要围绕关卡推进、Boss 战和奖励收集展开。</p>
       </div>
     </section>
-
     <section class="conclusion">
-      <h2>开始 Nori's Adventure</h2>
+      <h2>开始 Nori 的冒险</h2>
       <p>每一场冒险，都从第一个关卡开始。</p>
       <p>在 <strong>Nori's Adventure</strong> 中，每完成一个阶段，你都会距离下一个 Boss、下一颗钻石以及最终挑战更近一步。</p>
       <p>完成关卡、击败 Boss、收集五颗钻石，然后向最终 Boss 发起挑战。</p>
       <p><strong>Nori 的冒险，你能走到多远？</strong></p>
     </section>
   </section>
-
-  <!-- =====================================================
-       保留完整Schema结构化数据，利于SEO
-       ===================================================== -->
+  <!-- ✅ Schema 结构化数据，利于SEO -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -463,7 +413,6 @@
     "inLanguage": ["en", "zh-CN"]
   }
   </script>
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -488,45 +437,36 @@
     ]
   }
   </script>
-
 </article>
-
-<!-- ✅ 稳定可用、放末尾、记忆语言、切换独立区块JS脚本 -->
+<!-- ✅ 双语切换脚本：记忆语言、独立区块切换、标题/描述同步 -->
 <script>
 document.addEventListener('DOMContentLoaded', function(){
   const langSwitchBtn = document.getElementById('langSwitch');
   const enSection = document.querySelector('.language-en');
   const zhSection = document.querySelector('.language-zh');
-
-  // 读取本地存储语言，默认英文
   let currentLang = localStorage.getItem('preferredLang') || 'en';
-
-  // 核心切换函数：激活对应区块、隐藏另一个、更新按钮、保存语言
   function switchLang(lang){
     if(lang === 'en'){
       enSection.classList.add('active');
       zhSection.classList.remove('active');
       langSwitchBtn.textContent = '中文 / EN';
       document.documentElement.lang = 'en';
+      document.title = document.querySelector('title').getAttribute('data-lang-en');
     }else{
       zhSection.classList.add('active');
       enSection.classList.remove('active');
       langSwitchBtn.textContent = 'EN / 中文';
       document.documentElement.lang = 'zh-CN';
+      document.title = document.querySelector('title').getAttribute('data-lang-zh');
     }
     localStorage.setItem('preferredLang', lang);
   }
-
-  // 初始化加载上次语言
   switchLang(currentLang);
-
-  // 点击切换
   langSwitchBtn.addEventListener('click', function(){
     currentLang = currentLang === 'en' ? 'zh' : 'en';
     switchLang(currentLang);
   });
 });
 </script>
-
 </body>
 </html>
